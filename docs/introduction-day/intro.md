@@ -1,2 +1,0 @@
-# Einführung zur WISS Schule
-
