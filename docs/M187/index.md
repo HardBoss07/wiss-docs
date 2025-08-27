@@ -221,11 +221,6 @@ EULA steht für End User License Agreement
 | Automatisch beim Boot mounten | `sudo nano /etc/fstab`                     | Neue Partition hier eintragen, z. B.: `/dev/sdX1 /mnt/meinePartition ext4 defaults 0 2`          |
 
 ### 187-04A - 00.00
-Alles klar, hier ist die gekürzte Version im gleichen Stil:
-
----
-
-### 187-04A - 00.00
 
 * Dateisystem = Bibliothek:
   * Ordner = Regale
