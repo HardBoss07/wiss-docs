@@ -152,8 +152,9 @@ EULA steht für End User License Agreement
   - `update`: Update der Paketlisten von hinterlegten Paketquellen
   - `upgrade`: Installierte Pakete auf die neuste Version bringen (das Neue wirklich installieren)
 - Was ist der Vorteil von einem Paketmanagers im Vergleich zu normaler Installation:
+
 | Vorteil                       | Beschreibung                                                         |
-|-------------------------------|----------------------------------------------------------------------|
+| ----------------------------- | -------------------------------------------------------------------- |
 | Automatische Abhängigkeiten   | Fehlende Bibliotheken werden automatisch mit installiert.            |
 | Zentrale Updates              | Alle Programme können mit einem einzigen Befehl aktualisiert werden. |
 | Sicherheit                    | Pakete stammen aus geprüften und vertrauenswürdigen Quellen.         |
