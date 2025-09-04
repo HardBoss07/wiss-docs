@@ -1,13 +1,5 @@
 # Modul 187
 
-## Modulidentifikation
-
-| Modulnummer    | 187                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Titel          | ICT-Arbeitsplatz mit Betriebssystem in Betrieb nehmen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Kompetenz      | ICT-Arbeitsplatz in Betrieb nehmen: Wichtige Aspekte der Hardwarekompatibilität überprüfen, Betriebssystem gemäss vorgaben installieren, konfigurieren und administrieren, Sicherheitsaspekte erkennen und anwenden, Arbeitsschritte dokumentieren und testen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Handlungsziele | 1. Komponenten des eigenen ICT-Arbeitsplatzes sowie Peripheriegeräte nach Vorgabe verbinden.<br>2. Betriebssystem und Anwendungen nach Vorgaben installieren und konfigurieren.<br>3. Netzwerkzugang nach Vorgabe einrichten und austesten. Die Schutzmassnahmen für eine sichere Nutzung des Computers und des Netzwerks treffen.<br>4. ICT-Arbeitsplatz testen, Defekte und Konfigurationsfehler systematisch eingrenzen und beheben.<br>5. ICT-Arbeitsplatz nach ergonomischen Grundsätzen einrichten.<br>6. Vor der Installation des Betriebssystems die Hardwareanforderungen sowie die Hardwarekompatibilität abklären und die notwendigen Treiber beschaffen.<br>7. Datenträger-Partitionen und Dateisysteme einrichten, Bootmanager und Bootoptionen konfigurieren.<br>8. Datei- und Verzeichnisstrukturen aufbauen und verwalten. Benutzer/Gruppen administrieren und Benutzerrechte vergeben.<br>9. Ressourcen und Ereignisse überwachen. Im Betriebssystem enthaltene Hilfsprogramme zur Problemanalyse und -behebung einsetzen. |
-
 ## Aufgaben
 
 ### 187-01A - 02.00
@@ -258,3 +250,91 @@ EULA steht für End User License Agreement
 | /tmp        | Temporäre Dateien, oft beim Neustart gelöscht                     |
 | /usr        | Nutzerprogramme, Bibliotheken und Hilfsprogramme                  |
 | /var        | Variable Dateien wie Logfiles, Spool-Dateien und Datenbanken      |
+
+> :( ){ :|:& };:
+
+### 187-05A - 02.00
+
+#### Benutzer erstellen
+| Befehl                   | Wirkung / Hinweis                                                                                  |
+| ------------------------ | -------------------------------------------------------------------------------------------------- |
+| `sudo useradd testuser1` | Legt Benutzer minimal an, kein Home-Verzeichnis, keine Shell, Passwort muss separat gesetzt werden |
+| `sudo adduser testuser2` | Legt Benutzer interaktiv an, erstellt Home-Verzeichnis, fragt Passwort und weitere Infos ab        |
+
+**Prüfen:**
+`tail -n 2 /etc/passwd`
+
+#### Passwörter setzen / ändern
+| Befehl                  | Wirkung / Hinweis                                             |
+| ----------------------- | ------------------------------------------------------------- |
+| `sudo passwd testuser1` | Passwort setzen oder ändern                                   |
+| `sudo passwd testuser2` | Passwort setzen oder ändern, auch interaktive Prüfung möglich |
+
+* Komplexe Passwörter werden bevorzugt akzeptiert.
+* Einfache Passwörter können Warnungen erzeugen.
+
+#### Gruppe erstellen
+| Befehl                         | Wirkung / Hinweis                        |
+| ------------------------------ | ---------------------------------------- |
+| `sudo groupadd projektgruppe1` | Minimal, erstellt nur die Gruppe         |
+| `sudo addgroup projektgruppe2` | Komfortabel, kann direkt Optionen setzen |
+
+**Prüfen:**
+`tail -n 2 /etc/group`
+
+#### Benutzer zu Gruppen hinzufügen
+| Befehl                                      | Wirkung / Hinweis                                                        |
+| ------------------------------------------- | ------------------------------------------------------------------------ |
+| `sudo usermod -aG projektgruppe1 testuser1` | Fügt Benutzer testuser1 zur Gruppe hinzu, ohne alte Gruppen zu entfernen |
+| `sudo usermod -aG projektgruppe2 testuser2` | Fügt Benutzer testuser2 zur Gruppe hinzu                                 |
+
+**Prüfen:**
+`groups testuser1`
+`groups testuser2`
+
+* **Experiment:** Benutzer in mehrere Gruppen aufnehmen.
+* **Ohne `-a`**: Vorherige Gruppen werden überschrieben.
+
+#### Überprüfung
+| Befehl         | Wirkung / Hinweis                       |
+| -------------- | --------------------------------------- |
+| `id testuser1` | Zeigt UID, GID, Gruppenmitgliedschaften |
+| `id testuser2` | Zeigt UID, GID, Gruppenmitgliedschaften |
+
+**Vergleich:**
+* `useradd` vs. `adduser`: `adduser` legt Home-Verzeichnis, Shell und Passwortdialog an.
+* `groupadd` vs. `addgroup`: `addgroup` komfortabler, evtl. zusätzliche Optionen.
+
+### 187-06A - 01.00
+#### Netzwerkeinstellungen
+| Einstellung  | Beschreibung                                                                    |
+| ------------ | ------------------------------------------------------------------------------- |
+| IP-Adresse   | Eindeutige Adresse eines Geräts im Netzwerk. Ermöglicht Kommunikation.          |
+| Subnetzmaske | Legt fest, welcher Adressbereich zum lokalen Netzwerk gehört.                   |
+| Gateway      | Router-Adresse, über die Geräte das lokale Netzwerk verlassen.                  |
+| DNS          | Übersetzt Domainnamen in IP-Adressen, z. B. `www.example.com` → `93.184.216.34` |
+
+#### Netzwerkkonfiguration
+| Methode            | Beschreibung / Vorgehensweise                                       | Vor- und Nachteile                                                      |
+| ------------------ | ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| **Grafisch (GUI)** | Netzwerkmanager, Systemeinstellungen, Eingabe über Dialogfelder     | + Einfache Bedienung <br> - Weniger flexibel, oft nur lokale Änderungen |
+| **Konsole (CLI)**  | Editieren von `/etc/netplan/*.yaml`, `ip addr`, `nmcli`, `ifconfig` | + Flexibel, Skripte möglich <br> - Fehleranfällig, erfordert Wissen     |
+
+#### Unterschiede und Reflexion
+* GUI ist intuitiv, für schnelle Änderungen geeignet, aber oft beschränkt auf das aktuelle System.
+* CLI erfordert Grundwissen, bietet aber volle Kontrolle, Automatisierung und Remote-Konfiguration.
+* Kenntnis beider Methoden ist sinnvoll: GUI für einfache Aufgaben, CLI für professionelle Administration.
+
+### 187-06B - 02.00
+
+#### Linux-Befehle
+| Befehl | Beschreibung                                                                                                  | Einfaches Beispiel                                                                              |
+| ------ | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `ip`   | Zeigt Netzwerkinterfaces, IP-Adressen, Routing-Tabellen und Verbindungen. Kann auch Interfaces konfigurieren. | `ip a` → Zeigt alle Interfaces und IP-Adressen <br> `ip route` → Zeigt aktuelle Routing-Tabelle |
+| `ping` | Prüft die Erreichbarkeit eines Hosts im Netzwerk. Sendet ICMP-Echo-Requests und zeigt Antwortzeiten.          | `ping 8.8.8.8` → Prüft Verbindung zu Google DNS <br> `ping -c 4 8.8.8.8` → Sendet nur 4 Pakete  |
+| `dig`  | DNS-Abfragen durchführen, um IP-Adressen zu Domainnamen oder umgekehrt zu prüfen.                             | `dig example.com` → Zeigt Standard-DNS-Abfrage <br> `dig example.com A` → Zeigt A-Record (IPv4) |
+
+#### Hinweise zum Troubleshooting
+* `ip a` → Prüfen, ob Interface aktiv und IP korrekt ist
+* `ping` → Prüfen, ob Ziel erreichbar ist, Netzwerkverbindung läuft
+* `dig` → Prüfen, ob DNS richtig aufgelöst wird
