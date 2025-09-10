@@ -177,11 +177,11 @@ EULA steht für End User License Agreement
 * Ohne Dateisystem: Festplatte nur „Rohdaten“
 
 #### Überblick Dateisysteme
-* FAT32: sehr kompatibel, max. 4 GB Datei, 2 TB Partition → USB/SD
-* NTFS: Standard Windows, große Dateien, Rechteverwaltung → Windows/Externe Platten
-* EXT4: Standard Linux, Journaling, stabil → Linux-Systeme
-* Btrfs: modern, Snapshots, Subvolumes → flexible Systeme
-* ZFS: robust, Datenintegrität, riesige Datenmengen → Server/NAS
+* FAT32: sehr kompatibel, max. 4 GB Datei, 2 TB Partition -> USB/SD
+* NTFS: Standard Windows, große Dateien, Rechteverwaltung -> Windows/Externe Platten
+* EXT4: Standard Linux, Journaling, stabil -> Linux-Systeme
+* Btrfs: modern, Snapshots, Subvolumes -> flexible Systeme
+* ZFS: robust, Datenintegrität, riesige Datenmengen -> Server/NAS
 
 #### Dateisysteme im Vergleich
 | Dateisystem | Kompatibilität               | Max. Datei | Besonderheiten                 | Typische Nutzung         |
@@ -251,8 +251,6 @@ EULA steht für End User License Agreement
 | /usr        | Nutzerprogramme, Bibliotheken und Hilfsprogramme                  |
 | /var        | Variable Dateien wie Logfiles, Spool-Dateien und Datenbanken      |
 
-> :( ){ :|:& };:
-
 ### 187-05A - 02.00
 
 #### Benutzer erstellen
@@ -312,7 +310,7 @@ EULA steht für End User License Agreement
 | IP-Adresse   | Eindeutige Adresse eines Geräts im Netzwerk. Ermöglicht Kommunikation.          |
 | Subnetzmaske | Legt fest, welcher Adressbereich zum lokalen Netzwerk gehört.                   |
 | Gateway      | Router-Adresse, über die Geräte das lokale Netzwerk verlassen.                  |
-| DNS          | Übersetzt Domainnamen in IP-Adressen, z. B. `www.example.com` → `93.184.216.34` |
+| DNS          | Übersetzt Domainnamen in IP-Adressen, z. B. `www.example.com` -> `93.184.216.34` |
 
 #### Netzwerkkonfiguration
 | Methode            | Beschreibung / Vorgehensweise                                       | Vor- und Nachteile                                                      |
@@ -330,11 +328,82 @@ EULA steht für End User License Agreement
 #### Linux-Befehle
 | Befehl | Beschreibung                                                                                                  | Einfaches Beispiel                                                                              |
 | ------ | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `ip`   | Zeigt Netzwerkinterfaces, IP-Adressen, Routing-Tabellen und Verbindungen. Kann auch Interfaces konfigurieren. | `ip a` → Zeigt alle Interfaces und IP-Adressen <br> `ip route` → Zeigt aktuelle Routing-Tabelle |
-| `ping` | Prüft die Erreichbarkeit eines Hosts im Netzwerk. Sendet ICMP-Echo-Requests und zeigt Antwortzeiten.          | `ping 8.8.8.8` → Prüft Verbindung zu Google DNS <br> `ping -c 4 8.8.8.8` → Sendet nur 4 Pakete  |
-| `dig`  | DNS-Abfragen durchführen, um IP-Adressen zu Domainnamen oder umgekehrt zu prüfen.                             | `dig example.com` → Zeigt Standard-DNS-Abfrage <br> `dig example.com A` → Zeigt A-Record (IPv4) |
+| `ip`   | Zeigt Netzwerkinterfaces, IP-Adressen, Routing-Tabellen und Verbindungen. Kann auch Interfaces konfigurieren. | `ip a` -> Zeigt alle Interfaces und IP-Adressen <br> `ip route` -> Zeigt aktuelle Routing-Tabelle |
+| `ping` | Prüft die Erreichbarkeit eines Hosts im Netzwerk. Sendet ICMP-Echo-Requests und zeigt Antwortzeiten.          | `ping 8.8.8.8` -> Prüft Verbindung zu Google DNS <br> `ping -c 4 8.8.8.8` -> Sendet nur 4 Pakete  |
+| `dig`  | DNS-Abfragen durchführen, um IP-Adressen zu Domainnamen oder umgekehrt zu prüfen.                             | `dig example.com` -> Zeigt Standard-DNS-Abfrage <br> `dig example.com A` -> Zeigt A-Record (IPv4) |
 
 #### Hinweise zum Troubleshooting
-* `ip a` → Prüfen, ob Interface aktiv und IP korrekt ist
-* `ping` → Prüfen, ob Ziel erreichbar ist, Netzwerkverbindung läuft
-* `dig` → Prüfen, ob DNS richtig aufgelöst wird
+* `ip a` -> Prüfen, ob Interface aktiv und IP korrekt ist
+* `ping` -> Prüfen, ob Ziel erreichbar ist, Netzwerkverbindung läuft
+* `dig` -> Prüfen, ob DNS richtig aufgelöst wird
+
+### 187-06C - 02.00
+1. Ports
+* `ss -tulwn` -> aktive Dienste
+* Risiko: unnötige Ports schließen
+
+2. Firewall
+* `ufw enable`
+* `ufw allow ssh`
+* `ufw deny 80/443` -> Web blockiert
+* `ufw reset`
+
+3. Virenscanner
+* `apt install clamav`
+* `clamscan -r /home/student`
+* Ergebnis: OK / FOUND
+
+4. Reflexion
+* **Präventiv:** Firewall, Updates, Echtzeit-AV
+* **Reaktiv:** Scan, Logs, Incident Response
+* **Unternehmen:** Segmentierung, zentrale Firewall, Monitoring, Backups, MFA
+
+### 187-07A - 02.00
+1. Prozesse & Ressourcen
+* `ps aux | less` -> alle Prozesse anzeigen
+* `top` / `htop` -> CPU-Last beobachten
+* `kill -9 <PID>` -> Prozess mit hoher Last beenden
+* Unterschied Prozess vs. Service -> Prozess = laufendes Programm, Service = Hintergrunddienst, meist dauerhaft aktiv
+
+2. Ressourcen belasten
+* `apt install stress`
+* `stress --cpu 2 --timeout 20` -> CPU-Auslastung erzeugen
+* Parallel `htop` -> hohe CPU-Last sichtbar
+* Load Average -> Durchschnittsauslastung über Zeit; kritisch, wenn dauerhaft höher als CPU-Kerne
+
+3. Speicherplatz & Dateisystem
+* `du -h --max-depth=1 /` -> grösster Platzverbraucher finden
+* `fallocate -l 1G bigfile.img` -> Testdatei erstellen, mehrfach wiederholen bis Platte voll
+* Beobachtung: System wird langsam/instabil
+* Folgen:
+  * `/var/log` voll -> keine Logs mehr, Fehleranalyse erschwert
+  * `/home` voll -> User können keine Dateien speichern
+
+4. Services & Systemkontrolle
+* `systemctl status ssh` -> Status prüfen
+* `systemctl stop/start ssh` -> Dienst anhalten / starten
+* Unterschied: `stop` = Dienst sofort anhalten, `disable` = verhindert Start beim Booten
+* `systemctl disable ssh` -> Dienst beim Boot deaktiviert
+* `systemctl enable ssh` -> Dienst wieder dauerhaft aktivieren
+
+5. Systemleistung & Logs
+* `free -h` -> RAM & Swap prüfen
+* `uptime` -> Load Average prüfen
+* Hoher Load Average kritisch, wenn höher als CPU-Anzahl über längere Zeit
+* `/var/log/syslog` -> Logs analysieren (Info, Warning, Error)
+* Aufbau: Zeitstempel, Hostname, Prozess, Nachricht
+
+6. Systematische Fehleranalyse
+* **Langsames System**
+  * Prozesse prüfen (`top`, `htop`)
+  * RAM / Swap prüfen (`free -h`)
+  * Speicherplatz prüfen (`df -h`)
+  * Logs durchsuchen (`/var/log/syslog`)
+  * Engpass eingrenzen und beheben
+
+* **Dienst nicht verfügbar**
+  * `ping <Server>` -> Netzwerk prüfen
+  * `systemctl status <dienst>` -> Dienststatus prüfen
+  * Ports testen (`ss -tulwn`)
+  * Logs prüfen (`journalctl -u <dienst>`)
+  * Dienst neu starten / konfigurieren
