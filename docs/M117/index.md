@@ -112,7 +112,7 @@ Wichtige Ethernetkabel:
 OSI-7 Schichten Modell
 
 ### 1. Physical Layer
-1. Wie heisst diese Schicht?: Physical Layer (Physische Schicht)
+1. Wie heisst diese Schicht?: Physical Layer (Bitübertragungsschicht Schicht)
 2. Was macht diese Schicht?: Überträgt die rohen Bits (0 und 1) als elektrische, optische oder Funk-Signale
-3. Welche Protokolle sind in dieser Schicht?: Streng genommen keine Protokolle (Aber Standarts / Technologien); Ethernet, DSL, WLAN, Bluetooth
-4. Beschreibung: In der physischer Schicht wird die mechanische, elektrische und funktionale EIgenschaften der Verbindung definiert. Stecker, Kabeltypen, Übertragungsrate oder Signalcodierung. Es wird sichergestellt, dass die Bits zuverlässig von einem Gerät zum anderen kommen.
+3. Welche Protokolle sind in dieser Schicht?: Streng genommen keine Protokolle (Aber Standarts / Technologien); Ethernet, DSL, WLAN, Bluetooth, Koaxial
+4. Beschreibung: In der physischer Schicht wird die mechanische, elektrische und funktionale Eigenschaften der Verbindung definiert. Stecker, Kabeltypen, Übertragungsrate oder Signalcodierung. Es wird sichergestellt, dass die Bits zuverlässig von einem Gerät zum anderen kommen.
