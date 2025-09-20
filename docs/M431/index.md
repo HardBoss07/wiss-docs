@@ -129,7 +129,7 @@
 | Entwirft die technische Architektur der Lösung?          | Architekt        |
 | Schreibt den Quellcode und entwickelt die Software?      | Entwickler       |
 | Testet die Software auf Fehler?                          | Tester           |
-| Berichtet regelmäßig über den Projektfortschritt?        | Projektleiter    |
+| Berichtet regelmässig über den Projektfortschritt?       | Projektleiter    |
 | Prüft, ob alle Anforderungen erfüllt sind?               | Architekt        |
 | Sorgt für die Einhaltung von Zeitplänen und Fristen?     | PMO              |
 | Entwirft technische Lösungen für spezifische Probleme?   | Architekt        |
@@ -190,7 +190,7 @@
 
 3. Regel 3 - Richtig Zuhören
    * Hören und Hinhören ist nicht gleich Zuhören
-   * Zuhören heißt nicht automatisch Verstehen
+   * Zuhören heisst nicht automatisch Verstehen
    * Gefühle sind nie richtig oder falsch, Gefühle sind nur Informationen
 
 4. Regel 4 - Sende "Ich-Botschaften"
@@ -202,7 +202,7 @@
 ## Konfliktmanagement
 "Eine schwierige Situation infolge des Aufeinanderprallens unterschiedlicher Interessen, Forderungen oder Meinungen"
 * Intrapersoneller Konflikt (innerlicher Konflikt)
-* Interpersoneller Konflikt (äußerer Konflikt)
+* Interpersoneller Konflikt (äusserer Konflikt)
 * Gruppenkonflikt (Konflikt zwischen mehreren Gruppen / Personen)
 
 # Side-Quest 3
@@ -227,4 +227,165 @@ Qualität ist nicht nur ein Ziel, es ist ein grundlegender Wert von WISSDOM. Wir
 Wir freuen uns auf einen spannenden Informationsaustausch während den Konversationen mit den Anderen im Team. Nebenbei ist es natürlich auch wichtig, dass wir uns besser kennenlernen und dadurch einen stärkeren Zusammenhalt innerhalb des Teams.
 
 ## Wie messen wir unseren Erfolg?
-Wir messen unseren Erfolg schlussendlich mit einer guten Note. Jedoch spielt bei uns die emotionale Lage der Teammember eine genau so wichtige Rolle. Keiner in userem Team sollte sich ausgegrenzt oder missverstanden fühlen. 
+Wir messen unseren Erfolg schlussendlich mit einer guten Note. Jedoch spielt bei uns die emotionale Lage der Teammember eine genau so wichtige Rolle. Keiner in userem Team sollte sich ausgegrenzt oder missverstanden fühlen.
+
+---
+
+# IPERKA
+
+SMART-Zielsetzung
+
+## I - Informieren
+* Situation analysieren
+* Informationen sammeln (Auftrag, Ziele, Rahmenbedingungen)
+* Beteiligte & Anforderungen klären
+
+### Fragen
+* Wie lautet die Aufgabe oder der Auftrag?
+* Welches Ergebnis wird bis wann erwartet und welche Bedingungen sind einzuhalten?
+* Welche Informationen oder Kenntnisse fehlen mir noch und wo kann ich mir diese beschaffen oder aneignen?
+* Welche ähnlichen Aufgaben habe ich schon gelöst und wie bin ich dabei vorgegangen?
+* Wer ist wofür verantwortlich und wer ist über die Arbeitsschritte und das Resultat zu informieren?
+
+## P - Planen
+* Vorgehen strukturieren
+* Arbeitsschritte und Zeitplan erstellen
+* Ressourcen (Material, Personen, Budget) berücksichtigen
+
+### Fragen
+* Wie sehen der Zeitplan und die Priorität des Auftrags aus?
+* Welche Lösungsmöglichkeiten sind zu prüfen?
+* Welche Teilarbeiten von welcher Dauer sind zu erledigen?
+* Wer bearbeitet welche Teilaufgabe?
+* Welche Hilfsmittel, Maschinen und Werkzeuge werden gebraucht?
+
+## E - Entscheiden
+* Verschiedene Lösungen vergleichen
+* Beste Variante auswählen
+* Entscheidung begründen
+
+### Fragen
+* Welche Lösungsvariante wird gewählt?
+* Welche Kriterien sind für den Entscheid ausschlaggebend und weshalb?
+* Wie werden die Lösungsvarianten bewertet (intuitiv, anhand einer Entscheidungstabelle)?
+* Wer ist für den Entscheid letztlich zuständig?
+* Wem müssen Entscheidungsgrundlagen vorgelegt werden?
+
+## R - Realisieren
+* Geplante Schritte umsetzen
+* Arbeit praktisch ausführen
+* Vorgaben und Qualität beachten
+
+### Fragen
+* Welche Vorschriften zur Arbeitssicherheit sind einzuhalten?
+* Welche Konsequenzen haben sich aus allfälligen Abweichungen von der Planung ergeben?
+* Kontrollieren Sie die ausgeführten Arbeitsschritte bzw. arbeiten Sie nach dem Arbeitsablauf?
+* Braucht es zusätzliche Hilfsmittel?
+
+## K - Kontrollieren
+* Zwischenergebnisse überprüfen
+* Abweichungen erkennen und korrigieren
+* Endergebnis mit Auftrag abgleichen
+
+### Fragen
+* Erweisen sich die in der Planung festgelegten Prüfkriterien als richtig und vollständig?
+* Konnte der Zeitplan eingehalten werden?
+* Entspricht der ausgeführte Auftrag den Planvorgaben?
+* Wer ist über den Abschluss der Arbeit zu informieren?
+
+## A - Auswerten
+* Erfahrungen reflektieren
+* Verbesserungspotenzial festhalten
+* Feedback einholen und dokumentieren
+
+### Fragen
+* Was machte ich gern und warum?
+* Was gelang mir gut, was weniger? Worin liegen die Gründe?
+* Welche Schwierigkeiten / Probleme sind aufgetreten und was waren die Ursachen?
+* Welche Erkenntnisse ziehe ich daraus?
+* Sofern ich den Zeitplan nicht einhalten konnte, warum habe ich mich verschätzt?
+* Warum bin ich mit meiner Leistung / meinem Resultat zufrieden bzw. nicht zufrieden?
+* Was kann ich beim nachsten Auftrag noch besser machen?
+* Wie kann ich gewährleisten, dass die Erfahrung, die ich durch das Aufdecken von Mängeln gewonnen habe weiteren Arbeiten berücksichtigt wird?
+* Sind aufgrund von Fehlern Verbesserungsmassnahmen vorzunehmen?
+* Was von meinen früheren Vorsatzen konnte ich umsetzen?
+* Was habe ich gelernt?
+
+---
+
+# IPERKA - Aufgaben
+
+## Aufgabe 1
+
+### Kontrollieren
+
+In dieser Phase wird überprüft, ob die Arbeitsschritte und das Endergebnis den Vorgaben entsprechen, Abweichungen werden korrigiert und der Abschluss kommuniziert.
+
+**Was sind die wichtigsten Elemente / Schritte in dieser Phase:**
+| Schritt                               | Erklärung                                                               |
+| ------------------------------------- | ----------------------------------------------------------------------- |
+| Zwischenergebnisse überprüfen         | Sicherstellen, dass die Arbeitsschritte korrekt ausgeführt wurden       |
+| Abweichungen erkennen und korrigieren | Fehler oder Probleme feststellen und Gegenmassnahmen einleiten          |
+| Endergebnis mit Auftrag abgleichen    | Prüfen, ob das Resultat den Planvorgaben und Anforderungen entspricht   |
+| Prüfkriterien hinterfragen            | Überprüfen, ob die definierten Kriterien vollständig und sinnvoll waren |
+| Zeitplan kontrollieren                | Prüfen, ob die Arbeit im vorgesehenen Zeitrahmen erledigt wurde         |
+| Abschluss kommunizieren               | Relevante Personen oder Stellen über die Fertigstellung informieren     |
+
+### Auswerten
+
+In dieser Phase werden Erfahrungen reflektiert, Stärken und Schwächen analysiert sowie Verbesserungsmassnahmen und Erkenntnisse für zukünftige Arbeiten festgehalten.
+
+**Was sind die wichtigsten Elemente / Schritte in dieser Phase:**
+| Schritt                                | Erklärung                                                                   |
+| -------------------------------------- | --------------------------------------------------------------------------- |
+| Erfahrungen reflektieren               | Eigene Arbeitserfahrungen durchdenken und Schlüsse ziehen                   |
+| Stärken und Schwächen analysieren      | Herausfinden, was gut lief und wo es Probleme gab                           |
+| Ursachen für Schwierigkeiten ermitteln | Verstehen, warum Probleme oder Verzögerungen aufgetreten sind               |
+| Verbesserungspotenzial festhalten      | Ideen für zukünftige Verbesserungen dokumentieren                           |
+| Feedback einholen                      | Rückmeldungen von Betreuern, Kollegen oder Kunden berücksichtigen           |
+| Erkenntnisse sichern                   | Gelerntes schriftlich oder gedanklich für zukünftige Aufträge festhalten    |
+| Vorsätze überprüfen                    | Prüfen, welche früheren Verbesserungsziele umgesetzt wurden                 |
+| Massnahmen ableiten                    | Konkrete Schritte für die nächste Arbeit definieren, um Fehler zu vermeiden |
+
+# Side Quest 04A - Stunden- / Raumplaner | WISSDOM
+
+# Projekt: Digitaler Raum- und Stundenplaner für unsere Schule
+
+## Was heisst das?
+
+Das Projekt befasst sich mit der Entwicklung eines **digitalen Systems zur Verwaltung und Darstellung von Stunden- und Raumplänen** innerhalb unserer Schule. Momentan sind Stunden- oder Raumänderungen oft nur über Aushänge oder mündliche Mitteilungen bekannt. Das führt schnell zu Verwirrung, insbesondere wenn Räume kurzfristig gewechselt werden oder Lektionen ausfallen.
+
+Mit einem zentralen, digitalen Plan können **alle Beteiligten jederzeit online oder über das Schulnetzwerk** nachvollziehen, wann und wo Unterricht stattfindet. Da wir direkten Zugriff auf die vorhandene Infrastruktur unserer Schule haben (Server, PCs, Netzwerke), lässt sich das Projekt realistisch umsetzen und testen.
+
+## Was verstehen wir darunter - Ziel
+
+Unser Ziel ist es, eine **transparente, aktuelle und leicht zugängliche Lösung** zu schaffen, die für Lernende wie Lehrpersonen Vorteile bringt:
+
+* Aktualität: Änderungen (z. B. Raumwechsel oder Lektionen-Ausfall) können sofort eingetragen und eingesehen werden.
+* Zugänglichkeit: Der Stundenplan ist jederzeit und von überall innerhalb der Schule abrufbar (PC, Laptop, Tablet, Smartphone).
+* Übersichtlichkeit: Lernende wissen genau, in welchem Raum sie zu welcher Zeit Unterricht haben.
+* Effizienz: Lehrpersonen müssen Änderungen nur einmal eintragen - alle sehen automatisch die aktualisierte Version.
+* Zuverlässigkeit: Es gibt eine einheitliche Quelle für alle Klassen- und Raumpläne.
+
+## SMART-Analyse
+
+| Kriterium   | Beschreibung                                                                                                                                                                                        |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Spezifisch  | Entwicklung eines digitalen Systems, das den Stunden- und Raumplan unserer Schule zentral darstellt und jederzeit für Lernende und Lehrpersonen abrufbar ist.                                       |
+| Messbar     | Erfolgreich, wenn 100 % der Klassen ihren Plan digital einsehen können und mindestens 80 % der Lehrpersonen aktiv Änderungen eintragen.                                                             |
+| Attraktiv   | Das System spart Zeit, reduziert Verwirrung durch Raumwechsel und sorgt für mehr Transparenz im Schulalltag.                                                                                        |
+| Realistisch | Umsetzung ist möglich, da wir direkten Zugriff auf die bestehende Infrastruktur der Schule (Server, Netzwerke, Geräte) haben. Start in kleinem Umfang (z. B. eine Klasse als Pilotprojekt) denkbar. |
+| Terminiert  | Erste funktionierende Version innerhalb von 2-3 Monaten; vollständige Einführung im kommenden Semester.                                                                                             |
+
+## Wo könnte eine grosse Schwierigkeit (Risiko) bestehen?
+
+Bei der Umsetzung dieses Projekts können verschiedene Risiken auftreten:
+
+* Aktualität & Pflege: Der Plan ist nur dann nützlich, wenn Lehrpersonen oder Verwaltungspersonal Änderungen konsequent und zeitnah eintragen. Unterbleibt das, verliert das System schnell an Verlässlichkeit.
+* Technische Integration: Die Einbindung in die bestehende Infrastruktur der Schule (Server, Netzwerk, eventuell Schnittstellen zu bestehenden Tools) könnte aufwendiger sein als gedacht.
+* Akzeptanz: Nicht alle Lehrpersonen oder Schüler sind offen für digitale Lösungen. Manche könnten weiterhin lieber auf Aushänge oder gedruckte Pläne vertrauen, was die Nutzung des Systems einschränken würde.
+
+## Fazit
+
+Der digitale Raum- und Stundenplaner bietet unserer Schule die Chance, den Unterrichtsalltag deutlich transparenter und effizienter zu gestalten. Trotz möglicher Risiken bei Pflege, Technik und Akzeptanz überwiegen die Vorteile: einheitliche Informationen, schnelle Aktualisierung und einfache Zugänglichkeit. Damit leistet das Projekt einen wichtigen Beitrag zur Modernisierung unserer Schulorganisation.
+
