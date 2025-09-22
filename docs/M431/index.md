@@ -389,3 +389,38 @@ Bei der Umsetzung dieses Projekts können verschiedene Risiken auftreten:
 
 Der digitale Raum- und Stundenplaner bietet unserer Schule die Chance, den Unterrichtsalltag deutlich transparenter und effizienter zu gestalten. Trotz möglicher Risiken bei Pflege, Technik und Akzeptanz überwiegen die Vorteile: einheitliche Informationen, schnelle Aktualisierung und einfache Zugänglichkeit. Damit leistet das Projekt einen wichtigen Beitrag zur Modernisierung unserer Schulorganisation.
 
+# SideQuest 05B - Walt Disney Methode
+
+## Walt Disney Methode
+
+Die Walt-Disney-Methode ist eine Kreativitätstechnik, die oft in Brainstormings oder bei der Ideenentwicklung genutzt wird. Sie hilft, Ideen aus verschiedenen Perspektiven zu betrachten, um sie realistischer, kreativer und umsetzbarer zu machen. Die Methode ist nach Walt Disney benannt, weil er selbst angeblich so an seine Projekte herangegangen ist.
+
+**Hier ist die Methode in einfachen Worten:**
+
+### 1 Die drei Rollen / Perspektiven
+Man betrachtet ein Projekt oder eine Idee aus drei unterschiedlichen Rollen:
+
+1. Träumer (Dreamer)
+  * Alles ist möglich.
+  * Keine Idee ist zu verrückt.
+  * Ziel: Kreativität und neue Ideen freisetzen.
+  * Beispiel: „Was wäre, wenn wir einen Freizeitpark auf dem Mond bauen würden?“
+
+2. Realist (Realist)
+  * Prüft, wie die Idee umgesetzt werden könnte.
+  * Fokus auf Machbarkeit, Planung, Ressourcen.
+  * Beispiel: „Ok, ein Freizeitpark auf dem Mond ist im Moment unmöglich, aber wir könnten Virtual Reality nutzen, um das Erlebnis zu simulieren.“
+
+3. Kritiker (Critic)
+  * Hinterfragt Risiken, Schwächen und Probleme.
+  * Ziel: Die Idee sicherer und robuster machen.
+  * Beispiel: „Wie teuer wäre so eine VR-Erfahrung? Wie viele Besucher würden tatsächlich kommen?“
+
+### 2 Ablauf
+1. Träumer-Phase: Erst mal wild brainstormen, ohne Grenzen.
+2. Realist-Phase: Die Ideen aus der Träumer-Phase praktisch planen.
+3. Kritiker-Phase: Schwächen erkennen, Probleme identifizieren und Lösungen finden.
+4. Optional: Man kann die Phasen mehrmals durchlaufen, um die Idee immer weiter zu verbessern.
+
+### 3 Kurz gesagt
+Die Walt-Disney-Methode hilft, kreativ, praktisch und kritisch gleichzeitig zu denken - ohne dass die Phasen sich gegenseitig blockieren.
