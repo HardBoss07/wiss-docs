@@ -21,7 +21,6 @@ export default function Appointment({event}: AppointmentProps) {
                 {event.start.toLocaleString()} - {event.end.toLocaleString()}
             </p>
             {event.location && <p className="text-sm italic">{event.location}</p>}
-            {event.description && <p className="mt-1 text-gray-700">{event.description}</p>}
         </div>
     );
 }
