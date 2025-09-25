@@ -471,3 +471,49 @@ Drahtlos-LAN-Adapter WLAN:
 * Materialliste für Netzwerkkomponenten
 * Netzwerkparameter für Betrieb der Geräte definiert
 * Vorgehensweise nach IPERKA angewendet
+
+## 117-4C
+
+### Benutzer- und Gruppenkonzept
+
+**Benutzerkonten:**
+
+* Jeder Mitarbeiter erhält ein persönliches Benutzerkonto (Vorname.Nachname).
+* Authentifizierung über ein zentrales Active Directory.
+* Passwort-Richtlinien (Komplexität, Ablauf nach 90 Tagen).
+
+**Gruppen (basierend auf Organigramm):**
+
+* Management (z.B. Direktor, Abteilungsleiter)
+* Lehrkräfte
+* Administration (Sekretariat, Organisation)
+* Technik/Support
+* Schüler/Teilnehmer
+* Gastnetz (WLAN) → kein Zugriff auf interne Ressourcen
+
+#### Datenkonzept
+
+**Freizugebende Datenbereiche:**
+
+* **Management-Daten** (z.B. Planung, Finanzen, Verträge)
+* **Lehrmaterialien** (Unterrichtsunterlagen, Prüfungen)
+* **Administration** (Stundenpläne, Schülerlisten, Formulare)
+* **Technik-Daten** (Netzwerkdokumentation, Software-Images)
+* **Öffentliche Daten** (z.B. Info-Aushänge, Newsletter, allgemeine Formulare)
+
+#### Berechtigungsmatrix
+
+| **Ressource**      | **Management**  | **Lehrkräfte** | **Administration** | **Technik** | **Schüler** | **Gäste (WLAN)** |
+| ------------------ | --------------- | -------------- | ------------------ | ----------- | ----------- | ---------------- |
+| **Management**     | Vollzugriff     | Lesen          | Lesen              | Lesen       | -           | -                |
+| **Lehrmaterial**   | Lesen/Schreiben | Vollzugriff    | Lesen              | -           | Lesen       | -                |
+| **Administration** | Lesen           | Lesen          | Vollzugriff        | -           | -           | -                |
+| **Technik**        | Lesen           | -              | -                  | Vollzugriff | -           | -                |
+| **Öffentlich**     | Lesen           | Lesen          | Lesen              | Lesen       | Lesen       | Lesen            |
+
+Legende:
+
+* **Vollzugriff** = Lesen, Schreiben, Ändern, Löschen
+* **Lesen/Schreiben** = kein Löschen
+* **Lesen** = nur Anzeige der Daten
+* **-** = kein Zugriff
