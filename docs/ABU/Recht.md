@@ -34,9 +34,19 @@
 
 > Art. 17-18, 323 ZGB
 
-
-
 > Straftatbestand über den ich Vortrag machen muss: 
 > Definiiton
 > Hintergrund
-> 
+
+## Rechtsgrundsätze
+
+* Rechtsgleichheit: Gleichbehandlung
+* `in dubio pro reo`: Im Zweifel des Angeklagtens
+* Guter Glaube: Schutzbedürfniss
+* Treu und Glauben: Jeder sollte vertrauenswürdig sein
+* Gerichtliches Ermessen
+
+## Verträge (Obligation)
+
+> Die Obligation im rechtlichen Sinne ist eine Verpflichtung oder ein Schuldverhältnis.
+
