@@ -1,4 +1,6 @@
 *.tmp
 *.makefile
 ~$*.docx
+~$*.xlsx
+~$*.pptx
 /idea/*
