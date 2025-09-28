@@ -22,9 +22,8 @@ function getWeekNumber(date: Date) {
     return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
 }
 
-// 🎨 Theme interface
 export interface CalendarScheme {
-    weekdayColors: string[]; // array of 7 colors
+    weekdayColors: string[];
     backgroundColor: string;
     foregroundColor: string;
 }
@@ -43,7 +42,7 @@ export default function CalendarClient({scheme}: CalendarClientProps) {
             const vevents = comp.getAllSubcomponents("vevent");
 
             const now = new Date();
-            now.setHours(0, 0, 0, 0); // cutoff at midnight today
+            now.setHours(0, 0, 0, 0);
 
             const parsedEvents: CalendarEvent[] = vevents
                 .map(eventComp => {
@@ -64,7 +63,6 @@ export default function CalendarClient({scheme}: CalendarClientProps) {
         }
     }, []);
 
-    // Group events by week + day
     const eventsByWeek: Record<number, Record<string, CalendarEvent[]>> = {};
 
     events.forEach(event => {
@@ -75,7 +73,6 @@ export default function CalendarClient({scheme}: CalendarClientProps) {
         eventsByWeek[week][day].push(event);
     });
 
-    // Attach earliest date per week for sorting
     const weeksWithDates = Object.entries(eventsByWeek).map(([week, days]) => {
         const allEvents = Object.values(days).flat();
         const earliestEvent = allEvents.reduce(
@@ -85,7 +82,6 @@ export default function CalendarClient({scheme}: CalendarClientProps) {
         return {week: Number(week), year: earliestEvent.getFullYear(), earliestDate: earliestEvent, days};
     });
 
-    // Sort weeks chronologically
     const sortedWeeks = weeksWithDates.sort(
         (a, b) => a.earliestDate.getTime() - b.earliestDate.getTime()
     );
@@ -95,16 +91,16 @@ export default function CalendarClient({scheme}: CalendarClientProps) {
             style={{backgroundColor: scheme.backgroundColor, color: scheme.foregroundColor}}
             className="p-4 rounded"
         >
-            <h1 className="text-2xl font-bold mb-4">Calendar Events</h1>
+            <h1 className="text-xl sm:text-2xl font-bold mb-4">Calendar Events</h1>
             {sortedWeeks.map(({week, year, days}) => {
                 const nonEmptyDays = weekdays.filter(day => days[day]?.length > 0);
 
                 return (
                     <div key={`${week}-${year}`} className="mb-6">
-                        <h2 className="text-xl font-semibold mb-2">
+                        <h2 className="text-lg sm:text-xl font-semibold mb-2">
                             Week {week}, {year}
                         </h2>
-                        <div className="flex gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4">
                             {nonEmptyDays.map(day => {
                                 const dayIndex = weekdays.indexOf(day);
                                 const dayColor = scheme.weekdayColors[dayIndex] || "#f0f0f0";
@@ -115,7 +111,7 @@ export default function CalendarClient({scheme}: CalendarClientProps) {
                                         className="border p-2 rounded flex-1"
                                         style={{backgroundColor: dayColor}}
                                     >
-                                        <h3 className="text-center font-semibold mb-2">{day}</h3>
+                                        <h3 className="text-center text-sm sm:text-base font-semibold mb-2">{day}</h3>
                                         {days[day]
                                             .sort((a, b) => a.start.getTime() - b.start.getTime())
                                             .map((event, i) => (
