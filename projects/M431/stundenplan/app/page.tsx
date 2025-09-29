@@ -18,11 +18,11 @@ const lightScheme: CalendarScheme = {
 const darkScheme: CalendarScheme = {
     weekdayColors: [
         "#1f2937", // Sunday
-        "#1e3a8a", // Monday
-        "#064e3b", // Tuesday
+        "#1e7d2b", // Monday
+        "#7f1d1d", // Tuesday
         "#4a044e", // Wednesday
         "#312e81", // Thursday
-        "#7f1d1d", // Friday
+        "#064e3b", // Friday
         "#374151", // Saturday
     ],
     backgroundColor: "#111827", // dark background
@@ -30,7 +30,7 @@ const darkScheme: CalendarScheme = {
 };
 
 export default function Home() {
-    const scheme = lightScheme;
+    const scheme = darkScheme;
 
     return (
         <div>

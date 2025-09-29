@@ -115,8 +115,12 @@ export default function CalendarClient({scheme}: CalendarClientProps) {
                                         {days[day]
                                             .sort((a, b) => a.start.getTime() - b.start.getTime())
                                             .map((event, i) => (
-                                                <Appointment key={i} event={event}/>
-                                            ))}
+                                                <Appointment
+                                                    key={i}
+                                                    event={event}
+                                                    textColor={scheme.foregroundColor}
+                                                    bgColor={scheme.backgroundColor} // optional: same as weekday background
+                                                />))}
                                     </div>
                                 );
                             })}
