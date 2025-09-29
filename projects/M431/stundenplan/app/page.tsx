@@ -1,36 +1,46 @@
-import CalendarClient, {CalendarScheme } from "@/app/components/calender";
-import sharp from "sharp";
+"use client";
+import {useEffect, useState} from "react";
+import CalendarClient, {CalendarScheme} from "@/app/components/calender";
 
 const lightScheme: CalendarScheme = {
     weekdayColors: [
-        "#FFD580", // Sunday - warm orange
-        "#90EE90", // Monday - bright green
-        "#87CEFA", // Tuesday - sky blue
-        "#FFB6C1", // Wednesday - pink
-        "#D8BFD8", // Thursday - purple/lavender
-        "#FF7F7F", // Friday - coral/red
-        "#FFE066", // Saturday - sunny yellow
+        "#FFD580", "#90EE90", "#87CEFA", "#FFB6C1",
+        "#D8BFD8", "#FF7F7F", "#FFE066",
     ],
-    backgroundColor: "#FFFFFF", // white background
-    foregroundColor: "#111827", // dark gray text
+    backgroundColor: "#FFFFFF",
+    foregroundColor: "#111827",
 };
 
 const darkScheme: CalendarScheme = {
     weekdayColors: [
-        "#1f2937", // Sunday
-        "#1e7d2b", // Monday
-        "#7f1d1d", // Tuesday
-        "#4a044e", // Wednesday
-        "#312e81", // Thursday
-        "#064e3b", // Friday
-        "#374151", // Saturday
+        "#1f2937", "#1e7d2b", "#7f1d1d", "#4a044e",
+        "#312e81", "#064e3b", "#374151",
     ],
-    backgroundColor: "#111827", // dark background
-    foregroundColor: "#f9fafb", // light text
+    backgroundColor: "#111827",
+    foregroundColor: "#f9fafb",
 };
 
 export default function Home() {
-    const scheme = darkScheme;
+    const [scheme, setScheme] = useState<CalendarScheme>(lightScheme);
+
+    useEffect(() => {
+        // Detect user preference
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+        const updateScheme = () => {
+            setScheme(mediaQuery.matches ? darkScheme : lightScheme);
+        };
+
+        // Initial check
+        updateScheme();
+
+        // Listen for changes (user switches theme)
+        mediaQuery.addEventListener("change", updateScheme);
+
+        return () => {
+            mediaQuery.removeEventListener("change", updateScheme);
+        };
+    }, []);
 
     return (
         <div>
