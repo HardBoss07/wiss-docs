@@ -424,3 +424,80 @@ Man betrachtet ein Projekt oder eine Idee aus drei unterschiedlichen Rollen:
 
 ### 3 Kurz gesagt
 Die Walt-Disney-Methode hilft, kreativ, praktisch und kritisch gleichzeitig zu denken - ohne dass die Phasen sich gegenseitig blockieren.
+
+## Tätigkeitsliste
+
+| Nr. | Arbeit                                                       | Wer (mit wem)                | Aufwand geschätzt (h) | Zeitbedarf geschätzt | Start- & Enddatum | Abhängigkeit |
+| --- | ------------------------------------------------------------ | ---------------------------- | --------------------- | -------------------- | ----------------- | ------------ |
+| 1   | Projektplanung & Kick-off                                    | Projektleiter (Team)         | 4h                    | 0,5 Tage             | 22.09. - 22.09.   | -            |
+| 2   | Anforderungen detaillieren (Feinspezifikation)               | Projektleiter, UI/UX         | 6h                    | 0,5 Tage             | 22.09. - 22.09.   | 1            |
+| 3   | Erstellung erster UI/UX-Designs (Wireframes, Farbkonzept)    | Angelo & Severin             | 12h                   | 1 Tag                | 23.09. - 23.09.   | 2            |
+| 4   | Feedback & Anpassungen der UI/UX-Prototypen                  | UI/UX, Projektleiter         | 6h                    | 0,5 Tage             | 23.09. - 23.09.   | 3            |
+| 5   | Backend- & API-Vorbereitung (TOCCO-Datenzugang prüfen)       | Matteo                       | 8h                    | 1 Tag                | 23.09. - 23.09.   | 2            |
+| 6   | Frontend-Entwicklung (Grunddarstellung Stundenplan)          | Matteo (mit UI/UX)           | 16h                   | 2 Tage               | 24.09. - 25.09.   | 3, 5         |
+| 7   | Erweiterung Funktionen (Tages-/Wochenansicht, Farbcodierung) | Matteo                       | 8h                    | 1 Tag                | 25.09. - 25.09.   | 6            |
+| 8   | Echtzeit-Änderungen (Raum-/Vertretungslogik)                 | Matteo                       | 8h                    | 1 Tag                | 26.09. - 26.09.   | 7            |
+| 9   | Interner UI/UX-Test (Usability, Layout, Responsive Design)   | Tester (mit UI/UX)           | 8h                    | 1 Tag                | 27.09. - 27.09.   | 6, 7         |
+| 10  | Funktionaler Test (API, Datenkorrektheit)                    | Tester                       | 6h                    | 0,5 Tage             | 28.09. - 28.09.   | 8            |
+| 11  | Fehlerbehebung & Optimierung                                 | Matteo (mit Tester)          | 10h                   | 1 Tag                | 29.09. - 29.09.   | 9, 10        |
+| 12  | Abschlussprüfung & Abnahme                                   | Projektleiter (Team)         | 4h                    | 0,5 Tage             | 30.09. - 30.09.   | 11           |
+| 13  | Dokumentation & Präsentation                                 | Projektleiter, UI/UX, Tester | 4h                    | 0,5 Tage             | 01.10. - 01.10.   | 12           |
+
+**Zeitabschätzung:**
+Summe: ca. 100h (verteilt auf alle Rollen)
+* Projektleiter: ~10h
+* Entwickler: ~40h
+* UI/UX: ~30h
+* Tester: ~20h
+
+### Gantt-Chart
+| Nr. | Arbeit                       | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 | 01 |
+| --- | ---------------------------- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 1   | Projektplanung & Kick-off    | █  |    |    |    |    |    |    |    |    |    |
+| 2   | Anforderungen detaillieren   | █  |    |    |    |    |    |    |    |    |    |
+| 3   | UI/UX-Designs (Wireframes)   |    | █  |    |    |    |    |    |    |    |    |
+| 4   | Feedback & Anpassungen       |    | █  |    |    |    |    |    |    |    |    |
+| 5   | Backend- & API-Vorbereitung  |    | █  |    |    |    |    |    |    |    |    |
+| 6   | Frontend-Entwicklung (Grund) |    |    | █  | █  |    |    |    |    |    |    |
+| 7   | Erweiterte Funktionen        |    |    |    | █  |    |    |    |    |    |    |
+| 8   | Echtzeit-Änderungen          |    |    |    |    | █  |    |    |    |    |    |
+| 9   | Interner UI/UX-Test          |    |    |    |    |    | █  |    |    |    |    |
+| 10  | Funktionaler Test            |    |    |    |    |    |    | █  |    |    |    |
+| 11  | Fehlerbehebung & Optimierung |    |    |    |    |    |    |    | █  |    |    |
+| 12  | Abschlussprüfung & Abnahme   |    |    |    |    |    |    |    |    | █  |    |
+| 13  | Dokumentation & Präsentation |    |    |    |    |    |    |    |    |    | █  |
+
+## Übergabeliste
+
+
+### Vorbereitung
+
+* [ ] Eigene Lösung nochmals durchtesten (UI/UX, Funktionen, API-Daten, Responsivität)
+* [ ] Dokumentation prüfen (Bedienungsanleitung, Entwickler-Notizen, Benutzerleitfaden)
+* [ ] Abnahmeprotokoll erstellen und mit typischen Testfällen befüllen
+* [ ] Termin mit Kunde vereinbaren (inkl. Agenda und benötigte Ressourcen: Laptop, Zugangsdaten, Beamer etc.)
+* [ ] Sicherstellen, dass Test- und Produktivumgebung lauffähig sind
+
+### Durchführung
+
+* [x] Kunden empfangen und Ablauf des Treffens kurz vorstellen
+* [x] Projektziel und erreichte Verbesserungen am TOCCO-Stundenplan erklären
+* [x] Neue UI/UX-Oberfläche live zeigen (Funktionen wie Tages-/Wochenansicht, Farbcodierung, Echtzeit-Updates)
+* [x] Technische Änderungen kurz erläutern (API-Anbindung, Datenlogik)
+* [x] Kunde darf selbst ausprobieren:
+
+  * Stundenplan öffnen
+  * Ansicht wechseln (Tag/Woche)
+  * Farben/Fächer prüfen
+  * Echtzeitänderungen simulieren (z. B. Raumwechsel)
+* [x] Dokumentation erklären (z. B. Benutzerhandbuch, FAQ für häufige Fragen)
+* [x] Kunde führt einen **Probelauf aus dem ausgeschalteten Zustand** durch (Login, Nutzung, Logout)
+* [x] Kunde prüft Resultate und visiert das Abnahmeprotokoll
+
+### Nachbereitung
+
+* [x] Feedback des Kunden dokumentieren und ggf. in Doku einfügen
+* [x] Kurzfristige Nachfrage nach 2-3 Tagen: „Funktioniert alles wie gewünscht?“
+* [x] Alle Dokumente archivieren (Versionsstand sichern, Projektmappe schließen)
+* [x] Auftrag abrechnen (Zeitaufwand, Ressourcen)
+* [x] Abschlussgespräch mit Auftraggeber führen (Lessons Learned, Zufriedenheit klären)
