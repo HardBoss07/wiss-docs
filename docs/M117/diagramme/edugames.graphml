@@ -13,7 +13,7 @@
   <key attr.name="description" attr.type="string" for="edge" id="d9"/>
   <key for="edge" id="d10" yfiles.type="edgegraphics"/>
   <graph edgedefault="directed" id="G">
-    <data key="d0"/>
+    <data key="d0" xml:space="preserve"/>
     <node id="n0">
       <data key="d6">
         <y:SVGNode>
@@ -82,7 +82,6 @@ Kunden / Mobilgeräte<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:La
       </data>
     </node>
     <node id="n4">
-      <data key="d5"/>
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="45.56999588012695" width="67.49800109863281" x="674.6259994506836" y="480.5900020599365"/>
@@ -102,7 +101,6 @@ Workstations<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel>
       </data>
     </node>
     <node id="n5">
-      <data key="d5"/>
       <data key="d6">
         <y:SVGNode>
           <y:Geometry height="56.231998443603516" width="35.095298767089844" x="468.9631075831571" y="522.6370010375977"/>
@@ -121,8 +119,28 @@ Drucker / Server<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMo
         </y:SVGNode>
       </data>
     </node>
+    <node id="n6">
+      <data key="d5"/>
+      <data key="d6">
+        <y:ShapeNode>
+          <y:Geometry height="203.91651090342685" width="131.78068535825548" x="174.0550566674936" y="37.83520249221172"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
+          <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="151.01171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="94.71484375" x="18.53292080412774" xml:space="preserve" y="26.452396076713427">Netzwerkplan
+
+Verfasser:
+Matteo Bosshard
+
+Datum:
+25.09.2025
+
+Version:
+1.0.1<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+          <y:Shape type="rectangle"/>
+        </y:ShapeNode>
+      </data>
+    </node>
     <edge id="e0" source="n0" target="n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -133,7 +151,6 @@ Drucker / Server<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMo
       </data>
     </edge>
     <edge id="e1" source="n1" target="n2">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -144,7 +161,6 @@ Drucker / Server<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMo
       </data>
     </edge>
     <edge id="e2" source="n2" target="n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -155,7 +171,6 @@ Drucker / Server<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMo
       </data>
     </edge>
     <edge id="e3" source="n2" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -166,7 +181,6 @@ Drucker / Server<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMo
       </data>
     </edge>
     <edge id="e4" source="n2" target="n5">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>

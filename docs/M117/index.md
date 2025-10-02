@@ -404,6 +404,11 @@ Drahtlos-LAN-Adapter WLAN:
 #### Netzwerkschema (Basis)
 [Netzwerkplan für Variante 2](./diagramme/edugames.graphml)
 
+Im Netzwerkplan immer:
+- Name
+- Datum
+- Versionsnummer
+
 **IP-Adressen Erklärung:**
 * Router: 192.168.0.1 -> Standardgateway für alle Geräte
 * Switch (verwaltbar): 192.168.0.2 -> Management-IP für Konfiguration
@@ -517,3 +522,21 @@ Legende:
 * **Lesen/Schreiben** = kein Löschen
 * **Lesen** = nur Anzeige der Daten
 * **-** = kein Zugriff
+
+## Netzklassen
+
+### IPv4 Netzklassen Übersicht
+
+| Klasse | Erster Oktett-Bereich | Standard-Subnetzmaske | Adressbereich (Start - Ende) | Anzahl Hosts pro Netz | Zweck                      |
+| ------ | --------------------- | --------------------- | ---------------------------- | --------------------- | -------------------------- |
+| A      | 0 - 127               | 255.0.0.0 (/8)        | 0.0.0.0 - 127.255.255.255    | ca. 16 Mio            | Sehr große Netze           |
+| B      | 128 - 191             | 255.255.0.0 (/16)     | 128.0.0.0 - 191.255.255.255  | ca. 65k               | Mittelgroße Netze          |
+| C      | 192 - 223             | 255.255.255.0 (/24)   | 192.0.0.0 - 223.255.255.255  | 254                   | Kleine Netze               |
+| D      | 224 - 239             | -                     | 224.0.0.0 - 239.255.255.255  | -                     | Multicast                  |
+| E      | 240 - 255             | -                     | 240.0.0.0 - 255.255.255.255  | -                     | Reserviert (Experimentell) |
+
+**Private Adressbereiche** (häufig genutzt im LAN):
+
+* Klasse A: 10.0.0.0 - 10.255.255.255
+* Klasse B: 172.16.0.0 - 172.31.255.255
+* Klasse C: 192.168.0.0 - 192.168.255.255
