@@ -508,13 +508,13 @@ Im Netzwerkplan immer:
 
 #### Berechtigungsmatrix
 
-| **Ressource**      | **Management**  | **Lehrkräfte** | **Administration** | **Technik** | **Schüler** | **Gäste (WLAN)** |
-| ------------------ | --------------- | -------------- | ------------------ | ----------- | ----------- | ---------------- |
-| **Management**     | Vollzugriff     | Lesen          | Lesen              | Lesen       | -           | -                |
-| **Lehrmaterial**   | Lesen/Schreiben | Vollzugriff    | Lesen              | -           | Lesen       | -                |
-| **Administration** | Lesen           | Lesen          | Vollzugriff        | -           | -           | -                |
-| **Technik**        | Lesen           | -              | -                  | Vollzugriff | -           | -                |
-| **Öffentlich**     | Lesen           | Lesen          | Lesen              | Lesen       | Lesen       | Lesen            |
+| Ressource      | Management      | Lehrkräfte  | Administration | Technik     | Schüler | Gäste (WLAN) |
+| -------------- | --------------- | ----------- | -------------- | ----------- | ------- | ------------ |
+| Management     | Vollzugriff     | Lesen       | Lesen          | Lesen       | -       | -            |
+| Lehrmaterial   | Lesen/Schreiben | Vollzugriff | Lesen          | -           | Lesen   | -            |
+| Administration | Lesen           | Lesen       | Vollzugriff    | -           | -       | -            |
+| Technik        | Lesen           | -           | -              | Vollzugriff | -       | -            |
+| Öffentlich     | Lesen           | Lesen       | Lesen          | Lesen       | Lesen   | Lesen        |
 
 Legende:
 
