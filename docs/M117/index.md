@@ -540,3 +540,18 @@ Legende:
 * Klasse A: 10.0.0.0 - 10.255.255.255
 * Klasse B: 172.16.0.0 - 172.31.255.255
 * Klasse C: 192.168.0.0 - 192.168.255.255
+
+## 117-5B
+
+| Befehl         | Zweck / Beschreibung                                                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ipconfig       | Zeigt die aktuelle IP-Konfiguration des Computers an (IP-Adresse, Gateway, DNS-Server, etc.). Wird oft genutzt, um Netzwerkprobleme zu erkennen. |
+| ping           | Prüft, ob ein Ziel (z. B. ein anderer Computer oder eine Website) im Netzwerk erreichbar ist, und misst die Antwortzeit.                         |
+| tracert        | Zeigt den Weg (Route) an, den Datenpakete zu einem Zielserver nehmen, und wo mögliche Verbindungsprobleme auftreten.                             |
+| net share      | Zeigt alle freigegebenen Ordner und Ressourcen im Netzwerk oder erstellt neue Freigaben.                                                         |
+| net statistics | Zeigt Netzwerkstatistiken an (z. B. Anzahl der gesendeten und empfangenen Pakete). Nützlich zur Fehleranalyse.                                   |
+| net use        | Verbindet oder trennt Netzlaufwerke und zeigt bestehende Verbindungen zu anderen Computern im Netzwerk.                                          |
+| net localgroup | Zeigt oder verwaltet lokale Gruppen auf dem Computer (z. B. Administratoren, Benutzer).                                                          |
+| net user       | Zeigt Benutzerkonten an oder erstellt, ändert und löscht sie.                                                                                    |
+| netstat        | Zeigt aktive Netzwerkverbindungen, offene Ports und Protokolle (TCP/UDP). Wichtig, um laufende Verbindungen zu prüfen.                           |
+| nslookup       | Prüft DNS-Einträge – also die Auflösung von Domainnamen in IP-Adressen. Hilft bei DNS-Problemen.                                                 |
