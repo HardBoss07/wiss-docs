@@ -555,3 +555,66 @@ Legende:
 | net user       | Zeigt Benutzerkonten an oder erstellt, ändert und löscht sie.                                                                                    |
 | netstat        | Zeigt aktive Netzwerkverbindungen, offene Ports und Protokolle (TCP/UDP). Wichtig, um laufende Verbindungen zu prüfen.                           |
 | nslookup       | Prüft DNS-Einträge – also die Auflösung von Domainnamen in IP-Adressen. Hilft bei DNS-Problemen.                                                 |
+
+## 117-6A
+
+| Befehl         | Beschreibung / Zweck                                                                                                    |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| ipconfig       | Zeigt die aktuelle IP-Konfiguration an (IP-Adresse, Subnetz, Gateway, DNS). Hilft bei IP- oder Verbindungsproblemen.    |
+| ping           | Testet, ob ein Ziel (z. B. Server oder Website) erreichbar ist, und misst die Antwortzeit.                              |
+| tracert        | Zeigt die Route (Zwischenstationen) an, die ein Datenpaket zu einem Ziel nimmt. Hilfreich bei Verbindungsverzögerungen. |
+| net share      | Zeigt freigegebene Ordner an oder erstellt neue Netzwerkfreigaben.                                                      |
+| net statistics | Zeigt Netzwerkstatistiken wie gesendete und empfangene Pakete oder Fehler an.                                           |
+| net use        | Verbindet, trennt oder zeigt Netzlaufwerke und Netzwerkverbindungen an.                                                 |
+| net localgroup | Zeigt oder verwaltet lokale Benutzergruppen (z. B. Administratoren, Benutzer).                                          |
+| net user       | Zeigt Benutzerkonten an oder erstellt, ändert und löscht sie.                                                           |
+| net view       | Zeigt Computer und freigegebene Ressourcen im Netzwerk an.                                                              |
+| netstat        | (oft falsch als *netstats* bezeichnet) Zeigt aktive Verbindungen, Ports und Netzwerkprotokolle an.                      |
+| nslookup       | Überprüft DNS-Einträge – also die Zuordnung von Domainnamen zu IP-Adressen.                                             |
+
+## 117-6B - Testplan
+
+1. Sichtprüfung
+   * Prüfen, ob die Netzwerkkarte aktiviert ist und die Verbindung im System aktiv angezeigt wird.
+   * Sicherstellen, dass die VirtualBox-Netzwerkeinstellungen (Adapter) korrekt eingebunden sind.
+
+2. IP-Konfiguration prüfen
+   * Befehl: `ipconfig /all`
+   * Ziel: Kontrolle der IP-Adresse, Subnetzmaske, Gateway und DNS-Server.
+   * Erwartung: Eine gültige IP-Adresse ist vorhanden, Gateway und DNS sind korrekt eingetragen.
+
+3. Verbindung im lokalen Netzwerk testen
+   * Befehl: `ping <Gateway-IP>`
+   * Ziel: Prüfen, ob die lokale Netzwerkverbindung funktioniert.
+   * Erwartung: Antwort vom Gateway erhalten.
+
+4. Verbindung ins Internet testen
+   * Befehl: `ping 8.8.8.8`
+   * Ziel: Prüfen, ob eine Verbindung ins Internet besteht.
+   * Erwartung: Antwort von der externen IP-Adresse erhalten.
+
+5. DNS-Auflösung testen
+   * Befehl: `ping www.google.com` und `nslookup www.google.com`
+   * Ziel: Überprüfen, ob DNS-Namen korrekt aufgelöst werden.
+   * Erwartung: Domain wird in eine IP-Adresse aufgelöst.
+
+6. Routing überprüfen
+   * Befehl: `tracert www.google.com`
+   * Ziel: Route zum Ziel anzeigen, um festzustellen, wo die Verbindung unterbrochen wird.
+   * Erwartung: Route wird vollständig angezeigt, keine Abbrüche.
+
+7. Aktive Verbindungen prüfen
+   * Befehl: `netstat -ano`
+   * Ziel: Kontrolle laufender Netzwerkverbindungen und Dienste.
+   * Erwartung: Erwartete Ports und Verbindungen sind sichtbar.
+
+8. Netzwerkfreigaben und Benutzer prüfen
+   * Befehle: `net share, net use, net user`
+   * Ziel: Überprüfen, ob Freigaben und Benutzerberechtigungen korrekt sind.
+   * Erwartung: Notwendige Freigaben und Benutzer vorhanden.
+
+9. Zusammenfassung und Dokumentation
+   * Beobachtungen notieren.
+   * Fehlerursache und mögliche Massnahme oder temporären Fix beschreiben.
+
+> BENUTZER UND GRUPPEN ERSTELLEN WIRD AN DER PRÜFUNG KOMMEN
