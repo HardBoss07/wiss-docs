@@ -50,3 +50,12 @@
 
 > Die Obligation im rechtlichen Sinne ist eine Verpflichtung oder ein Schuldverhältnis.
 
+* Für Jugendliche zwischen 10 und 18 Jahren gilt das Jugendstrafrecht (Jugendstrafgesetz).
+* Ziel ist die Wiedereingliederung straffälliger Jugendlicher in die Gesellschaft.
+* Im Mittelpunkt steht der Erziehungsgedanke, nicht die Bestrafung oder Geldbusse.
+* Straftaten sollen als Anlass dienen, ungünstige Entwicklungen durch erzieherische Massnahmen zu korrigieren.
+* Schon im Verfahren wird versucht, erzieherisch auf den Jugendlichen einzuwirken.
+* Das Delikt ist zwar der Ausgangspunkt, aber die Person des Jugendlichen steht im Vordergrund.
+* Der Jugendrichter fragt weniger nach Schuld und Tat, sondern danach, ob zukünftige Straftaten zu erwarten sind.
+* Es wird geprüft, ob erzieherische Massnahmen geeignet sind, weitere Delikte zu verhindern.
+* Das Verfahren soll möglichst schnell abgeschlossen werden, damit zwischen Tat und Massnahme wenig Zeit vergeht.
