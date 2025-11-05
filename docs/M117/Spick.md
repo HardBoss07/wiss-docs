@@ -1,26 +1,31 @@
-## **Lernziele M117 - Zusammenfassung**
+# Netzwerktechnik - M117 Spick / Zusammenfassung
 
-### Was sind Megatrends?
+## Megatrends
 
-Megatrends sind langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaft und Technik stark beeinflussen.
-**Beispiele in der IT / Netzwerktechnik:**
+* Langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaft und Technik stark beeinflussen
+* Beispiele in IT / Netzwerktechnik:
 
-* Digitalisierung & Cloud Computing
-* Internet of Things (IoT)
-* Künstliche Intelligenz & Automatisierung
-* Mobile Kommunikation (5G, Wi-Fi 6/7)
-* Cybersecurity & Datenschutz
-* Glasfaser- und Hochgeschwindigkeitsnetze
+  * Digitalisierung & Cloud Computing
+  * Internet of Things (IoT)
+  * Künstliche Intelligenz & Automatisierung
+  * Mobile Kommunikation (5G, Wi-Fi 6/7)
+  * Cybersecurity & Datenschutz
+  * Glasfaser- und Hochgeschwindigkeitsnetze
+* Datenkommunikation: Morse → Telefon → Digitales Messaging → Instant Messaging → Glasfaser
 
-### Was ist ein Router, Switch, Firewall?
+## Netzwerkkomponenten
 
-| Gerät    | Aufgabe                                                 | Erklärung                                                                |
-| -------- | ------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Router   | Verbindet verschiedene Netzwerke (z. B. LAN ↔ Internet) | Verteilt IP-Adressen per DHCP, leitet Datenpakete zwischen Netzen weiter |
-| Switch   | Verbindet Geräte innerhalb eines Netzwerks (LAN)        | Leitet Daten gezielt anhand der MAC-Adresse weiter                       |
-| Firewall | Kontrolliert und filtert Datenverkehr                   | Schützt vor unerlaubtem Zugriff oder Angriffen (Hardware oder Software)  |
+| Komponente                | Aufgabe                                     | Bemerkung / Erklärung                                                |
+| ------------------------- | ------------------------------------------- | -------------------------------------------------------------------- |
+| Router                    | Verbindet Netzwerke (z. B. LAN ↔ Internet)  | Verteilt IP-Adressen via DHCP, NAT, Gateway zum Internet             |
+| Switch                    | Verbindet Geräte im LAN                     | Leitet Daten gezielt anhand der MAC-Adresse, effizienter als Hub     |
+| Hub                       | Sendet Daten an alle Ports                  | Veraltet (Kollisionen)                                               |
+| Firewall                  | Filtert Datenverkehr, schützt vor Angriffen | Hardware oder Software                                               |
+| Access Point              | Stellt WLAN-Zugang bereit                   | Pro Etage oder Mesh-System, LAN-Anbindung stabiler als WLAN-Repeater |
+| Repeater / Range Extender | Verstärkt WLAN-Signal                       | Kann Geschwindigkeit reduzieren                                      |
+| Modem                     | Wandelt digitale ↔ analoge Signale          | Verbindung zum Provider                                              |
 
-### Internet zu Hause einrichten - auch über mehrere Stockwerke
+## Internet zu Hause / mehrere Stockwerke
 
 **Grundaufbau:**
 
@@ -29,37 +34,63 @@ Megatrends sind langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaf
 3. Switch → Verbindung zu mehreren Geräten über LAN-Kabel
 4. WLAN-Access Points oder Mesh-Systeme → für obere Stockwerke
 
-**Mehrstöckiges Haus:**
+**Tipps für mehrstöckige Häuser:**
 
-* Ethernet-Kabel zwischen den Stockwerken verlegen
+* Ethernet-Kabel zwischen Stockwerken verlegen
 * Pro Etage Access Point oder Mesh-Repeater installieren
-* Access Points per LAN anbinden (bessere Stabilität als WLAN-Repeater)
+* Access Points per LAN anbinden für bessere Stabilität
+* Repeater nur bei fehlendem Kabel
+* Powerline-Adapter als Alternative über Stromnetz
 
-### Internet-Anbindungen und Varianten
+## Internet-Anbindungen / Varianten
 
-| Technologie                   | Beschreibung                     | Geschwindigkeit    | Zielgruppe             |
+| Typ / Technologie             | Beschreibung                     | Geschwindigkeit    | Zielgruppe             |
 | ----------------------------- | -------------------------------- | ------------------ | ---------------------- |
-| **DSL / ADSL / VDSL / VDSL2** | Kupferleitung (Telefonanschluss) | bis ca. 250 Mbit/s | Privatkunden           |
-| **FTTH (Fiber To The Home)**  | Glasfaser bis ins Haus           | bis 10 Gbit/s      | Privat & Business      |
-| **Koaxial (Kabelnetz)**       | Fernsehkabel                     | bis 1 Gbit/s       | Privatkunden           |
-| **Mobile (4G / 5G)**          | Mobilfunknetz                    | bis 1-2 Gbit/s     | Unterwegs / Backup     |
-| **SHDSL / G.SHDSL**           | Symmetrisch (gleicher Up/Down)   | bis 2 Mbit/s       | Firmen, Standleitungen |
+| DSL / ADSL / VDSL / VDSL2     | Kupferleitung (Telefonanschluss) | bis ca. 250 Mbit/s | Privatkunden           |
+| HDSL / SDSL / SHDSL / G.SHDSL | Symmetrisch (gleicher Up/Down)   | bis 2 Mbit/s       | Firmen, Standleitungen |
+| FTTH (Fiber To The Home)      | Glasfaser bis ins Haus           | bis 10 Gbit/s      | Privat & Business      |
+| Koaxial (Kabelnetz)           | Fernsehkabel                     | bis 1 Gbit/s       | Privatkunden           |
+| Mobile (4G / 5G)              | Mobilfunknetz                    | bis 1-2 Gbit/s     | Unterwegs / Backup     |
 
-### OSI-7-Schichtenmodell und Aufgaben
+## OSI-7-Schichtenmodell
 
-| Nr. | Name (engl./dt.)           | Aufgabe                                   | Beispielprotokolle   |
-| --- | -------------------------- | ----------------------------------------- | -------------------- |
-| 7   | Application / Anwendung    | Dienste für Nutzer und Programme          | HTTP, FTP, DNS, SMTP |
-| 6   | Presentation / Darstellung | Übersetzen, Verschlüsseln, Komprimieren   | SSL/TLS, JPEG, ASCII |
-| 5   | Session / Sitzung          | Aufbau, Verwaltung, Beenden von Sitzungen | NetBIOS, SMB         |
-| 4   | Transport / Transport      | Zuverlässige Ende-zu-Ende-Kommunikation   | TCP, UDP             |
-| 3   | Network / Vermittlung      | Routing & IP-Adressierung                 | IP, ICMP, OSPF       |
-| 2   | Data Link / Sicherung      | Fehlerfreie Übertragung, MAC-Adressen     | Ethernet, WLAN       |
-| 1   | Physical / Bitübertragung  | Physische Übertragung der Bits            | Kabel, Stecker, Funk |
+| Nr. | Name (engl./dt.)           | Aufgabe                                   | Beispielprotokolle                     |
+| --- | -------------------------- | ----------------------------------------- | -------------------------------------- |
+| 7   | Application / Anwendung    | Dienste für Nutzer und Programme          | HTTP, FTP, DNS, SMTP, POP3, IMAP, SNMP |
+| 6   | Presentation / Darstellung | Übersetzen, Verschlüsseln, Komprimieren   | SSL/TLS, JPEG, ASCII                   |
+| 5   | Session / Sitzung          | Aufbau, Verwaltung, Beenden von Sitzungen | NetBIOS, SMB, RPC, PPTP                |
+| 4   | Transport / Transport      | Zuverlässige Ende-zu-Ende-Kommunikation   | TCP, UDP, SCTP                         |
+| 3   | Network / Vermittlung      | Routing & IP-Adressen                     | IP, ICMP, OSPF                         |
+| 2   | Data Link / Sicherung      | Fehlerfreie Übertragung, MAC-Adressen     | Ethernet, PPP, ARP, WLAN               |
+| 1   | Physical / Bitübertragung  | Physische Übertragung der Bits            | Kabel, Stecker, Funk, DSL, Koaxial     |
 
-### System im Netzwerkplan richtig konfigurieren
+## IPv4-Netzklassen
 
-**Beispiel (LAN):**
+| Klasse | Oktett  | Subnetzmaske | Hosts  | Zweck             |
+| ------ | ------- | ------------ | ------ | ----------------- |
+| A      | 0-127   | /8           | 16 Mio | sehr große Netze  |
+| B      | 128-191 | /16          | 65k    | mittelgroße Netze |
+| C      | 192-223 | /24          | 254    | kleine Netze      |
+| D      | 224-239 | -            | -      | Multicast         |
+| E      | 240-255 | -            | -      | reserviert        |
+
+**Private Bereiche:**
+
+* A: 10.0.0.0-10.255.255.255
+* B: 172.16.0.0-172.31.255.255
+* C: 192.168.0.0-192.168.255.255
+
+## Berechtigungsmatrix (Beispiel)
+
+| Ressource      | Management      | Lehrkräfte  | Administration | Technik     | Schüler | Gäste |
+| -------------- | --------------- | ----------- | -------------- | ----------- | ------- | ----- |
+| Management     | Vollzugriff     | Lesen       | Lesen          | Lesen       | -       | -     |
+| Lehrmaterial   | Lesen/Schreiben | Vollzugriff | Lesen          | -           | Lesen   | -     |
+| Administration | Lesen           | Lesen       | Vollzugriff    | -           | -       | -     |
+| Technik        | Lesen           | -           | -              | Vollzugriff | -       | -     |
+| Öffentlich     | Lesen           | Lesen       | Lesen          | Lesen       | Lesen   | Lesen |
+
+## System im Netzwerkplan richtig konfigurieren
 
 * Router: `192.168.0.1` (Gateway, DHCP, DNS)
 * Switch (verwaltbar): `192.168.0.2`
@@ -69,9 +100,7 @@ Megatrends sind langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaf
 * WLAN-SSID + Passwort (WPA2/3)
 * DNS → Router oder externer DNS (z. B. 8.8.8.8)
 
-### Netzwerkplan deklarieren & Komponenten darstellen
-
-**Im Plan beschriften:**
+**Netzwerkplan beschriften:**
 
 * Router, Switch, Access Point, Server, Clients
 * Verbindungstypen (LAN/WLAN)
@@ -79,9 +108,9 @@ Megatrends sind langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaf
 * DHCP-Bereich
 * Legende, Name, Datum, Version
 
-**Software-Tools:** draw.io / yEd / Lucidchart
+**Software-Tools:** draw.io, yEd, Lucidchart
 
-### Materialliste erstellen
+## Materialliste (Beispiel)
 
 | Gerät              | Anzahl | Zweck                   |
 | ------------------ | ------ | ----------------------- |
@@ -92,17 +121,7 @@ Megatrends sind langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaf
 | Patchpanel         | 1      | Ordnung & Wartung       |
 | Server / Drucker   | 1      | Dienste bereitstellen   |
 
-### Berechtigungsmatrix erstellen (Beispiel)
-
-| Ressource      | Management      | Lehrer      | Admin       | Technik     | Schüler | Gäste |
-| -------------- | --------------- | ----------- | ----------- | ----------- | ------- | ----- |
-| Management     | Vollzugriff     | Lesen       | Lesen       | Lesen       | -       | -     |
-| Lehrmaterial   | Lesen/Schreiben | Vollzugriff | Lesen       | -           | Lesen   | -     |
-| Administration | Lesen           | Lesen       | Vollzugriff | -           | -       | -     |
-| Technik        | Lesen           | -           | -           | Vollzugriff | -       | -     |
-| Öffentlich     | Lesen           | Lesen       | Lesen       | Lesen       | Lesen   | Lesen |
-
-### Windows-Befehle (Commands)
+## Windows-Befehle / Commands
 
 | Befehl              | Zweck / Beschreibung                                       |
 | ------------------- | ---------------------------------------------------------- |
@@ -118,7 +137,7 @@ Megatrends sind langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaf
 | `net view`          | Zeigt alle Computer im Netzwerk                            |
 | `net statistics`    | Zeigt gesendete/empfangene Pakete                          |
 
-### Testplan (Vorgehen bei Netzwerkprüfung)
+## Testplan (Netzwerkprüfung)
 
 1. Sichtprüfung - Kabel, Adapter, Verbindungen kontrollieren
 2. IP-Konfiguration prüfen - `ipconfig /all`
@@ -130,9 +149,9 @@ Megatrends sind langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaf
 8. Freigaben & Benutzer prüfen - `net share`, `net user`
 9. Dokumentation - Ergebnisse festhalten, Fehler beheben
 
-### Einmalige vs. wiederkehrende Kosten
+## Kostenarten
 
-| Art                       | Beschreibung              | Beispiel                            |
-| ------------------------- | ------------------------- | ----------------------------------- |
-| **Einmalige Kosten**      | Anschaffung, Installation | Router, Switch, Kabel, Montage      |
-| **Wiederkehrende Kosten** | Laufende Betriebskosten   | Internetabo, Strom, Wartung, Domain |
+| Art                   | Beschreibung              | Beispiel                            |
+| --------------------- | ------------------------- | ----------------------------------- |
+| Einmalige Kosten      | Anschaffung, Installation | Router, Switch, Kabel, Montage      |
+| Wiederkehrende Kosten | Laufende Betriebskosten   | Internetabo, Strom, Wartung, Domain |
