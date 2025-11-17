@@ -141,4 +141,78 @@ So bleibt eine sinnvolle Auswertung möglich, ohne dass einzelne Personen identi
 - Eine Nutzung ist nur mit ausdrücklicher Zustimmung der betroffenen Personen erlaubt.
 - Für eine datenschutzkonforme Verarbeitung sollten alle identifizierenden Merkmale entfernt oder anonymisiert werden.
 
-## 162-2B SideQuest
+## 162-3A SideQuest:
+# Entitäten & Attribute
+
+**Player**
+
+* /player_id/
+* email
+* username
+* password
+
+**Game**
+
+* /game_id/
+* title
+* price
+
+**Purchase**
+
+* /purchase_id/
+* player_id (FK)
+* game_id (FK)
+* purchase_date
+
+**Review**
+
+* /review_id/
+* player_id (FK)
+* game_id (FK)
+* rating (1–5)
+
+**LeaderboardEntry**
+
+* /entry_id/
+* game_id (FK)
+* player_id (FK)
+* rank
+
+# Beziehungen (Martin / Krähenfuss, einfach)
+
+1. `Player (1) -- (m) Purchase`
+2. `Game (1) -- (m) Purchase`
+3. `Player (1) -- (m) Review`
+4. `Game (1) -- (m) Review`
+5. `Game (1) -- (m) LeaderboardEntry`
+6. `Player (1) -- (m) LeaderboardEntry`
+
+[Diagramm](./diagramme/gamehub-erd.drawio)
+
+## 162-4C SideQuest:
+
+* Genre
+  * Label
+* Medientyp
+  * Label
+* Medium
+  * Titel
+  * Beschreibung
+  * Author
+  * Genre
+  * Medientyp
+* Mitarbeiter
+  * Vorname
+  * Name
+  * Geburtsdatum
+* Ausleihe
+  * Welches Medium
+  * Ausleihende Person
+  * Startdatum
+  * Enddatum
+
+Beziehungen:
+Mitarbeiter 1 ----- mc Ausleihe
+Ausleihe    1 ----- m  Medium
+Medientyp   m ----- 1  Medium
+Genre       m ----- 1  Medium
