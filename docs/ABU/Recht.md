@@ -59,3 +59,9 @@
 * Der Jugendrichter fragt weniger nach Schuld und Tat, sondern danach, ob zukünftige Straftaten zu erwarten sind.
 * Es wird geprüft, ob erzieherische Massnahmen geeignet sind, weitere Delikte zu verhindern.
 * Das Verfahren soll möglichst schnell abgeschlossen werden, damit zwischen Tat und Massnahme wenig Zeit vergeht.
+
+## Rechtfall Beschreiben (Struktur)
+* Wer will was?
+* Von wem?
+* Woraus?
+* Warum?
