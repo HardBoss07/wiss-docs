@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Compression Visualizer (Huffman, LZ77, LZ78)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .section-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .output-box {
+            background-color: #eef2ff;
+            border: 1px solid #c7d2fe;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .step-table th, .step-table td {
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        /* Custom style to ensure the canvas container is centered and scrollable */
+        .tree-container {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto; /* Allows horizontal scrolling if the tree is very wide */
+            max-width: 100%;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Compression Algorithm Explorer</h1>
+            <p class="text-xl text-indigo-600">Huffman Coding, LZ77, & LZ78 Visualization</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="section-card">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">1. Input Text</h2>
+            <p class="text-sm text-gray-600 mb-3">Enter the text you want to compress. You'll see the results below.</p>
+            <textarea id="inputText" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-gray-700" placeholder="e.g., 'A good beginning is the key to a good story.'">A good beginning is the key to a good story.</textarea>
+            <button onclick="processCompression()" class="mt-4 w-full md:w-auto px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition duration-150 ease-in-out shadow-lg transform hover:scale-[1.01]">
+                Process and Visualize
+            </button>
+            <div id="originalTextInfo" class="mt-4 text-sm text-gray-600"></div>
+        </div>
+
+        <!-- Output Sections -->
+        <div id="resultsContainer" class="space-y-6" style="display: none;">
+
+            <!-- Huffman Coding Section -->
+            <div id="huffmanSection" class="section-card">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">2. Huffman Coding (Frequency-Based)</h2>
+                <p class="text-sm text-gray-600 mb-3">
+                    Assigns variable-length codes based on character frequency. **The most frequent character will always receive the shortest possible code, which can be as short as 1 bit.**
+                </p>
+                <div id="huffmanOutput"></div>
+            </div>
+
+            <!-- LZ77 Section -->
+            <div id="lz77Section" class="section-card">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">3. LZ77 (Sliding Window)</h2>
+                <p class="text-sm text-gray-600 mb-3">
+                    Uses a **Search Buffer** (4 characters) and a **Lookahead Buffer** (3 characters) to find repeated sequences. Output is a triplet: <code>(Offset, Length, Next Symbol)</code>.
+                </p>
+                <div id="lz77Output"></div>
+            </div>
+
+            <!-- LZ78 Section -->
+            <div id="lz78Section" class="section-card">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">4. LZ78 (Dictionary Based)</h2>
+                <p class="text-sm text-gray-600 mb-3">
+                    Builds an incremental dictionary of encountered phrases. Output is a pair: <code>(Dictionary Index, Next Symbol)</code>.
+                </p>
+                <div id="lz78Output"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- Utility Functions ---
+
+        /**
+         * Returns the device pixel ratio, defaulting to 1 for non-browser environments.
+         */
+        function getPixelRatio() {
+            return window.devicePixelRatio || 1;
+        }
+
+        /**
+         * Converts a string of text to a representation of its size (in bytes, assuming 8 bits per character).
+         * @param {string} text
+         * @returns {string}
+         */
+        function calculateOriginalSize(text) {
+            return `${text.length} characters (approx. ${text.length * 8} bits)`;
+        }
+
+        /**
+         * Calculates the estimated size of the compressed output for visualization purposes.
+         * The compression size calculation is simplified and only for illustrative comparison.
+         * @param {number} numItems The number of output tokens/items.
+         * @param {number} bitsPerToken A simplified estimate of bits needed for each token type.
+         * @returns {string}
+         */
+        function calculateCompressedSize(numItems, bitsPerToken) {
+            // This is a highly simplified calculation for visualization:
+            // Assume each token costs 'bitsPerToken' bits.
+            const totalBits = numItems * bitsPerToken;
+            return `${numItems} tokens (approx. ${totalBits} bits)`;
+        }
+
+
+        // --- HUFFMAN CODING IMPLEMENTATION ---
+
+        /**
+         * Implements Huffman Coding: frequency analysis, tree building, and code generation.
+         * @param {string} text
+         * @returns {object} {codes, outputString, bitsSaved, totalBits, root}
+         */
+        function runHuffman(text) {
+            const freq = {};
+            for (const char of text) {
+                freq[char] = (freq[char] || 0) + 1;
+            }
+
+            // Create nodes and sort
+            let nodes = Object.entries(freq).map(([char, count]) => ({
+                char,
+                count,
+                left: null,
+                right: null,
+                x: 0, y: 0 // For visualization layout
+            }));
+            nodes.sort((a, b) => a.count - b.count);
+
+            // Build the tree
+            while (nodes.length > 1) {
+                const left = nodes.shift();
+                const right = nodes.shift();
+                const parent = {
+                    char: null,
+                    count: left.count + right.count,
+                    left,
+                    right,
+                    x: 0, y: 0 // For visualization layout
+                };
+
+                nodes.push(parent);
+                nodes.sort((a, b) => a.count - b.count);
+            }
+
+            const root = nodes[0];
+            const codes = {};
+
+            // Generate codes (DFS)
+            function generateCodes(node, code = "") {
+                if (!node) return;
+                if (node.char !== null) {
+                    codes[node.char] = code;
+                    return;
+                }
+                generateCodes(node.left, code + "0");
+                generateCodes(node.right, code + "1");
+            }
+
+            if (root) {
+                generateCodes(root);
+            } else if (text.length > 0) {
+                // Case for single character text (e.g., "AAAA")
+                codes[text[0]] = "0";
+            }
+
+            // Calculate compressed size and build output string
+            let totalBits = 0;
+            let outputString = "";
+            for (const char of text) {
+                const code = codes[char] || "";
+                outputString += code + " ";
+                totalBits += code.length;
+            }
+
+            const originalBits = text.length * 8;
+            const bitsSaved = originalBits - totalBits;
+
+            return {
+                freq,
+                codes,
+                outputString: outputString.trim(),
+                totalBits,
+                originalBits,
+                bitsSaved,
+                root // Return the root of the tree for visualization
+            };
+        }
+
+        /**
+         * Draws the Huffman Tree onto a canvas, handling high-DPI scaling.
+         * @param {object} root The root node of the Huffman tree.
+         * @param {string} canvasId The ID of the canvas element.
+         */
+        function drawHuffmanTree(root, canvasId) {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas || !root) return;
+
+            const pixelRatio = getPixelRatio();
+            
+            // --- Step 1: Calculate Leaf Count and Max Depth ---
+            let leafNodesCount = 0;
+            let maxDepth = 0;
+            
+            function collectInfo(node, depth = 0) {
+                if (!node) return;
+                maxDepth = Math.max(maxDepth, depth);
+                if (node.char !== null) {
+                    leafNodesCount++;
+                }
+                collectInfo(node.left, depth + 1);
+                collectInfo(node.right, depth + 1);
+            }
+            collectInfo(root);
+            
+            if (leafNodesCount === 0) return;
+
+            // --- Step 2: Dynamic Sizing (High DPI Adapted) ---
+            const nodeRadius = 15;
+            const padding = 30;
+            const leafSpacing = 50; // Horizontal space between leaf nodes
+            
+            // Calculate required CSS dimensions (what the user sees)
+            const cssWidth = Math.max(300, leafNodesCount * leafSpacing + 2 * padding); 
+            const cssHeight = 500; // Fixed CSS height
+
+            // Set canvas display size using style
+            canvas.style.width = cssWidth + 'px';
+            canvas.style.height = cssHeight + 'px';
+
+            // Set internal drawing buffer size using attributes (scaled for DPI)
+            canvas.width = cssWidth * pixelRatio;
+            canvas.height = cssHeight * pixelRatio;
+
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Scale the context so all future drawing commands use CSS pixels
+            ctx.scale(pixelRatio, pixelRatio);
+            
+            // Calculate vertical spacing based on CSS height
+            const vSpacing = (cssHeight - 2 * padding) / (maxDepth || 1); 
+
+            // --- Step 3: Assign X coordinates (Leaf-first approach) ---
+            let currentLeafIndex = 0;
+            
+            function assignLeafX(node) {
+                if (!node) return;
+
+                if (node.char !== null) {
+                    // Assign X coordinate based on leaf index (in CSS pixels)
+                    node.x = padding + currentLeafIndex * leafSpacing + leafSpacing / 2;
+                    currentLeafIndex++;
+                } else {
+                    assignLeafX(node.left);
+                    assignLeafX(node.right);
+                }
+            }
+            assignLeafX(root);
+
+            // --- Step 4: Assign Internal Node X and all Y coordinates (Post-order traversal) ---
+            function assignInternalX(node, level = 0) {
+                if (!node) return null;
+
+                // Set Y coordinate (in CSS pixels)
+                node.y = padding + level * vSpacing;
+                
+                if (node.char === null) {
+                    // Internal node: Recurse first to get children's calculated X
+                    const leftX = assignInternalX(node.left, level + 1);
+                    const rightX = assignInternalX(node.right, level + 1);
+
+                    // Set internal node X as midpoint of children's X
+                    if (leftX !== null && rightX !== null) {
+                        node.x = (leftX + rightX) / 2;
+                    } else if (leftX !== null) {
+                        node.x = leftX; 
+                    } else if (rightX !== null) {
+                        node.x = rightX; 
+                    }
+                }
+                
+                // Return its assigned X coordinate
+                return node.x;
+            }
+            assignInternalX(root, 0);
+
+
+            // --- Step 5: Drawing functions ---
+            
+            function drawLine(parent, child, label) {
+                ctx.strokeStyle = '#374151';
+                // Adjust line width to look crisp (1.5 CSS pixels)
+                ctx.lineWidth = 1.5; 
+                
+                // Calculate start/end points to touch the circle edge
+                const angle = Math.atan2(child.y - parent.y, child.x - parent.x);
+                const startX = parent.x + nodeRadius * Math.cos(angle);
+                const startY = parent.y + nodeRadius * Math.sin(angle);
+                const endX = child.x - nodeRadius * Math.cos(angle);
+                const endY = child.y - nodeRadius * Math.sin(angle);
+                
+                // Draw line
+                ctx.beginPath();
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(endX, endY);
+                ctx.stroke();
+                
+                // Draw label (0 or 1)
+                const midX = (parent.x + child.x) / 2;
+                const midY = (parent.y + child.y) / 2;
+                
+                // Draw a small white background for the label
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(midX - 10, midY - 10, 20, 20);
+                
+                // Draw the label text
+                ctx.fillStyle = '#1f2937';
+                ctx.font = 'bold 14px Inter';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(label, midX, midY);
+            }
+
+            const drawnNodes = [];
+            function drawNode(node) {
+                if (!node || drawnNodes.includes(node)) return;
+                drawnNodes.push(node);
+
+                // Draw connections (lines first)
+                if (node.left) {
+                    drawLine(node, node.left, '0');
+                    drawNode(node.left);
+                }
+                if (node.right) {
+                    drawLine(node, node.right, '1');
+                    drawNode(node.right);
+                }
+
+                // Draw node circle (over the lines)
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, nodeRadius, 0, 2 * Math.PI);
+                
+                // Styling
+                if (node.char !== null) {
+                    ctx.fillStyle = '#6366f1'; // Indigo for leaves
+                    ctx.shadowColor = 'rgba(99, 102, 241, 0.5)';
+                } else {
+                    ctx.fillStyle = '#ffffff'; // White for internal nodes
+                    ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
+                }
+                ctx.shadowBlur = 8;
+                ctx.fill();
+                ctx.shadowBlur = 0; // Disable shadow for strokes and text
+                
+                ctx.strokeStyle = '#374151'; // Dark gray border
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+                
+                // Draw text/label
+                ctx.fillStyle = node.char !== null ? '#ffffff' : '#1f2937'; 
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.font = 'bold 12px Inter';
+
+                let label;
+                if (node.char !== null) {
+                    // Leaf Node: Character
+                    label = node.char === ' ' ? '␣' : node.char;
+                } else {
+                    // Internal Node: Frequency count
+                    label = node.count;
+                }
+                
+                ctx.fillText(label, node.x, node.y);
+            }
+
+            drawNode(root);
+        }
+
+        /**
+         * Renders the Huffman results.
+         */
+        function renderHuffman(huffmanResult) {
+            const { freq, codes, outputString, totalBits, originalBits, bitsSaved, root } = huffmanResult;
+            const outputDiv = document.getElementById('huffmanOutput');
+
+            // --- Sorting Logic ---
+            const charData = Object.keys(freq).map(char => {
+                const code = codes[char] || '';
+                return {
+                    char: char,
+                    freq: freq[char],
+                    code: code,
+                    length: code.length
+                };
+            });
+
+            // Sort: Primary by Code Length (ascending), Secondary by Frequency (descending)
+            charData.sort((a, b) => {
+                if (a.length !== b.length) {
+                    return a.length - b.length;
+                }
+                return b.freq - a.freq;
+            });
+            // --- End Sorting Logic ---
+
+            // --- Huffman Tree Canvas Placeholder ---
+            let treeHtml = '<h3 class="text-xl font-semibold mt-6 mb-2">Huffman Tree Visualization</h3>';
+            treeHtml += '<p class="text-sm text-gray-600 mb-3">Internal nodes show accumulated frequency counts, leaf nodes show characters. (0 = left, 1 = right)</p>';
+            // Note: Canvas attributes for width/height are removed here, as the JS sets them dynamically for DPI scaling
+            treeHtml += '<div class="tree-container"><canvas id="huffmanTreeCanvas" class="border border-gray-300 rounded-lg bg-gray-50"></canvas></div>';
+
+
+            // 1. Frequency Table
+            let freqHtml = '<h3 class="text-xl font-semibold mt-4 mb-2">Frequency & Code Table (Sorted by Code Length)</h3>';
+            freqHtml += '<table class="min-w-full step-table border-collapse">';
+            freqHtml += '<thead><tr class="bg-gray-50"><th class="font-medium text-gray-600">Character</th><th class="font-medium text-gray-600">Frequency</th><th class="font-medium text-gray-600">Code</th><th class="font-medium text-gray-600">Length (bits)</th></tr></thead>';
+            freqHtml += '<tbody>';
+
+            // Use the sorted array to populate the table
+            charData.forEach(item => {
+                const charDisplay = item.char === ' ' ? '␣ (Space)' : (item.char === '\n' ? '↵ (Newline)' : item.char);
+                freqHtml += `<tr>
+                    <td class="font-mono text-indigo-700">${charDisplay}</td>
+                    <td>${item.freq}</td>
+                    <td class="font-mono text-green-700">${item.code}</td>
+                    <td>${item.length}</td>
+                </tr>`;
+            });
+
+            freqHtml += '</tbody></table>';
+
+            // 2. Output & Summary
+            let summaryHtml = `
+                <h3 class="text-xl font-semibold mt-6 mb-2">Compressed Output (Binary Simulation)</h3>
+                <div class="output-box mb-4 text-sm">${outputString}</div>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">Summary</h3>
+                <p class="text-gray-700">Original Size (Fixed 8-bit): <span class="font-mono font-bold">${originalBits} bits</span></p>
+                <p class="text-gray-700">Compressed Size (Variable Length): <span class="font-mono font-bold text-green-600">${totalBits} bits</span></p>
+                <p class="text-gray-700">Total Bits Saved: <span class="font-mono font-bold text-green-600">${bitsSaved} bits</span></p>
+                <p class="text-gray-700">Compression Ratio (approx): <span class="font-mono font-bold">${(100 - (totalBits / originalBits * 100)).toFixed(2)}% reduction</span></p>
+            `;
+
+            outputDiv.innerHTML = treeHtml + freqHtml + summaryHtml;
+            
+            // Draw the tree after DOM update
+            drawHuffmanTree(root, 'huffmanTreeCanvas');
+        }
+
+
+        // --- LZ77 IMPLEMENTATION ---
+
+        /**
+         * Implements LZ77 compression with fixed window sizes.
+         * @param {string} text
+         * @param {number} searchBufferSize
+         * @param {number} lookaheadBufferSize
+         * @returns {object} {tokens, outputString, totalBits}
+         */
+        function runLZ77(text, searchBufferSize = 4, lookaheadBufferSize = 3) {
+            const tokens = [];
+            let cursor = 0;
+
+            while (cursor < text.length) {
+                const searchStart = Math.max(0, cursor - searchBufferSize);
+                const searchBuffer = text.substring(searchStart, cursor);
+                const lookaheadBuffer = text.substring(cursor, cursor + lookaheadBufferSize);
+
+                let bestMatch = { offset: 0, length: 0 };
+
+                // Search for the longest match in the search buffer
+                for (let length = lookaheadBuffer.length; length >= 1; length--) {
+                    const phrase = lookaheadBuffer.substring(0, length);
+                    const matchIndex = searchBuffer.lastIndexOf(phrase);
+
+                    if (matchIndex !== -1) {
+                        bestMatch = {
+                            offset: searchBuffer.length - matchIndex,
+                            length: length
+                        };
+                        break;
+                    }
+                }
+
+                let nextSymbol;
+                let step;
+
+                if (bestMatch.length > 0) {
+                    // Match found: (Offset, Length, Next Symbol)
+                    nextSymbol = text[cursor + bestMatch.length] || 'EOF';
+                    step = bestMatch.length + (nextSymbol !== 'EOF' ? 1 : 0);
+                    tokens.push({
+                        type: 'match',
+                        offset: bestMatch.offset,
+                        length: bestMatch.length,
+                        symbol: nextSymbol,
+                        cursor
+                    });
+                } else {
+                    // No match: (0, 0, Symbol)
+                    nextSymbol = lookaheadBuffer[0];
+                    step = 1;
+                    tokens.push({
+                        type: 'literal',
+                        offset: 0,
+                        length: 0,
+                        symbol: nextSymbol,
+                        cursor
+                    });
+                }
+
+                cursor += step;
+            }
+
+            // Simplified output string and size calculation
+            const outputString = tokens.map(t => {
+                if (t.type === 'match') {
+                    // (Offset, Length, Symbol)
+                    return `(${t.offset}, ${t.length}, '${t.symbol === 'EOF' ? '' : t.symbol}')`;
+                } else {
+                    // (0, 0, Symbol)
+                    return `(0, 0, '${t.symbol}')`;
+                }
+            }).join(' ');
+
+            // Simplified bit calculation: assume 4 bits for Offset, 4 bits for Length, 8 bits for Symbol
+            const bitsPerToken = 4 + 4 + 8;
+            const totalBits = tokens.length * bitsPerToken;
+
+            return { tokens, outputString, totalBits };
+        }
+
+        /**
+         * Renders the LZ77 results.
+         */
+        function renderLZ77(lz77Result, text) {
+            const { tokens, outputString, totalBits } = lz77Result;
+            const outputDiv = document.getElementById('lz77Output');
+
+            let stepsHtml = '<h3 class="text-xl font-semibold mt-4 mb-2">Compression Steps</h3>';
+            stepsHtml += '<table class="min-w-full step-table border-collapse">';
+            stepsHtml += '<thead class="bg-gray-50"><tr><th class="font-medium text-gray-600">Step</th><th class="font-medium text-gray-600">Cursor</th><th class="font-medium text-gray-600">Input (Text)</th><th class="font-medium text-gray-600">Search Buffer</th><th class="font-medium text-gray-600">Lookahead</th><th class="font-medium text-gray-600">Output Token (O, L, S)</th></tr></thead>';
+            stepsHtml += '<tbody>';
+
+            tokens.forEach((token, index) => {
+                const start = token.cursor;
+                const searchStart = Math.max(0, start - 4); // Fixed Search Buffer size 4
+                const searchBuffer = text.substring(searchStart, start);
+                const lookaheadBuffer = text.substring(start, start + 3); // Fixed Lookahead Buffer size 3
+
+                const textHighlight = text.split('').map((char, i) => {
+                    if (i === start) {
+                        return `<span class="font-bold text-red-600">${char}</span>`;
+                    }
+                    if (i >= start && i < start + (token.length || 1)) {
+                         return `<span class="bg-yellow-200">${char}</span>`;
+                    }
+                    return char;
+                }).join('');
+
+
+                const outputToken = token.type === 'match' ?
+                    `<span class="font-mono text-green-700">(${token.offset}, ${token.length}, '${token.symbol === 'EOF' ? '' : token.symbol}')</span>` :
+                    `<span class="font-mono text-blue-700">(0, 0, '${token.symbol}')`;
+
+                stepsHtml += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${start}</td>
+                    <td>${textHighlight}</td>
+                    <td class="font-mono">${searchBuffer}</td>
+                    <td class="font-mono">${lookaheadBuffer}</td>
+                    <td>${outputToken}</td>
+                </tr>`;
+            });
+
+            stepsHtml += '</tbody></table>';
+
+            // 2. Output & Summary
+            const originalBits = text.length * 8;
+            const bitsSaved = originalBits - totalBits;
+
+            let summaryHtml = `
+                <h3 class="text-xl font-semibold mt-6 mb-2">Compressed Output (Tokens)</h3>
+                <div class="output-box mb-4 text-sm">${outputString}</div>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">Summary</h3>
+                <p class="text-gray-700">Original Size (Fixed 8-bit): <span class="font-mono font-bold">${originalBits} bits</span></p>
+                <p class="text-gray-700">Compressed Size (Approx. 16 bits/token): <span class="font-mono font-bold text-green-600">${totalBits} bits</span></p>
+                <p class="text-gray-700">Total Tokens Generated: <span class="font-mono font-bold">${tokens.length}</span></p>
+                <p class="text-gray-700">Compression Ratio (approx): <span class="font-mono font-bold">${(100 - (totalBits / originalBits * 100)).toFixed(2)}% reduction</span></p>
+            `;
+
+            outputDiv.innerHTML = stepsHtml + summaryHtml;
+        }
+
+        // --- LZ78 IMPLEMENTATION ---
+
+        /**
+         * Implements LZ78 compression.
+         * @param {string} text
+         * @returns {object} {tokens, outputString, totalBits}
+         */
+        function runLZ78(text) {
+            const dictionary = { 'START': 0 }; // Initialize dictionary with a dummy value/index 0
+            const dictionaryArray = ['']; // Array representation for step visualization: Index 0 is reserved/empty
+            const tokens = [];
+            let currentPhrase = "";
+            let nextIndex = 1;
+
+            for (let i = 0; i < text.length; i++) {
+                const symbol = text[i];
+                const newPhrase = currentPhrase + symbol;
+
+                if (dictionary[newPhrase] !== undefined) {
+                    // Phrase is in the dictionary, extend the phrase
+                    currentPhrase = newPhrase;
+                } else {
+                    // Phrase is NOT in the dictionary, create a token
+                    const prefix = currentPhrase || '';
+                    const prefixIndex = dictionary[prefix] === undefined ? 0 : dictionary[prefix];
+
+                    // Output token: (Index, New Symbol)
+                    tokens.push({
+                        index: prefixIndex,
+                        symbol: symbol,
+                        phrase: prefix,
+                        newEntry: newPhrase
+                    });
+
+                    // Add the new phrase (prefix + new symbol) to the dictionary
+                    dictionary[newPhrase] = nextIndex;
+                    dictionaryArray.push(newPhrase);
+                    nextIndex++;
+
+                    // Reset current phrase to the current symbol
+                    currentPhrase = "";
+                }
+            }
+
+            // Handle the remaining phrase (if any)
+            if (currentPhrase.length > 0) {
+                const prefix = currentPhrase || '';
+                const prefixIndex = dictionary[prefix] === undefined ? 0 : dictionary[prefix];
+                // Output token: (Index, Null/Empty Symbol)
+                tokens.push({
+                    index: prefixIndex,
+                    symbol: '', // Null symbol for the last part
+                    phrase: currentPhrase,
+                    newEntry: ''
+                });
+            }
+
+            // Simplified output string and size calculation
+            const outputString = tokens.map(t => {
+                // (Index, Symbol)
+                return `(${t.index}, '${t.symbol}')`;
+            }).join(' ');
+
+            // Simplified bit calculation: assume 8 bits for Index (up to 256), 8 bits for Symbol
+            const bitsPerToken = 8 + 8;
+            const totalBits = tokens.length * bitsPerToken;
+
+            return { tokens, outputString, totalBits, dictionaryArray };
+        }
+
+        /**
+         * Renders the LZ78 results.
+         */
+        function renderLZ78(lz78Result, text) {
+            const { tokens, outputString, totalBits, dictionaryArray } = lz78Result;
+            const outputDiv = document.getElementById('lz78Output');
+
+            // 1. Dictionary Table
+            let dictHtml = '<h3 class="text-xl font-semibold mt-4 mb-2">Final Dictionary</h3>';
+            dictHtml += '<table class="min-w-full step-table border-collapse">';
+            dictHtml += '<thead><tr class="bg-gray-50"><th class="font-medium text-gray-600">Index</th><th class="font-medium text-gray-600">Phrase</th></tr></thead>';
+            dictHtml += '<tbody>';
+
+            dictionaryArray.forEach((phrase, index) => {
+                if (index > 0) {
+                    const phraseDisplay = phrase === ' ' ? '␣ (Space)' : phrase.replace(/ /g, '␣');
+                    dictHtml += `<tr>
+                        <td class="font-mono text-indigo-700">${index}</td>
+                        <td class="font-mono text-gray-800">${phraseDisplay}</td>
+                    </tr>`;
+                }
+            });
+            dictHtml += '</tbody></table>';
+
+            // 2. Steps Table
+            let stepsHtml = '<h3 class="text-xl font-semibold mt-6 mb-2">Compression Steps & Tokens</h3>';
+            stepsHtml += '<table class="min-w-full step-table border-collapse">';
+            stepsHtml += '<thead class="bg-gray-50"><tr><th class="font-medium text-gray-600">Step</th><th class="font-medium text-gray-600">Prefix/Match</th><th class="font-medium text-gray-600">New Symbol</th><th class="font-medium text-gray-600">Output Token (I, S)</th><th class="font-medium text-gray-600">New Dictionary Entry</th></tr></thead>';
+            stepsHtml += '<tbody>';
+
+            tokens.forEach((token, index) => {
+                const phraseDisplay = token.phrase === ' ' ? '␣' : token.phrase.replace(/ /g, '␣');
+                const symbolDisplay = token.symbol === ' ' ? '␣' : (token.symbol || 'NULL');
+                const newEntryDisplay = token.newEntry === ' ' ? '␣' : (token.newEntry.replace(/ /g, '␣') || 'N/A');
+
+                const outputToken = `<span class="font-mono text-green-700">(${token.index}, '${symbolDisplay.replace('NULL', '')}')`;
+
+                stepsHtml += `<tr>
+                    <td>${index + 1}</td>
+                    <td class="font-mono">${phraseDisplay || 'N/A'}</td>
+                    <td class="font-mono">${symbolDisplay}</td>
+                    <td>${outputToken}</td>
+                    <td class="font-mono text-red-600">${token.newEntry ? `${dictionaryArray.indexOf(token.newEntry)}: ${newEntryDisplay}` : 'N/A'}</td>
+                </tr>`;
+            });
+
+            stepsHtml += '</tbody></table>';
+
+            // 3. Output & Summary
+            const originalBits = text.length * 8;
+            const bitsSaved = originalBits - totalBits;
+
+            let summaryHtml = `
+                <h3 class="text-xl font-semibold mt-6 mb-2">Compressed Output (Tokens)</h3>
+                <div class="output-box mb-4 text-sm">${outputString}</div>
+
+                <h3 class="text-xl font-semibold mt-6 mb-2">Summary</h3>
+                <p class="text-gray-700">Original Size (Fixed 8-bit): <span class="font-mono font-bold">${originalBits} bits</span></p>
+                <p class="text-gray-700">Compressed Size (Approx. 16 bits/token): <span class="font-mono font-bold text-green-600">${totalBits} bits</span></p>
+                <p class="text-gray-700">Total Tokens Generated: <span class="font-mono font-bold">${tokens.length}</span></p>
+                <p class="text-gray-700">Compression Ratio (approx): <span class="font-mono font-bold">${(100 - (totalBits / originalBits * 100)).toFixed(2)}% reduction</span></p>
+            `;
+
+            outputDiv.innerHTML = dictHtml + stepsHtml + summaryHtml;
+        }
+
+        // --- Main Controller ---
+
+        function processCompression() {
+            const text = document.getElementById('inputText').value.trim();
+            const resultsContainer = document.getElementById('resultsContainer');
+            const originalTextInfo = document.getElementById('originalTextInfo');
+
+            if (text.length === 0) {
+                originalTextInfo.innerHTML = '<span class="text-red-600">Please enter some text to process.</span>';
+                resultsContainer.style.display = 'none';
+                return;
+            }
+
+            // 1. Display Original Info
+            originalTextInfo.innerHTML = `Original Text Length: ${calculateOriginalSize(text)}.`;
+            resultsContainer.style.display = 'block';
+
+            // 2. Run and Render Huffman
+            const huffmanResult = runHuffman(text);
+            renderHuffman(huffmanResult, text);
+
+            // 3. Run and Render LZ77
+            const lz77Result = runLZ77(text);
+            renderLZ77(lz77Result, text);
+
+            // 4. Run and Render LZ78
+            const lz78Result = runLZ78(text);
+            renderLZ78(lz78Result, text);
+        }
+
+        // Run on initial load with placeholder text
+        document.addEventListener('DOMContentLoaded', processCompression);
+
+    </script>
+</body>
+</html>
