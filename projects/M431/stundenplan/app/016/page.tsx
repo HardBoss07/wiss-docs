@@ -1,7 +1,7 @@
 "use client";
 import {useEffect, useState} from "react";
 import CalendarClient, {CalendarScheme} from "@/app/components/calender";
-import {data} from "@/app/components/data";
+import {o16data} from "@/app/016/016";
 
 const lightScheme: CalendarScheme = {
     weekdayColors: [
@@ -45,7 +45,7 @@ export default function Home() {
 
     return (
         <div>
-            <CalendarClient scheme={scheme} data={data}/>
+            <CalendarClient scheme={scheme} data={o16data}/>
         </div>
     );
 }

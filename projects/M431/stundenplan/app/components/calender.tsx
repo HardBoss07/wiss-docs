@@ -1,7 +1,6 @@
 "use client";
 import {useEffect, useState} from "react";
 import ICAL from "ical.js";
-import {data} from "./data";
 import Appointment from "@/app/components/Appointment";
 
 type CalendarEvent = {
@@ -30,9 +29,10 @@ export interface CalendarScheme {
 
 interface CalendarClientProps {
     scheme: CalendarScheme;
+    data: string;
 }
 
-export default function CalendarClient({scheme}: CalendarClientProps) {
+export default function CalendarClient({scheme, data}: CalendarClientProps) {
     const [events, setEvents] = useState<CalendarEvent[]>([]);
 
     useEffect(() => {
