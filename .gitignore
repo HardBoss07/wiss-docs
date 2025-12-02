@@ -3,4 +3,5 @@
 ~$*.docx
 ~$*.xlsx
 ~$*.pptx
-/idea/*
+*.bkp
+/.idea/*
