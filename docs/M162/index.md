@@ -216,3 +216,70 @@ Mitarbeiter 1 ----- mc Ausleihe
 Ausleihe    1 ----- m  Medium
 Medientyp   m ----- 1  Medium
 Genre       m ----- 1  Medium
+
+## 162-5A SideQuest:
+
+### A
+
+Ohne Zwischentabelle möglich
+
+**Buch:**
+| BuchID | Titel           | Seitenzahl | Cover  |
+| ------ | --------------- | ---------- | ------ |
+| 15     | Faust           | 120        | f.png  |
+| 16     | Der Prozess     | 280        | kp.png |
+| 17     | Die Verwandlung | 96         | vw.png |
+
+**Ausleihe:**
+| AusleiheID | DatumVon | DatumBis | BuchIDFS |
+| ---------- | -------- | -------- | -------- |
+| 240        | 11.12.25 | 18.12.25 | 15       |
+| 241        | 02.01.26 | 10.01.26 | 16       |
+| 242        | 05.01.26 | 12.01.26 | 17       |
+
+**Ja, das Einfügen geht**, solange:
+* **Der Buch-Datensatz zuerst existiert**, bevor man eine Ausleihe dazu einfügt.
+* **BuchIDFS in Ausleihe auf einen vorhandenen BuchID-Wert zeigt**.
+
+Also:
+1. `INSERT INTO Buch ...`
+2. Danach `INSERT INTO Ausleihe ...` mit passender BuchIDFS.
+
+### B
+Mit Zwischentabelle möglich
+
+
+**Buch:**
+| BuchID | Titel           | Seitenzahl | Cover  |
+| ------ | --------------- | ---------- | ------ |
+| 10     | Faust           | 120        | f.png  |
+| 11     | Die Verwandlung | 96         | vw.png |
+
+**Ausleihe:**
+| AusleiheID | DatumVon | DatumBis |
+| ---------- | -------- | -------- |
+| 300        | 01.12.25 | 05.12.25 |
+
+**Ausleihe_Buch:**
+| AusleiheID_FK | BuchID_FK |
+| ------------- | --------- |
+| 300           | 10        |
+| 300           | 11        |
+
+**Ja, das Einfügen geht**, solange:
+* **Buch und Ausleihe zuerst existieren**, bevor man Einträge in `Ausleihe_Buch` anlegt.
+* **Jede Kombination aus AusleiheID_FK und BuchID_FK** auf gültige Datensätze zeigt.
+
+Also:
+1. `INSERT INTO Buch ...`
+2. `INSERT INTO Ausleihe ...`
+3. `INSERT INTO Ausleihe_Buch ...` für die Zuordnung.
+
+## 162-5B SideQuest:
+In OneNote gelöst
+
+## 162-5C SideQuest:
+In OneNote gelöst
+
+## 162-5D SideQuest:
+[Diagramm](/docs/M162/diagramme/162-5D-MatteoBosshard.drawio)
