@@ -109,22 +109,22 @@ Negative Zahlen werden kodiert, damit man mit denselben Schaltkreisen rechnen ka
 
 | Binär | Einerkomplement | Zweierkomplement |
 | ----- | --------------- | ---------------- |
-|  0000 | +0              | 0                |
-|  0001 | +1              | +1               |
-|  0010 | +2              | +2               |
-|  0011 | +3              | +3               |
-|  0100 | +4              | +4               |
-|  0101 | +5              | +5               |
-|  0110 | +6              | +6               |
-|  0111 | +7              | +7               |
-|  1000 | -7              | -8               |
-|  1001 | -6              | -7               |
-|  1010 | -5              | -6               |
-|  1011 | -4              | -5               |
-|  1100 | -3              | -4               |
-|  1101 | -2              | -3               |
-|  1110 | -1              | -2               |
-|  1111 | -0              | -1               |
+| 0000  | +0              | 0                |
+| 0001  | +1              | +1               |
+| 0010  | +2              | +2               |
+| 0011  | +3              | +3               |
+| 0100  | +4              | +4               |
+| 0101  | +5              | +5               |
+| 0110  | +6              | +6               |
+| 0111  | +7              | +7               |
+| 1000  | -7              | -8               |
+| 1001  | -6              | -7               |
+| 1010  | -5              | -6               |
+| 1011  | -4              | -5               |
+| 1100  | -3              | -4               |
+| 1101  | -2              | -3               |
+| 1110  | -1              | -2               |
+| 1111  | -0              | -1               |
 
 ### Gleitkommazahlen (Dezimal mit Nachkommastellen)
 
@@ -365,3 +365,362 @@ Ohne Leerzeichen:
 `1110100100111101101000`
 Das ist der komplette Huffman-kodierte Text für **"BANANENMANN"**.
 Eine Kompresison von 75% wurde ermöglicht
+
+## Zusammenfassung: Was ist Kryptografie?
+
+Der Begriff Kryptografie stammt aus dem Griechischen, wobei "Kryptos" (geheim/verborgen) und "Graphein" (schreiben) die Grundlage bilden.
+
+### 1. Die Disziplinen der Kryptologie
+
+Die verwandte Wissenschaft Kryptologie vereint drei Hauptbereiche:
+* Kryptografie: Die Wissenschaft der Geheimschrift.
+* Kryptoanalyse: Die Kunst, Geheimschrift (unbefugt) zu entziffern und den Code zu brechen.
+* Kryptologie: Die Wissenschaft, die Kryptografie und Kryptoanalyse miteinander vereint.
+
+### 2. Ziel und Prinzip der Kryptografie
+
+* Ziel: Nachrichten in eine "Geheimschrift" (Chiffretext) zu übersetzen, damit sie sicher über möglicherweise unsichere Wege zum vorgesehenen Empfänger geschickt werden können.
+* Prinzip: Nur der vorbestimmte Empfänger soll in der Lage sein, den Inhalt der Nachricht wieder lesbar zu machen.
+* Zeichen: Für die Kryptografie ist die Verwendung von geheimen Zeichen nicht notwendig. Die Zeichen des Klartextes sind dieselben wie die des Chiffretextes.
+    * Historisch wurden die Zeichen des Alphabetes verwendet.
+    * Modern werden meist Gruppen binärer Zustände (Bytes oder Blöcke) eingesetzt.
+
+### 3. Symmetrische Verschlüsselungsverfahren (Beispiele)
+
+Symmetrische Verfahren nutzen denselben Schlüssel für das Ver- und Entschlüsseln. Die genannten Beispiele sind:
+
+* AES (Advanced Encryption Standard) oder Rijndael
+* DES (Data Encryption Standard) oder Lucifer
+* 3DES - Triple-DES
+* IDEA (International Data Encryption Algorithm)
+* Blowfish: 1993 von Bruce Schneier entwickeltes Blockverschlüsselungsverfahren, unpatentiert
+* QUISCI (Quick Stream Cipher)
+* Twofish: Blockverschlüsselungsverfahren, vom Counterpane Team; wird u. a. in Microsoft Windows eingesetzt.
+* CAST-128, CAST-256
+* RC2, RC4, RC5, RC6 ("Rivest Cipher")
+* Serpent
+* One-Time-Pad
+
+## Verschlüsselungsmethoden
+
+### 1. Symmetrische Verschlüsselung
+Hierbei verwenden Sender und Empfänger denselben geheimen Schlüssel.
+* Schlüsselanzahl: Ein Schlüssel (KEY) für alles.
+* Funktionsweise:
+    * Der Sender nutzt KEY zum Verschlüsseln.
+    * Der Empfänger nutzt denselben KEY zum Entschlüsseln.
+* Hauptvorteil: Sie ist sehr schnell und effizient (gut für grosse Datenmengen).
+* Hauptnachteil: Der geheime Schlüssel KEY muss auf einem sicheren Weg zwischen Sender und Empfänger ausgetauscht werden.
+* Bekannte Beispiele: AES (Advanced Encryption Standard).
+
+### 2. Asymmetrische Verschlüsselung
+Hierbei verwendet jeder Teilnehmer ein Paar aus einem öffentlichen und einem privaten Schlüssel.
+* Schlüsselanzahl: Zwei Schlüssel (PubKey und PrivKey) pro Nutzer.
+* Das Schlüsselpaar:
+    * Öffentlicher Schlüssel (PubKey): Darf jeder kennen. Dient zum Verschlüsseln der Nachricht an den Besitzer.
+    * Privater Schlüssel (PrivKey): Muss streng geheim bleiben. Dient zum Entschlüsseln der Nachricht.
+* Funktionsweise:
+    * Sender verschlüsselt mit dem öffentlichen Schlüssel des Empfängers.
+    * Empfänger entschlüsselt mit seinem eigenen privaten Schlüssel.
+* Hauptvorteil: Löst das Schlüsselverteilungsproblem, da der Verschlüsselungsschlüssel (PubKey) offen geteilt werden kann.
+* Hauptnachteil: Sie ist viel langsamer als die symmetrische Verschlüsselung.
+* Bekannte Beispiele: RSA (Rivest-Shamir-Adleman).
+
+### Praktische Anwendung (Hybrid)
+
+In der Praxis werden beide Verfahren kombiniert:
+1.  Die langsame asymmetrische Methode wird nur dazu benutzt, einen schnellen, symmetrischen Sitzungsschlüssel sicher auszutauschen.
+2.  Die schnelle symmetrische Methode wird dann benutzt, um die eigentlichen Daten zu verschlüsseln.
+
+## 114-6A SideQuest:
+
+### 1. Stabchiffre (Skytale)
+
+* Prinzip- Transpositionsverfahren. Klartext wird zeilenweise geschrieben und spaltenweise gelesen. Der Schlüssel ist die Anzahl der Zeilen.
+
+#### A: Verschlüsseln: `Verschluesselungsverfahren` (4 Zeilen)
+
+| V   | E   | R   | S   | C   | H   | L   | U   |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| E   | S   | S   | E   | L   | U   | N   | G   |
+| S   | V   | E   | R   | F   | A   | H   | R   |
+| E   | N   |     |     |     |     |     |     |
+
+* Geheimtext (spaltenweise gelesen): `VESEE SSVNR SSELL UAFGN RHEHR` (Oder sauber- VESESSVNRSELLUAFGNRHEHR)
+
+#### B: Entschlüsseln: `kohrgiyrepatp` (5 Zeilen)
+
+* Gittergröße- 13 Zeichen / 5 Zeilen => 3 Spalten (mit 5+5+3 Zeichen).
+* Klartext (zeilenweise gelesen)- KRYPTOGRAPHIE
+
+### 2. Caesar-Chiffre
+
+* Prinzip: Substitutionsverfahren. Jeder Buchstabe wird um $k$ Positionen verschoben.
+* Formel: $C = (P + k) \pmod{26}$ | $P = (C - k) \pmod{26}$
+
+#### A: Verschlüsseln: `WISS` (Schlüssel 4)
+
+| Klartext (P)    | W(22)  | I(8) | S(18) | S(18) |
+| --------------- | ------ | ---- | ----- | ----- |
+| + Schlüssel (4) | 26 (0) | 12   | 22    | 22    |
+| Geheimtext (C)  | A      | M    | W     | W     |
+
+* Geheimtext- AMWW
+
+#### B: Entschlüsseln: `Otluxsgzoq` (Schlüssel 6)
+
+| Geheimtext (C)  | O(14) | t(19) | l(11) | u(20) | x(23) | s(18) | g(6) | z(25) | o(14) | q(16) |
+| --------------- | ----- | ----- | ----- | ----- | ----- | ----- | ---- | ----- | ----- | ----- |
+| - Schlüssel (6) | 8     | 13    | 5     | 14    | 17    | 12    | 0    | 19    | 8     | 10    |
+| Klartext (P)    | I     | N     | F     | O     | R     | M     | A    | T     | I     | K     |
+
+* Klartext- INFORMATIK
+
+### 3. Vigenère-Chiffre
+
+* Prinzip- Polyalphabetische Substitution. Verwendet ein sich wiederholendes Schlüsselwort ($K$).
+
+#### A: Verschlüsseln: `Wirtschaft` (Key- `KEY`)
+
+* Schlüsselsequenz- `KEYKEYKEYK`
+
+| P   | W   | I   | R   | T   | S   | C   | H   | A   | F   | T   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| K   | K   | E   | Y   | K   | E   | Y   | K   | E   | Y   | K   |
+| C   | G   | M   | P   | D   | W   | A   | R   | E   | D   | D   |
+
+* Geheimtext- GMPDWARDEDD
+
+#### B: Entschlüsseln: `Jypsgf` (Key- `KEY`)
+
+* Schlüsselsequenz- `KEYKEY`
+
+| C   | J   | y   | p   | s   | g   | f   |
+| --- | --- | --- | --- | --- | --- | --- |
+| K   | K   | E   | Y   | K   | E   | Y   |
+| P   | Z   | U   | R   | I   | C   | H   |
+
+* Klartext- ZURICH
+
+## 114-6B SideQuest:
+
+### Modulo bestimmen
+| Aufgabe     | Rechnung         | Ergebnis |
+| ----------- | ---------------- | -------- |
+| 37 (mod 5)  | 37 / 5 = 7 R 2   | 2        |
+| 93 (mod 50) | 93 / 50 = 1 R 43 | 43       |
+| 15 (mod 3)  | 15 / 3 = 5 R 0   | 0        |
+| 43 (mod 5)  | 43 / 5 = 8 R 3   | 3        |
+
+### Addition mit Modulo
+| Aufgabe       | Schritt 1- Summieren | Schritt 2- Modulo-Rest | Ergebnis |
+| ------------- | -------------------- | ---------------------- | -------- |
+| 3+5 (mod 7)   | 8                    | 8 / 7 = R 1            | 1        |
+| 2+2 (mod 15)  | 4                    | 4 / 15 = R 4           | 4        |
+| 3+6 (mod 9)   | 9                    | 9 / 9 = R 0            | 0        |
+| 17+23 (mod 9) | 40                   | 40 / 9 = R 4           | 4        |
+
+### Subtraktion mit Modulo
+| Aufgabe       | Schritt 1- Subtrahieren | Schritt 2- Modulo-Rest (oder Addition) | Ergebnis |
+| ------------- | ----------------------- | -------------------------------------- | -------- |
+| 16–23 (mod 5) | -7                      | -7 + (2 * 5) = 3                       | 3        |
+| 3–6 (mod 9)   | -3                      | -3 + 9 = 6                             | 6        |
+| 27–37 (mod 9) | -10                     | -10 + (2 * 9) = 8                      | 8        |
+| 8–9 (mod 7)   | -1                      | -1 + 7 = 6                             | 6        |
+
+### Multiplikation mit Modulo
+| Aufgabe        | Schritt 1- Multiplizieren | Schritt 2- Modulo-Rest | Ergebnis |
+| -------------- | ------------------------- | ---------------------- | -------- |
+| 4 * 5 (mod 7)  | 20                        | 20 / 7 = R 6           | 6        |
+| 20 * 2 (mod 4) | 40                        | 40 / 4 = R 0           | 0        |
+| 3 * 7 (mod 6)  | 21                        | 21 / 6 = R 3           | 3        |
+| 9 * 3 (mod 4)  | 27                        | 27 / 4 = R 3           | 3        |
+
+## 114-7A SideQuest:
+
+### 1. Symmetrische Verschlüsselung
+Hierbei verwenden Sender und Empfänger denselben geheimen Schlüssel.
+* Schlüsselanzahl: Ein Schlüssel (KEY) für alles.
+* Funktionsweise:
+    * Der Sender nutzt KEY zum Verschlüsseln.
+    * Der Empfänger nutzt denselben KEY zum Entschlüsseln.
+* Hauptvorteil: Sie ist sehr schnell und effizient (gut für grosse Datenmengen).
+* Hauptnachteil: Der geheime Schlüssel KEY muss auf einem sicheren Weg zwischen Sender und Empfänger ausgetauscht werden.
+* Bekannte Beispiele: AES (Advanced Encryption Standard).
+
+### 2. Asymmetrische Verschlüsselung
+Hierbei verwendet jeder Teilnehmer ein Paar aus einem öffentlichen und einem privaten Schlüssel.
+* Schlüsselanzahl: Zwei Schlüssel (PubKey und PrivKey) pro Nutzer.
+* Das Schlüsselpaar:
+    * Öffentlicher Schlüssel (PubKey): Darf jeder kennen. Dient zum Verschlüsseln der Nachricht an den Besitzer.
+    * Privater Schlüssel (PrivKey): Muss streng geheim bleiben. Dient zum Entschlüsseln der Nachricht.
+* Funktionsweise:
+    * Sender verschlüsselt mit dem öffentlichen Schlüssel des Empfängers.
+    * Empfänger entschlüsselt mit seinem eigenen privaten Schlüssel.
+* Hauptvorteil: Löst das Schlüsselverteilungsproblem, da der Verschlüsselungsschlüssel (PubKey) offen geteilt werden kann.
+* Hauptnachteil: Sie ist viel langsamer als die symmetrische Verschlüsselung.
+* Bekannte Beispiele: RSA (Rivest-Shamir-Adleman).
+
+### Praktische Anwendung (Hybrid)
+
+In der Praxis werden beide Verfahren kombiniert:
+1.  Die langsame asymmetrische Methode wird nur dazu benutzt, einen schnellen, symmetrischen Sitzungsschlüssel sicher auszutauschen.
+2.  Die schnelle symmetrische Methode wird dann benutzt, um die eigentlichen Daten zu verschlüsseln.
+
+### SHA-Verfahren (Secure Hash Algorithm)
+
+SHA-Verfahren sind Hash-Funktionen. Das bedeutet, sie nehmen beliebige Daten (wie Text, Dateien oder Passwörter) entgegen und erzeugen daraus eine feste, kurze Zeichenkette (den sogenannten Hashwert oder Digest).
+
+#### 1. Grundprinzip
+
+1.  Eingabe: Du gibst eine Nachricht beliebiger Länge ein (z.B. einen Satz oder ein 1 GB grosses Video).
+2.  Berechnung: Die Daten werden durch eine komplexe mathematische Einweg-Funktion geschickt.
+3.  Ausgabe: Es entsteht ein Hashwert von fester Länge in Form einer Hexadezimalzahl.
+
+#### 2. Wichtige Eigenschaften
+
+* Einbahnstrasse (Einwegfunktion): Aus dem Hashwert kann man die ursprüngliche Eingabe nicht wiederherstellen.
+* Kleine Änderung, grosser Effekt: Ändert man nur ein einziges Bit in der Eingabe, ändert sich der gesamte Hashwert dramatisch.
+* Kollisionssicherheit: Es ist extrem unwahrscheinlich, dass zwei unterschiedliche Eingaben denselben Hashwert erzeugen.
+
+#### 3. Die verschiedenen SHA-Versionen
+
+Die Zahl im Namen gibt die Länge des erzeugten Hashwertes in Bits an. Je länger der Hashwert, desto sicherer das Verfahren.
+
+| Verfahren | Hash-Länge (Bits)        | Hash-Länge (Hex-Zeichen) | Status             | Kurzbeschreibung                                                                                                                                                                                       |
+| --------- | ------------------------ | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SHA-256   | 256                      | 64                       | Aktueller Standard | Teil der SHA-2-Familie. Wird häufig in Blockchain-Technologien (z.B. Bitcoin) und bei der Sicherung von TLS/SSL (HTTPS) verwendet. Bietet eine hohe Sicherheit.                                        |
+| SHA-3     | Variabel (z.B. 256, 512) | Variabel                 | Neuester Standard  | Wurde als Nachfolger für die gesamte SHA-2-Familie entwickelt. Es basiert auf einer völlig anderen kryptografischen Struktur (Keccak-Algorithmus) und bietet eine verbesserte theoretische Sicherheit. |
+
+## 114-7B
+
+### Was ist Steganografie?
+* Steganografie ist die Wissenschaft und Kunst des Verbergens von Informationen.
+* Der Begriff stammt aus dem Griechischen und bedeutet wörtlich "geheimes Schreiben".
+* Ziel ist es, nicht nur den Inhalt einer Nachricht unlesbar zu machen (wie bei der Kryptografie), sondern die Existenz der Nachricht selbst zu verbergen. 
+
+### Wie funktioniert es?
+Die gängigste Methode bei digitalen Bildern ist die LSB-Methode (Least Significant Bit):
+
+* Digitale Bilder bestehen aus Pixeln, und jedes Pixel hat Farbwerte (z.B. Rot, Grün, Blau).
+* Jeder Farbwert wird durch eine Reihe von Bits dargestellt (z.B. 8 Bit).
+* Die Steganografie verändert das letzte Bit (das am wenigsten wichtige Bit, LSB) dieser Farbwerte.
+* Eine Änderung des LSB hat kaum sichtbare Auswirkungen auf die Farbe des Pixels, da das menschliche Auge den minimalen Unterschied nicht wahrnehmen kann.
+* Diese "unschuldigen" letzten Bits werden dann genutzt, um die geheime Botschaft binär zu speichern.
+
+### Warum wird es verwendet?
+* Zensurumgehung: Um die Überwachung durch Dritte zu umgehen, da nicht die verschlüsselte Natur der Daten, sondern die Daten selbst verborgen werden.
+* Urheberrechtsschutz (Wasserzeichen): Unsichtbare Markierungen (digitale Wasserzeichen) in Bildern oder Musikdateien, um den Ursprung des Inhalts zu beweisen.
+* Geheimkommunikation: Ermöglicht die Kommunikation zwischen zwei Parteien, ohne dass ein Dritter überhaupt Verdacht schöpft.
+
+## 114-7C
+
+### Theoretische Infos zur Aufgabe
+
+**1. Warum E-Mails unsicher sind**
+* Normale E-Mails sind wie Postkarten -> jeder Server dazwischen kann alles lesen.
+* Risiko: Abfangen, Mitlesen, Manipulation.
+
+### 2. Verschlüsselungsverfahren bei E-Mails
+
+**Asymmetrische Verschlüsselung (Public-Key-Verfahren)**
+
+Wird bei Mailverschlüsselung (PGP/GPG, S/MIME) genutzt.
+
+Prinzip:
+* Jeder hat 2 Schlüssel:
+  * Public Key -> darf jeder haben
+  * Private Key -> bleibt geheim
+* Verschlüsseln erfolgt mit dem Public Key des Empfängers
+* Entschlüsseln kann nur der Private Key
+
+**Vorteile:**
+
+* Kein geheimer Schlüsselaustausch notwendig
+* Ermöglicht Signaturen (Authentizität + Integrität)
+* Hohe Sicherheit (z.B. 2048-4096 Bit RSA)
+
+### 3. Signatur vs. Verschlüsselung
+
+Verschlüsseln:
+-> Schützt den Inhalt
+-> Nur der Empfänger kann lesen
+-> Ziel: Vertraulichkeit
+
+Signieren:
+-> Beweist, dass die Nachricht wirklich von dir ist
+-> Empfänger kann prüfen, ob die Datei verändert wurde
+-> Ziel: Authentizität + Integrität
+
+Wie funktioniert es?
+
+* Signieren nutzt deinen privaten Schlüssel
+* Empfänger überprüft mit deinem öffentlichen Schlüssel
+
+### 4. GPG / OpenPGP / Gpg4Win
+
+GPG (GnuPG)
+
+* Open-Source Umsetzung von OpenPGP
+* Wird verwendet, um Dateien/Mails zu verschlüsseln und zu signieren
+
+Gpg4Win
+
+* Windows-Paket, enthält:
+
+  * Kleopatra -> Schlüsselverwaltung
+  * GPG Core Tools
+
+Einsatzgebiete:
+
+* Verschlüsselte Mails (PGP/MIME)
+* Sichere Dateiübertragung
+* Software-Signaturen
+
+### 5. Wann nutzt man was? (Praxisrelevant)
+
+**PGP / GPG**
+
+* Personenkommunikation
+* Entwickler, Admins, Datenschutz
+
+**S/MIME**
+
+* Unternehmen
+* Zertifikate über PKI (z.B. SwissSign)
+
+### 6. Rechtliche Mindestanforderungen (Schweiz / DSGVO)
+
+Für Datenübertragung über das Internet gelten heute meist:
+
+* Mindestens 128-Bit symmetrisch (AES-128)
+* Asymmetrisch: mindestens 2048 Bit RSA
+* E-Mail-Transport: TLS 1.2 oder höher
+
+Sensible Daten müssen Ende-zu-Ende verschlüsselt werden (PGP oder S/MIME).
+
+### 7. Digitales Zertifikat - wozu?
+
+Dient zur Identitätsbestätigung (z.B. einer Mailadresse oder Person).
+
+Gewährleistet:
+
+* Authentizität -> Absender ist echt
+* Integrität -> Daten unverändert
+* Vertrauen zwischen zwei Parteien
+
+Beispiel: HTTPS-Zertifikate, Firmensignaturen, S/MIME.
+
+### 8. Warum EduGame Mailverschlüsselung braucht
+
+-> Lizenz-Key = sensibler Wert
+-> Ohne Verschlüsselung könnten:
+
+* Keys abgefangen werden
+* Missbrauch / Weitergabe passieren
+* Rechtliche Vorgaben verletzt werden (DSG/DSGVO)
+
+Durch Verschlüsselung:
+* Nur der richtige Schüler kann den Key lesen
+* Signatur zeigt, dass die Mail nicht manipuliert wurde
+

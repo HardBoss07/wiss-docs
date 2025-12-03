@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kryptographie-Werkzeugkasten</title>
+    <style>
+        /*
+        * CSS-Bereich für das Styling
+        */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #007bff;
+            border-bottom: 1px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            outline: none;
+            transition: background-color 0.3s, color 0.3s;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .tab-button.active {
+            color: #007bff;
+            border-bottom: 3px solid #007bff;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .cipher-section {
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            background-color: #fafafa;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="text"], input[type="number"], textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-encrypt {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-decrypt {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-encrypt:hover {
+            background-color: #218838;
+        }
+
+        .btn-decrypt:hover {
+            background-color: #c82333;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            border-radius: 4px;
+            font-size: 1.1em;
+            word-wrap: break-word;
+        }
+
+        .output hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        .output table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .output th, .output td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .info-box {
+            background-color: #e7f5ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kryptographie-Werkzeugkasten</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openCipher('skytale')">Stabchiffre (Skytale)</button>
+            <button class="tab-button" onclick="openCipher('caesar')">Caesar</button>
+            <button class="tab-button" onclick="openCipher('vigenere')">Vigenère</button>
+        </div>
+
+        <div id="skytale" class="tab-content active">
+            <div class="cipher-section">
+                <h2>Stabchiffre (Skytale)</h2>
+                <div class="info-box">
+                    <strong>Info:</strong> Die Skytale ist eine <strong>Transpositionschiffre</strong>. Der Schlüssel ist die <strong>Wickelzahl</strong> (Anzahl der Zeilen). Der Text wird zeilenweise geschrieben und spaltenweise gelesen.
+                </div>
+
+                <label for="skytale-text">Text (Klartext/Chiffrat):</label>
+                <textarea id="skytale-text" placeholder="Geben Sie den Text hier ein..."></textarea>
+
+                <label for="skytale-key">Wickelzahl (Schlüssel):</label>
+                <input type="number" id="skytale-key" min="2" value="3">
+
+                <button class="btn-encrypt" onclick="skytaleEncrypt()">Verschlüsseln</button>
+                <button class="btn-decrypt" onclick="skytaleDecrypt()">Entschlüsseln</button>
+
+                <div class="output" id="skytale-output">Ergebnis:</div>
+            </div>
+        </div>
+
+        <div id="caesar" class="tab-content">
+            <div class="cipher-section">
+                <h2>Caesar-Chiffre</h2>
+                <div class="info-box">
+                    <strong>Info:</strong> Die Caesar-Chiffre ist eine <strong>monoalphabetische Substitutionschiffre</strong>. Jeder Buchstabe wird um einen festen Wert (den Schlüssel <i>k</i>) verschoben. Es wird modulo 26 gerechnet. 
+                </div>
+
+                <label for="caesar-text">Text (Klartext/Chiffrat):</label>
+                <textarea id="caesar-text" placeholder="Geben Sie den Text hier ein..."></textarea>
+
+                <label for="caesar-key">Schlüssel (Verschiebung 0-25):</label>
+                <input type="number" id="caesar-key" min="0" max="25" value="3">
+
+                <button class="btn-encrypt" onclick="caesarEncrypt()">Verschlüsseln</button>
+                <button class="btn-decrypt" onclick="caesarDecrypt()">Entschlüsseln</button>
+
+                <div class="output" id="caesar-output">Ergebnis:</div>
+            </div>
+        </div>
+
+        <div id="vigenere" class="tab-content">
+            <div class="cipher-section">
+                <h2>Vigenère-Chiffre</h2>
+                <div class="info-box">
+                    <strong>Info:</strong> Die Vigenère-Chiffre ist eine <strong>polyalphabetische Substitutionschiffre</strong>. Sie verwendet einen sich wiederholenden Textschlüssel, wobei der Versatz für jeden Buchstaben variiert. Es werden nur Buchstaben (A-Z) verarbeitet. 
+                </div>
+
+                <label for="vigenere-text">Text (Klartext/Chiffrat):</label>
+                <textarea id="vigenere-text" placeholder="Geben Sie den Text hier ein..."></textarea>
+
+                <label for="vigenere-key">Textschlüssel (nur Buchstaben):</label>
+                <input type="text" id="vigenere-key" value="SCHLUESSEL">
+
+                <button class="btn-encrypt" onclick="vigenereEncrypt()">Verschlüsseln</button>
+                <button class="btn-decrypt" onclick="vigenereDecrypt()">Entschlüsseln</button>
+
+                <div class="output" id="vigenere-output">Ergebnis:</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /*
+        * JAVASCRIPT-BEREICH für die Logik
+        */
+
+        // **************** ALLGEMEINE FUNKTIONEN ****************
+
+        /** Wechselt zwischen den Tabs (Skytale, Caesar, Vigenere) */
+        function openCipher(cipherName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cipherName).style.display = "block";
+            // event.currentTarget ist das angeklickte Button-Element
+            if (event.currentTarget) {
+                event.currentTarget.className += " active";
+            }
+        }
+        
+        // Beim Laden des Skripts den ersten Tab aktivieren
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('skytale').style.display = 'block';
+        });
+
+        // **************** KONSTANTEN ****************
+        const BASE_CODE = 'A'.charCodeAt(0);
+        const ALPHABET_SIZE = 26;
+
+        /** Bereinigt den Text (nur Großbuchstaben, keine Sonderzeichen/Umlaute) */
+        function cleanText(text, allowSpaces = false) {
+            // Ersetzt alle Nicht-Buchstaben durch Leere, außer Leerzeichen, falls erlaubt
+            let cleaned = text.toUpperCase().replace(/[^A-Z\s]/g, '');
+            if (!allowSpaces) {
+                 // Entfernt Leerzeichen
+                 cleaned = cleaned.replace(/\s/g, '');
+            }
+            return cleaned;
+        }
+
+        // **************** CAESAR-CHIFFRE LOGIK (MIT ERKLÄRUNG) ****************
+
+        /** Führt die eigentliche Caesar-Verschiebung durch und generiert die Erklärung */
+        function caesarShift(text, key, decrypt = false) {
+            let result = '';
+            let explanation = '<h3>Schritt-für-Schritt Erklärung:</h3>';
+            explanation += '<p>Verfahren: <strong>Caesar Chiffre</strong><br>Operation: <strong>' + (decrypt ? 'Entschlüsseln' : 'Verschlüsseln') + '</strong><br>Schlüssel (k): <strong>' + key + '</strong></p>';
+            explanation += '<table>';
+            explanation += '<tr><th>Buchstabe</th><th>Position (x)</th><th>Rechenschritt</th><th>Neue Position (y)</th><th>Ergebnis</th></tr>';
+            
+            // Bei Entschlüsselung: (x - k) mod 26. Man rechnet (x + (26-k)) mod 26
+            const shift = decrypt ? (ALPHABET_SIZE - key) : key;
+
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+                let currentPos = '';
+                let newPos = '';
+                let newChar = char;
+                let calculation = '&mdash;'; // HTML-Entität für langes Gedankenstrich
+                
+                if (char >= 'A' && char <= 'Z') {
+                    // Position des Buchstabens (0=A, 1=B, ...)
+                    const charCode = char.charCodeAt(0);
+                    currentPos = charCode - BASE_CODE;
+                    
+                    // Neue Position berechnen
+                    const calculatedPos = (currentPos + shift) % ALPHABET_SIZE;
+                    newPos = calculatedPos;
+                    
+                    // Neuen Buchstaben finden
+                    newChar = String.fromCharCode(BASE_CODE + calculatedPos);
+                    result += newChar;
+
+                    const sign = decrypt ? '-' : '+';
+                    const effectiveShift = decrypt ? key : key;
+                    
+                    // Erklärungszeile: E_k(x) = (x + k) mod 26 bzw. D_k(y) = (y - k) mod 26
+                    calculation = '(' + currentPos + ' ' + sign + ' ' + effectiveShift + ') mod 26 = ' + calculatedPos;
+
+                } else {
+                    // Nicht-alphabetische Zeichen unverändert lassen
+                    result += char;
+                }
+
+                explanation += '<tr>' +
+                    '<td>' + char + '</td>' +
+                    '<td>' + (currentPos === '' ? '-' : currentPos) + '</td>' +
+                    '<td>' + calculation + '</td>' +
+                    '<td>' + (newPos === '' ? '-' : newPos) + '</td>' +
+                    '<td style="font-weight: bold;">' + newChar + '</td>' +
+                '</tr>';
+            }
+            explanation += '</table>';
+            
+            return { result: result, explanation: explanation };
+        }
+
+        function caesarEncrypt() {
+            const text = document.getElementById('caesar-text').value;
+            const key = parseInt(document.getElementById('caesar-key').value);
+            // Erlaubt Leerzeichen im Input für Darstellung, wird im Shift-Block ignoriert
+            const cleanedText = cleanText(text, true); 
+            const outputElement = document.getElementById('caesar-output');
+
+            if (isNaN(key) || key < 0 || key > 25) {
+                outputElement.innerHTML = "Fehler: Schlüssel muss zwischen 0 und 25 liegen.";
+                return;
+            }
+
+            const { result, explanation } = caesarShift(cleanedText, key, false);
+            outputElement.innerHTML = '<strong>Chiffrat:</strong> ' + result + '<hr>' + explanation;
+        }
+
+        function caesarDecrypt() {
+            const text = document.getElementById('caesar-text').value;
+            const key = parseInt(document.getElementById('caesar-key').value);
+            const cleanedText = cleanText(text, true);
+            const outputElement = document.getElementById('caesar-output');
+
+            if (isNaN(key) || key < 0 || key > 25) {
+                outputElement.innerHTML = "Fehler: Schlüssel muss zwischen 0 und 25 liegen.";
+                return;
+            }
+
+            const { result, explanation } = caesarShift(cleanedText, key, true);
+            outputElement.innerHTML = '<strong>Klartext:</strong> ' + result + '<hr>' + explanation;
+        }
+
+        // **************** VIGENÈRE-CHIFFRE LOGIK (MIT ERKLÄRUNG) ****************
+
+        /** Führt die Vigenère-Operation durch und generiert die Erklärung */
+        function vigenereShift(text, key, decrypt = false) {
+            // Bereinigen Sie den Text und den Schlüssel von Nicht-Buchstaben (klassische Vigenère)
+            const cleanedText = cleanText(text, false); 
+            const cleanKey = cleanText(key, false);
+            const L = cleanedText.length;
+
+            let result = '';
+            let explanation = '<h3>Schritt-für-Schritt Erklärung:</h3>';
+            explanation += '<p>Verfahren: <strong>Vigenère Chiffre</strong><br>Operation: <strong>' + (decrypt ? 'Entschlüsseln' : 'Verschlüsseln') + '</strong><br>Schlüsselwort: <strong>' + cleanKey + '</strong></p>';
+            explanation += '<table>';
+            explanation += '<tr><th>Index (i)</th><th>Text (x)</th><th>Schlüssel (k)</th><th>Rechenschritt</th><th>Ergebnis (y)</th></tr>';
+
+            let keyIndex = 0;
+
+            if (cleanKey.length === 0) return { result: "Fehler: Schlüsselwort darf nur Buchstaben enthalten und nicht leer sein.", explanation: "" };
+            if (L === 0) return { result: "", explanation: "<p>Geben Sie Text zum Ver- oder Entschlüsseln ein.</p>" };
+
+
+            for (let i = 0; i < L; i++) { // Schleife über den BEREINIGTEN Text
+                const char = cleanedText[i];
+                let textValue = char.charCodeAt(0) - BASE_CODE; // x_i
+
+                // Schlüssel-Werte bestimmen (wiederholend)
+                const keyChar = cleanKey[keyIndex % cleanKey.length];
+                const keyValue = keyChar.charCodeAt(0) - BASE_CODE; // k_i
+
+                let newValue;
+                let calculation;
+
+                if (decrypt) {
+                    // Entschlüsseln: D_k(y) = (y - k_i + 26) mod 26
+                    newValue = (textValue - keyValue + ALPHABET_SIZE) % ALPHABET_SIZE;
+                    calculation = '(' + textValue + ' - ' + keyValue + ' + 26) mod 26 = ' + newValue;
+                } else {
+                    // Verschlüsseln: E_k(x) = (x + k_i) mod 26
+                    newValue = (textValue + keyValue) % ALPHABET_SIZE;
+                    calculation = '(' + textValue + ' + ' + keyValue + ') mod 26 = ' + newValue;
+                }
+                
+                const newChar = String.fromCharCode(BASE_CODE + newValue);
+                result += newChar;
+                
+                keyIndex++; // Schlüssel rückt bei jedem Buchstaben vor
+
+                explanation += '<tr>' +
+                    '<td>' + i + '</td>' +
+                    '<td>' + char + ' (' + textValue + ')</td>' +
+                    '<td>' + keyChar + ' (' + keyValue + ')</td>' +
+                    '<td>' + calculation + '</td>' +
+                    '<td style="font-weight: bold;">' + newChar + ' (' + newValue + ')</td>' +
+                '</tr>';
+            }
+            explanation += '</table>';
+            
+            return { result: result, explanation: explanation };
+        }
+
+        function vigenereEncrypt() {
+            const text = document.getElementById('vigenere-text').value;
+            const key = document.getElementById('vigenere-key').value;
+            const outputElement = document.getElementById('vigenere-output');
+            
+            const { result, explanation } = vigenereShift(text, key, false);
+            outputElement.innerHTML = '<strong>Chiffrat (nur Buchstaben):</strong> ' + result + '<hr>' + explanation;
+        }
+
+        function vigenereDecrypt() {
+            const text = document.getElementById('vigenere-text').value;
+            const key = document.getElementById('vigenere-key').value;
+            
+            const { result, explanation } = vigenereShift(text, key, true);
+            document.getElementById('vigenere-output').innerHTML = '<strong>Klartext (nur Buchstaben):</strong> ' + result + '<hr>' + explanation;
+        }
+
+
+        // **************** STABCHIFFRE (SKYTALE) LOGIK (MIT ERKLÄRUNG) ****************
+
+        /** Die Skytale (Transpositionschiffre) */
+        function skytale(text, key, encrypt = true) {
+            // Skytale entfernt auch alle Nicht-Buchstaben
+            const cleanedText = text.toUpperCase().replace(/[^A-Z]/g, '');
+            const L = cleanedText.length;
+            const K = key; // Wickelzahl (Zeilen)
+
+            if (L === 0) return { result: "", explanation: "" };
+            if (K < 2) return { result: "Fehler: Wickelzahl muss mindestens 2 sein.", explanation: "" };
+
+            const rows = K;
+            // Spaltenzahl C = ceil(L / K)
+            const cols = Math.ceil(L / rows);
+            const matrix = Array.from({ length: rows }, () => new Array(cols).fill('•')); // Füllzeichen
+            
+            // Formel in HTML-Code umwandeln: C = ceil(L/K)
+            const formula = 'C = &lceil; L / K &rceil; = &lceil; ' + L + ' / ' + K + ' &rceil; = ' + cols;
+
+            let explanation = '<h3>Schritt-für-Schritt Erklärung:</h3>';
+            explanation += '<p>Verfahren: <strong>Stabchiffre (Skytale)</strong><br>Operation: <strong>' + (encrypt ? 'Verschlüsseln' : 'Entschlüsseln') + '</strong><br>Wickelzahl (Zeilen K): <strong>' + K + '</strong><br>Errechnete Spaltenzahl C: <strong>' + formula + '</strong></p>';
+
+            if (encrypt) {
+                // VERSCHLÜSSELN: Zeilenweise schreiben, Spaltenweise lesen
+                explanation += '<p>Der Klartext wird <strong>zeilenweise</strong> in die ' + K + 'x' + cols + '-Matrix eingetragen.</p>';
+                let textIndex = 0;
+                for (let r = 0; r < rows; r++) {
+                    for (let c = 0; c < cols; c++) {
+                        if (textIndex < L) {
+                            matrix[r][c] = cleanedText[textIndex];
+                            textIndex++;
+                        }
+                    }
+                }
+                
+                // Matrix anzeigen
+                explanation += '<p><strong>Schreib-Matrix (Klartext):</strong></p>';
+                explanation += '<table><tr>';
+                for (let c = 0; c < cols; c++) explanation += '<th>S' + (c+1) + '</th>';
+                explanation += '</tr>';
+                for (let r = 0; r < rows; r++) {
+                    explanation += '<tr>';
+                    for (let c = 0; c < cols; c++) {
+                        explanation += '<td>' + matrix[r][c] + '</td>';
+                    }
+                    explanation += '</tr>';
+                }
+                explanation += '</table>';
+
+                // Lese Spaltenweise
+                explanation += '<p>Das <strong>Chiffrat</strong> ergibt sich durch das <strong>spaltenweise</strong> Lesen der Matrix.</p>';
+                let result = '';
+                let resultBlocks = [];
+                
+                for (let c = 0; c < cols; c++) {
+                    let colStr = '';
+                    for (let r = 0; r < rows; r++) {
+                        const char = matrix[r][c];
+                        if (char !== '•') { // Füllzeichen ignorieren
+                            result += char;
+                            colStr += char;
+                        }
+                    }
+                    if (colStr.length > 0) resultBlocks.push(colStr);
+                }
+                explanation += '<strong>Chiffrat (Spalten gelesen):</strong> ' + resultBlocks.join(' | ');
+                
+                return { result: result, explanation: explanation };
+
+            } else {
+                // ENTSCHLÜSSELN: Spaltenweise schreiben, Zeilenweise lesen (inverse Operation)
+                explanation += '<p>Der Chiffrat wird <strong>spaltenweise</strong> in die ' + K + 'x' + cols + '-Matrix eingefügt.</p>';
+                
+                let textIndex = 0;
+                // Befüllen der Matrix spaltenweise mit dem Chiffrat
+                for (let c = 0; c < cols; c++) {
+                    for (let r = 0; r < rows; r++) {
+                        // Die Position des Zeichens im Klartext (r * cols + c) muss < L sein,
+                        // da nur diese Plätze im Original belegt waren
+                        const originalPlaintextIndex = r * cols + c; 
+                        
+                        if (originalPlaintextIndex < L) { 
+                            if (textIndex < L) {
+                                matrix[r][c] = cleanedText[textIndex];
+                                textIndex++;
+                            }
+                        }
+                    }
+                }
+
+                // Matrix anzeigen
+                explanation += '<p><strong>Füll-Matrix (Chiffrat):</strong></p>';
+                explanation += '<table><tr>';
+                for (let c = 0; c < cols; c++) explanation += '<th>S' + (c+1) + '</th>';
+                explanation += '</tr>';
+                for (let r = 0; r < rows; r++) {
+                    explanation += '<tr>';
+                    for (let c = 0; c < cols; c++) {
+                        explanation += '<td>' + matrix[r][c] + '</td>';
+                    }
+                    explanation += '</tr>';
+                }
+                explanation += '</table>';
+                
+                // Lese Zeilenweise
+                explanation += '<p>Der <strong>Klartext</strong> ergibt sich durch das <strong>zeilenweise</strong> Lesen der Matrix.</p>';
+                let result = '';
+                let resultBlocks = [];
+                for (let r = 0; r < rows; r++) {
+                    let rowStr = '';
+                    for (let c = 0; c < cols; c++) {
+                        const char = matrix[r][c];
+                        if (char !== '•') {
+                            result += char;
+                            rowStr += char;
+                        }
+                    }
+                    if (rowStr.length > 0) resultBlocks.push(rowStr);
+                }
+                explanation += '<strong>Klartext (Zeilen gelesen):</strong> ' + resultBlocks.join(' | ');
+                
+                return { result: result, explanation: explanation };
+            }
+        }
+
+
+        function skytaleEncrypt() {
+            const text = document.getElementById('skytale-text').value;
+            const key = parseInt(document.getElementById('skytale-key').value);
+            
+            const { result, explanation } = skytale(text, key, true);
+            document.getElementById('skytale-output').innerHTML = '<strong>Chiffrat:</strong> ' + result + '<hr>' + explanation;
+        }
+
+        function skytaleDecrypt() {
+            const text = document.getElementById('skytale-text').value;
+            const key = parseInt(document.getElementById('skytale-key').value);
+            
+            const { result, explanation } = skytale(text, key, false);
+            document.getElementById('skytale-output').innerHTML = '<strong>Klartext:</strong> ' + result + '<hr>' + explanation;
+        }
+
+    </script>
+</body>
+</html>
