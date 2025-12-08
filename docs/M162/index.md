@@ -81,37 +81,37 @@ Für Auswertung ist Zeichensatz und Datenformate wichtig (UTF-8, ASCII, TT-MM-YY
 
 Die Datentabelle enthält folgende Einträge:
 
-| Kategorie         | Beispiel             | Art der Daten                          |
-| ----------------- | -------------------- | -------------------------------------- |
-| Name              | Sydney Zamora        | Personendaten                          |
-| Herkunftsland     | Ungarn               | Besonders schützenswerte Personendaten |
-| Geburtsdatum      | 10.10.1958           | Personendaten                          |
-| Zivilstand        | keine Angabe         | Personendaten                          |
-| Arbeitsverhältnis | Arbeitslos           | Personendaten                          |
-| IP-Adresse        | 106.228.157.99       | Personendaten                          |
-| Verdienst         | <50'000              | Besonders schützenswerte Personendaten |
-| Lieblingsfarbe    | Rot                  | Nicht schützenswerte Daten             |
-| Lieblingsgenre    | Roleplaying Game     | Nicht schützenswerte Daten             |
-| Lieblingsfilm     | Time to Hunt         | Nicht schützenswerte Daten             |
-| Name des Haustiers| Bailey               | Personendaten                          |
+| Kategorie          | Beispiel         | Art der Daten                          |
+| ------------------ | ---------------- | -------------------------------------- |
+| Name               | Sydney Zamora    | Personendaten                          |
+| Herkunftsland      | Ungarn           | Besonders schützenswerte Personendaten |
+| Geburtsdatum       | 10.10.1958       | Personendaten                          |
+| Zivilstand         | keine Angabe     | Personendaten                          |
+| Arbeitsverhältnis  | Arbeitslos       | Personendaten                          |
+| IP-Adresse         | 106.228.157.99   | Personendaten                          |
+| Verdienst          | <50'000          | Besonders schützenswerte Personendaten |
+| Lieblingsfarbe     | Rot              | Nicht schützenswerte Daten             |
+| Lieblingsgenre     | Roleplaying Game | Nicht schützenswerte Daten             |
+| Lieblingsfilm      | Time to Hunt     | Nicht schützenswerte Daten             |
+| Name des Haustiers | Bailey           | Personendaten                          |
 
 Die Daten enthalten somit sowohl normale als auch besonders schützenswerte Personendaten. Da der Name und weitere eindeutige Merkmale vorhanden sind, können Personen direkt identifiziert werden, weshalb die gesamte Datenerhebung unter das nDSG fällt.
 
 ### 3. Zulässigkeit der Daten
 
-| Datenart          | Zulässig      | Begründung                                                        |
-| ----------------- | ------------- | ----------------------------------------------------------------- |
-| Name              | Nein          | Identifiziert die Person eindeutig, nur mit Einwilligung erlaubt  |
-| Herkunftsland     | Eingeschränkt | Besonders schützenswert, nur mit ausdrücklicher Zustimmung        |
-| Geburtsdatum      | Eingeschränkt | Rückschlüsse auf Alter möglich, Zustimmung erforderlich           |
-| Zivilstand        | Eingeschränkt | Persönlich, nur mit Zustimmung oder anonymisiert zulässig         |
-| Arbeitsverhältnis | Eingeschränkt | Wirtschaftliche Situation, Zustimmung erforderlich                |
-| IP-Adresse        | Eingeschränkt | Technisch notwendig, aber personenbezogen                         |
-| Verdienst         | Nein          | Besonders schützenswert, Einwilligung zwingend                    |
-| Lieblingsfarbe    | Ja            | Keine schützenswerten oder identifizierenden Informationen        |
-| Lieblingsgenre    | Ja            | Unproblematisch, keine personenbezogenen Merkmale                 |
-| Lieblingsfilm     | Ja            | Unproblematisch, keine personenbezogenen Merkmale                 |
-| Name des Haustiers| Eingeschränkt | Kann zur Identifikation beitragen, besser anonymisieren           |
+| Datenart           | Zulässig      | Begründung                                                       |
+| ------------------ | ------------- | ---------------------------------------------------------------- |
+| Name               | Nein          | Identifiziert die Person eindeutig, nur mit Einwilligung erlaubt |
+| Herkunftsland      | Eingeschränkt | Besonders schützenswert, nur mit ausdrücklicher Zustimmung       |
+| Geburtsdatum       | Eingeschränkt | Rückschlüsse auf Alter möglich, Zustimmung erforderlich          |
+| Zivilstand         | Eingeschränkt | Persönlich, nur mit Zustimmung oder anonymisiert zulässig        |
+| Arbeitsverhältnis  | Eingeschränkt | Wirtschaftliche Situation, Zustimmung erforderlich               |
+| IP-Adresse         | Eingeschränkt | Technisch notwendig, aber personenbezogen                        |
+| Verdienst          | Nein          | Besonders schützenswert, Einwilligung zwingend                   |
+| Lieblingsfarbe     | Ja            | Keine schützenswerten oder identifizierenden Informationen       |
+| Lieblingsgenre     | Ja            | Unproblematisch, keine personenbezogenen Merkmale                |
+| Lieblingsfilm      | Ja            | Unproblematisch, keine personenbezogenen Merkmale                |
+| Name des Haustiers | Eingeschränkt | Kann zur Identifikation beitragen, besser anonymisieren          |
 
 ### 4. Begründung der Bewertung
 
@@ -128,9 +128,9 @@ Da in der Tabelle Name, Herkunftsland, Geburtsdatum, IP-Adresse und Verdienst en
 Für statistische oder analytische Zwecke sollten die Daten anonymisiert werden.  
 Eine mögliche anonymisierte Fassung könnte wie folgt aussehen:
 
-| Altersgruppe  | Herkunft (Region) | Arbeitsverhältnis | Einkommensklasse | Lieblingsgenre   |
-| ------------- | ----------------- | ----------------- | ---------------- | ---------------- |
-| 60–69         | Europa            | Arbeitslos        | <50'000          | Roleplaying Game |
+| Altersgruppe | Herkunft (Region) | Arbeitsverhältnis | Einkommensklasse | Lieblingsgenre   |
+| ------------ | ----------------- | ----------------- | ---------------- | ---------------- |
+| 60–69        | Europa            | Arbeitslos        | <50'000          | Roleplaying Game |
 
 So bleibt eine sinnvolle Auswertung möglich, ohne dass einzelne Personen identifizierbar sind.
 
@@ -283,3 +283,160 @@ In OneNote gelöst
 
 ## 162-5D SideQuest:
 [Diagramm](/docs/M162/diagramme/162-5D-MatteoBosshard.drawio)
+
+## 162-6C SideQuest:
+Benotet im Teams
+
+## 162-7A SideQuest:
+
+### **Aufgabe 1**
+#### **A. Problem**
+* Mehrere Telefonnummern pro Person -> Tabelle ist **nicht atomar** (Verstoss gegen 1. Normalform).
+* Variante 1: gemischtes Format, mehrere Werte in einer Zelle.
+* Variante 2: feste Anzahl Spalten (Tel1-Tel3) -> nicht flexibel.
+
+#### **B. ERD (logisch-relational, textform)**
+**PERSON**
+* PersonID (PK)
+* Name
+* Vorname
+* Email
+
+**TELEFON**
+* TelefonID (PK)
+* Nummer
+* PersonID (FK)
+Beziehung: **1 Person - n Telefonnummern**
+
+### **Aufgabe 2**
+#### **A. Ungünstig**
+* Entwicklername und EntwicklerID wiederholen sich -> **Redundanz**.
+* Sprache und SprachID wiederholen sich -> **Redundanz**.
+* Eine Tabelle enthält drei unterschiedliche Entitäten (Games, Entwickler, Sprachen).
+
+#### **B. ERD (textform)**
+**GAME**
+* GameID (PK)
+* Name
+* Genre
+* EntwicklerID (FK)
+* SprachID (FK)
+
+**ENTWICKLER**
+* EntwicklerID (PK)
+* EntwicklerName
+
+**SPRACHE**
+* SprachID (PK)
+* Sprache
+Beziehungen:
+* **1 Entwickler - n Games**
+* **1 Sprache - n Games**
+
+### **Aufgabe 3**
+#### **A. Änderung**
+* RatingCode und Rating hängen zusammen -> sollte **eigene Tabelle** sein.
+* Sonst wieder redundante Daten (z. B. PEGI18 -> immer "Ab 18 Jahren").
+
+#### **B. ERD (textform)**
+**GAME**
+* GameID (PK)
+* Name
+* RatingCode (FK)
+
+**RATING**
+* RatingCode (PK)
+* RatingText
+Beziehung: **1 Rating - n Games**
+
+## Rekursive Assoziationen
+
+Definiton: eine Entität steht in Beziehung mit sich selbst
+
+## Beziehungszeichen
+
+| Beschreibung | Zehner | Krähenfuss |
+| ------------ | ------ | ---------- |
+| genau 1      | 1      | +          |
+| 0 oder 1     | c      | -O         |
+| viele        | m      | >          |
+| 0 bis viele  | mc     | O>         |
+| 1 bis viele  | m      | +>         |
+
+## 162-7C SideQuest:
+
+### Ausgangslage
+**Tabellen:**
+* Genre:
+  * Titel
+  * Beschreibung
+* Game
+  * Titel
+  * Beschreibung
+  * Preis
+  * Release-Datum
+* Language
+  * Name
+  * Translator
+* Country
+  * Name
+  * Company
+  * Kontakt
+* Region
+  * Name
+  * ManagedBy
+
+**Beziehungen:**
+
+| Tabellen         | Beziehung |
+| ---------------- | --------- |
+| Genre:Game       | m:mc      |
+| Game:Language    | m:m       |
+| Language:Country | m:m       |
+| Region:Country   | c:m       |
+
+### Lösung
+
+**Tabellen:**
+* ContactPerson
+  * PersonID (PK)
+  * Name
+  * Email
+  * TelefonNr
+* Genre
+  * GenreID (PK)
+  * Titel
+  * Beschreibung
+* Game
+  * GameID (PK)
+  * Titel
+  * Beschreibung
+  * Preis
+  * Release-Datum
+  * FK_GenreID
+* Language
+  * LanguageID (PK)
+  * Name
+  * FK_TranslatorID
+* Country
+  * CountryID (PK)
+  * Name
+  * Company
+  * FK_ContactPersonID
+  * FK_RegionName
+* Region
+  * RegionID (PK)
+  * Name
+  * FK_ManagerID
+* GameLanguage
+  * FK_GameID (PK)
+  * FK_LanguageID (PK)
+* LanguageDistribution
+  * FK_LanguageID (PK)
+  * FK_CountryID (PK)
+* GenreGame
+  * FK_GenreID (PK)
+  * GameID (PK)
+
+**Beziehungen / Diagramm:**
+[Diagramm](/docs/M162/diagramme/162-7C-MatteoBosshard.drawio)
