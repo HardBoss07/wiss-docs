@@ -2,7 +2,7 @@
 
 ## 117-1A
 * Wie wirken sich IT Netze auf unser tägliches Leben aus?
-  * IT Netze werden heute überall und immer verwendet. Vom eigenen WLAN zu Hause oder von der Bluetooth-Verbindung mit den eigenen Kopfhörer
+  * IT Netze werden heute überall & immer verwendet. Vom eigenen WLAN zu Hause oder von der Bluetooth-Verbindung mit den eigenen Kopfhörer
 * Welche Hauptkomponenten kennt Ihr von IT Netzen?
   * Router
   * Switch
@@ -12,7 +12,7 @@
   * Access Point
   * Modem
   * Firewall
-* Welches sind die Chancen und Risiken in IT Netzen?
+* Welches sind die Chancen & Risiken in IT Netzen?
   * Chancen:
     * Vernetzung Menschen weltweit
     * Vereinfachte Kommunikation
@@ -31,21 +31,21 @@
 ## 117-1B
 * 1 Gigabit (Gb) = 125 Megabyte (MB)
 * 64000 Ports
-* Firewall spielt den Türsteher vom Internetverkehr. Limitiert von wo welche Pakete kommt und filtert unerlaubte raus
+* Firewall spielt den Türsteher vom Internetverkehr. Limitiert von wo welche Pakete kommt & filtert unerlaubte raus
 * Internet existiert seit 1960er, in Schweiz seit 1995
 * IPv4: 32-Bit
 * IPv6: 128-Bit
-* Immer zuerst Router und dann Firewall
+* Immer zuerst Router & dann Firewall
 
 ## 117-1C
-| Komponente                | Funktion                                                                                  | Vor- und Nachteile                                                                                              | Einsatz im Netzwerk                            |
+| Komponente                | Funktion                                                                                  | Vor- & Nachteile                                                                                              | Einsatz im Netzwerk                            |
 | ------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | Switch                    | Verbindet Geräte innerhalb eines LAN. Leitet Datenpakete gezielt an den richtigen Port.   | **Vorteile:** schnelle Datenübertragung, effizienter als Hub; **Nachteil:** keine Routing-Funktion ins Internet | LAN-Verbindungen in Büro oder Zuhause          |
 | Hub                       | Leitet Datenpakete an alle Ports weiter (ungezielt).                                      | **Vorteil:** einfach; **Nachteil:** ineffizient, Kollisionen möglich                                            | Alte Netzwerke, selten noch genutzt            |
-| Router                    | Verbindet verschiedene Netzwerke (z. B. LAN und Internet). Verteilt IP-Adressen via DHCP. | **Vorteile:** Internetzugang für alle Geräte, Firewall-Funktionen; **Nachteil:** teurer, komplexer              | Verbindung des Heimnetzwerks mit dem Internet  |
+| Router                    | Verbindet verschiedene Netzwerke (z. B. LAN & Internet). Verteilt IP-Adressen via DHCP. | **Vorteile:** Internetzugang für alle Geräte, Firewall-Funktionen; **Nachteil:** teurer, komplexer              | Verbindung des Heimnetzwerks mit dem Internet  |
 | Access Point (AP)         | Stellt drahtlosen Zugang zum Netzwerk bereit (WLAN).                                      | **Vorteile:** kabelloser Zugriff, flexibel; **Nachteil:** Reichweite begrenzt, Funkstörungen möglich            | WLAN-Zugriff für Laptops, Smartphones, Tablets |
-| Modem                     | Wandelt digitale Signale in analoge Signale (und umgekehrt).                              | **Vorteile:** ermöglicht Internetzugang; **Nachteil:** kein Routing, nur Signalwandlung                         | Verbindung zum Internetprovider                |
-| Firewall (Hardware)       | Überwacht und kontrolliert den Datenverkehr, schützt vor unautorisierten Zugriffen.       | **Vorteile:** Schutz vor Angriffen; **Nachteil:** kann komplex konfiguriert sein                                | Sicherheit im Netzwerk                         |
+| Modem                     | Wandelt digitale Signale in analoge Signale (& umgekehrt).                              | **Vorteile:** ermöglicht Internetzugang; **Nachteil:** kein Routing, nur Signalwandlung                         | Verbindung zum Internetprovider                |
+| Firewall (Hardware)       | Überwacht & kontrolliert den Datenverkehr, schützt vor unautorisierten Zugriffen.       | **Vorteile:** Schutz vor Angriffen; **Nachteil:** kann komplex konfiguriert sein                                | Sicherheit im Netzwerk                         |
 | Repeater / Range Extender | Verstärkt Signale, um grössere Entfernungen zu überbrücken.                                | **Vorteile:** verbessert Reichweite; **Nachteil:** kann Geschwindigkeit reduzieren                              | Grosse Gebäude oder WLAN-Lücken                 |
 
 ## 117-2A
@@ -98,7 +98,7 @@ Wichtige Ethernetkabel:
   - Im Prinzip dasselbe Verfahren (nur Kurzform des Namens).
 
 ### FTTH (Glasfaser direkt ins Haus) + Business / statische IP
-* **Warum:** Glasfaser liefert symmetrische hohe Bandbreiten (z.B. 300 Mbit-10 Gbit je nach Tarif), sehr niedrige Latenz und stabile Leistung abends, wenn viele Geräte aktiv sind. Für einen Webshop ist Zuverlässigkeit + feste IP ideal.
+* **Warum:** Glasfaser liefert symmetrische hohe Bandbreiten (z.B. 300 Mbit-10 Gbit je nach Tarif), sehr niedrige Latenz & stabile Leistung abends, wenn viele Geräte aktiv sind. Für einen Webshop ist Zuverlässigkeit + feste IP ideal.
 * **Wie (praktisch):** Prüfen, ob Glasfaser an der Adresse verfügbar ist (Hinwil wird aktuell ausgebaut - Ausbau läuft etappenweise). Wenn FTTH verfügbar: Anbieterangebote (Swisscom, Sunrise, Quickline, Salt, lokale Anbieter) vergleichen; Business-Tarif oder Residential + Static-IP-Option wählen. (Swisscom Ausbau Hinwil / Verfügbarkeit prüfen).
 * **Kosten/Beispiel:** Swisscom / Sunrise/Quickline haben FTTH-Tarife - Preise variieren (Promotionen möglich). Für Preisvergleiche siehe Vergleichsportale.
 
@@ -117,43 +117,43 @@ Protokoll ist eine bestimme, standartisierte Anreihung von Bits.
 
 ### 1. Physical Layer
 1. Wie heisst diese Schicht?: Physical Layer (Bitübertragungsschicht Schicht)
-2. Was macht diese Schicht?: Überträgt die rohen Bits (0 und 1) als elektrische, optische oder Funk-Signale
+2. Was macht diese Schicht?: Überträgt die rohen Bits (0 & 1) als elektrische, optische oder Funk-Signale
 3. Welche Protokolle sind in dieser Schicht?: Streng genommen keine Protokolle (Aber Standarts / Technologien); Ethernet, DSL, WLAN, Bluetooth, Koaxial
-4. Beschreibung: In der physischer Schicht wird die mechanische, elektrische und funktionale Eigenschaften der Verbindung definiert. Stecker, Kabeltypen, Übertragungsrate oder Signalcodierung. Es wird sichergestellt, dass die Bits zuverlässig von einem Gerät zum anderen kommen.
+4. Beschreibung: In der physischer Schicht wird die mechanische, elektrische & funktionale Eigenschaften der Verbindung definiert. Stecker, Kabeltypen, Übertragungsrate oder Signalcodierung. Es wird sichergestellt, dass die Bits zuverlässig von einem Gerät zum anderen kommen.
 
 ### 2. Data Link Layer
 1. Wie heisst diese Schicht?: Data Link Layer (Sicherungsschicht)
-2. Was macht diese Schicht?: Stellt eine fehlerfreie Übertragung von Frames zwischen zwei direkt verbundenen Geräten sicher. Kümmert sich um Adressierung (-Adressen) und Zugriffskontrolle auf das Medium.
+2. Was macht diese Schicht?: Stellt eine fehlerfreie Übertragung von Frames zwischen zwei direkt verbundenen Geräten sicher. Kümmert sich um Adressierung (-Adressen) & Zugriffskontrolle auf das Medium.
 3. Welche Protokolle sind in dieser Schicht?: Ethernet, PPP, ARP, WLAN (IEEE 802.11), Token Ring.
-4. Beschreibung: Die Sicherungsschicht teilt die Bitströme aus der physikalischen Schicht in Rahmen (Frames) auf und kontrolliert diese auf Fehler (z.B. per CRC). Ausserdem werden MAC-Adressen für die Gerätekommunikation innerhalb eines lokalen Netzwerks genutzt.
+4. Beschreibung: Die Sicherungsschicht teilt die Bitströme aus der physikalischen Schicht in Rahmen (Frames) auf & kontrolliert diese auf Fehler (z.B. per CRC). Ausserdem werden MAC-Adressen für die Gerätekommunikation innerhalb eines lokalen Netzwerks genutzt.
 
 ### 3. Network Layer
 1. Wie heisst diese Schicht?: Network Layer (Vermittlungsschicht)
-2. Was macht diese Schicht?: Kümmert sich um die logische Adressierung (IP-Adressen), Routing und Weiterleitung von Datenpaketen zwischen verschiedenen Netzwerken.
+2. Was macht diese Schicht?: Kümmert sich um die logische Adressierung (IP-Adressen), Routing & Weiterleitung von Datenpaketen zwischen verschiedenen Netzwerken.
 3. Welche Protokolle sind in dieser Schicht?: IP (IPv4, IPv6), ICMP, IPsec, RIP, OSPF.
-4. Beschreibung: Diese Schicht sorgt dafür, dass Pakete den richtigen Weg vom Sender zum Empfänger finden, auch über verschiedene Netzwerke hinweg. Dabei kommen Routing-Tabellen und Algorithmen zum Einsatz.
+4. Beschreibung: Diese Schicht sorgt dafür, dass Pakete den richtigen Weg vom Sender zum Empfänger finden, auch über verschiedene Netzwerke hinweg. Dabei kommen Routing-Tabellen & Algorithmen zum Einsatz.
 
 ### 4. Transport Layer
 1. Wie heisst diese Schicht?: Transport Layer (Transportschicht)
-2. Was macht diese Schicht?: Sichert die Ende-zu-Ende-Verbindung zwischen Anwendungen. Stellt sicher, dass Daten vollständig, in richtiger Reihenfolge und fehlerfrei ankommen.
+2. Was macht diese Schicht?: Sichert die Ende-zu-Ende-Verbindung zwischen Anwendungen. Stellt sicher, dass Daten vollständig, in richtiger Reihenfolge & fehlerfrei ankommen.
 3. Welche Protokolle sind in dieser Schicht?: TCP, UDP, SCTP.
-4. Beschreibung: Hier wird die Segmentierung und Zusammensetzung von Daten übernommen. TCP sorgt für zuverlässige, verbindungsorientierte Übertragung, UDP für schnelle, verbindungslose Übertragung.
+4. Beschreibung: Hier wird die Segmentierung & Zusammensetzung von Daten übernommen. TCP sorgt für zuverlässige, verbindungsorientierte Übertragung, UDP für schnelle, verbindungslose Übertragung.
 
 ### 5. Session Layer
 1. Wie heisst diese Schicht?: Session Layer (Sitzungsschicht)
-2. Was macht diese Schicht?: Stellt Sitzungen zwischen Anwendungen her, verwaltet sie und beendet sie. Sorgt für Synchronisation und Dialogkontrolle.
+2. Was macht diese Schicht?: Stellt Sitzungen zwischen Anwendungen her, verwaltet sie & beendet sie. Sorgt für Synchronisation & Dialogkontrolle.
 3. Welche Protokolle sind in dieser Schicht?: NetBIOS, RPC, PPTP, SMB.
 4. Beschreibung: In dieser Schicht wird die Kommunikation strukturiert, sodass Anwendungen Daten austauschen können, ohne sich um den Verbindungsaufbau oder -abbau kümmern zu müssen.
 
 ### 6. Presentation Layer
 1. Wie heisst diese Schicht?: Presentation Layer (Darstellungsschicht)
-2. Was macht diese Schicht?: Übersetzt, verschlüsselt und komprimiert Daten, damit unterschiedliche Systeme sie verstehen können.
+2. Was macht diese Schicht?: Übersetzt, verschlüsselt & komprimiert Daten, damit unterschiedliche Systeme sie verstehen können.
 3. Welche Protokolle sind in dieser Schicht?: JPEG, GIF, MPEG, SSL/TLS, ASCII, EBCDIC.
 4. Beschreibung: Diese Schicht fungiert als „Übersetzer“. Sie sorgt dafür, dass Daten aus unterschiedlichen Formaten in eine gemeinsame Darstellungsform gebracht werden, z.B. Zeichencodierung oder Verschlüsselung.
 
 ### 7. Application Layer
 1. Wie heisst diese Schicht?: Application Layer (Anwendungsschicht)
-2. Was macht diese Schicht?: Bietet direkte Schnittstellen zu den Anwendungen und ermöglicht so die Kommunikation für den Nutzer.
+2. Was macht diese Schicht?: Bietet direkte Schnittstellen zu den Anwendungen & ermöglicht so die Kommunikation für den Nutzer.
 3. Welche Protokolle sind in dieser Schicht?: HTTP, FTP, SMTP, DNS, POP3, IMAP, SNMP.
 4. Beschreibung: Hier findet die eigentliche Interaktion mit den Anwendungen statt. Diese Schicht stellt die Dienste bereit, die Nutzer oder Programme direkt verwenden, z.B. Webzugriff oder E-Mail.
 
@@ -266,7 +266,7 @@ Im Netzwerkplan immer:
 
 ### K - Kontrollieren
 * IP-Vergabe prüfen (DHCP / statisch)
-* LAN- und WLAN-Zugriff testen
+* LAN- & WLAN-Zugriff testen
 * Server & Drucker prüfen
 * Switch-Management prüfen (192.168.0.2)
 * Sicherheit & Gästezugang kontrollieren
@@ -285,7 +285,7 @@ Im Netzwerkplan immer:
 
 ## 117-4C
 
-### Benutzer- und Gruppenkonzept
+### Benutzer- & Gruppenkonzept
 
 **Benutzerkonten:**
 
@@ -352,14 +352,14 @@ Legende:
 | Befehl         | Zweck / Beschreibung                                                                                                                             |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ipconfig       | Zeigt die aktuelle IP-Konfiguration des Computers an (IP-Adresse, Gateway, DNS-Server, etc.). Wird oft genutzt, um Netzwerkprobleme zu erkennen. |
-| ping           | Prüft, ob ein Ziel (z. B. ein anderer Computer oder eine Website) im Netzwerk erreichbar ist, und misst die Antwortzeit.                         |
-| tracert        | Zeigt den Weg (Route) an, den Datenpakete zu einem Zielserver nehmen, und wo mögliche Verbindungsprobleme auftreten.                             |
-| net share      | Zeigt alle freigegebenen Ordner und Ressourcen im Netzwerk oder erstellt neue Freigaben.                                                         |
-| net statistics | Zeigt Netzwerkstatistiken an (z. B. Anzahl der gesendeten und empfangenen Pakete). Nützlich zur Fehleranalyse.                                   |
-| net use        | Verbindet oder trennt Netzlaufwerke und zeigt bestehende Verbindungen zu anderen Computern im Netzwerk.                                          |
+| ping           | Prüft, ob ein Ziel (z. B. ein anderer Computer oder eine Website) im Netzwerk erreichbar ist, & misst die Antwortzeit.                         |
+| tracert        | Zeigt den Weg (Route) an, den Datenpakete zu einem Zielserver nehmen, & wo mögliche Verbindungsprobleme auftreten.                             |
+| net share      | Zeigt alle freigegebenen Ordner & Ressourcen im Netzwerk oder erstellt neue Freigaben.                                                         |
+| net statistics | Zeigt Netzwerkstatistiken an (z. B. Anzahl der gesendeten & empfangenen Pakete). Nützlich zur Fehleranalyse.                                   |
+| net use        | Verbindet oder trennt Netzlaufwerke & zeigt bestehende Verbindungen zu anderen Computern im Netzwerk.                                          |
 | net localgroup | Zeigt oder verwaltet lokale Gruppen auf dem Computer (z. B. Administratoren, Benutzer).                                                          |
-| net user       | Zeigt Benutzerkonten an oder erstellt, ändert und löscht sie.                                                                                    |
-| netstat        | Zeigt aktive Netzwerkverbindungen, offene Ports und Protokolle (TCP/UDP). Wichtig, um laufende Verbindungen zu prüfen.                           |
+| net user       | Zeigt Benutzerkonten an oder erstellt, ändert & löscht sie.                                                                                    |
+| netstat        | Zeigt aktive Netzwerkverbindungen, offene Ports & Protokolle (TCP/UDP). Wichtig, um laufende Verbindungen zu prüfen.                           |
 | nslookup       | Prüft DNS-Einträge – also die Auflösung von Domainnamen in IP-Adressen. Hilft bei DNS-Problemen.                                                 |
 
 ## 117-6A
@@ -367,27 +367,27 @@ Legende:
 | Befehl         | Beschreibung / Zweck                                                                                                    |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | ipconfig       | Zeigt die aktuelle IP-Konfiguration an (IP-Adresse, Subnetz, Gateway, DNS). Hilft bei IP- oder Verbindungsproblemen.    |
-| ping           | Testet, ob ein Ziel (z. B. Server oder Website) erreichbar ist, und misst die Antwortzeit.                              |
+| ping           | Testet, ob ein Ziel (z. B. Server oder Website) erreichbar ist, & misst die Antwortzeit.                              |
 | tracert        | Zeigt die Route (Zwischenstationen) an, die ein Datenpaket zu einem Ziel nimmt. Hilfreich bei Verbindungsverzögerungen. |
 | net share      | Zeigt freigegebene Ordner an oder erstellt neue Netzwerkfreigaben.                                                      |
-| net statistics | Zeigt Netzwerkstatistiken wie gesendete und empfangene Pakete oder Fehler an.                                           |
-| net use        | Verbindet, trennt oder zeigt Netzlaufwerke und Netzwerkverbindungen an.                                                 |
+| net statistics | Zeigt Netzwerkstatistiken wie gesendete & empfangene Pakete oder Fehler an.                                           |
+| net use        | Verbindet, trennt oder zeigt Netzlaufwerke & Netzwerkverbindungen an.                                                 |
 | net localgroup | Zeigt oder verwaltet lokale Benutzergruppen (z. B. Administratoren, Benutzer).                                          |
-| net user       | Zeigt Benutzerkonten an oder erstellt, ändert und löscht sie.                                                           |
-| net view       | Zeigt Computer und freigegebene Ressourcen im Netzwerk an.                                                              |
-| netstat        | (oft falsch als *netstats* bezeichnet) Zeigt aktive Verbindungen, Ports und Netzwerkprotokolle an.                      |
+| net user       | Zeigt Benutzerkonten an oder erstellt, ändert & löscht sie.                                                           |
+| net view       | Zeigt Computer & freigegebene Ressourcen im Netzwerk an.                                                              |
+| netstat        | (oft falsch als *netstats* bezeichnet) Zeigt aktive Verbindungen, Ports & Netzwerkprotokolle an.                      |
 | nslookup       | Überprüft DNS-Einträge – also die Zuordnung von Domainnamen zu IP-Adressen.                                             |
 
 ## 117-6B - Testplan
 
 1. Sichtprüfung
-   * Prüfen, ob die Netzwerkkarte aktiviert ist und die Verbindung im System aktiv angezeigt wird.
+   * Prüfen, ob die Netzwerkkarte aktiviert ist & die Verbindung im System aktiv angezeigt wird.
    * Sicherstellen, dass die VirtualBox-Netzwerkeinstellungen (Adapter) korrekt eingebunden sind.
 
 2. IP-Konfiguration prüfen
    * Befehl: `ipconfig /all`
-   * Ziel: Kontrolle der IP-Adresse, Subnetzmaske, Gateway und DNS-Server.
-   * Erwartung: Eine gültige IP-Adresse ist vorhanden, Gateway und DNS sind korrekt eingetragen.
+   * Ziel: Kontrolle der IP-Adresse, Subnetzmaske, Gateway & DNS-Server.
+   * Erwartung: Eine gültige IP-Adresse ist vorhanden, Gateway & DNS sind korrekt eingetragen.
 
 3. Verbindung im lokalen Netzwerk testen
    * Befehl: `ping <Gateway-IP>`
@@ -400,7 +400,7 @@ Legende:
    * Erwartung: Antwort von der externen IP-Adresse erhalten.
 
 5. DNS-Auflösung testen
-   * Befehl: `ping www.google.com` und `nslookup www.google.com`
+   * Befehl: `ping www.google.com` & `nslookup www.google.com`
    * Ziel: Überprüfen, ob DNS-Namen korrekt aufgelöst werden.
    * Erwartung: Domain wird in eine IP-Adresse aufgelöst.
 
@@ -411,16 +411,16 @@ Legende:
 
 7. Aktive Verbindungen prüfen
    * Befehl: `netstat -ano`
-   * Ziel: Kontrolle laufender Netzwerkverbindungen und Dienste.
-   * Erwartung: Erwartete Ports und Verbindungen sind sichtbar.
+   * Ziel: Kontrolle laufender Netzwerkverbindungen & Dienste.
+   * Erwartung: Erwartete Ports & Verbindungen sind sichtbar.
 
-8. Netzwerkfreigaben und Benutzer prüfen
+8. Netzwerkfreigaben & Benutzer prüfen
    * Befehle: `net share, net use, net user`
-   * Ziel: Überprüfen, ob Freigaben und Benutzerberechtigungen korrekt sind.
-   * Erwartung: Notwendige Freigaben und Benutzer vorhanden.
+   * Ziel: Überprüfen, ob Freigaben & Benutzerberechtigungen korrekt sind.
+   * Erwartung: Notwendige Freigaben & Benutzer vorhanden.
 
-9. Zusammenfassung und Dokumentation
+9. Zusammenfassung & Dokumentation
    * Beobachtungen notieren.
-   * Fehlerursache und mögliche Massnahme oder temporären Fix beschreiben.
+   * Fehlerursache & mögliche Massnahme oder temporären Fix beschreiben.
 
-> BENUTZER UND GRUPPEN ERSTELLEN WIRD AN DER PRÜFUNG KOMMEN
+> BENUTZER & GRUPPEN ERSTELLEN WIRD AN DER PRÜFUNG KOMMEN

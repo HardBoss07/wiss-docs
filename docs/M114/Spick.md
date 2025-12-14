@@ -87,7 +87,7 @@ Carry ist prüfungsrelevant.
 
 # **5. Kompression**
 
-Fokus nur: **Huffman** und **RLE**
+Fokus nur: **Huffman** & **RLE**
 
 
 ## **5.1 RLE (Run Length Encoding)**
@@ -281,11 +281,11 @@ Beispiel: **TLS (HTTPS)**
    2. texte in ceaser in plaintext entschlüsseln
 2. aufgabe:
    1. wissen wie mit dem email verschlüsseln
-   2. vor- und nachteile von emails
+   2. vor- & nachteile von emails
    3. welche technologien sftp, imap, pop3 etc
    4. transportverschlüsselung, tunneling, auf dem server unverschlüsselt
    5. End-2-End-Encryption
 3. modulo rechnen
 4. kerkhoff prinzip
-5. viginiere und stabchiffre verschlüsseln
+5. viginiere & stabchiffre verschlüsseln
 6. qr code teile wissen

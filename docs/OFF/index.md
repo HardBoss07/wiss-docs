@@ -9,4 +9,4 @@
   * To-Do-Listen (egal ob digital oder von Hand)
 * Arbeitsblöcke erstellen
 * Ähnliche Tätigkeiten in Arbeitsblöcken so weit wie möglich zusammenfassen
-  * Nur Emails (Beispiel) in einem Moment machen, nicht 10 Mails jetzt, 10 Mails am Mittag und 10 am Abend
+  * Nur Emails (Beispiel) in einem Moment machen, nicht 10 Mails jetzt, 10 Mails am Mittag & 10 am Abend

@@ -1,4 +1,4 @@
-# Modul 162 - Daten analysieren und modellieren
+# Modul 162 - Daten analysieren & modellieren
 
 ## Daten:
 
@@ -13,9 +13,9 @@ Typen von Daten:
 
 Ursprung von Daten:
 - Primärquellen:
-  - Umfragen und Befragungen
-  - Sensoren und Messungen
-  - Beobachtungen und Experimente
+  - Umfragen & Befragungen
+  - Sensoren & Messungen
+  - Beobachtungen & Experimente
 - Sekundärquellen:
   - Bundesamt für Statistik
   - Zeitungsartikel
@@ -31,7 +31,7 @@ Strukturmerkamle:
   - Videos, Bilder ohne Metadaten
   - Fliesstexte
 
-Für Auswertung ist Zeichensatz und Datenformate wichtig (UTF-8, ASCII, TT-MM-YYY, YYYY-MM-TT)
+Für Auswertung ist Zeichensatz & Datenformate wichtig (UTF-8, ASCII, TT-MM-YYY, YYYY-MM-TT)
 
 ## 162-1A SideQuest:
 
@@ -55,18 +55,18 @@ Für Auswertung ist Zeichensatz und Datenformate wichtig (UTF-8, ASCII, TT-MM-YY
   * Code-/Strukturansicht: Bei .svg möglich, da sie aus Text (XML) besteht.
 
 * Audiodateien
-  * Audioansicht: Abspielen und Hören.
+  * Audioansicht: Abspielen & Hören.
   * Wellenformansicht: Darstellung des Tons als Schallwelle (z.B. in Audacity).
   * Metadatenansicht: Titel, Künstler, Album, Länge usw.
 
 * Videodateien
-  * Videoansicht: Wiedergabe von Bild und Ton.
+  * Videoansicht: Wiedergabe von Bild & Ton.
   * Zeitachsenansicht: Frame-by-Frame-Darstellung (z.B. in Videobearbeitungssoftware).
   * Metadatenansicht: Auflösung, Framerate, Codec, Dauer.
 
 * Numerische Daten
-  * Tabellenansicht: Daten in Zeilen und Spalten (z.B. Datenbanken, Excel, Google Sheets).
-  * Textansicht: Reine Zahlenwerte und Trennzeichen (z.B. in .csv oder .json).
+  * Tabellenansicht: Daten in Zeilen & Spalten (z.B. Datenbanken, Excel, Google Sheets).
+  * Textansicht: Reine Zahlenwerte & Trennzeichen (z.B. in .csv oder .json).
   * Diagrammansicht: Grafische Darstellung von Werten (z.B. Balken-, Linien-, Kreisdiagramme).
 
 ## 162-2A SideQuest
@@ -95,7 +95,7 @@ Die Datentabelle enthält folgende Einträge:
 | Lieblingsfilm      | Time to Hunt     | Nicht schützenswerte Daten             |
 | Name des Haustiers | Bailey           | Personendaten                          |
 
-Die Daten enthalten somit sowohl normale als auch besonders schützenswerte Personendaten. Da der Name und weitere eindeutige Merkmale vorhanden sind, können Personen direkt identifiziert werden, weshalb die gesamte Datenerhebung unter das nDSG fällt.
+Die Daten enthalten somit sowohl normale als auch besonders schützenswerte Personendaten. Da der Name & weitere eindeutige Merkmale vorhanden sind, können Personen direkt identifiziert werden, weshalb die gesamte Datenerhebung unter das nDSG fällt.
 
 ### 3. Zulässigkeit der Daten
 
@@ -121,7 +121,7 @@ Nach dem nDSG dürfen Personendaten nur bearbeitet werden, wenn:
 2. eine gesetzliche Grundlage besteht, oder
 3. die Daten für den vorgesehenen Zweck zwingend notwendig sind.
 
-Da in der Tabelle Name, Herkunftsland, Geburtsdatum, IP-Adresse und Verdienst enthalten sind, ist eine Bearbeitung nur mit ausdrücklicher Einwilligung erlaubt. Ohne Einwilligung müssen die Daten anonymisiert oder pseudonymisiert werden, damit keine Rückschlüsse auf Einzelpersonen möglich sind.
+Da in der Tabelle Name, Herkunftsland, Geburtsdatum, IP-Adresse & Verdienst enthalten sind, ist eine Bearbeitung nur mit ausdrücklicher Einwilligung erlaubt. Ohne Einwilligung müssen die Daten anonymisiert oder pseudonymisiert werden, damit keine Rückschlüsse auf Einzelpersonen möglich sind.
 
 ### 5. Empfehlung
 
@@ -136,8 +136,8 @@ So bleibt eine sinnvolle Auswertung möglich, ohne dass einzelne Personen identi
 
 ### 6. Zusammenfassung
 
-- Das nDSG fordert Rechtmässigkeit, Zweckbindung, Verhältnismässigkeit und Datensicherheit.
-- Die vorliegenden Umfragedaten enthalten identifizierbare und teilweise besonders schützenswerte Personendaten.
+- Das nDSG fordert Rechtmässigkeit, Zweckbindung, Verhältnismässigkeit & Datensicherheit.
+- Die vorliegenden Umfragedaten enthalten identifizierbare & teilweise besonders schützenswerte Personendaten.
 - Eine Nutzung ist nur mit ausdrücklicher Zustimmung der betroffenen Personen erlaubt.
 - Für eine datenschutzkonforme Verarbeitung sollten alle identifizierenden Merkmale entfernt oder anonymisiert werden.
 
@@ -267,8 +267,8 @@ Mit Zwischentabelle möglich
 | 300           | 11        |
 
 **Ja, das Einfügen geht**, solange:
-* **Buch und Ausleihe zuerst existieren**, bevor man Einträge in `Ausleihe_Buch` anlegt.
-* **Jede Kombination aus AusleiheID_FK und BuchID_FK** auf gültige Datensätze zeigt.
+* **Buch & Ausleihe zuerst existieren**, bevor man Einträge in `Ausleihe_Buch` anlegt.
+* **Jede Kombination aus AusleiheID_FK & BuchID_FK** auf gültige Datensätze zeigt.
 
 Also:
 1. `INSERT INTO Buch ...`
@@ -310,8 +310,8 @@ Beziehung: **1 Person - n Telefonnummern**
 
 ### **Aufgabe 2**
 #### **A. Ungünstig**
-* Entwicklername und EntwicklerID wiederholen sich -> **Redundanz**.
-* Sprache und SprachID wiederholen sich -> **Redundanz**.
+* Entwicklername & EntwicklerID wiederholen sich -> **Redundanz**.
+* Sprache & SprachID wiederholen sich -> **Redundanz**.
 * Eine Tabelle enthält drei unterschiedliche Entitäten (Games, Entwickler, Sprachen).
 
 #### **B. ERD (textform)**
@@ -335,7 +335,7 @@ Beziehungen:
 
 ### **Aufgabe 3**
 #### **A. Änderung**
-* RatingCode und Rating hängen zusammen -> sollte **eigene Tabelle** sein.
+* RatingCode & Rating hängen zusammen -> sollte **eigene Tabelle** sein.
 * Sonst wieder redundante Daten (z. B. PEGI18 -> immer "Ab 18 Jahren").
 
 #### **B. ERD (textform)**

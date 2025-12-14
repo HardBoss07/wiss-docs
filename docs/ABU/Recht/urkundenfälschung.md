@@ -22,4 +22,4 @@ Wichtig ist auch, was keine Urkundenfälschung darstellt. Eine blosse Lüge ohne
 Heute spielt auch die digitale Urkundenfälschung eine grosse Rolle. Gefälschte PDF-Verträge, manipulierte E-Mails oder auch der Missbrauch elektronischer Signaturen fallen genauso unter den Straftatbestand. Das zeigt die Aktualität des Themas.
 
 ## Fazit
-Zusammengefasst: Urkundenfälschung schützt das Vertrauen in unsere Dokumente. Wer sie begeht, riskiert hohe Strafen - und vor allem das Vertrauen der Gesellschaft.
+Zusammengefasst: Urkundenfälschung schützt das Vertrauen in unsere Dokumente. Wer sie begeht, riskiert hohe Strafen - & vor allem das Vertrauen der Gesellschaft.

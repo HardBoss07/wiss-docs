@@ -7,11 +7,11 @@
 Jede Zelle hat **nur einen Wert**.
 
 **2. Normalform (2NF)**
--> erfüllt 1NF **und** alle Nicht-Schlüsselattribute hängen **voll** vom Primärschlüssel ab.
+-> erfüllt 1NF **&** alle Nicht-Schlüsselattribute hängen **voll** vom Primärschlüssel ab.
 Keine Abhängigkeit von nur einem Teil eines zusammengesetzten Schlüssels.
 
 **3. Normalform (3NF)**
--> erfüllt 2NF **und** keine **transitiven Abhängigkeiten** (Nicht-Schlüssel hängt nicht von anderem Nicht-Schlüssel ab).
+-> erfüllt 2NF **&** keine **transitiven Abhängigkeiten** (Nicht-Schlüssel hängt nicht von anderem Nicht-Schlüssel ab).
 
 ## 164-1A SideQuest:
 
@@ -100,8 +100,8 @@ Langfristig (20-50+ Jahre):
 
 ## 164-1D SideQuest:
 
-DBMS = Software zur Speicherung, Verwaltung und Abfrage von Daten in strukturierter Form (z.B. Tabellen).
-Ziel: Daten sicher, effizient und konsistent verwalten.
+DBMS = Software zur Speicherung, Verwaltung & Abfrage von Daten in strukturierter Form (z.B. Tabellen).
+Ziel: Daten sicher, effizient & konsistent verwalten.
 
 ### Vergleich der Systeme
 

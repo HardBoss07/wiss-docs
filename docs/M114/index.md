@@ -1,4 +1,4 @@
-# Modul 114 - Codierungs-, Kompressions- und Verschlüsselungsverfahren einsetzen
+# Modul 114 - Codierungs-, Kompressions- & Verschlüsselungsverfahren einsetzen
 
 ## 114-1A - SideQuest:
 
@@ -6,17 +6,17 @@
   * Interpretation von binären Daten in spezifische Formate
   * Beispiele: UTF-8, HEX-Farbcodes, ASCII
   * Nützlich, um binäre Daten in ein für Menschen verständliches Format umzuwandeln
-  * Ohne Kodierung müssten wir digital direkt mit 0 und 1 arbeiten
+  * Ohne Kodierung müssten wir digital direkt mit 0 & 1 arbeiten
 * Kompression:
   * Verkleinerung von Daten durch Ersetzen wiederkehrender Muster
   * Beispiele: ZIP, RAR, JPEG
   * Dadurch können selten verwendete Daten weniger Speicherplatz beanspruchen
-  * Ohne Kompression wäre das Speichern grosser Datenmengen teurer und umständlicher
+  * Ohne Kompression wäre das Speichern grosser Datenmengen teurer & umständlicher
 * Verschlüsselung:
   * Wandelt lesbare Daten in sogenannten Ciphertext um
   * Beispiele: HTTPS, PGP, AES
   * Mit Verschlüsselung kann sichergestellt werden, dass nur berechtigte Personen Zugriff auf die Daten haben
-  * Ohne Verschlüsselung könnte jeder den Internetverkehr mitlesen, Dokumente verändern und die digitale Privatsphäre wäre praktisch nicht existent
+  * Ohne Verschlüsselung könnte jeder den Internetverkehr mitlesen, Dokumente verändern & die digitale Privatsphäre wäre praktisch nicht existent
 
 ## 114-1B SideQuest:
 
@@ -24,7 +24,7 @@ Im Alltag wird hauptsächlich das Dezimalsystem verwendet (0–9).
 
 Das Binärsystem funktioniert nur mit 2 Zuständen (0, 1). Mit einer Aneinanderreihung dieser 2 Zustände kann man praktisch jeden gewünschten Zustand definieren.
 
-Das Hexadezimalsystem funktioniert mit 16 Zuständen (0–9, A–F) und wird in der Informatik genutzt, da es lesbarer ist als Binär. Mit einer einstelligen Hex-Zahl kann eine vierstellige Binärzahl dargestellt werden.
+Das Hexadezimalsystem funktioniert mit 16 Zuständen (0–9, A–F) & wird in der Informatik genutzt, da es lesbarer ist als Binär. Mit einer einstelligen Hex-Zahl kann eine vierstellige Binärzahl dargestellt werden.
 
 Das Problem, nicht zu wissen, ob '10' eine Dezimal-, Binär- oder Hex-Zahl ist, löst man mit Präfixen:
 
@@ -36,7 +36,7 @@ Das Problem, nicht zu wissen, ob '10' eine Dezimal-, Binär- oder Hex-Zahl ist, 
 
 ### Zahlensystem mit 3 Werten:
 
-Um ein Zahlensystem mit 3 Werten zu entwickeln, nimmt man 3 verschiedene Zeichen. Ich mache es mir einfach und nehme 0, 1 und 2 mit dem Präfix 0t.
+Um ein Zahlensystem mit 3 Werten zu entwickeln, nimmt man 3 verschiedene Zeichen. Ich mache es mir einfach & nehme 0, 1 & 2 mit dem Präfix 0t.
 
 ### Zahlensysteme 0–20 (dec, bin, oct, hex, ter)
 
@@ -83,7 +83,7 @@ Negative Zahlen werden kodiert, damit man mit denselben Schaltkreisen rechnen ka
 
 * Negative Zahl = alle Bits der positiven Zahl invertieren (0 -> 1, 1 -> 0)
 * Beispiel: +5 = `00000101` -> -5 = `11111010`
-* Nachteil: Es gibt +0 und -0 (2 Darstellungen von 0).
+* Nachteil: Es gibt +0 & -0 (2 Darstellungen von 0).
 
 **2. Zweierkomplement (Standard heute)**
 
@@ -164,7 +164,7 @@ Ein logischer Operator kann eine oder mehrere Eingaben (Operanden) haben.
 
 Beispiel:
 
-* AND (UND-Verknüpfung): ergibt *wahr*, wenn alle Operanden wahr sind.
+* AND (&-Verknüpfung): ergibt *wahr*, wenn alle Operanden wahr sind.
 
 Wichtige Operatoren:
 
@@ -247,7 +247,7 @@ Hamming Distanz: 1, 4 ->  2
 
 ## Huffman Codierung
 
-Huffman-Codes komprimieren Daten, indem **häufige Zeichen kurze Codes** und **seltene lange Codes** bekommen.
+Huffman-Codes komprimieren Daten, indem **häufige Zeichen kurze Codes** & **seltene lange Codes** bekommen.
 Wir erstellen den Code **komplett per Hand**.
 
 ### **1. Häufigkeiten zählen**
@@ -368,16 +368,16 @@ Eine Kompresison von 75% wurde ermöglicht
 
 ## Zusammenfassung: Was ist Kryptografie?
 
-Der Begriff Kryptografie stammt aus dem Griechischen, wobei "Kryptos" (geheim/verborgen) und "Graphein" (schreiben) die Grundlage bilden.
+Der Begriff Kryptografie stammt aus dem Griechischen, wobei "Kryptos" (geheim/verborgen) & "Graphein" (schreiben) die Grundlage bilden.
 
 ### 1. Die Disziplinen der Kryptologie
 
 Die verwandte Wissenschaft Kryptologie vereint drei Hauptbereiche:
 * Kryptografie: Die Wissenschaft der Geheimschrift.
-* Kryptoanalyse: Die Kunst, Geheimschrift (unbefugt) zu entziffern und den Code zu brechen.
-* Kryptologie: Die Wissenschaft, die Kryptografie und Kryptoanalyse miteinander vereint.
+* Kryptoanalyse: Die Kunst, Geheimschrift (unbefugt) zu entziffern & den Code zu brechen.
+* Kryptologie: Die Wissenschaft, die Kryptografie & Kryptoanalyse miteinander vereint.
 
-### 2. Ziel und Prinzip der Kryptografie
+### 2. Ziel & Prinzip der Kryptografie
 
 * Ziel: Nachrichten in eine "Geheimschrift" (Chiffretext) zu übersetzen, damit sie sicher über möglicherweise unsichere Wege zum vorgesehenen Empfänger geschickt werden können.
 * Prinzip: Nur der vorbestimmte Empfänger soll in der Lage sein, den Inhalt der Nachricht wieder lesbar zu machen.
@@ -387,7 +387,7 @@ Die verwandte Wissenschaft Kryptologie vereint drei Hauptbereiche:
 
 ### 3. Symmetrische Verschlüsselungsverfahren (Beispiele)
 
-Symmetrische Verfahren nutzen denselben Schlüssel für das Ver- und Entschlüsseln. Die genannten Beispiele sind:
+Symmetrische Verfahren nutzen denselben Schlüssel für das Ver- & Entschlüsseln. Die genannten Beispiele sind:
 
 * AES (Advanced Encryption Standard) oder Rijndael
 * DES (Data Encryption Standard) oder Lucifer
@@ -404,18 +404,18 @@ Symmetrische Verfahren nutzen denselben Schlüssel für das Ver- und Entschlüss
 ## Verschlüsselungsmethoden
 
 ### 1. Symmetrische Verschlüsselung
-Hierbei verwenden Sender und Empfänger denselben geheimen Schlüssel.
+Hierbei verwenden Sender & Empfänger denselben geheimen Schlüssel.
 * Schlüsselanzahl: Ein Schlüssel (KEY) für alles.
 * Funktionsweise:
     * Der Sender nutzt KEY zum Verschlüsseln.
     * Der Empfänger nutzt denselben KEY zum Entschlüsseln.
-* Hauptvorteil: Sie ist sehr schnell und effizient (gut für grosse Datenmengen).
-* Hauptnachteil: Der geheime Schlüssel KEY muss auf einem sicheren Weg zwischen Sender und Empfänger ausgetauscht werden.
+* Hauptvorteil: Sie ist sehr schnell & effizient (gut für grosse Datenmengen).
+* Hauptnachteil: Der geheime Schlüssel KEY muss auf einem sicheren Weg zwischen Sender & Empfänger ausgetauscht werden.
 * Bekannte Beispiele: AES (Advanced Encryption Standard).
 
 ### 2. Asymmetrische Verschlüsselung
-Hierbei verwendet jeder Teilnehmer ein Paar aus einem öffentlichen und einem privaten Schlüssel.
-* Schlüsselanzahl: Zwei Schlüssel (PubKey und PrivKey) pro Nutzer.
+Hierbei verwendet jeder Teilnehmer ein Paar aus einem öffentlichen & einem privaten Schlüssel.
+* Schlüsselanzahl: Zwei Schlüssel (PubKey & PrivKey) pro Nutzer.
 * Das Schlüsselpaar:
     * Öffentlicher Schlüssel (PubKey): Darf jeder kennen. Dient zum Verschlüsseln der Nachricht an den Besitzer.
     * Privater Schlüssel (PrivKey): Muss streng geheim bleiben. Dient zum Entschlüsseln der Nachricht.
@@ -436,7 +436,7 @@ In der Praxis werden beide Verfahren kombiniert:
 
 ### 1. Stabchiffre (Skytale)
 
-* Prinzip- Transpositionsverfahren. Klartext wird zeilenweise geschrieben und spaltenweise gelesen. Der Schlüssel ist die Anzahl der Zeilen.
+* Prinzip- Transpositionsverfahren. Klartext wird zeilenweise geschrieben & spaltenweise gelesen. Der Schlüssel ist die Anzahl der Zeilen.
 
 #### A: Verschlüsseln: `Verschluesselungsverfahren` (4 Zeilen)
 
@@ -539,18 +539,18 @@ In der Praxis werden beide Verfahren kombiniert:
 ## 114-7A SideQuest:
 
 ### 1. Symmetrische Verschlüsselung
-Hierbei verwenden Sender und Empfänger denselben geheimen Schlüssel.
+Hierbei verwenden Sender & Empfänger denselben geheimen Schlüssel.
 * Schlüsselanzahl: Ein Schlüssel (KEY) für alles.
 * Funktionsweise:
     * Der Sender nutzt KEY zum Verschlüsseln.
     * Der Empfänger nutzt denselben KEY zum Entschlüsseln.
-* Hauptvorteil: Sie ist sehr schnell und effizient (gut für grosse Datenmengen).
-* Hauptnachteil: Der geheime Schlüssel KEY muss auf einem sicheren Weg zwischen Sender und Empfänger ausgetauscht werden.
+* Hauptvorteil: Sie ist sehr schnell & effizient (gut für grosse Datenmengen).
+* Hauptnachteil: Der geheime Schlüssel KEY muss auf einem sicheren Weg zwischen Sender & Empfänger ausgetauscht werden.
 * Bekannte Beispiele: AES (Advanced Encryption Standard).
 
 ### 2. Asymmetrische Verschlüsselung
-Hierbei verwendet jeder Teilnehmer ein Paar aus einem öffentlichen und einem privaten Schlüssel.
-* Schlüsselanzahl: Zwei Schlüssel (PubKey und PrivKey) pro Nutzer.
+Hierbei verwendet jeder Teilnehmer ein Paar aus einem öffentlichen & einem privaten Schlüssel.
+* Schlüsselanzahl: Zwei Schlüssel (PubKey & PrivKey) pro Nutzer.
 * Das Schlüsselpaar:
     * Öffentlicher Schlüssel (PubKey): Darf jeder kennen. Dient zum Verschlüsseln der Nachricht an den Besitzer.
     * Privater Schlüssel (PrivKey): Muss streng geheim bleiben. Dient zum Entschlüsseln der Nachricht.
@@ -569,7 +569,7 @@ In der Praxis werden beide Verfahren kombiniert:
 
 ### SHA-Verfahren (Secure Hash Algorithm)
 
-SHA-Verfahren sind Hash-Funktionen. Das bedeutet, sie nehmen beliebige Daten (wie Text, Dateien oder Passwörter) entgegen und erzeugen daraus eine feste, kurze Zeichenkette (den sogenannten Hashwert oder Digest).
+SHA-Verfahren sind Hash-Funktionen. Das bedeutet, sie nehmen beliebige Daten (wie Text, Dateien oder Passwörter) entgegen & erzeugen daraus eine feste, kurze Zeichenkette (den sogenannten Hashwert oder Digest).
 
 #### 1. Grundprinzip
 
@@ -589,20 +589,20 @@ Die Zahl im Namen gibt die Länge des erzeugten Hashwertes in Bits an. Je länge
 
 | Verfahren | Hash-Länge (Bits)        | Hash-Länge (Hex-Zeichen) | Status             | Kurzbeschreibung                                                                                                                                                                                       |
 | --------- | ------------------------ | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| SHA-256   | 256                      | 64                       | Aktueller Standard | Teil der SHA-2-Familie. Wird häufig in Blockchain-Technologien (z.B. Bitcoin) und bei der Sicherung von TLS/SSL (HTTPS) verwendet. Bietet eine hohe Sicherheit.                                        |
-| SHA-3     | Variabel (z.B. 256, 512) | Variabel                 | Neuester Standard  | Wurde als Nachfolger für die gesamte SHA-2-Familie entwickelt. Es basiert auf einer völlig anderen kryptografischen Struktur (Keccak-Algorithmus) und bietet eine verbesserte theoretische Sicherheit. |
+| SHA-256   | 256                      | 64                       | Aktueller Standard | Teil der SHA-2-Familie. Wird häufig in Blockchain-Technologien (z.B. Bitcoin) & bei der Sicherung von TLS/SSL (HTTPS) verwendet. Bietet eine hohe Sicherheit.                                        |
+| SHA-3     | Variabel (z.B. 256, 512) | Variabel                 | Neuester Standard  | Wurde als Nachfolger für die gesamte SHA-2-Familie entwickelt. Es basiert auf einer völlig anderen kryptografischen Struktur (Keccak-Algorithmus) & bietet eine verbesserte theoretische Sicherheit. |
 
 ## 114-7B
 
 ### Was ist Steganografie?
-* Steganografie ist die Wissenschaft und Kunst des Verbergens von Informationen.
-* Der Begriff stammt aus dem Griechischen und bedeutet wörtlich "geheimes Schreiben".
+* Steganografie ist die Wissenschaft & Kunst des Verbergens von Informationen.
+* Der Begriff stammt aus dem Griechischen & bedeutet wörtlich "geheimes Schreiben".
 * Ziel ist es, nicht nur den Inhalt einer Nachricht unlesbar zu machen (wie bei der Kryptografie), sondern die Existenz der Nachricht selbst zu verbergen. 
 
 ### Wie funktioniert es?
 Die gängigste Methode bei digitalen Bildern ist die LSB-Methode (Least Significant Bit):
 
-* Digitale Bilder bestehen aus Pixeln, und jedes Pixel hat Farbwerte (z.B. Rot, Grün, Blau).
+* Digitale Bilder bestehen aus Pixeln, & jedes Pixel hat Farbwerte (z.B. Rot, Grün, Blau).
 * Jeder Farbwert wird durch eine Reihe von Bits dargestellt (z.B. 8 Bit).
 * Die Steganografie verändert das letzte Bit (das am wenigsten wichtige Bit, LSB) dieser Farbwerte.
 * Eine Änderung des LSB hat kaum sichtbare Auswirkungen auf die Farbe des Pixels, da das menschliche Auge den minimalen Unterschied nicht wahrnehmen kann.
@@ -662,7 +662,7 @@ Wie funktioniert es?
 GPG (GnuPG)
 
 * Open-Source Umsetzung von OpenPGP
-* Wird verwendet, um Dateien/Mails zu verschlüsseln und zu signieren
+* Wird verwendet, um Dateien/Mails zu verschlüsseln & zu signieren
 
 Gpg4Win
 

@@ -9,7 +9,7 @@
 2. ATX-Kabel (Strom)
 3. CPU
 4. RAM
-5. PCI-Express Slots (Grafikkarte und andere Erweiterungen)
+5. PCI-Express Slots (Grafikkarte & andere Erweiterungen)
 6. SATA-Kabel
 7. NVMe M.2-SSD
 
@@ -72,12 +72,12 @@
 #### Lizenzmodelle
 | Modell              | Beschreibung                                                                                                          |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| Proprietäre Lizenz  | Closed Source Software, kein Zugriff auf den Source-Code, Distribution und Modifikation in der Regel verboten         |
+| Proprietäre Lizenz  | Closed Source Software, kein Zugriff auf den Source-Code, Distribution & Modifikation in der Regel verboten         |
 | Free Software       | Software, die die vier Freiheiten (Benutzung, Untersuchung, Weitergabe, Veränderung) gewährt; Source-Code meist offen |
-| Open Source Lizenz  | Source-Code offen, darf genutzt, verändert und verteilt werden; Offenlegung bleibt bei Weitergabe Pflicht             |
+| Open Source Lizenz  | Source-Code offen, darf genutzt, verändert & verteilt werden; Offenlegung bleibt bei Weitergabe Pflicht             |
 | Shareware           | Software darf kostenlos getestet werden, volle Nutzung meist nur nach Bezahlung                                       |
 | Freeware            | Kostenlos nutzbare Software, jedoch ohne Garantie auf Offenlegung des Source-Codes                                    |
-| Public Domain       | Software ohne Urheberrechtsschutz, frei nutzbar, veränderbar und weitergebbar                                         |
+| Public Domain       | Software ohne Urheberrechtsschutz, frei nutzbar, veränderbar & weitergebbar                                         |
 | Kommerzielle Lizenz | Software wird gegen Bezahlung lizenziert; Nutzung nur im Rahmen der Lizenzbedingungen erlaubt                         |
 
 
@@ -95,14 +95,14 @@
 #### EULA - Was ist das?
 EULA steht für End User License Agreement
 
-* Die EULA ist ein Vertrag zwischen Software-Hersteller und Nutzer.
+* Die EULA ist ein Vertrag zwischen Software-Hersteller & Nutzer.
 * Sie definiert rechtlich verbindlich, was man mit der Software darf (z. B. Installation, Nutzung auf einem Gerät, keine Weitergabe).
-* Sie betrifft vor allem proprietäre und kommerzielle Software, weniger Open-Source.
+* Sie betrifft vor allem proprietäre & kommerzielle Software, weniger Open-Source.
 * Problem: Die meisten Leute stimmen zu, ohne die EULA zu lesen.
 
 #### Welche Erfahrung habe ich mit Lizenzen bereits gehabt?
-- EULAs / AGBs in Spielen und Webseiten
-- Creative Commons Lizenz bei Bildern und Musik
+- EULAs / AGBs in Spielen & Webseiten
+- Creative Commons Lizenz bei Bildern & Musik
 - GNU General Purpose / MIT Lizenz bei Verbreitung eigener Software
 - GNU General Purpose / MIT / Apache Lizenz bei Download von Libraries / Software
 
@@ -111,7 +111,7 @@ EULA steht für End User License Agreement
   - OSX (MacOS)
   - Linux
   - Windows
-- Betriebssystem verwaltet alle Komponente miteinander und macht den Computer nutzbar
+- Betriebssystem verwaltet alle Komponente miteinander & macht den Computer nutzbar
 
 > SSH: **S**ecure **Sh**ell
 
@@ -122,10 +122,10 @@ EULA steht für End User License Agreement
 ### 187-02A - 01.00
 | Begriff             | Beschreibung                                                                                                                                                                                                       |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Gast Betriebssystem | Das Betriebssystem, das innerhalb der virtuellen Maschine läuft. Es wird vom Hypervisor verwaltet und nutzt virtuelle Hardware (z. B. virtuelle CPU, RAM, Festplatten).                                            |
-| Hypervisor          | Die Virtualisierungssoftware, die zwischen Host-Hardware und Gastbetriebssystem(en) vermittelt. Sie stellt den VMs die virtuelle Hardware bereit und verwaltet Ressourcen. Beispiele: VirtualBox, VMware, Hyper-V. |
-| Host Betriebssystem | Das Betriebssystem, das direkt auf der physischen Hardware installiert ist und den Hypervisor (bei Typ-2-Hypervisoren) ausführt. Beispiel: Windows, Linux oder macOS.                                              |
-| Hardware            | Die physische Grundlage des Systems, also Prozessor, Arbeitsspeicher, Festplatten und Netzwerkkarten. Diese Ressourcen werden vom Hypervisor an die VMs verteilt.                                                  |
+| Gast Betriebssystem | Das Betriebssystem, das innerhalb der virtuellen Maschine läuft. Es wird vom Hypervisor verwaltet & nutzt virtuelle Hardware (z. B. virtuelle CPU, RAM, Festplatten).                                            |
+| Hypervisor          | Die Virtualisierungssoftware, die zwischen Host-Hardware & Gastbetriebssystem(en) vermittelt. Sie stellt den VMs die virtuelle Hardware bereit & verwaltet Ressourcen. Beispiele: VirtualBox, VMware, Hyper-V. |
+| Host Betriebssystem | Das Betriebssystem, das direkt auf der physischen Hardware installiert ist & den Hypervisor (bei Typ-2-Hypervisoren) ausführt. Beispiel: Windows, Linux oder macOS.                                              |
+| Hardware            | Die physische Grundlage des Systems, also Prozessor, Arbeitsspeicher, Festplatten & Netzwerkkarten. Diese Ressourcen werden vom Hypervisor an die VMs verteilt.                                                  |
 
 ### 187-03A - 01.00
 | Befehl                             | Bedeutung                                                             |
@@ -140,7 +140,7 @@ EULA steht für End User License Agreement
 | apt list <suchbegriff> --installed | Zeigt installierte Pakete, bei denen der Suchbegriff vorkommt.        |
 
 ### 187-03A - 02.00
-- Unterschied von `sudo apt update` und `sudo apt upgrade`:
+- Unterschied von `sudo apt update` & `sudo apt upgrade`:
   - `update`: Update der Paketlisten von hinterlegten Paketquellen
   - `upgrade`: Installierte Pakete auf die neuste Version bringen (das Neue wirklich installieren)
 - Was ist der Vorteil von einem Paketmanagers im Vergleich zu normaler Installation:
@@ -149,13 +149,13 @@ EULA steht für End User License Agreement
 | ----------------------------- | -------------------------------------------------------------------- |
 | Automatische Abhängigkeiten   | Fehlende Bibliotheken werden automatisch mit installiert.            |
 | Zentrale Updates              | Alle Programme können mit einem einzigen Befehl aktualisiert werden. |
-| Sicherheit                    | Pakete stammen aus geprüften und vertrauenswürdigen Quellen.         |
+| Sicherheit                    | Pakete stammen aus geprüften & vertrauenswürdigen Quellen.         |
 | Systemintegration             | Software wird korrekt ins System eingebunden (Pfad, Menüs, Dienste). |
-| Einfachheit und Zeitersparnis | Installation, Update und Entfernung sind schneller und konsistenter. |
+| Einfachheit & Zeitersparnis | Installation, Update & Entfernung sind schneller & konsistenter. |
 
 ### 187-03B - 00.00
-* Mit `lsblk` kann man die vorhandenen Blockgeräte und Partitionen sehen.
-* Mit `df -Th` kann man die eingehängten Dateisysteme inkl. Typ und Speicherverbrauch anzeigen.
+* Mit `lsblk` kann man die vorhandenen Blockgeräte & Partitionen sehen.
+* Mit `df -Th` kann man die eingehängten Dateisysteme inkl. Typ & Speicherverbrauch anzeigen.
 * In einer Standard-Ubuntu-VM sieht man typischerweise:
 
   * eine Partition mit ext4 (`/`)
@@ -166,7 +166,7 @@ EULA steht für End User License Agreement
 | Dateisystem | Vorteile                                                                 | Nachteile                                                          | Typische Verwendung                                     |
 | ----------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------- |
 | FAT32       | Sehr kompatibel (fast alle Betriebssysteme unterstützen es), einfach     | Keine Dateien >4 GB, keine Journaling- oder Sicherheitsfunktionen  | USB-Sticks, SD-Karten, Datenaustausch zwischen Systemen |
-| NTFS        | Unterstützt große Dateien/Partitionen, Rechte- und Journaling-Funktionen | Volle Unterstützung nur unter Windows, Linux/Mac nur eingeschränkt | Windows-Systemlaufwerke, externe Festplatten            |
+| NTFS        | Unterstützt große Dateien/Partitionen, Rechte- & Journaling-Funktionen | Volle Unterstützung nur unter Windows, Linux/Mac nur eingeschränkt | Windows-Systemlaufwerke, externe Festplatten            |
 | EXT4        | Standard unter Linux, stabil, Journaling, effizient mit großen Dateien   | Kaum Unterstützung unter Windows/Mac ohne Zusatzsoftware           | Linux-Systemlaufwerke, Server, virtuelle Maschinen      |
 
 ### 187-03B - 01.00
@@ -204,13 +204,13 @@ EULA steht für End User License Agreement
 ### 187-03C - 00.00
 | Schritt                       | Befehl                                     | Beschreibung / Hinweis                                                                           |
 | ----------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| Partitionen anzeigen          | `lsblk`                                    | Zeigt alle Festplatten und Partitionen                                                           |
-| Partitionen überprüfen        | `sudo fdisk -l`                            | Listet Details zu Partitionen und Größe auf                                                      |
+| Partitionen anzeigen          | `lsblk`                                    | Zeigt alle Festplatten & Partitionen                                                           |
+| Partitionen überprüfen        | `sudo fdisk -l`                            | Listet Details zu Partitionen & Größe auf                                                      |
 | Neue Partition erstellen      | `sudo fdisk /dev/sdX`                      | `X` = Laufwerksbuchstabe, interaktiv: `n` für neue Partition, `w` zum Speichern                  |
 | Partition formatieren         | `sudo mkfs.ext4 /dev/sdX1`                 | Erstellt ein EXT4-Dateisystem auf der neuen Partition (passt auch andere FS an z.B. `mkfs.ntfs`) |
 | Mountpoint erstellen          | `sudo mkdir /mnt/meinePartition`           | Erzeugt ein Verzeichnis, an dem die Partition eingebunden wird                                   |
 | Partition einbinden           | `sudo mount /dev/sdX1 /mnt/meinePartition` | Mountet die Partition ins System                                                                 |
-| Mount testen                  | `df -Th`                                   | Zeigt eingebundene Partitionen und Dateisysteme                                                  |
+| Mount testen                  | `df -Th`                                   | Zeigt eingebundene Partitionen & Dateisysteme                                                  |
 | Automatisch beim Boot mounten | `sudo nano /etc/fstab`                     | Neue Partition hier eintragen, z. B.: `/dev/sdX1 /mnt/meinePartition ext4 defaults 0 2`          |
 
 ### 187-04A - 00.00
@@ -228,28 +228,28 @@ EULA steht für End User License Agreement
 #### Erwartete Lernergebnisse
 * Dateien mit nano bearbeiten
 * Grundbefehle von vi kennen
-* Dateien mit touch, cat, more, less, head, tail, file, echo erstellen und anzeigen
-* Unterschied zwischen Anzeigen und Editieren verstehen
+* Dateien mit touch, cat, more, less, head, tail, file, echo erstellen & anzeigen
+* Unterschied zwischen Anzeigen & Editieren verstehen
 
 ### 187-04B - 04.00
 | Verzeichnis | Beschreibung                                                      |
 | ----------- | ----------------------------------------------------------------- |
-| /bin        | Wichtige Systemprogramme und Befehle für alle Benutzer            |
+| /bin        | Wichtige Systemprogramme & Befehle für alle Benutzer            |
 | /sbin       | Systemprogramme, meist für Root-Benutzer                          |
 | /dev        | Gerätedateien für Hardware (Festplatten, USB, Terminals)          |
 | /etc        | Systemweite Konfigurationsdateien                                 |
 | /home       | Persönliche Verzeichnisse der Benutzer                            |
-| /lib        | Systembibliotheken für Programme in /bin und /sbin                |
+| /lib        | Systembibliotheken für Programme in /bin & /sbin                |
 | /media      | Einhängepunkte für Wechselmedien (USB, CDs)                       |
 | /mnt        | Temporäre Einhängepunkte für Partitionen oder Laufwerke           |
 | /opt        | Optionale Softwarepakete oder Zusatzprogramme                     |
-| /proc       | Virtuelles Dateisystem mit Informationen über Prozesse und Kernel |
+| /proc       | Virtuelles Dateisystem mit Informationen über Prozesse & Kernel |
 | /run        | Temporäre Laufzeitdaten, z. B. Prozess- oder Socketinformationen  |
 | /srv        | Daten für vom System bereitgestellte Dienste (Webserver, FTP)     |
-| /sys        | Virtuelles Dateisystem für Kernel- und Hardwareinformationen      |
+| /sys        | Virtuelles Dateisystem für Kernel- & Hardwareinformationen      |
 | /tmp        | Temporäre Dateien, oft beim Neustart gelöscht                     |
-| /usr        | Nutzerprogramme, Bibliotheken und Hilfsprogramme                  |
-| /var        | Variable Dateien wie Logfiles, Spool-Dateien und Datenbanken      |
+| /usr        | Nutzerprogramme, Bibliotheken & Hilfsprogramme                  |
+| /var        | Variable Dateien wie Logfiles, Spool-Dateien & Datenbanken      |
 
 ### 187-05A - 02.00
 
@@ -257,7 +257,7 @@ EULA steht für End User License Agreement
 | Befehl                   | Wirkung / Hinweis                                                                                  |
 | ------------------------ | -------------------------------------------------------------------------------------------------- |
 | `sudo useradd testuser1` | Legt Benutzer minimal an, kein Home-Verzeichnis, keine Shell, Passwort muss separat gesetzt werden |
-| `sudo adduser testuser2` | Legt Benutzer interaktiv an, erstellt Home-Verzeichnis, fragt Passwort und weitere Infos ab        |
+| `sudo adduser testuser2` | Legt Benutzer interaktiv an, erstellt Home-Verzeichnis, fragt Passwort & weitere Infos ab        |
 
 **Prüfen:**
 `tail -n 2 /etc/passwd`
@@ -300,7 +300,7 @@ EULA steht für End User License Agreement
 | `id testuser2` | Zeigt UID, GID, Gruppenmitgliedschaften |
 
 **Vergleich:**
-* `useradd` vs. `adduser`: `adduser` legt Home-Verzeichnis, Shell und Passwortdialog an.
+* `useradd` vs. `adduser`: `adduser` legt Home-Verzeichnis, Shell & Passwortdialog an.
 * `groupadd` vs. `addgroup`: `addgroup` komfortabler, evtl. zusätzliche Optionen.
 
 ### 187-06A - 01.00
@@ -313,14 +313,14 @@ EULA steht für End User License Agreement
 | DNS          | Übersetzt Domainnamen in IP-Adressen, z. B. `www.example.com` -> `93.184.216.34` |
 
 #### Netzwerkkonfiguration
-| Methode            | Beschreibung / Vorgehensweise                                       | Vor- und Nachteile                                                      |
+| Methode            | Beschreibung / Vorgehensweise                                       | Vor- & Nachteile                                                      |
 | ------------------ | ------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | **Grafisch (GUI)** | Netzwerkmanager, Systemeinstellungen, Eingabe über Dialogfelder     | + Einfache Bedienung <br> - Weniger flexibel, oft nur lokale Änderungen |
 | **Konsole (CLI)**  | Editieren von `/etc/netplan/*.yaml`, `ip addr`, `nmcli`, `ifconfig` | + Flexibel, Skripte möglich <br> - Fehleranfällig, erfordert Wissen     |
 
-#### Unterschiede und Reflexion
+#### Unterschiede & Reflexion
 * GUI ist intuitiv, für schnelle Änderungen geeignet, aber oft beschränkt auf das aktuelle System.
-* CLI erfordert Grundwissen, bietet aber volle Kontrolle, Automatisierung und Remote-Konfiguration.
+* CLI erfordert Grundwissen, bietet aber volle Kontrolle, Automatisierung & Remote-Konfiguration.
 * Kenntnis beider Methoden ist sinnvoll: GUI für einfache Aufgaben, CLI für professionelle Administration.
 
 ### 187-06B - 02.00
@@ -328,12 +328,12 @@ EULA steht für End User License Agreement
 #### Linux-Befehle
 | Befehl | Beschreibung                                                                                                  | Einfaches Beispiel                                                                              |
 | ------ | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `ip`   | Zeigt Netzwerkinterfaces, IP-Adressen, Routing-Tabellen und Verbindungen. Kann auch Interfaces konfigurieren. | `ip a` -> Zeigt alle Interfaces und IP-Adressen <br> `ip route` -> Zeigt aktuelle Routing-Tabelle |
-| `ping` | Prüft die Erreichbarkeit eines Hosts im Netzwerk. Sendet ICMP-Echo-Requests und zeigt Antwortzeiten.          | `ping 8.8.8.8` -> Prüft Verbindung zu Google DNS <br> `ping -c 4 8.8.8.8` -> Sendet nur 4 Pakete  |
+| `ip`   | Zeigt Netzwerkinterfaces, IP-Adressen, Routing-Tabellen & Verbindungen. Kann auch Interfaces konfigurieren. | `ip a` -> Zeigt alle Interfaces & IP-Adressen <br> `ip route` -> Zeigt aktuelle Routing-Tabelle |
+| `ping` | Prüft die Erreichbarkeit eines Hosts im Netzwerk. Sendet ICMP-Echo-Requests & zeigt Antwortzeiten.          | `ping 8.8.8.8` -> Prüft Verbindung zu Google DNS <br> `ping -c 4 8.8.8.8` -> Sendet nur 4 Pakete  |
 | `dig`  | DNS-Abfragen durchführen, um IP-Adressen zu Domainnamen oder umgekehrt zu prüfen.                             | `dig example.com` -> Zeigt Standard-DNS-Abfrage <br> `dig example.com A` -> Zeigt A-Record (IPv4) |
 
 #### Hinweise zum Troubleshooting
-* `ip a` -> Prüfen, ob Interface aktiv und IP korrekt ist
+* `ip a` -> Prüfen, ob Interface aktiv & IP korrekt ist
 * `ping` -> Prüfen, ob Ziel erreichbar ist, Netzwerkverbindung läuft
 * `dig` -> Prüfen, ob DNS richtig aufgelöst wird
 
@@ -399,7 +399,7 @@ EULA steht für End User License Agreement
   * RAM / Swap prüfen (`free -h`)
   * Speicherplatz prüfen (`df -h`)
   * Logs durchsuchen (`/var/log/syslog`)
-  * Engpass eingrenzen und beheben
+  * Engpass eingrenzen & beheben
 
 * **Dienst nicht verfügbar**
   * `ping <Server>` -> Netzwerk prüfen

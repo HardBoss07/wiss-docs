@@ -1,8 +1,8 @@
 # Recht
 
-* Rechtsfähigkeit: Ich bin rechtsfähig, weil ich als Mensch von der Geburt bis zum Tod Träger von Rechten und Pflichten bin.
-* Urteilsfähigkeit: Ich bin urteilsfähig, weil ich die Fähigkeit habe, vernunftgemäss zu handeln und die Folgen meiner Handlungen zu erkennen.
-* Mündigkeit: Ich bin mündig, weil ich das 18. Altersjahr vollendet habe und damit voll geschäftsfähig bin.
+* Rechtsfähigkeit: Ich bin rechtsfähig, weil ich als Mensch von der Geburt bis zum Tod Träger von Rechten & Pflichten bin.
+* Urteilsfähigkeit: Ich bin urteilsfähig, weil ich die Fähigkeit habe, vernunftgemäss zu handeln & die Folgen meiner Handlungen zu erkennen.
+* Mündigkeit: Ich bin mündig, weil ich das 18. Altersjahr vollendet habe & damit voll geschäftsfähig bin.
 
 ## Handlungsfähigkeit
 
@@ -11,7 +11,7 @@
 > Mündigkeit erreicht haben gemäss Art. 14 ZGB
 
 ### Handlungsfähigkeit
-* Ich bin handlungsfähig, weil ich urteilsfähig und mündig bin.
+* Ich bin handlungsfähig, weil ich urteilsfähig & mündig bin.
 
 * Bedeutet: Ich kann selbstständig gültige Verträge abschliessen.
 * Beispiel: Volljährige Person kauft ein Auto – der Vertrag ist voll gültig.
@@ -43,22 +43,22 @@
 * Rechtsgleichheit: Gleichbehandlung
 * `in dubio pro reo`: Im Zweifel des Angeklagtens
 * Guter Glaube: Schutzbedürfniss
-* Treu und Glauben: Jeder sollte vertrauenswürdig sein
+* Treu & Glauben: Jeder sollte vertrauenswürdig sein
 * Gerichtliches Ermessen
 
 ## Verträge (Obligation)
 
 > Die Obligation im rechtlichen Sinne ist eine Verpflichtung oder ein Schuldverhältnis.
 
-* Für Jugendliche zwischen 10 und 18 Jahren gilt das Jugendstrafrecht (Jugendstrafgesetz).
+* Für Jugendliche zwischen 10 & 18 Jahren gilt das Jugendstrafrecht (Jugendstrafgesetz).
 * Ziel ist die Wiedereingliederung straffälliger Jugendlicher in die Gesellschaft.
 * Im Mittelpunkt steht der Erziehungsgedanke, nicht die Bestrafung oder Geldbusse.
 * Straftaten sollen als Anlass dienen, ungünstige Entwicklungen durch erzieherische Massnahmen zu korrigieren.
 * Schon im Verfahren wird versucht, erzieherisch auf den Jugendlichen einzuwirken.
 * Das Delikt ist zwar der Ausgangspunkt, aber die Person des Jugendlichen steht im Vordergrund.
-* Der Jugendrichter fragt weniger nach Schuld und Tat, sondern danach, ob zukünftige Straftaten zu erwarten sind.
+* Der Jugendrichter fragt weniger nach Schuld & Tat, sondern danach, ob zukünftige Straftaten zu erwarten sind.
 * Es wird geprüft, ob erzieherische Massnahmen geeignet sind, weitere Delikte zu verhindern.
-* Das Verfahren soll möglichst schnell abgeschlossen werden, damit zwischen Tat und Massnahme wenig Zeit vergeht.
+* Das Verfahren soll möglichst schnell abgeschlossen werden, damit zwischen Tat & Massnahme wenig Zeit vergeht.
 
 ## Rechtfall Beschreiben (Struktur)
 * Wer will was?

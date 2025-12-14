@@ -180,7 +180,7 @@
             <div class="cipher-section">
                 <h2>Stabchiffre (Skytale)</h2>
                 <div class="info-box">
-                    <strong>Info:</strong> Die Skytale ist eine <strong>Transpositionschiffre</strong>. Der Schlüssel ist die <strong>Wickelzahl</strong> (Anzahl der Zeilen). Der Text wird zeilenweise geschrieben und spaltenweise gelesen.
+                    <strong>Info:</strong> Die Skytale ist eine <strong>Transpositionschiffre</strong>. Der Schlüssel ist die <strong>Wickelzahl</strong> (Anzahl der Zeilen). Der Text wird zeilenweise geschrieben & spaltenweise gelesen.
                 </div>
 
                 <label for="skytale-text">Text (Klartext/Chiffrat):</label>
@@ -284,7 +284,7 @@
 
         // **************** CAESAR-CHIFFRE LOGIK (MIT ERKLÄRUNG) ****************
 
-        /** Führt die eigentliche Caesar-Verschiebung durch und generiert die Erklärung */
+        /** Führt die eigentliche Caesar-Verschiebung durch & generiert die Erklärung */
         function caesarShift(text, key, decrypt = false) {
             let result = '';
             let explanation = '<h3>Schritt-für-Schritt Erklärung:</h3>';
@@ -347,7 +347,7 @@
             const outputElement = document.getElementById('caesar-output');
 
             if (isNaN(key) || key < 0 || key > 25) {
-                outputElement.innerHTML = "Fehler: Schlüssel muss zwischen 0 und 25 liegen.";
+                outputElement.innerHTML = "Fehler: Schlüssel muss zwischen 0 & 25 liegen.";
                 return;
             }
 
@@ -362,7 +362,7 @@
             const outputElement = document.getElementById('caesar-output');
 
             if (isNaN(key) || key < 0 || key > 25) {
-                outputElement.innerHTML = "Fehler: Schlüssel muss zwischen 0 und 25 liegen.";
+                outputElement.innerHTML = "Fehler: Schlüssel muss zwischen 0 & 25 liegen.";
                 return;
             }
 
@@ -372,9 +372,9 @@
 
         // **************** VIGENÈRE-CHIFFRE LOGIK (MIT ERKLÄRUNG) ****************
 
-        /** Führt die Vigenère-Operation durch und generiert die Erklärung */
+        /** Führt die Vigenère-Operation durch & generiert die Erklärung */
         function vigenereShift(text, key, decrypt = false) {
-            // Bereinigen Sie den Text und den Schlüssel von Nicht-Buchstaben (klassische Vigenère)
+            // Bereinigen Sie den Text & den Schlüssel von Nicht-Buchstaben (klassische Vigenère)
             const cleanedText = cleanText(text, false); 
             const cleanKey = cleanText(key, false);
             const L = cleanedText.length;
@@ -387,7 +387,7 @@
 
             let keyIndex = 0;
 
-            if (cleanKey.length === 0) return { result: "Fehler: Schlüsselwort darf nur Buchstaben enthalten und nicht leer sein.", explanation: "" };
+            if (cleanKey.length === 0) return { result: "Fehler: Schlüsselwort darf nur Buchstaben enthalten & nicht leer sein.", explanation: "" };
             if (L === 0) return { result: "", explanation: "<p>Geben Sie Text zum Ver- oder Entschlüsseln ein.</p>" };
 
 

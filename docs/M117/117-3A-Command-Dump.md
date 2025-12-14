@@ -13,7 +13,7 @@ VERWENDUNG:
 
 wobei:
     adapter             Verbindungsname
-                       (Die Platzhalter * und ? sind zulässig, siehe Beispiele)
+                       (Die Platzhalter * & ? sind zulässig, siehe Beispiele)
 
     Optionen:
        /?               Zeigt diese Hilfenachricht an.
@@ -23,7 +23,7 @@ wobei:
        /renew           Erneuert die IPv4-Adresse für den angegebenen Adapter.
        /renew6          Erneuert die IPv6-Adresse für den angegebenen Adapter.
        /flushdns        Leert den DNS-Konfliktlösercache.
-       /registerdns     Aktualisiert alle DHCP-Leases und registriert die DNS-Namen erneut.
+       /registerdns     Aktualisiert alle DHCP-Leases & registriert die DNS-Namen erneut.
        /displaydns      Zeigt den Inhalt des DNS-Konfliktlösercaches an.
        /showclassid     Zeigt alle für den Adapter zugelassenen DHCP-Klassen-IDs an.
        /setclassid      Ändert die DHCP-Klassen-ID.

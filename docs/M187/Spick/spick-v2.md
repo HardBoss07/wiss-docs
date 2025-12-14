@@ -32,7 +32,7 @@
 | Begriff    | Beschreibung                                                        |
 | ---------- | ------------------------------------------------------------------- |
 | Gast-OS    | Läuft in VM, nutzt virtuelle HW                                     |
-| Hypervisor | Schicht zwischen HW und Gast-OS (z. B. VirtualBox, VMware, Hyper-V) |
+| Hypervisor | Schicht zwischen HW & Gast-OS (z. B. VirtualBox, VMware, Hyper-V) |
 | Host-OS    | Basis-OS (bei Typ 2), z. B. Linux, Windows                          |
 | Hardware   | CPU, RAM, Disk, Netz, wird vom Hypervisor verteilt                  |
 

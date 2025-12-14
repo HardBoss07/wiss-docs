@@ -2,7 +2,7 @@
 
 ## Megatrends
 
-* Langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaft und Technik stark beeinflussen
+* Langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaft & Technik stark beeinflussen
 * Beispiele in IT / Netzwerktechnik:
 
   * Digitalisierung & Cloud Computing
@@ -10,7 +10,7 @@
   * Künstliche Intelligenz & Automatisierung
   * Mobile Kommunikation (5G, Wi-Fi 6/7)
   * Cybersecurity & Datenschutz
-  * Glasfaser- und Hochgeschwindigkeitsnetze
+  * Glasfaser- & Hochgeschwindigkeitsnetze
 * Datenkommunikation: Morse → Telefon → Digitales Messaging → Instant Messaging → Glasfaser
 
 ## Netzwerkkomponenten
@@ -56,7 +56,7 @@
 
 | Nr. | Name (engl./dt.)           | Aufgabe                                   | Beispielprotokolle                     |
 | --- | -------------------------- | ----------------------------------------- | -------------------------------------- |
-| 7   | Application / Anwendung    | Dienste für Nutzer und Programme          | HTTP, FTP, DNS, SMTP, POP3, IMAP, SNMP |
+| 7   | Application / Anwendung    | Dienste für Nutzer & Programme          | HTTP, FTP, DNS, SMTP, POP3, IMAP, SNMP |
 | 6   | Presentation / Darstellung | Übersetzen, Verschlüsseln, Komprimieren   | SSL/TLS, JPEG, ASCII                   |
 | 5   | Session / Sitzung          | Aufbau, Verwaltung, Beenden von Sitzungen | NetBIOS, SMB, RPC, PPTP                |
 | 4   | Transport / Transport      | Zuverlässige Ende-zu-Ende-Kommunikation   | TCP, UDP, SCTP                         |

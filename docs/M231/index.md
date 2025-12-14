@@ -883,8 +883,8 @@ Die Anforderungen müssen im Data Processing Agreement (DPA) mit Steam (als Auft
 ### 2. Wie kommt hier das DSGVO zum Einsatz?
 
 - Datenschutzgrundverordnung (DSGVO / GDPR)
-  - Regelt, wie personenbezogene und besonders sensible Daten (z.B. Gesundheitsdaten, juristische Daten) verarbeitet, gespeichert und übertragen werden dürfen.
-  - Verlangt Sicherheit, Vertraulichkeit, Integrität und Zugriffsschutz bei jeder Datenübermittlung.
+  - Regelt, wie personenbezogene & besonders sensible Daten (z.B. Gesundheitsdaten, juristische Daten) verarbeitet, gespeichert & übertragen werden dürfen.
+  - Verlangt Sicherheit, Vertraulichkeit, Integrität & Zugriffsschutz bei jeder Datenübermittlung.
 
 #### a. Wie sieht es hier mit Backup oder einer Archivierung der Daten aus?
 
@@ -965,7 +965,7 @@ Viele grosse Dienste bieten nur Transportverschlüsselung, aber kein echtes E2E 
 [Link zum Wikipedia Artikel](https://en.wikipedia.org/wiki/Vastaamo_data_breach)
 
 - Fallbeschreibung:
-  Beim finnischen Psychotherapie-Zentrum *Vastaamo* wurde zwischen 2018–2020 die zentrale Patientendatenbank gehackt. Die Täter entwendeten hochsensible Therapie- und Personendaten und erpressten anschliessend sowohl das Unternehmen als auch einzelne Patienten.
+  Beim finnischen Psychotherapie-Zentrum *Vastaamo* wurde zwischen 2018–2020 die zentrale Patientendatenbank gehackt. Die Täter entwendeten hochsensible Therapie- & Personendaten & erpressten anschliessend sowohl das Unternehmen als auch einzelne Patienten.
 
 #### a. Welche Daten wurden veruntreut?
 
@@ -974,7 +974,7 @@ Viele grosse Dienste bieten nur Transportverschlüsselung, aber kein echtes E2E 
 | Personendaten                | Name, Adresse, Telefonnummer, E-Mail, Sozialversicherungsnummer             |
 | Gesundheitsdaten             | Diagnosen, Therapietermine, interne Notizen, vollständige Therapie-Berichte |
 | Logins / Verwaltungseinträge | Patientennummern, Aktenverknüpfungen, interne IDs                           |
-| Kommunikationsdaten          | Nachrichten zwischen Patient und Therapeut (in Teilen)                      |
+| Kommunikationsdaten          | Nachrichten zwischen Patient & Therapeut (in Teilen)                      |
 
 #### b. An was hat es gelegen?
 
@@ -984,14 +984,14 @@ Viele grosse Dienste bieten nur Transportverschlüsselung, aber kein echtes E2E 
 | Fehlende starke Verschlüsselung sensibler Gesundheitsdaten | Daten lagen im Klartext oder schwach geschützt vor                     |
 | Mangelnde Zugangskontrollen & Segmentierung                | Ein Angriff reichte aus, um tausende Patientenakten zu kompromittieren |
 | Zu zentrale Speicherung ohne Zero-Access-Prinzip           | Betreiber bzw. Angreifer hatten technischen Vollzugriff                |
-| Verspätete Erkennung des Angriffs                          | Angreifer konnten Daten kopieren und Erpressung vorbereiten            |
+| Verspätete Erkennung des Angriffs                          | Angreifer konnten Daten kopieren & Erpressung vorbereiten            |
 
 #### Fazit
 
-Der Vastaamo-Fall zeigt deutlich, dass besonders medizinische und psychologische Daten nur dann sicher sind, wenn:
+Der Vastaamo-Fall zeigt deutlich, dass besonders medizinische & psychologische Daten nur dann sicher sind, wenn:
 - starke Verschlüsselung eingesetzt wird
 - Zugriff strikt beschränkt ist
-- Logging, Monitoring und sichere Backups vorhanden sind
+- Logging, Monitoring & sichere Backups vorhanden sind
 - sensible Daten niemals ungeschützt zentral liegen
 
-Für medizinische und juristische Branchen ist der Fall ein klassisches Beispiel dafür, wie ein einzelnes fehlendes Sicherheitskonzept zu einer massiven Datenschutzkatastrophe führen kann.
+Für medizinische & juristische Branchen ist der Fall ein klassisches Beispiel dafür, wie ein einzelnes fehlendes Sicherheitskonzept zu einer massiven Datenschutzkatastrophe führen kann.
