@@ -1,56 +1,63 @@
 # Eigene Datenbank designen
 
 Gedanken bezüglich Preis, bestellung und bezahlung:
-Produktpreis in PRODUCT tabelle gefunden
-wird multipliziert mit amount in PRODUCT_ORDER
-danach wird rabatt von ORDER abgezogen
-das gibt amount_due in PAYMENT
+Produktpreis in `Product` Tabelle gefunden
+wird multipliziert mit quantity in `ProductOrder`
+danach wird discount von `Order` abgezogen
+das gibt amount_due in `Payment`
 
 ## Beziehungen
 
-Genau ein USER kann mehrere oder keine ORDER haben
-Genau ein PAYMENT gehört zu genau einem ORDER
-Genau ein PAYMENT_METHOD kann mehrere oder keine PAYMENT haben
-Genau ein CATEGORY kann mehrere oder keine PRODUCT haben
-Genau ein USER kann mehrere oder keine ADRESS haben
+Genau ein `User` kann mehrere oder keine `Order` haben
+Genau ein `Payment` gehört zu genau einem `Order`
+Genau ein `PaymentMethod` kann mehrere oder keine `Payment` haben
+Genau ein `Category` kann mehrere oder keine `Product` haben
+Genau ein `User` kann mehrere oder keine `Adress` haben
 
+Genau ein `Order` kann mehrere oder keine `Product` haben
+Genau ein `Product` kann in mehreren oder keinen `Order` erscheinen
+Beziehung ist über Zwischentabelle `ProductOrder` abgebildet
 
 ## Tabellen
 
-- PRODUCT:
+- `Product`:
   - product_id: NN, UN, AI, PK
   - name: NN
   - category: NN, FK1
   - price: NN
   - stock: NN
-- USER:
+- `User`:
   - user_id: NN, UN, AI, PK
   - username: NN, UN
   - password: NN
   - firstname: NN
   - lastname: NN
-- ORDER:
+- `Order`:
   - order_id: NN, UN, AI, PK
   - user_id: NN, FK1
   - date: NN
   - discount: NN
   - total: NN
-- ADRESS:
+- `Adress`:
   - adress_id: NN, UN, AI, PK
   - user_id: NN, FK1
   - country: NN
   - street: NN
   - city: NN
   - postal_code: NN
-- PAYMENT:
+- `Payment`:
   - payment_id: NN, UN, AI, PK
   - order_id: NN, FK1
   - payment_method_id: NN, FK2
   - amount_due: NN
   - date: NN
-- CATEGORY:
+- `Category`:
   - category_id: NN, UN, AI, PK
   - label: NN, UN
-- PAYMENT_METHOD:
+- `PaymentMethod`:
   - payment_method_id: NN, UN, AI, PK
   - label: NN, UN
+- `ProductOrder`:
+  - product_id: NN, PK, FK1
+  - order_id: NN, PK, FK2
+  - quantity: NN
