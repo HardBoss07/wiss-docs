@@ -995,3 +995,41 @@ Der Vastaamo-Fall zeigt deutlich, dass besonders medizinische & psychologische D
 - sensible Daten niemals ungeschützt zentral liegen
 
 Für medizinische & juristische Branchen ist der Fall ein klassisches Beispiel dafür, wie ein einzelnes fehlendes Sicherheitskonzept zu einer massiven Datenschutzkatastrophe führen kann.
+
+## 231-8A SideQuest:
+
+### 1. Ziele und Anforderungen
+* Verkauf von Fanartikeln zu Bestseller-Spielen
+* Kundenkonto ist Pflicht
+* Zahlungsmittel müssen hinterlegt werden
+* Keine Bestellung auf Rechnung möglich
+
+### 2. Rechtliche Anforderungen
+* Impressum
+* Allgemeine Geschäftsbedingungen (AGB)
+* Datenschutzerklärung
+* Einhaltung der DSGVO
+* SSL-Verschlüsselung der Webseite
+
+### 3. Datenschutz und Sicherheit
+* Sichere Speicherung von Kundendaten
+* Keine Speicherung sensibler Zahlungsdaten auf eigenen Servern
+* Nutzung zertifizierter Zahlungsanbieter (PCI-DSS)
+* Einwilligung der Nutzer zur Datenverarbeitung
+
+### 4. Technische Umsetzung
+* Wahl eines Shop-Systems (z.B. Shopify, WooCommerce, Shopware)
+* Integration in bestehende Homepage
+* Responsives Design (Desktop, Tablet, Mobile)
+* Benutzerfreundliche Navigation
+
+### 5. Kundenkonto
+* Registrierung und Login
+* Passwort-Richtlinien
+* Möglichkeit zur Verwaltung persönlicher Daten
+* Konto-Löschung auf Anfrage
+
+### 6. Zahlungsabwicklung
+* Integration von Online-Zahlungsmethoden (z.B. Kreditkarte, PayPal)
+* Kein Kauf auf Rechnung
+* Sichere Zahlungsabwicklung über externe Anbieter
