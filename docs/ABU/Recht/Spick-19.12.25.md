@@ -91,6 +91,11 @@
 - **Bedarf**: Bedürfnis + Geld
 - **Nachfrage**: Kauf
 - **Maslow**: 5 Stufen
+  1. Physiologische Bedürfnisse
+  2. Sicherheitsbedürfnisse
+  3. Soziale Bedürfnisse
+  4. Wertschätzungsbedürfnisse
+  5. Selbstverwirklichung
 - **Individual** vs. **Kollektiv**
 
 ## **7. Güterarten**
