@@ -1014,7 +1014,7 @@ Für medizinische & juristische Branchen ist der Fall ein klassisches Beispiel d
 ### 3. Datenschutz und Sicherheit
 * Sichere Speicherung von Kundendaten
 * Keine Speicherung sensibler Zahlungsdaten auf eigenen Servern
-* Nutzung zertifizierter Zahlungsanbieter (PCI-DSS)
+* Nutzung zertifizierter Zahlungsanbieter (PCI-DSS, Payment Card Industry Data Security Standard)
 * Einwilligung der Nutzer zur Datenverarbeitung
 
 ### 4. Technische Umsetzung
