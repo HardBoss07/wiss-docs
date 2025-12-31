@@ -20,44 +20,50 @@ Beziehung ist über Zwischentabelle `ProductOrder` abgebildet
 
 ## Tabellen
 
-- `Product`:
-  - product_id: NN, UN, AI, PK
-  - name: NN
-  - category: NN, FK1
-  - price: NN
-  - stock: NN
-- `User`:
-  - user_id: NN, UN, AI, PK
-  - username: NN, UN
-  - password: NN
-  - firstname: NN
-  - lastname: NN
-- `Order`:
-  - order_id: NN, UN, AI, PK
-  - user_id: NN, FK1
-  - date: NN
-  - discount: NN
-  - total: NN
-- `Adress`:
-  - adress_id: NN, UN, AI, PK
-  - user_id: NN, FK1
-  - country: NN
-  - street: NN
-  - city: NN
-  - postal_code: NN
-- `Payment`:
-  - payment_id: NN, UN, AI, PK
-  - order_id: NN, FK1
-  - payment_method_id: NN, FK2
-  - amount_due: NN
-  - date: NN
-- `Category`:
-  - category_id: NN, UN, AI, PK
-  - label: NN, UN
-- `PaymentMethod`:
-  - payment_method_id: NN, UN, AI, PK
-  - label: NN, UN
-- `ProductOrder`:
-  - product_id: NN, PK, FK1
-  - order_id: NN, PK, FK2
-  - quantity: NN
+- **`Product`**
+  - `product_id`: NN, UN, AI (PK)
+  - `name`: NN
+  - `category`: NN (FK1)
+  - `price`: NN
+  - `stock`: NN
+
+- **`User`**
+  - `user_id`: NN, UN, AI (PK)
+  - `username`: NN, UN
+  - `password`: NN
+  - `firstname`: NN
+  - `lastname`: NN
+
+- **`Order`**
+  - `order_id`: NN, UN, AI (PK)
+  - `user_id`: NN (FK1)
+  - `date`: NN
+  - `discount`: NN
+
+- **`Adress`**
+  - `adress_id`: NN, UN, AI (PK)
+  - `user_id`: NN (FK1)
+  - `country`: NN
+  - `street`: NN
+  - `city`: NN
+  - `postal_code`: NN
+
+- **`Payment`**
+  - `payment_id`: NN, UN, AI (PK)
+  - `order_id`: NN (FK1)
+  - `payment_method_id`: NN (FK2)
+  - `amount_due`: NN
+  - `date`: NN
+
+- **`Category`**
+  - `category_id`: NN, UN, AI (PK)
+  - `label`: NN, UN
+
+- **`Payment_Method`**
+  - `payment_method_id`: NN, UN, AI (PK)
+  - `label`: NN, UN
+
+- **`ProductOrder`**
+  - `order_id`: NN (PK, FK1)
+  - `product_id`: NN (PK, FK2)
+  - `quantity`: NN
