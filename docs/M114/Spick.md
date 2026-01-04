@@ -1,4 +1,3 @@
-
 # ** Zusammenfassung - Informatik LB (max. 4 A4 Seiten)**
 
 # **1. Codierung, Kompression, Verschlüsselung**
@@ -25,28 +24,27 @@ Codierung verändert **nicht den Informationsgehalt**, nur die **Darstellung**.
 | Bits   | Werte  | Beispiel      |
 | ------ | ------ | ------------- |
 | 8 Bit  | 256    | 0-255         |
-| 16 Bit | 65’536 | Unicode Point |
+| 16 Bit | 65'536 | Unicode Point |
 | 32 Bit | ~4 Mrd | IPv4, Farben  |
 
 ## **2.2 Zahlensysteme - Umrechnungen**
 
 ### **Dezimal -> Binär**
 
-* Durch 2 teilen, Reste gesammelt rückwärts.
+- Durch 2 teilen, Reste gesammelt rückwärts.
 
 ### **Binär -> Dezimal**
 
-* Stellenwerte (1, 2, 4, 8 …) multiplizieren & addieren.
+- Stellenwerte (1, 2, 4, 8 …) multiplizieren & addieren.
 
 ### **Hex -> Bin**
 
-* Jede Hex-Ziffer = **4 Bits**
+- Jede Hex-Ziffer = **4 Bits**
   z.B. A = 1010
 
 ### **Bin -> Hex**
 
-* Bits in **4er-Gruppen** einteilen.
-
+- Bits in **4er-Gruppen** einteilen.
 
 # **3. Additionen (Binär, Hex, Oktal)**
 
@@ -60,35 +58,30 @@ Codierung verändert **nicht den Informationsgehalt**, nur die **Darstellung**.
 
 Carry ist prüfungsrelevant.
 
-
 ## **3.2 Hexadezimal**
 
-* Alphabet: **A-F = 10-15**
-* Addition funktioniert wie Dezimal, aber **Basis 16**.
-
+- Alphabet: **A-F = 10-15**
+- Addition funktioniert wie Dezimal, aber **Basis 16**.
 
 ## **3.3 Oktal**
 
-* Basis 8 (Ziffern: **0-7**)
-* Selten, aber Grundprinzip identisch.
-
+- Basis 8 (Ziffern: **0-7**)
+- Selten, aber Grundprinzip identisch.
 
 # **4. Logische Operatoren**
 
 | Operator | Bedeutung             | Ergebnis    |
 | -------- | --------------------- | ----------- |
-| **AND**  | beide 1 -> 1           | 1 AND 1 = 1 |
-| **OR**   | mind. 1 -> 1           | 0 OR 1 = 1  |
+| **AND**  | beide 1 -> 1          | 1 AND 1 = 1 |
+| **OR**   | mind. 1 -> 1          | 0 OR 1 = 1  |
 | **NOT**  | invertiert            | NOT 1 = 0   |
 | **XOR**  | genau ein Eingang = 1 | 1 XOR 1 = 0 |
 
 **XOR ist in Kryptografie wichtig**, z.B. One-Time-Pad.
 
-
 # **5. Kompression**
 
 Fokus nur: **Huffman** & **RLE**
-
 
 ## **5.1 RLE (Run Length Encoding)**
 
@@ -100,13 +93,12 @@ Fokus nur: **Huffman** & **RLE**
 
 **Gut für:**
 
-* Bilder mit grossen Farbflächen
-* Texte mit vielen Wiederholungen
+- Bilder mit grossen Farbflächen
+- Texte mit vielen Wiederholungen
 
 **Schlecht für:**
 
-* zufällige Daten (kann sogar grösser werden)
-
+- zufällige Daten (kann sogar grösser werden)
 
 ## **5.2 Huffman-Kodierung**
 
@@ -123,24 +115,22 @@ Seltene Zeichen -> lange Codes
 
 ### **Eigenschaften**
 
-* Präfixfrei (kein Code ist Prefix eines anderen)
-* Optimal für zeichenweise Kodierung
-* Verlustfrei
+- Präfixfrei (kein Code ist Prefix eines anderen)
+- Optimal für zeichenweise Kodierung
+- Verlustfrei
 
 **Typische Prüfungsaufgabe:**
 
-* Häufigkeitstabelle -> Baum -> Codes -> komprimierter Text.
-
+- Häufigkeitstabelle -> Baum -> Codes -> komprimierter Text.
 
 # **6. QR-Code**
 
 ## **6.1 Vorteile**
 
-* Schnell lesbar
-* Bis zu **30% Fehlerkorrektur**
-* Hohe Datendichte
-* Kamera-basiert
-
+- Schnell lesbar
+- Bis zu **30% Fehlerkorrektur**
+- Hohe Datendichte
+- Kamera-basiert
 
 ## **6.2 Aufbau**
 
@@ -152,7 +142,6 @@ Seltene Zeichen -> lange Codes
 | **Datenbereich**                | Binäre Nutzdaten                  |
 | **ECC (Error Correction Code)** | Rekonstruktion beschädigter Teile |
 
-
 ## **6.3 Wie QR ausgelesen wird**
 
 1. Bild -> Schwarz/Weiss rasterisieren
@@ -160,7 +149,6 @@ Seltene Zeichen -> lange Codes
 3. Matrix ausgelesen
 4. Fehlerkorrektur
 5. Binärdaten -> Text/URL/etc.
-
 
 # **7. Kryptografie - Grundlagen**
 
@@ -170,7 +158,6 @@ Seltene Zeichen -> lange Codes
 
 Nur der Schlüssel muss geheim bleiben.
 
-
 ## **7.2 Steganografie / Kryptografie / Kryptoanalyse**
 
 | Begriff           | Zweck                                       |
@@ -178,7 +165,6 @@ Nur der Schlüssel muss geheim bleiben.
 | **Steganografie** | Nachricht **verstecken** (z.B. Bildpixel)   |
 | **Kryptografie**  | Nachricht **verschlüsseln**                 |
 | **Kryptoanalyse** | Verschlüsselung **angreifen** / analysieren |
-
 
 # **8. Klassische Chiffren**
 
@@ -191,14 +177,12 @@ Nur der Schlüssel muss geheim bleiben.
 
 **Schlüssel:** Anzahl Spalten/Zeilen.
 
-
 ## **8.2 Caesar - einfache Verschiebung**
 
 **C = (P + k) mod 26**
 **P = (C − k) mod 26**
 
 k = Verschiebung (0-25)
-
 
 ## **8.3 Vigenère - polyalphabetisch**
 
@@ -208,9 +192,8 @@ k = Verschiebung (0-25)
 
 **C = (P + K) mod 26**
 
-* Mehr Sicherheit als Caesar
-* Bruchbar durch Häufigkeitsanalyse + Kasiski-Test
-
+- Mehr Sicherheit als Caesar
+- Bruchbar durch Häufigkeitsanalyse + Kasiski-Test
 
 # **9. Moderne Kryptografie**
 
@@ -224,7 +207,6 @@ k = Verschiebung (0-25)
 
 Beispiele: **AES, ChaCha20**
 
-
 ## **9.2 Asymmetrische Verfahren**
 
 | Eigenschaft     | Beschreibung                 |
@@ -235,7 +217,6 @@ Beispiele: **AES, ChaCha20**
 
 Beispiele: **RSA, ECC**
 
-
 ## **9.3 Hybride Systeme**
 
 Realität:
@@ -244,28 +225,25 @@ Realität:
 
 Beispiel: **TLS (HTTPS)**
 
-
 # **10. E-Mail-Verschlüsselung**
 
 ## **10.1 PGP / GPG**
 
-* Jeder Nutzer: **Keypair**
-* **Verschlüsseln:** Empfänger-Public-Key
-* **Signieren:** eigener Private-Key
-* **Open Source**
-
+- Jeder Nutzer: **Keypair**
+- **Verschlüsseln:** Empfänger-Public-Key
+- **Signieren:** eigener Private-Key
+- **Open Source**
 
 ## **10.2 S/MIME**
 
-* Zertifikatsbasiert (PKI)
-* Firmenfreundlich
+- Zertifikatsbasiert (PKI)
+- Firmenfreundlich
 
 ## **10.3 Transportverschlüsselung**
 
 **TLS zwischen Mailservern**
--> schützt *Transportweg*
--> Inhalt liegt *unverschlüsselt* im Postfach (wenn nicht PGP/S/MIME).
-
+-> schützt _Transportweg_
+-> Inhalt liegt _unverschlüsselt_ im Postfach (wenn nicht PGP/S/MIME).
 
 # **11. Dateien verschlüsseln (z.B. GPG4Win)**
 
@@ -276,6 +254,7 @@ Beispiel: **TLS (HTTPS)**
 3. Empfänger kann mit seinem Private-Key entschlüsseln
 
 # Prüfungsinfos
+
 1. aufgabe:
    1. texte in plaintext in caesar verschlüsseln
    2. texte in ceaser in plaintext entschlüsseln

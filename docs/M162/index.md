@@ -5,6 +5,7 @@
 > Definition: Grundbausteine von Informationen
 
 Typen von Daten:
+
 - Textdateien: .txt, .pdf, .docx
 - Bilddateien: .jpeg, .png, .gif, .svg
 - Audiodateien: .mp3, .wav, .flac
@@ -12,6 +13,7 @@ Typen von Daten:
 - Numerische Daten: .csv, .xlsx, .json
 
 Ursprung von Daten:
+
 - Primärquellen:
   - Umfragen & Befragungen
   - Sensoren & Messungen
@@ -23,6 +25,7 @@ Ursprung von Daten:
   - Social edia Analysen
 
 Strukturmerkamle:
+
 - Strukturierte Quellen:
   - Datenbanken
 - Halbstrukturierte Quellen:
@@ -45,36 +48,40 @@ Für Auswertung ist Zeichensatz & Datenformate wichtig (UTF-8, ASCII, TT-MM-YYY,
 
 **Ansichten:**
 
-* Textdateien
-  * Reiner Text: Inhalt kann direkt gelesen oder bearbeitet werden (z.B. in einem Texteditor).
-  * Formatierte Ansicht: Bei .pdf oder .docx mit Layout, Schriftarten, Bildern usw.
+- Textdateien
 
-* Bilddateien (.jpeg, .png, .gif, .svg)
-  * Visuelle Ansicht: Anzeige als Bild in einem Bildbetrachter.
-  * Metadaten-Ansicht: Anzeige von Informationen wie Auflösung, Dateigröße, Erstellungsdatum.
-  * Code-/Strukturansicht: Bei .svg möglich, da sie aus Text (XML) besteht.
+  - Reiner Text: Inhalt kann direkt gelesen oder bearbeitet werden (z.B. in einem Texteditor).
+  - Formatierte Ansicht: Bei .pdf oder .docx mit Layout, Schriftarten, Bildern usw.
 
-* Audiodateien
-  * Audioansicht: Abspielen & Hören.
-  * Wellenformansicht: Darstellung des Tons als Schallwelle (z.B. in Audacity).
-  * Metadatenansicht: Titel, Künstler, Album, Länge usw.
+- Bilddateien (.jpeg, .png, .gif, .svg)
 
-* Videodateien
-  * Videoansicht: Wiedergabe von Bild & Ton.
-  * Zeitachsenansicht: Frame-by-Frame-Darstellung (z.B. in Videobearbeitungssoftware).
-  * Metadatenansicht: Auflösung, Framerate, Codec, Dauer.
+  - Visuelle Ansicht: Anzeige als Bild in einem Bildbetrachter.
+  - Metadaten-Ansicht: Anzeige von Informationen wie Auflösung, Dateigröße, Erstellungsdatum.
+  - Code-/Strukturansicht: Bei .svg möglich, da sie aus Text (XML) besteht.
 
-* Numerische Daten
-  * Tabellenansicht: Daten in Zeilen & Spalten (z.B. Datenbanken, Excel, Google Sheets).
-  * Textansicht: Reine Zahlenwerte & Trennzeichen (z.B. in .csv oder .json).
-  * Diagrammansicht: Grafische Darstellung von Werten (z.B. Balken-, Linien-, Kreisdiagramme).
+- Audiodateien
+
+  - Audioansicht: Abspielen & Hören.
+  - Wellenformansicht: Darstellung des Tons als Schallwelle (z.B. in Audacity).
+  - Metadatenansicht: Titel, Künstler, Album, Länge usw.
+
+- Videodateien
+
+  - Videoansicht: Wiedergabe von Bild & Ton.
+  - Zeitachsenansicht: Frame-by-Frame-Darstellung (z.B. in Videobearbeitungssoftware).
+  - Metadatenansicht: Auflösung, Framerate, Codec, Dauer.
+
+- Numerische Daten
+  - Tabellenansicht: Daten in Zeilen & Spalten (z.B. Datenbanken, Excel, Google Sheets).
+  - Textansicht: Reine Zahlenwerte & Trennzeichen (z.B. in .csv oder .json).
+  - Diagrammansicht: Grafische Darstellung von Werten (z.B. Balken-, Linien-, Kreisdiagramme).
 
 ## 162-2A SideQuest
 
 ### 1. Wichtige Grundprinzipien (nDSG)
 
-- Rechtmässigkeit (Einwilligung oder gesetzliche Grundlage)  
-- Verhältnismässigkeit & Zweckbindung  
+- Rechtmässigkeit (Einwilligung oder gesetzliche Grundlage)
+- Verhältnismässigkeit & Zweckbindung
 - Transparenz & Datensicherheit
 
 ### 2. Analyse der Umfragedaten
@@ -130,7 +137,7 @@ Eine mögliche anonymisierte Fassung könnte wie folgt aussehen:
 
 | Altersgruppe | Herkunft (Region) | Arbeitsverhältnis | Einkommensklasse | Lieblingsgenre   |
 | ------------ | ----------------- | ----------------- | ---------------- | ---------------- |
-| 60–69        | Europa            | Arbeitslos        | <50'000          | Roleplaying Game |
+| 60-69        | Europa            | Arbeitslos        | <50'000          | Roleplaying Game |
 
 So bleibt eine sinnvolle Auswertung möglich, ohne dass einzelne Personen identifizierbar sind.
 
@@ -142,41 +149,42 @@ So bleibt eine sinnvolle Auswertung möglich, ohne dass einzelne Personen identi
 - Für eine datenschutzkonforme Verarbeitung sollten alle identifizierenden Merkmale entfernt oder anonymisiert werden.
 
 ## 162-3A SideQuest:
+
 # Entitäten & Attribute
 
 **Player**
 
-* /player_id/
-* email
-* username
-* password
+- /player_id/
+- email
+- username
+- password
 
 **Game**
 
-* /game_id/
-* title
-* price
+- /game_id/
+- title
+- price
 
 **Purchase**
 
-* /purchase_id/
-* player_id (FK)
-* game_id (FK)
-* purchase_date
+- /purchase_id/
+- player_id (FK)
+- game_id (FK)
+- purchase_date
 
 **Review**
 
-* /review_id/
-* player_id (FK)
-* game_id (FK)
-* rating (1–5)
+- /review_id/
+- player_id (FK)
+- game_id (FK)
+- rating (1-5)
 
 **LeaderboardEntry**
 
-* /entry_id/
-* game_id (FK)
-* player_id (FK)
-* rank
+- /entry_id/
+- game_id (FK)
+- player_id (FK)
+- rank
 
 # Beziehungen (Martin / Krähenfuss, einfach)
 
@@ -191,31 +199,31 @@ So bleibt eine sinnvolle Auswertung möglich, ohne dass einzelne Personen identi
 
 ## 162-4C SideQuest:
 
-* Genre
-  * Label
-* Medientyp
-  * Label
-* Medium
-  * Titel
-  * Beschreibung
-  * Author
-  * Genre
-  * Medientyp
-* Mitarbeiter
-  * Vorname
-  * Name
-  * Geburtsdatum
-* Ausleihe
-  * Welches Medium
-  * Ausleihende Person
-  * Startdatum
-  * Enddatum
+- Genre
+  - Label
+- Medientyp
+  - Label
+- Medium
+  - Titel
+  - Beschreibung
+  - Author
+  - Genre
+  - Medientyp
+- Mitarbeiter
+  - Vorname
+  - Name
+  - Geburtsdatum
+- Ausleihe
+  - Welches Medium
+  - Ausleihende Person
+  - Startdatum
+  - Enddatum
 
 Beziehungen:
 Mitarbeiter 1 ----- mc Ausleihe
-Ausleihe    1 ----- m  Medium
-Medientyp   m ----- 1  Medium
-Genre       m ----- 1  Medium
+Ausleihe 1 ----- m Medium
+Medientyp m ----- 1 Medium
+Genre m ----- 1 Medium
 
 ## 162-5A SideQuest:
 
@@ -224,130 +232,154 @@ Genre       m ----- 1  Medium
 Ohne Zwischentabelle möglich
 
 **Buch:**
-| BuchID | Titel           | Seitenzahl | Cover  |
+| BuchID | Titel | Seitenzahl | Cover |
 | ------ | --------------- | ---------- | ------ |
-| 15     | Faust           | 120        | f.png  |
-| 16     | Der Prozess     | 280        | kp.png |
-| 17     | Die Verwandlung | 96         | vw.png |
+| 15 | Faust | 120 | f.png |
+| 16 | Der Prozess | 280 | kp.png |
+| 17 | Die Verwandlung | 96 | vw.png |
 
 **Ausleihe:**
 | AusleiheID | DatumVon | DatumBis | BuchIDFS |
 | ---------- | -------- | -------- | -------- |
-| 240        | 11.12.25 | 18.12.25 | 15       |
-| 241        | 02.01.26 | 10.01.26 | 16       |
-| 242        | 05.01.26 | 12.01.26 | 17       |
+| 240 | 11.12.25 | 18.12.25 | 15 |
+| 241 | 02.01.26 | 10.01.26 | 16 |
+| 242 | 05.01.26 | 12.01.26 | 17 |
 
 **Ja, das Einfügen geht**, solange:
-* **Der Buch-Datensatz zuerst existiert**, bevor man eine Ausleihe dazu einfügt.
-* **BuchIDFS in Ausleihe auf einen vorhandenen BuchID-Wert zeigt**.
+
+- **Der Buch-Datensatz zuerst existiert**, bevor man eine Ausleihe dazu einfügt.
+- **BuchIDFS in Ausleihe auf einen vorhandenen BuchID-Wert zeigt**.
 
 Also:
+
 1. `INSERT INTO Buch ...`
 2. Danach `INSERT INTO Ausleihe ...` mit passender BuchIDFS.
 
 ### B
+
 Mit Zwischentabelle möglich
 
-
 **Buch:**
-| BuchID | Titel           | Seitenzahl | Cover  |
+| BuchID | Titel | Seitenzahl | Cover |
 | ------ | --------------- | ---------- | ------ |
-| 10     | Faust           | 120        | f.png  |
-| 11     | Die Verwandlung | 96         | vw.png |
+| 10 | Faust | 120 | f.png |
+| 11 | Die Verwandlung | 96 | vw.png |
 
 **Ausleihe:**
 | AusleiheID | DatumVon | DatumBis |
 | ---------- | -------- | -------- |
-| 300        | 01.12.25 | 05.12.25 |
+| 300 | 01.12.25 | 05.12.25 |
 
 **Ausleihe_Buch:**
 | AusleiheID_FK | BuchID_FK |
 | ------------- | --------- |
-| 300           | 10        |
-| 300           | 11        |
+| 300 | 10 |
+| 300 | 11 |
 
 **Ja, das Einfügen geht**, solange:
-* **Buch & Ausleihe zuerst existieren**, bevor man Einträge in `Ausleihe_Buch` anlegt.
-* **Jede Kombination aus AusleiheID_FK & BuchID_FK** auf gültige Datensätze zeigt.
+
+- **Buch & Ausleihe zuerst existieren**, bevor man Einträge in `Ausleihe_Buch` anlegt.
+- **Jede Kombination aus AusleiheID_FK & BuchID_FK** auf gültige Datensätze zeigt.
 
 Also:
+
 1. `INSERT INTO Buch ...`
 2. `INSERT INTO Ausleihe ...`
 3. `INSERT INTO Ausleihe_Buch ...` für die Zuordnung.
 
 ## 162-5B SideQuest:
+
 In OneNote gelöst
 
 ## 162-5C SideQuest:
+
 In OneNote gelöst
 
 ## 162-5D SideQuest:
+
 [Diagramm](/docs/M162/diagramme/162-5D-MatteoBosshard.drawio)
 
 ## 162-6C SideQuest:
+
 Benotet im Teams
 
 ## 162-7A SideQuest:
 
 ### **Aufgabe 1**
+
 #### **A. Problem**
-* Mehrere Telefonnummern pro Person -> Tabelle ist **nicht atomar** (Verstoss gegen 1. Normalform).
-* Variante 1: gemischtes Format, mehrere Werte in einer Zelle.
-* Variante 2: feste Anzahl Spalten (Tel1-Tel3) -> nicht flexibel.
+
+- Mehrere Telefonnummern pro Person -> Tabelle ist **nicht atomar** (Verstoss gegen 1. Normalform).
+- Variante 1: gemischtes Format, mehrere Werte in einer Zelle.
+- Variante 2: feste Anzahl Spalten (Tel1-Tel3) -> nicht flexibel.
 
 #### **B. ERD (logisch-relational, textform)**
+
 **PERSON**
-* PersonID (PK)
-* Name
-* Vorname
-* Email
+
+- PersonID (PK)
+- Name
+- Vorname
+- Email
 
 **TELEFON**
-* TelefonID (PK)
-* Nummer
-* PersonID (FK)
-Beziehung: **1 Person - n Telefonnummern**
+
+- TelefonID (PK)
+- Nummer
+- PersonID (FK)
+  Beziehung: **1 Person - n Telefonnummern**
 
 ### **Aufgabe 2**
+
 #### **A. Ungünstig**
-* Entwicklername & EntwicklerID wiederholen sich -> **Redundanz**.
-* Sprache & SprachID wiederholen sich -> **Redundanz**.
-* Eine Tabelle enthält drei unterschiedliche Entitäten (Games, Entwickler, Sprachen).
+
+- Entwicklername & EntwicklerID wiederholen sich -> **Redundanz**.
+- Sprache & SprachID wiederholen sich -> **Redundanz**.
+- Eine Tabelle enthält drei unterschiedliche Entitäten (Games, Entwickler, Sprachen).
 
 #### **B. ERD (textform)**
+
 **GAME**
-* GameID (PK)
-* Name
-* Genre
-* EntwicklerID (FK)
-* SprachID (FK)
+
+- GameID (PK)
+- Name
+- Genre
+- EntwicklerID (FK)
+- SprachID (FK)
 
 **ENTWICKLER**
-* EntwicklerID (PK)
-* EntwicklerName
+
+- EntwicklerID (PK)
+- EntwicklerName
 
 **SPRACHE**
-* SprachID (PK)
-* Sprache
-Beziehungen:
-* **1 Entwickler - n Games**
-* **1 Sprache - n Games**
+
+- SprachID (PK)
+- Sprache
+  Beziehungen:
+- **1 Entwickler - n Games**
+- **1 Sprache - n Games**
 
 ### **Aufgabe 3**
+
 #### **A. Änderung**
-* RatingCode & Rating hängen zusammen -> sollte **eigene Tabelle** sein.
-* Sonst wieder redundante Daten (z. B. PEGI18 -> immer "Ab 18 Jahren").
+
+- RatingCode & Rating hängen zusammen -> sollte **eigene Tabelle** sein.
+- Sonst wieder redundante Daten (z. B. PEGI18 -> immer "Ab 18 Jahren").
 
 #### **B. ERD (textform)**
+
 **GAME**
-* GameID (PK)
-* Name
-* RatingCode (FK)
+
+- GameID (PK)
+- Name
+- RatingCode (FK)
 
 **RATING**
-* RatingCode (PK)
-* RatingText
-Beziehung: **1 Rating - n Games**
+
+- RatingCode (PK)
+- RatingText
+  Beziehung: **1 Rating - n Games**
 
 ## Rekursive Assoziationen
 
@@ -366,25 +398,27 @@ Definiton: eine Entität steht in Beziehung mit sich selbst
 ## 162-7C SideQuest:
 
 ### Ausgangslage
+
 **Tabellen:**
-* Genre:
-  * Titel
-  * Beschreibung
-* Game
-  * Titel
-  * Beschreibung
-  * Preis
-  * Release-Datum
-* Language
-  * Name
-  * Translator
-* Country
-  * Name
-  * Company
-  * Kontakt
-* Region
-  * Name
-  * ManagedBy
+
+- Genre:
+  - Titel
+  - Beschreibung
+- Game
+  - Titel
+  - Beschreibung
+  - Preis
+  - Release-Datum
+- Language
+  - Name
+  - Translator
+- Country
+  - Name
+  - Company
+  - Kontakt
+- Region
+  - Name
+  - ManagedBy
 
 **Beziehungen:**
 
@@ -398,45 +432,46 @@ Definiton: eine Entität steht in Beziehung mit sich selbst
 ### Lösung
 
 **Tabellen:**
-* ContactPerson
-  * PersonID (PK)
-  * Name
-  * Email
-  * TelefonNr
-* Genre
-  * GenreID (PK)
-  * Titel
-  * Beschreibung
-* Game
-  * GameID (PK)
-  * Titel
-  * Beschreibung
-  * Preis
-  * Release-Datum
-  * FK_GenreID
-* Language
-  * LanguageID (PK)
-  * Name
-  * FK_TranslatorID
-* Country
-  * CountryID (PK)
-  * Name
-  * Company
-  * FK_ContactPersonID
-  * FK_RegionName
-* Region
-  * RegionID (PK)
-  * Name
-  * FK_ManagerID
-* GameLanguage
-  * FK_GameID (PK)
-  * FK_LanguageID (PK)
-* LanguageDistribution
-  * FK_LanguageID (PK)
-  * FK_CountryID (PK)
-* GenreGame
-  * FK_GenreID (PK)
-  * GameID (PK)
+
+- ContactPerson
+  - PersonID (PK)
+  - Name
+  - Email
+  - TelefonNr
+- Genre
+  - GenreID (PK)
+  - Titel
+  - Beschreibung
+- Game
+  - GameID (PK)
+  - Titel
+  - Beschreibung
+  - Preis
+  - Release-Datum
+  - FK_GenreID
+- Language
+  - LanguageID (PK)
+  - Name
+  - FK_TranslatorID
+- Country
+  - CountryID (PK)
+  - Name
+  - Company
+  - FK_ContactPersonID
+  - FK_RegionName
+- Region
+  - RegionID (PK)
+  - Name
+  - FK_ManagerID
+- GameLanguage
+  - FK_GameID (PK)
+  - FK_LanguageID (PK)
+- LanguageDistribution
+  - FK_LanguageID (PK)
+  - FK_CountryID (PK)
+- GenreGame
+  - FK_GenreID (PK)
+  - GameID (PK)
 
 **Beziehungen / Diagramm:**
 [Diagramm](/docs/M162/diagramme/162-7C-MatteoBosshard.drawio)

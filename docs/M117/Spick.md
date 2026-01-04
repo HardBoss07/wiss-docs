@@ -2,16 +2,17 @@
 
 ## Megatrends
 
-* Langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaft & Technik stark beeinflussen
-* Beispiele in IT / Netzwerktechnik:
+- Langfristige, globale Entwicklungen, die Gesellschaft, Wirtschaft & Technik stark beeinflussen
+- Beispiele in IT / Netzwerktechnik:
 
-  * Digitalisierung & Cloud Computing
-  * Internet of Things (IoT)
-  * Künstliche Intelligenz & Automatisierung
-  * Mobile Kommunikation (5G, Wi-Fi 6/7)
-  * Cybersecurity & Datenschutz
-  * Glasfaser- & Hochgeschwindigkeitsnetze
-* Datenkommunikation: Morse → Telefon → Digitales Messaging → Instant Messaging → Glasfaser
+  - Digitalisierung & Cloud Computing
+  - Internet of Things (IoT)
+  - Künstliche Intelligenz & Automatisierung
+  - Mobile Kommunikation (5G, Wi-Fi 6/7)
+  - Cybersecurity & Datenschutz
+  - Glasfaser- & Hochgeschwindigkeitsnetze
+
+- Datenkommunikation: Morse → Telefon → Digitales Messaging → Instant Messaging → Glasfaser
 
 ## Netzwerkkomponenten
 
@@ -36,11 +37,11 @@
 
 **Tipps für mehrstöckige Häuser:**
 
-* Ethernet-Kabel zwischen Stockwerken verlegen
-* Pro Etage Access Point oder Mesh-Repeater installieren
-* Access Points per LAN anbinden für bessere Stabilität
-* Repeater nur bei fehlendem Kabel
-* Powerline-Adapter als Alternative über Stromnetz
+- Ethernet-Kabel zwischen Stockwerken verlegen
+- Pro Etage Access Point oder Mesh-Repeater installieren
+- Access Points per LAN anbinden für bessere Stabilität
+- Repeater nur bei fehlendem Kabel
+- Powerline-Adapter als Alternative über Stromnetz
 
 ## Internet-Anbindungen / Varianten
 
@@ -56,7 +57,7 @@
 
 | Nr. | Name (engl./dt.)           | Aufgabe                                   | Beispielprotokolle                     |
 | --- | -------------------------- | ----------------------------------------- | -------------------------------------- |
-| 7   | Application / Anwendung    | Dienste für Nutzer & Programme          | HTTP, FTP, DNS, SMTP, POP3, IMAP, SNMP |
+| 7   | Application / Anwendung    | Dienste für Nutzer & Programme            | HTTP, FTP, DNS, SMTP, POP3, IMAP, SNMP |
 | 6   | Presentation / Darstellung | Übersetzen, Verschlüsseln, Komprimieren   | SSL/TLS, JPEG, ASCII                   |
 | 5   | Session / Sitzung          | Aufbau, Verwaltung, Beenden von Sitzungen | NetBIOS, SMB, RPC, PPTP                |
 | 4   | Transport / Transport      | Zuverlässige Ende-zu-Ende-Kommunikation   | TCP, UDP, SCTP                         |
@@ -76,9 +77,9 @@
 
 **Private Bereiche:**
 
-* A: 10.0.0.0-10.255.255.255
-* B: 172.16.0.0-172.31.255.255
-* C: 192.168.0.0-192.168.255.255
+- A: 10.0.0.0-10.255.255.255
+- B: 172.16.0.0-172.31.255.255
+- C: 192.168.0.0-192.168.255.255
 
 ## Berechtigungsmatrix (Beispiel)
 
@@ -92,21 +93,21 @@
 
 ## System im Netzwerkplan richtig konfigurieren
 
-* Router: `192.168.0.1` (Gateway, DHCP, DNS)
-* Switch (verwaltbar): `192.168.0.2`
-* Server/Drucker: `192.168.0.100-120`
-* Clients (statisch oder DHCP): `192.168.0.10-80`
-* Subnetzmaske: `255.255.255.0`
-* WLAN-SSID + Passwort (WPA2/3)
-* DNS → Router oder externer DNS (z. B. 8.8.8.8)
+- Router: `192.168.0.1` (Gateway, DHCP, DNS)
+- Switch (verwaltbar): `192.168.0.2`
+- Server/Drucker: `192.168.0.100-120`
+- Clients (statisch oder DHCP): `192.168.0.10-80`
+- Subnetzmaske: `255.255.255.0`
+- WLAN-SSID + Passwort (WPA2/3)
+- DNS → Router oder externer DNS (z. B. 8.8.8.8)
 
 **Netzwerkplan beschriften:**
 
-* Router, Switch, Access Point, Server, Clients
-* Verbindungstypen (LAN/WLAN)
-* IP-Adressen
-* DHCP-Bereich
-* Legende, Name, Datum, Version
+- Router, Switch, Access Point, Server, Clients
+- Verbindungstypen (LAN/WLAN)
+- IP-Adressen
+- DHCP-Bereich
+- Legende, Name, Datum, Version
 
 **Software-Tools:** draw.io, yEd, Lucidchart
 

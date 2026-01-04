@@ -21,6 +21,7 @@ Beziehung ist über Zwischentabelle `ProductOrder` abgebildet
 ## Tabellen
 
 - **`Product`**
+
   - `product_id`: NN, UN, AI (PK)
   - `name`: NN
   - `category`: NN (FK1)
@@ -28,6 +29,7 @@ Beziehung ist über Zwischentabelle `ProductOrder` abgebildet
   - `stock`: NN
 
 - **`User`**
+
   - `user_id`: NN, UN, AI (PK)
   - `username`: NN, UN
   - `password`: NN
@@ -35,12 +37,14 @@ Beziehung ist über Zwischentabelle `ProductOrder` abgebildet
   - `lastname`: NN
 
 - **`Order`**
+
   - `order_id`: NN, UN, AI (PK)
   - `user_id`: NN (FK1)
   - `date`: NN
   - `discount`: NN
 
 - **`Adress`**
+
   - `adress_id`: NN, UN, AI (PK)
   - `user_id`: NN (FK1)
   - `country`: NN
@@ -49,6 +53,7 @@ Beziehung ist über Zwischentabelle `ProductOrder` abgebildet
   - `postal_code`: NN
 
 - **`Payment`**
+
   - `payment_id`: NN, UN, AI (PK)
   - `order_id`: NN (FK1)
   - `payment_method_id`: NN (FK2)
@@ -56,10 +61,12 @@ Beziehung ist über Zwischentabelle `ProductOrder` abgebildet
   - `date`: NN
 
 - **`Category`**
+
   - `category_id`: NN, UN, AI (PK)
   - `label`: NN, UN
 
 - **`Payment_Method`**
+
   - `payment_method_id`: NN, UN, AI (PK)
   - `label`: NN, UN
 

@@ -26,15 +26,15 @@
 
 ## Hypervisor
 
-* **Typ 1**: direkt auf Hardware
-* **Typ 2**: läuft auf Host-OS
+- **Typ 1**: direkt auf Hardware
+- **Typ 2**: läuft auf Host-OS
 
-| Begriff    | Beschreibung                                                        |
-| ---------- | ------------------------------------------------------------------- |
-| Gast-OS    | Läuft in VM, nutzt virtuelle HW                                     |
+| Begriff    | Beschreibung                                                      |
+| ---------- | ----------------------------------------------------------------- |
+| Gast-OS    | Läuft in VM, nutzt virtuelle HW                                   |
 | Hypervisor | Schicht zwischen HW & Gast-OS (z. B. VirtualBox, VMware, Hyper-V) |
-| Host-OS    | Basis-OS (bei Typ 2), z. B. Linux, Windows                          |
-| Hardware   | CPU, RAM, Disk, Netz, wird vom Hypervisor verteilt                  |
+| Host-OS    | Basis-OS (bei Typ 2), z. B. Linux, Windows                        |
+| Hardware   | CPU, RAM, Disk, Netz, wird vom Hypervisor verteilt                |
 
 ## Paketmanager (APT)
 
@@ -51,8 +51,8 @@
 
 **Update vs. Upgrade**
 
-* `update`: nur Listen
-* `upgrade`: installiert neue Versionen
+- `update`: nur Listen
+- `upgrade`: installiert neue Versionen
 
 **Vorteile**: Automatische Abhängigkeiten, zentrale Updates, Sicherheit, Integration, einfache Verwaltung
 
@@ -68,11 +68,11 @@
 
 **Partitionen**
 
-* Primär: max. 4
-* Erweitert: Container für logische
-* Logisch: flexibel
-* **MBR**: max. 2 TB, 4 primär
-* **GPT**: modern, >2 TB, bis 128
+- Primär: max. 4
+- Erweitert: Container für logische
+- Logisch: flexibel
+- **MBR**: max. 2 TB, 4 primär
+- **GPT**: modern, >2 TB, bis 128
 
 ## Partitionen erstellen
 

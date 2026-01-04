@@ -14,7 +14,7 @@
 * Ich bin handlungsfähig, weil ich urteilsfähig & mündig bin.
 
 * Bedeutet: Ich kann selbstständig gültige Verträge abschliessen.
-* Beispiel: Volljährige Person kauft ein Auto – der Vertrag ist voll gültig.
+* Beispiel: Volljährige Person kauft ein Auto - der Vertrag ist voll gültig.
 
 > Art. 12-13 ZGB
 
