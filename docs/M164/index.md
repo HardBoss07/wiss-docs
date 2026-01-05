@@ -138,3 +138,200 @@ Ziel: Daten sicher, effizient & konsistent verwalten.
 ## 164-4A SideQuest:
 
 [Link zur SQL Datei](/docs/M164/sql/164-4A.sql)
+
+
+## 164-6B SideQuest
+
+### 1. Cross Join
+
+Zweck:
+- Liefert das kartesische Produkt von zwei Tabellen (jede Kombination aus Zeilen).
+- Wird selten produktiv genutzt, eher für Tests oder Analysen aller möglichen Kombinationen.
+
+Syntax:
+```sql
+SELECT *
+FROM tabelle1
+CROSS JOIN tabelle2;
+```
+
+Beispiele:
+- Auslesen: Alle Kombinationen von Mitarbeitern und Projekten
+
+```sql
+SELECT e.firstname, e.name AS lastname, p.name AS project_name
+FROM employee e
+CROSS JOIN project p;
+```
+- DELETE: Cross Join wird normalerweise nicht zum Löschen genutzt.
+
+### 2. Theta Join
+
+Zweck:
+- Verknüpft Tabellen über beliebige Vergleichsoperatoren (=, <, >, <=, >=, <>).
+- Flexibler als Inner Join.
+
+Syntax:
+```sql
+SELECT *
+FROM tabelle1 t1, tabelle2 t2
+WHERE t1.spalte OPERATOR t2.spalte;
+```
+
+Beispiele:
+- Auslesen: Alle Projekte, deren `project_id` kleiner ist als `employee_id` eines Mitarbeiters
+
+```sql
+SELECT e.firstname, e.name AS lastname, p.name AS project_name
+FROM employee e, project p
+WHERE p.project_id < e.employee_id;
+```
+
+- DELETE:
+```sql
+DELETE a
+FROM assignment a, project p
+WHERE a.project_id = p.project_id AND p.project_head = 2;
+```
+
+### 3. Inner Join
+
+Zweck:
+- Liefert nur Zeilen, die in beiden Tabellen übereinstimmende Werte haben.
+
+Syntax:
+```sql
+SELECT t1.spalte, t2.spalte
+FROM tabelle1 t1
+INNER JOIN tabelle2 t2
+ON t1.gemeinsame_spalte = t2.gemeinsame_spalte;
+```
+
+Beispiele:
+- SELECT: Alle Mitarbeiter mit ihren Abteilungen
+
+```sql
+SELECT e.firstname, e.name AS lastname, d.name AS department
+FROM employee e
+INNER JOIN department d
+ON e.department = d.department_id;
+```
+
+- DELETE: Lösche Assignments eines Projektleiters
+
+```sql
+DELETE a
+FROM assignment a
+INNER JOIN project p
+ON a.project_id = p.project_id
+WHERE p.project_head = 1;
+```
+
+- UPDATE: Setze employment auf 100% für Development-Mitarbeiter
+
+```sql
+UPDATE employee e
+INNER JOIN department d
+ON e.department = d.department_id
+SET e.employment = 100
+WHERE d.name = 'Development';
+```
+
+### 4. Natural Join
+
+Zweck:
+- Join über alle Spalten mit gleichem Namen automatisch.
+- Keine explizite ON-Bedingung nötig.
+
+Syntax:
+```sql
+SELECT *
+FROM tabelle1
+NATURAL JOIN tabelle2;
+```
+
+Beispiele:
+- SELECT: Alle Employee-Salary-Daten
+
+```sql
+SELECT e.firstname, e.name AS lastname, s.amount
+FROM employee e
+NATURAL JOIN employee_salary es
+NATURAL JOIN salary s;
+```
+
+### 5. Outer Join (Left, Right, Full)
+
+Zweck:
+- Liefert alle Zeilen einer Tabelle auch wenn keine passenden Zeilen in der anderen Tabelle existieren.
+- Left Join: alle Zeilen der linken Tabelle + passende rechte Zeilen
+- Right Join: alle Zeilen der rechten Tabelle + passende linke Zeilen
+- Full Join: alle Zeilen beider Tabellen
+
+Syntax (Left Join Beispiel):
+```sql
+SELECT e.firstname, e.name AS lastname, d.name AS department
+FROM employee e
+LEFT JOIN department d
+ON e.department = d.department_id;
+```
+
+Beispiele:
+- SELECT: Alle Mitarbeiter + Abteilung (inkl. unzugeordnete Mitarbeiter)
+
+```sql
+SELECT e.firstname, e.name AS lastname, d.name AS department
+FROM employee e
+LEFT JOIN department d
+ON e.department = d.department_id;
+```
+
+- DELETE: selten, kann aber z.B. alle Mitarbeiter ohne Abteilung markieren.
+
+### 6. Self Join
+
+Zweck:
+- Tabelle wird mit sich selbst verknüpft.
+- Praktisch z.B. für Hierarchien oder Vergleich von Datensätzen innerhalb derselben Tabelle.
+
+Syntax:
+```sql
+SELECT a.firstname AS emp1, b.firstname AS emp2
+FROM employee a
+INNER JOIN employee b
+ON a.manager_id = b.employee_id;
+```
+
+Beispiele:
+- SELECT: Mitarbeiter und ihr Vorgesetzter
+
+```sql
+SELECT e1.firstname AS employee, e2.firstname AS manager
+FROM employee e1
+LEFT JOIN employee e2
+ON e1.department = e2.department AND e1.employee_id <> e2.employee_id;
+```
+
+### 7. Union
+
+Zweck:
+- Kombiniert Ergebnisse mehrerer SELECTs zu einem Ergebnis.
+- Alle SELECTs müssen die gleiche Anzahl Spalten und kompatible Datentypen haben.
+
+Syntax:
+```sql
+SELECT spalte1, spalte2 FROM tabelle1
+UNION
+SELECT spalte1, spalte2 FROM tabelle2;
+```
+
+Beispiele:
+- SELECT: Alle Usernames aus `user` und `customeraccount`
+
+```sql
+SELECT username FROM user
+UNION
+SELECT username FROM customeraccount;
+```
+
+- DELETE: Union kann nicht direkt für DELETE genutzt werden.
