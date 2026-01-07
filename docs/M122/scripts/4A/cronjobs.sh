@@ -1,4 +1,14 @@
 #!/bin/bash
+# Programm: Cronjobs
+# Beschreibung: Erstellt 2 Cronjobs
+# Aufruf: ./cronjobs.sh
+# Optionen: -
+# Parameter: -
+# Autor: Matteo Bosshard
+# Version: 0.1.0
+# Datum: 2026-01-07
+# Aenderung: Skriptkopf eingefügt
+# Aenderungsdatum: 2026-01-07
 
 # Beispiel-Skript, das aufgerufen werden soll
 SCRIPT="/home/student1/scripts/test_script.sh"
