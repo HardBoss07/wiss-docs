@@ -76,3 +76,49 @@ Diese Befehle dienen dazu, laufende Programme (Prozesse) zu überwachen und zu s
 | ps | Zeigt eine Momentaufnahme der aktuell laufenden Prozesse an. Mit `ps aux` siehst du alle Prozesse aller Benutzer. |
 | top | Öffnet eine Live-Ansicht (wie der Windows Task-Manager). Du siehst, welches Programm wie viel CPU oder RAM verbraucht. (Beenden mit Q). |
 | kill | Beendet einen Prozess. Du musst die Prozess-ID (PID) angeben, die du bei `ps` oder `top` findest. Beispiel: `kill 1234`. |
+
+## 122-4A SideQuest:
+
+## 2. quadrat.sh
+
+```bash
+$ ./4A/quadrat.sh 
+Von welcher Zahl möchtest du das Quadrat errechnen?
+12
+12 hoch 2 = 144
+```
+
+### 3. systeminfo.sh
+
+```bash
+$ ./4A/systeminfo.sh
+Name des Computers: Matteo-Lenovo
+Heimverzeichnis: /c/Users/matte
+Aktuelles Verzeichnis: /c/Schule/wiss-docs/docs/M122/scripts
+Benutzername: matte
+```
+
+### 4. quadrat2.sh
+
+```bash
+$ ./4A/quadrat2.sh
+ hoch 2 = 0
+
+$ ./4A/quadrat2.sh 12
+12 hoch 2 = 144
+
+$ ./4A/quadrat2.sh 12 4
+12 hoch 2 = 144
+```
+
+## 5. quadrat3.sh
+
+```bash
+$ ./4A/quadrat3.sh
+Von welcher Zahl möchtest du das Quadrat errechnen?
+14
+14 hoch 2 = 196
+
+$ ./4A/quadrat3.sh 3
+3 hoch 2 = 9
+```
