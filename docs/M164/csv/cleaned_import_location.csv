@@ -1,0 +1,11 @@
+location_id,name,infrastruktur_vorhanden,adresse_id
+1,Standort Süd 1,normal,20
+2,Standort Nord 2,full,8
+3,Standort Süd 3,full,18
+4,Standort Nord 4,full,9
+5,Standort Nord 5,normal,6
+6,Standort Mitte 6,basic,1
+7,Standort Süd 7,full,4
+8,Standort Nord 8,normal,1
+9,Standort Mitte 9,normal,20
+10,Standort Süd 10,full,7

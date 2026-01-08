@@ -1,0 +1,26 @@
+spiel_id,name,beschreibung_de,beschreibung_en,infrastruktur_bedarf,teambildung_moeglich,kosten,einfuehrungsdatum,thema_id
+3,Game Adventure 3,Spannendes Lernspiel.,Exciting educational game.,basic,1,77.69,2024-03-20,2
+5,Game Battle 5,Spannendes Lernspiel.,Exciting educational game.,normal,0,66.09,2024-01-22,1
+6,Game Adventure 6,Spannendes Lernspiel.,Exciting educational game.,normal,0,28.49,2023-07-27,3
+9,Game Master 9,Spannendes Lernspiel.,Exciting educational game.,full,1,96.71,2025-02-05,4
+10,Game Master 10,Spannendes Lernspiel.,Exciting educational game.,full,1,79.7,2023-05-23,5
+11,Game Battle 11,Spannendes Lernspiel.,Exciting educational game.,normal,0,81.49,2024-01-14,4
+12,Game Quest 12,Spannendes Lernspiel.,Exciting educational game.,normal,0,88.41,2024-02-29,7
+13,Game Adventure 13,Spannendes Lernspiel.,Exciting educational game.,normal,0,52.06,2025-01-27,7
+15,Game Battle 15,Spannendes Lernspiel.,Exciting educational game.,normal,1,97.41,2024-05-13,4
+18,Game Battle 18,Spannendes Lernspiel.,Exciting educational game.,normal,0,48.09,2024-02-03,1
+19,Game Quest 19,Spannendes Lernspiel.,Exciting educational game.,full,1,63.45,2024-04-12,4
+21,Game Quest 21,Spannendes Lernspiel.,Exciting educational game.,full,0,33.59,2023-09-14,1
+22,Game Battle 22,Spannendes Lernspiel.,Exciting educational game.,normal,1,10.03,2024-04-23,7
+23,Game Adventure 23,Spannendes Lernspiel.,Exciting educational game.,normal,0,66.29,2025-12-06,7
+25,Game Adventure 25,Spannendes Lernspiel.,Exciting educational game.,full,1,70.33,2023-12-14,2
+26,Game Adventure 26,Spannendes Lernspiel.,Exciting educational game.,normal,0,62.73,2025-11-25,4
+28,Game Quest 28,Spannendes Lernspiel.,Exciting educational game.,basic,0,41.23,2024-03-21,6
+29,Game Adventure 29,Spannendes Lernspiel.,Exciting educational game.,basic,0,49.96,2024-12-22,7
+30,Game Adventure 30,Spannendes Lernspiel.,Exciting educational game.,full,0,12.03,2023-08-07,5
+31,Game Quest 31,Spannendes Lernspiel.,Exciting educational game.,full,1,48.26,2025-11-29,5
+33,Game Quest 33,Spannendes Lernspiel.,Exciting educational game.,basic,1,58.53,2023-08-27,5
+35,Game Master 35,Spannendes Lernspiel.,Exciting educational game.,basic,0,24.12,2024-07-31,1
+36,Game Master 36,Spannendes Lernspiel.,Exciting educational game.,full,0,28.65,2023-10-27,5
+37,Game Master 37,Spannendes Lernspiel.,Exciting educational game.,basic,1,57.23,2024-07-15,3
+38,Game Master 38,Spannendes Lernspiel.,Exciting educational game.,full,0,61.6,2023-10-03,2

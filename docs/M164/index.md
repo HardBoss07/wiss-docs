@@ -139,16 +139,17 @@ Ziel: Daten sicher, effizient & konsistent verwalten.
 
 [Link zur SQL Datei](/docs/M164/sql/164-4A.sql)
 
-
 ## 164-6B SideQuest
 
 ### 1. Cross Join
 
 Zweck:
+
 - Liefert das kartesische Produkt von zwei Tabellen (jede Kombination aus Zeilen).
 - Wird selten produktiv genutzt, eher für Tests oder Analysen aller möglichen Kombinationen.
 
 Syntax:
+
 ```sql
 SELECT *
 FROM tabelle1
@@ -156,6 +157,7 @@ CROSS JOIN tabelle2;
 ```
 
 Beispiele:
+
 - Auslesen: Alle Kombinationen von Mitarbeitern und Projekten
 
 ```sql
@@ -163,15 +165,18 @@ SELECT e.firstname, e.name AS lastname, p.name AS project_name
 FROM employee e
 CROSS JOIN project p;
 ```
+
 - DELETE: Cross Join wird normalerweise nicht zum Löschen genutzt.
 
 ### 2. Theta Join
 
 Zweck:
+
 - Verknüpft Tabellen über beliebige Vergleichsoperatoren (=, <, >, <=, >=, <>).
 - Flexibler als Inner Join.
 
 Syntax:
+
 ```sql
 SELECT *
 FROM tabelle1 t1, tabelle2 t2
@@ -179,6 +184,7 @@ WHERE t1.spalte OPERATOR t2.spalte;
 ```
 
 Beispiele:
+
 - Auslesen: Alle Projekte, deren `project_id` kleiner ist als `employee_id` eines Mitarbeiters
 
 ```sql
@@ -188,6 +194,7 @@ WHERE p.project_id < e.employee_id;
 ```
 
 - DELETE:
+
 ```sql
 DELETE a
 FROM assignment a, project p
@@ -197,9 +204,11 @@ WHERE a.project_id = p.project_id AND p.project_head = 2;
 ### 3. Inner Join
 
 Zweck:
+
 - Liefert nur Zeilen, die in beiden Tabellen übereinstimmende Werte haben.
 
 Syntax:
+
 ```sql
 SELECT t1.spalte, t2.spalte
 FROM tabelle1 t1
@@ -208,6 +217,7 @@ ON t1.gemeinsame_spalte = t2.gemeinsame_spalte;
 ```
 
 Beispiele:
+
 - SELECT: Alle Mitarbeiter mit ihren Abteilungen
 
 ```sql
@@ -240,10 +250,12 @@ WHERE d.name = 'Development';
 ### 4. Natural Join
 
 Zweck:
+
 - Join über alle Spalten mit gleichem Namen automatisch.
 - Keine explizite ON-Bedingung nötig.
 
 Syntax:
+
 ```sql
 SELECT *
 FROM tabelle1
@@ -251,6 +263,7 @@ NATURAL JOIN tabelle2;
 ```
 
 Beispiele:
+
 - SELECT: Alle Employee-Salary-Daten
 
 ```sql
@@ -263,12 +276,14 @@ NATURAL JOIN salary s;
 ### 5. Outer Join (Left, Right, Full)
 
 Zweck:
+
 - Liefert alle Zeilen einer Tabelle auch wenn keine passenden Zeilen in der anderen Tabelle existieren.
 - Left Join: alle Zeilen der linken Tabelle + passende rechte Zeilen
 - Right Join: alle Zeilen der rechten Tabelle + passende linke Zeilen
 - Full Join: alle Zeilen beider Tabellen
 
 Syntax (Left Join Beispiel):
+
 ```sql
 SELECT e.firstname, e.name AS lastname, d.name AS department
 FROM employee e
@@ -277,6 +292,7 @@ ON e.department = d.department_id;
 ```
 
 Beispiele:
+
 - SELECT: Alle Mitarbeiter + Abteilung (inkl. unzugeordnete Mitarbeiter)
 
 ```sql
@@ -291,10 +307,12 @@ ON e.department = d.department_id;
 ### 6. Self Join
 
 Zweck:
+
 - Tabelle wird mit sich selbst verknüpft.
 - Praktisch z.B. für Hierarchien oder Vergleich von Datensätzen innerhalb derselben Tabelle.
 
 Syntax:
+
 ```sql
 SELECT a.firstname AS emp1, b.firstname AS emp2
 FROM employee a
@@ -303,6 +321,7 @@ ON a.manager_id = b.employee_id;
 ```
 
 Beispiele:
+
 - SELECT: Mitarbeiter und ihr Vorgesetzter
 
 ```sql
@@ -315,10 +334,12 @@ ON e1.department = e2.department AND e1.employee_id <> e2.employee_id;
 ### 7. Union
 
 Zweck:
+
 - Kombiniert Ergebnisse mehrerer SELECTs zu einem Ergebnis.
 - Alle SELECTs müssen die gleiche Anzahl Spalten und kompatible Datentypen haben.
 
 Syntax:
+
 ```sql
 SELECT spalte1, spalte2 FROM tabelle1
 UNION
@@ -326,6 +347,7 @@ SELECT spalte1, spalte2 FROM tabelle2;
 ```
 
 Beispiele:
+
 - SELECT: Alle Usernames aus `user` und `customeraccount`
 
 ```sql
@@ -335,3 +357,180 @@ SELECT username FROM customeraccount;
 ```
 
 - DELETE: Union kann nicht direkt für DELETE genutzt werden.
+
+## 164-7A SideQuest:
+
+- Spiel
+
+  - spiel_id (INT, PK, AI, NN)
+  - name (VARCHAR(100), UN, NN)
+  - beschreibung_de (TEXT, NN)
+  - beschreibung_en (TEXT, NN)
+  - infrastruktur_bedarf (ENUM('basic', 'normal', 'full'), NN)
+  - altersgruppe (ENUM('5-7', '8-12', '14-18'), NN)
+  - teambildung_moeglich (BOOLEAN, NN)
+  - kosten (DECIMAL(10,2), NN)
+  - einfuehrungsdatum (DATE, NN)
+  - thema_id (INT, FK1, NN): Verweis auf `Thema(thema_id)`
+
+- Thema
+
+  - thema_id (INT, PK, AI, NN)
+  - bezeichnung (VARCHAR(50), UN, NN)
+
+- Teilnehmer
+
+  - teilnehmer_id (INT, PK, AI, NN)
+  - username (VARCHAR(50), UN, NN)
+  - vorname (VARCHAR(50), NN)
+  - nachname (VARCHAR(50), NN)
+  - spieler_alter (INT, NN)
+  - email (VARCHAR(100), UN, NN)
+  - telefon (VARCHAR(20), NN)
+
+- Team
+
+  - team_id (INT, PK, AI, NN)
+  - teamname (VARCHAR(50), UN, NN)
+
+- Adresse
+
+  - adresse_id (INT, PK, AI, NN)
+  - strasse (VARCHAR(100), NN)
+  - hausnummer (VARCHAR(10))
+  - plz (VARCHAR(10), NN)
+  - ort (VARCHAR(100), NN)
+  - land (VARCHAR(50), NN)
+
+- Location
+
+  - location_id (INT, PK, AI, NN)
+  - name (VARCHAR(100), NN)
+  - infrastruktur_vorhanden (ENUM('basic', 'normal', 'full'), NN)
+  - adresse_id (INT, FK1, NN): Verweis auf `Adresse(adresse_id)`
+
+- Durchfuehrung
+
+  - durchfuehrung_id (INT, PK, AI, NN)
+  - datum (DATETIME, NN)
+  - spiel_id (INT, FK1, NN)
+  - location_id (INT, FK2, NN)
+
+- Ergebnis
+
+  - ergebnis_id (INT, PK, AI, NN)
+  - punktestand (INT, NN)
+  - durchfuehrung_id (INT, FK1, NN)
+  - teilnehmer_id (INT, FK2, C): (null, wenn Team spielt)
+  - team_id (INT, FK3, C): (null, wenn Einzelspieler spielt)
+
+- TeamMitglieder
+  - team_id (INT, FK1, NN)
+  - teilnehmer_id (INT, FK2, NN)
+  - PRIMARY KEY (team_id, teilnehmer_id)
+
+### SQL Skript
+
+[Link zur SQL Datei](/docs/M164/sql/164-7A.sql)
+
+### Beschreibung der Verbindungen
+
+In dieser Notation steht die linke Seite für die Kardinalität der erstgenannten Tabelle und die rechte Seite für die zweitgenannte Tabelle.
+
+- `adresse : location` An einer Adresse kann sich eine Location befinden, eine Location hat genau eine Adresse.
+  (1 : MC)
+- `thema : spiel` Ein Thema ist in vielen Spielen vorhanden, ein Spiel hat genau ein Thema.
+  (1 : MC)
+- `spiel : durchfuehrung` Ein Spiel kann oft durchgeführt werden, eine Durchführung betrifft genau ein Spiel.
+  (1 : MC)
+- `location : durchfuehrung` An einem Standort gibt es viele Durchführungen, eine Durchführung findet an genau einem Standort statt.
+  (1 : MC)
+- `durchfuehrung : spiel_ergebnis` Eine Durchführung generiert mehrere Ergebnisse (Duelle), ein Ergebnis gehört zu genau einer Durchführung.
+  (1 : M)
+- `teilnehmer : spiel_ergebnis` Ein Teilnehmer kann viele Ergebnisse erzielen, ein Ergebnis kann optional einem Einzelteilnehmer zugeordnet sein.
+  (1 : MC)
+- `team : spiel_ergebnis` Ein Team kann viele Ergebnisse erzielen, ein Ergebnis kann optional einem Team zugeordnet sein.
+  (1 : MC)
+- `team : team_mitglieder` Ein Team hat mehrere Einträge in der Mitgliederliste, ein Listeneintrag gehört zu genau einem Team.
+  (1 : M)
+- `teilnehmer : team_mitglieder` Ein Teilnehmer kann in mehreren Teams gelistet sein, ein Listeneintrag gehört zu genau einem Teilnehmer.
+  (1 : MC)
+
+### Fehlerprotokoll der Datenbereinigung
+
+| Datei                 | Datensatz ID | Fehlerbeschreibung                          |
+| --------------------- | ------------ | ------------------------------------------- |
+| import_teilnehmer.csv | 14           | Duplikat E-Mail: 'julia.huber@edugames.ch'  |
+| import_teilnehmer.csv | 15           | Duplikat E-Mail: 'tim.weber@edugames.ch'    |
+| import_teilnehmer.csv | 17           | E-Mail ungültig: ''                         |
+| import_teilnehmer.csv | 18           | Duplikat E-Mail: 'beat.schmid@edugames.ch'  |
+| import_teilnehmer.csv | 23           | E-Mail ungültig: ''                         |
+| import_teilnehmer.csv | 24           | Duplikat E-Mail: 'julia.huber@edugames.ch'  |
+| import_teilnehmer.csv | 27           | Alter ist keine Zahl: 'unbekannt'           |
+| import_teilnehmer.csv | 28           | Alter ist keine Zahl: 'unbekannt'           |
+| import_teilnehmer.csv | 30           | Duplikat E-Mail: 'anna.müller@edugames.ch'  |
+| import_teilnehmer.csv | 32           | Duplikat E-Mail: 'beat.schmid@edugames.ch'  |
+| import_teilnehmer.csv | 33           | Duplikat E-Mail: 'julia.schmid@edugames.ch' |
+| import_teilnehmer.csv | 35           | Duplikat E-Mail: 'anna.müller@edugames.ch'  |
+| import_teilnehmer.csv | 36           | E-Mail ungültig: ''                         |
+| import_teilnehmer.csv | 37           | Duplikat E-Mail: 'beat.schmid@edugames.ch'  |
+| import_teilnehmer.csv | 40           | Duplikat E-Mail: 'elena.meier@edugames.ch'  |
+| import_teilnehmer.csv | 41           | Duplikat E-Mail: 'max.suter@edugames.ch'    |
+| import_teilnehmer.csv | 42           | Duplikat E-Mail: 'julia.schmid@edugames.ch' |
+| import_teilnehmer.csv | 44           | Duplikat E-Mail: 'julia.schmid@edugames.ch' |
+| import_teilnehmer.csv | 45           | Duplikat Username: 'user_00'                |
+| import_teilnehmer.csv | 46           | Duplikat E-Mail: 'elena.weber@edugames.ch'  |
+| import_teilnehmer.csv | 49           | Duplikat E-Mail: 'beat.meier@edugames.ch'   |
+| import_teilnehmer.csv | 50           | Alter ist keine Zahl: 'unbekannt'           |
+| import_teilnehmer.csv | 51           | Duplikat E-Mail: 'anna.müller@edugames.ch'  |
+| import_teilnehmer.csv | 54           | E-Mail ungültig: ''                         |
+| import_teilnehmer.csv | 56           | Duplikat E-Mail: 'anna.müller@edugames.ch'  |
+| import_teilnehmer.csv | 58           | Duplikat E-Mail: 'sarah.huber@edugames.ch'  |
+| import_teilnehmer.csv | 59           | Duplikat E-Mail: 'beat.weber@edugames.ch'   |
+| import_teilnehmer.csv | 60           | Duplikat E-Mail: 'elena.suter@edugames.ch'  |
+| import_teilnehmer.csv | 61           | Duplikat E-Mail: 'anna.müller@edugames.ch'  |
+| import_teilnehmer.csv | 62           | Duplikat E-Mail: 'beat.weber@edugames.ch'   |
+| import_teilnehmer.csv | 64           | Duplikat E-Mail: 'elena.keller@edugames.ch' |
+| import_teilnehmer.csv | 66           | Duplikat E-Mail: 'max.schmid@edugames.ch'   |
+| import_teilnehmer.csv | 67           | Alter ausserhalb Bereich: 250               |
+| import_teilnehmer.csv | 68           | Duplikat E-Mail: 'sarah.schmid@edugames.ch' |
+| import_teilnehmer.csv | 69           | Duplikat E-Mail: 'elena.schmid@edugames.ch' |
+| import_teilnehmer.csv | 70           | Duplikat E-Mail: 'elena.keller@edugames.ch' |
+| import_teilnehmer.csv | 71           | Alter ausserhalb Bereich: -10               |
+| import_teilnehmer.csv | 72           | Duplikat E-Mail: 'lukas.meier@edugames.ch'  |
+| import_teilnehmer.csv | 74           | Duplikat E-Mail: 'elena.meier@edugames.ch'  |
+| import_teilnehmer.csv | 75           | Duplikat E-Mail: 'beat.keller@edugames.ch'  |
+| import_teilnehmer.csv | 76           | Duplikat E-Mail: 'tim.weber@edugames.ch'    |
+| import_teilnehmer.csv | 81           | Duplikat Username: 'user_00'                |
+| import_teilnehmer.csv | 82           | E-Mail ungültig: ''                         |
+| import_teilnehmer.csv | 83           | Duplikat E-Mail: 'elena.suter@edugames.ch'  |
+| import_teilnehmer.csv | 84           | Alter ausserhalb Bereich: -10               |
+| import_teilnehmer.csv | 85           | Duplikat E-Mail: 'max.weber@edugames.ch'    |
+| import_teilnehmer.csv | 86           | Duplikat E-Mail: 'beat.keller@edugames.ch'  |
+| import_teilnehmer.csv | 87           | Duplikat E-Mail: 'sarah.huber@edugames.ch'  |
+| import_teilnehmer.csv | 88           | Duplikat E-Mail: 'beat.keller@edugames.ch'  |
+| import_teilnehmer.csv | 90           | Duplikat E-Mail: 'beat.suter@edugames.ch'   |
+| import_teilnehmer.csv | 91           | Duplikat E-Mail: 'tim.weber@edugames.ch'    |
+| import_teilnehmer.csv | 92           | Duplikat E-Mail: 'anna.weber@edugames.ch'   |
+| import_teilnehmer.csv | 93           | Alter ausserhalb Bereich: -10               |
+| import_teilnehmer.csv | 94           | Duplikat E-Mail: 'beat.schmid@edugames.ch'  |
+| import_teilnehmer.csv | 96           | Duplikat E-Mail: 'tim.keller@edugames.ch'   |
+| import_teilnehmer.csv | 97           | Duplikat E-Mail: 'sarah.schmid@edugames.ch' |
+| import_teilnehmer.csv | 98           | Duplikat E-Mail: 'lukas.müller@edugames.ch' |
+| import_teilnehmer.csv | 99           | Duplikat E-Mail: 'max.schmid@edugames.ch'   |
+| import_teilnehmer.csv | 100          | Duplikat E-Mail: 'max.weber@edugames.ch'    |
+| import_spiel.csv      | 1            | Enum-Fehler: High-End-PC                    |
+| import_spiel.csv      | 2            | Datumsfehler: 00.00.2024                    |
+| import_spiel.csv      | 4            | Enum-Fehler: High-End-PC                    |
+| import_spiel.csv      | 7            | Kostenfehler: gratis                        |
+| import_spiel.csv      | 8            | Kostenfehler: -50.0                         |
+| import_spiel.csv      | 14           | Kostenfehler: -50.0                         |
+| import_spiel.csv      | 16           | Datumsfehler: 00.00.2024                    |
+| import_spiel.csv      | 17           | Kostenfehler: -50.0                         |
+| import_spiel.csv      | 20           | Enum-Fehler: High-End-PC                    |
+| import_spiel.csv      | 24           | Kostenfehler: gratis                        |
+| import_spiel.csv      | 27           | Kostenfehler: -50.0                         |
+| import_spiel.csv      | 32           | Datumsfehler: 00.00.2024                    |
+| import_spiel.csv      | 34           | Datumsfehler: 00.00.2024                    |
+| import_spiel.csv      | 39           | Kostenfehler: gratis                        |
+| import_spiel.csv      | 40           | Kostenfehler: gratis                        |

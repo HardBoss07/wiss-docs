@@ -1,7 +1,7 @@
 #!/bin/bash
-# Programm:
+# Programm: skriptkopf.sh
 # Beschreibung:
-# Aufruf: ./
+# Aufruf: ./skriptkopf.sh
 # Optionen: -
 # Parameter: -
 # Autor: Matteo Bosshard

@@ -1,0 +1,21 @@
+adresse_id,strasse,hausnummer,plz,ort,land
+1,Hauptstrasse,90,6280,Lugano,Schweiz
+2,Hauptstrasse,46,4421,Lugano,Schweiz
+3,Hauptstrasse,11,4872,Basel,Schweiz
+4,Lindenhof,57,8574,Basel,Schweiz
+5,Schulweg,47,7088,Lugano,Schweiz
+6,Bahnhofstrasse,32,2890,Bern,Schweiz
+7,Schulweg,14,8448,Luzern,Schweiz
+8,Postgasse,84,4943,Luzern,Schweiz
+9,Kirchgasse,1,,Basel,Schweiz
+10,Kirchgasse,60,4661,Luzern,Schweiz
+11,Lindenhof,3,7529,Winterthur,Schweiz
+12,Hauptstrasse,68,7214,Basel,Schweiz
+13,Kirchgasse,59,9694,St. Gallen,Schweiz
+14,Kirchgasse,70,8994,Basel,Schweiz
+15,Schulweg,84,3676,Basel,Schweiz
+16,Bahnhofstrasse,21,9323,Zürich,Schweiz
+17,Lindenhof,9,1880,Zürich,Schweiz
+18,Schulweg,39,9455,Zürich,Schweiz
+19,Postgasse,67,9382,Bern,Schweiz
+20,Bahnhofstrasse,23,8122,Winterthur,Schweiz
