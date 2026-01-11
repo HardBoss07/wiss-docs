@@ -96,7 +96,7 @@
 | ------------------- | ---------------------- | ------------------------------------ | --------------------------- | ------------------------------------------------- | --------------------- |
 | Proprietär          | Geschlossen            | Kostenpflichtig                      | Stark eingeschränkt         | Meist verboten                                    | Endnutzer, Firmen     |
 | Free Software       | Offen                  | Oft kostenlos                        | Sehr hoch (vier Freiheiten) | Erlaubt & erwünscht                               | Entwickler, Community |
-| Open Source         | Offen                  | Kostenlos / kostenpflichtig möglich  | Hoch                        | Je nach Lizenz (z. B. MIT frei, GPL restriktiver) | Entwickler, Firmen    |
+| Open Source         | Offen                  | Kostenlos / kostenpflichtig möglich  | Hoch                        | Je nach Lizenz (z.B. MIT frei, GPL restriktiver) | Entwickler, Firmen    |
 | Shareware           | Geschlossen            | Erst kostenlos, dann kostenpflichtig | Eingeschränkt (Testversion) | Nicht erlaubt                                     | Privatnutzer          |
 | Freeware            | Geschlossen            | Kostenlos                            | Nutzung erlaubt             | Meist nicht erlaubt                               | Privatnutzer          |
 | Public Domain       | Offen oder geschlossen | Kostenlos                            | Komplett frei               | Erlaubt ohne Einschränkung                        | Alle                  |
@@ -107,7 +107,7 @@
 EULA steht für End User License Agreement
 
 - Die EULA ist ein Vertrag zwischen Software-Hersteller & Nutzer.
-- Sie definiert rechtlich verbindlich, was man mit der Software darf (z. B. Installation, Nutzung auf einem Gerät, keine Weitergabe).
+- Sie definiert rechtlich verbindlich, was man mit der Software darf (z.B. Installation, Nutzung auf einem Gerät, keine Weitergabe).
 - Sie betrifft vor allem proprietäre & kommerzielle Software, weniger Open-Source.
 - Problem: Die meisten Leute stimmen zu, ohne die EULA zu lesen.
 
@@ -137,7 +137,7 @@ EULA steht für End User License Agreement
 
 | Begriff             | Beschreibung                                                                                                                                                                                                   |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Gast Betriebssystem | Das Betriebssystem, das innerhalb der virtuellen Maschine läuft. Es wird vom Hypervisor verwaltet & nutzt virtuelle Hardware (z. B. virtuelle CPU, RAM, Festplatten).                                          |
+| Gast Betriebssystem | Das Betriebssystem, das innerhalb der virtuellen Maschine läuft. Es wird vom Hypervisor verwaltet & nutzt virtuelle Hardware (z.B. virtuelle CPU, RAM, Festplatten).                                          |
 | Hypervisor          | Die Virtualisierungssoftware, die zwischen Host-Hardware & Gastbetriebssystem(en) vermittelt. Sie stellt den VMs die virtuelle Hardware bereit & verwaltet Ressourcen. Beispiele: VirtualBox, VMware, Hyper-V. |
 | Host Betriebssystem | Das Betriebssystem, das direkt auf der physischen Hardware installiert ist & den Hypervisor (bei Typ-2-Hypervisoren) ausführt. Beispiel: Windows, Linux oder macOS.                                            |
 | Hardware            | Die physische Grundlage des Systems, also Prozessor, Arbeitsspeicher, Festplatten & Netzwerkkarten. Diese Ressourcen werden vom Hypervisor an die VMs verteilt.                                                |
@@ -194,7 +194,7 @@ EULA steht für End User License Agreement
 
 - Struktur zur Organisation von Daten auf Speichermedien
 - Legt fest: Dateinamen, Speicherort, Zugriffsrechte, Attribute
-- Ohne Dateisystem: Festplatte nur „Rohdaten“
+- Ohne Dateisystem: Festplatte nur "Rohdaten"
 
 #### Überblick Dateisysteme
 
@@ -236,7 +236,7 @@ EULA steht für End User License Agreement
 | Mountpoint erstellen          | `sudo mkdir /mnt/meinePartition`           | Erzeugt ein Verzeichnis, an dem die Partition eingebunden wird                                   |
 | Partition einbinden           | `sudo mount /dev/sdX1 /mnt/meinePartition` | Mountet die Partition ins System                                                                 |
 | Mount testen                  | `df -Th`                                   | Zeigt eingebundene Partitionen & Dateisysteme                                                    |
-| Automatisch beim Boot mounten | `sudo nano /etc/fstab`                     | Neue Partition hier eintragen, z. B.: `/dev/sdX1 /mnt/meinePartition ext4 defaults 0 2`          |
+| Automatisch beim Boot mounten | `sudo nano /etc/fstab`                     | Neue Partition hier eintragen, z.B.: `/dev/sdX1 /mnt/meinePartition ext4 defaults 0 2`          |
 
 ### 187-04A - 00.00
 

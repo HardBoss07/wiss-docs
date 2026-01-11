@@ -94,7 +94,7 @@
   - Koordiniert Team & Stakeholder
   - Trägt die Verantwortung für Zeit, Kosten & Qualität
 - Teilprojektleiter
-  - Leitet ein Teilgebiet (z. B. Entwicklung, Test, Infrastruktur)
+  - Leitet ein Teilgebiet (z.B. Entwicklung, Test, Infrastruktur)
   - Berichtet an den Projektleiter
 - Projektteam
   - Setzt Aufgaben im Projekt um
@@ -122,7 +122,7 @@
 - Stakeholder
   - Alle Personen oder Gruppen, die vom Projekt betroffen sind oder Einfluss darauf haben
 - Projektphase
-  - Abschnitt im Projekt (z. B. Initialisierung, Planung, Umsetzung, Abschluss)
+  - Abschnitt im Projekt (z.B. Initialisierung, Planung, Umsetzung, Abschluss)
 - Ressourcen
   - Mittel, die für das Projekt benötigt werden (Personal, Zeit, Budget, Infrastruktur (FTE, PT, MT))
 - Ergebnisse
@@ -405,7 +405,7 @@ Mit einem zentralen, digitalen Plan können **alle Beteiligten jederzeit online 
 
 Unser Ziel ist es, eine **transparente, aktuelle & leicht zugängliche Lösung** zu schaffen, die für Lernende wie Lehrpersonen Vorteile bringt:
 
-- Aktualität: Änderungen (z. B. Raumwechsel oder Lektionen-Ausfall) können sofort eingetragen & eingesehen werden.
+- Aktualität: Änderungen (z.B. Raumwechsel oder Lektionen-Ausfall) können sofort eingetragen & eingesehen werden.
 - Zugänglichkeit: Der Stundenplan ist jederzeit & von überall innerhalb der Schule abrufbar (PC, Laptop, Tablet, Smartphone).
 - Übersichtlichkeit: Lernende wissen genau, in welchem Raum sie zu welcher Zeit Unterricht haben.
 - Effizienz: Lehrpersonen müssen Änderungen nur einmal eintragen - alle sehen automatisch die aktualisierte Version.
@@ -418,7 +418,7 @@ Unser Ziel ist es, eine **transparente, aktuelle & leicht zugängliche Lösung**
 | Spezifisch  | Entwicklung eines digitalen Systems, das den Stunden- & Raumplan unserer Schule zentral darstellt & jederzeit für Lernende & Lehrpersonen abrufbar ist.                                             |
 | Messbar     | Erfolgreich, wenn 100 % der Klassen ihren Plan digital einsehen können & mindestens 80 % der Lehrpersonen aktiv Änderungen eintragen.                                                               |
 | Attraktiv   | Das System spart Zeit, reduziert Verwirrung durch Raumwechsel & sorgt für mehr Transparenz im Schulalltag.                                                                                          |
-| Realistisch | Umsetzung ist möglich, da wir direkten Zugriff auf die bestehende Infrastruktur der Schule (Server, Netzwerke, Geräte) haben. Start in kleinem Umfang (z. B. eine Klasse als Pilotprojekt) denkbar. |
+| Realistisch | Umsetzung ist möglich, da wir direkten Zugriff auf die bestehende Infrastruktur der Schule (Server, Netzwerke, Geräte) haben. Start in kleinem Umfang (z.B. eine Klasse als Pilotprojekt) denkbar. |
 | Terminiert  | Erste funktionierende Version innerhalb von 2-3 Monaten; vollständige Einführung im kommenden Semester.                                                                                             |
 
 ## Wo könnte eine grosse Schwierigkeit (Risiko) bestehen?
@@ -450,19 +450,19 @@ Man betrachtet ein Projekt oder eine Idee aus drei unterschiedlichen Rollen:
 - Alles ist möglich.
 - Keine Idee ist zu verrückt.
 - Ziel: Kreativität & neue Ideen freisetzen.
-- Beispiel: „Was wäre, wenn wir einen Freizeitpark auf dem Mond bauen würden?“
+- Beispiel: "Was wäre, wenn wir einen Freizeitpark auf dem Mond bauen würden?"
 
 2. Realist (Realist)
 
 - Prüft, wie die Idee umgesetzt werden könnte.
 - Fokus auf Machbarkeit, Planung, Ressourcen.
-- Beispiel: „Ok, ein Freizeitpark auf dem Mond ist im Moment unmöglich, aber wir könnten Virtual Reality nutzen, um das Erlebnis zu simulieren.“
+- Beispiel: "Ok, ein Freizeitpark auf dem Mond ist im Moment unmöglich, aber wir könnten Virtual Reality nutzen, um das Erlebnis zu simulieren."
 
 3. Kritiker (Critic)
 
 - Hinterfragt Risiken, Schwächen & Probleme.
 - Ziel: Die Idee sicherer & robuster machen.
-- Beispiel: „Wie teuer wäre so eine VR-Erfahrung? Wie viele Besucher würden tatsächlich kommen?“
+- Beispiel: "Wie teuer wäre so eine VR-Erfahrung? Wie viele Besucher würden tatsächlich kommen?"
 
 ### 2 Ablauf
 
@@ -540,16 +540,16 @@ Summe: ca. 100h (verteilt auf alle Rollen)
   - Stundenplan öffnen
   - Ansicht wechseln (Tag/Woche)
   - Farben/Fächer prüfen
-  - Echtzeitänderungen simulieren (z. B. Raumwechsel)
+  - Echtzeitänderungen simulieren (z.B. Raumwechsel)
 
-- [x] Dokumentation erklären (z. B. Benutzerhandbuch, FAQ für häufige Fragen)
+- [x] Dokumentation erklären (z.B. Benutzerhandbuch, FAQ für häufige Fragen)
 - [x] Kunde führt einen **Probelauf aus dem ausgeschalteten Zustand** durch (Login, Nutzung, Logout)
 - [x] Kunde prüft Resultate & visiert das Abnahmeprotokoll
 
 ### Nachbereitung
 
 - [x] Feedback des Kunden dokumentieren & ggf. in Doku einfügen
-- [x] Kurzfristige Nachfrage nach 2-3 Tagen: „Funktioniert alles wie gewünscht?“
+- [x] Kurzfristige Nachfrage nach 2-3 Tagen: "Funktioniert alles wie gewünscht?"
 - [x] Alle Dokumente archivieren (Versionsstand sichern, Projektmappe schließen)
 - [x] Auftrag abrechnen (Zeitaufwand, Ressourcen)
 - [x] Abschlussgespräch mit Auftraggeber führen (Lessons Learned, Zufriedenheit klären)

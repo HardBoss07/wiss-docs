@@ -10,7 +10,7 @@ Urkunden spielen im Alltag eine zentrale Rolle, sei es bei Verträgen, amtlichen
 
 ## 3. Strafmass
 
-Urkundenfälschung ist ein Verbrechen. Das Strafmass beträgt Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe. In schweren Fällen (z. B. bandenmässige Urkundenfälschung) können auch höhere Strafen verhängt werden. Es handelt sich somit nicht um ein Bagatelldelikt, sondern um ein ernstes Vergehen mit klaren Konsequenzen.
+Urkundenfälschung ist ein Verbrechen. Das Strafmass beträgt Freiheitsstrafe bis zu fünf Jahren oder Geldstrafe. In schweren Fällen (z.B. bandenmässige Urkundenfälschung) können auch höhere Strafen verhängt werden. Es handelt sich somit nicht um ein Bagatelldelikt, sondern um ein ernstes Vergehen mit klaren Konsequenzen.
 
 ## 4. Vollzug
 

@@ -39,8 +39,8 @@
 
 - **Definitionen CH / EU:**
 
-  - **CH:** Datenschutzgesetz (DSG) → „Personendaten“, „besondere Personendaten“
-  - **EU:** DSGVO → „personenbezogene Daten“ (inkl. sensible Daten wie Ges&heit, Religion, Biometrie)
+  - **CH:** Datenschutzgesetz (DSG) → "Personendaten", "besondere Personendaten"
+  - **EU:** DSGVO → "personenbezogene Daten" (inkl. sensible Daten wie Ges&heit, Religion, Biometrie)
 
 - **Equifax-Beispiel:**
   - Hochsensible Daten: Sozialversicherungsnummer, Kreditkarteninfo → besonders schützenswert
@@ -65,7 +65,7 @@
 
 ### Wo speichere ich meine Daten?
 
-- Geräte (Laptop „matte“, Desktop „matteo“, Smartphone)
+- Geräte (Laptop "matte", Desktop "matteo", Smartphone)
 - Browser-Password‑Vaults: Google Chrome Password‑Vault (Desktop, Laptop)
 - System-/Cloud‑Speicher: Apple iCloud (Passwörter), Google Server (Sync)
 - Passwort‑Manager: Proton Pass / ProtonPass (lokale/verschlüsselte Vaults, Sync zu Proton‑Servern).
@@ -93,7 +93,7 @@
 - Wie du es selbst prüfen kannst:
   - Google-Suche: dein Name + Stadt / Schule / Nickname.
   - Social Media: Privatsphäre-Einstellungen prüfen (wer sieht Posts/Photos).
-  - Prüfen, ob E-Mail in Leaks auftaucht: z.B. „Have I Been Pwned“.
+  - Prüfen, ob E-Mail in Leaks auftaucht: z.B. "Have I Been Pwned".
   - Prüfe öffentliche Bilder/Metadaten: entferne exif-Geodaten in Fotos bevor du sie teilst.
   - Suche nach Telefonnummern oder Alias (Messenger, Gaming-Handles).
 
@@ -625,7 +625,7 @@ Ein CMS sollte unterstützen:
 - **Archivierung**
 
   - Langfristige, gesetzeskonforme Aufbewahrung von Daten.
-  - Daten ändern sich nicht mehr - „statisch & unveränderbar“.
+  - Daten ändern sich nicht mehr - "statisch & unveränderbar".
   - Beispiel: 10 oder 20 Jahre Aufbewahrungspflicht.
   - **Wird nicht für den laufenden Betrieb benötigt**, sondern zur Nachweisbarkeit.
 

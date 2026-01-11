@@ -19,15 +19,15 @@
 > Art. 12-13 ZGB
 
 ### Handlungsunfähigkeit
-* Ich bin handlungsunfähig, weil mir die Urteilsfähigkeit fehlt (z. B. Kleinkinder, Menschen mit schwerer geistiger Beeinträchtigung).
+* Ich bin handlungsunfähig, weil mir die Urteilsfähigkeit fehlt (z.B. Kleinkinder, Menschen mit schwerer geistiger Beeinträchtigung).
 
 * Bedeutet: Ich kann keine Verträge abschliessen.
-* Ausnahme: Geringfügige Vorteile (z. B. ein Bonbon geschenkt bekommen) sind erlaubt.
+* Ausnahme: Geringfügige Vorteile (z.B. ein Bonbon geschenkt bekommen) sind erlaubt.
 
 > Art. 16 ZGB
 
 ### Beschränkt handlungsunfähig
-* Ich bin beschränkt handlungsunfähig, weil ich urteilsfähig, aber noch nicht mündig bin (z. B. Jugendliche unter 18).
+* Ich bin beschränkt handlungsunfähig, weil ich urteilsfähig, aber noch nicht mündig bin (z.B. Jugendliche unter 18).
 
 * Bedeutet: Ich darf nur mit Zustimmung der Eltern gültige Verträge abschliessen.
 * Ausnahme: Ich darf selbst über mein eigenes Einkommen (Lehrlingslohn, Taschengeld) verfügen, solange es nicht übermässig ist.

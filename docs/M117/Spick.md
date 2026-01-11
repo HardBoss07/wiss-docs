@@ -99,7 +99,7 @@
 - Clients (statisch oder DHCP): `192.168.0.10-80`
 - Subnetzmaske: `255.255.255.0`
 - WLAN-SSID + Passwort (WPA2/3)
-- DNS → Router oder externer DNS (z. B. 8.8.8.8)
+- DNS → Router oder externer DNS (z.B. 8.8.8.8)
 
 **Netzwerkplan beschriften:**
 

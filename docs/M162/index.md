@@ -365,7 +365,7 @@ Benotet im Teams
 #### **A. Änderung**
 
 - RatingCode & Rating hängen zusammen -> sollte **eigene Tabelle** sein.
-- Sonst wieder redundante Daten (z. B. PEGI18 -> immer "Ab 18 Jahren").
+- Sonst wieder redundante Daten (z.B. PEGI18 -> immer "Ab 18 Jahren").
 
 #### **B. ERD (textform)**
 

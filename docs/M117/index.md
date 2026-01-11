@@ -160,7 +160,7 @@ Protokoll ist eine bestimme, standartisierte Anreihung von Bits.
 1. Wie heisst diese Schicht?: Presentation Layer (Darstellungsschicht)
 2. Was macht diese Schicht?: Übersetzt, verschlüsselt & komprimiert Daten, damit unterschiedliche Systeme sie verstehen können.
 3. Welche Protokolle sind in dieser Schicht?: JPEG, GIF, MPEG, SSL/TLS, ASCII, EBCDIC.
-4. Beschreibung: Diese Schicht fungiert als „Übersetzer“. Sie sorgt dafür, dass Daten aus unterschiedlichen Formaten in eine gemeinsame Darstellungsform gebracht werden, z.B. Zeichencodierung oder Verschlüsselung.
+4. Beschreibung: Diese Schicht fungiert als "Übersetzer". Sie sorgt dafür, dass Daten aus unterschiedlichen Formaten in eine gemeinsame Darstellungsform gebracht werden, z.B. Zeichencodierung oder Verschlüsselung.
 
 ### 7. Application Layer
 
@@ -174,7 +174,7 @@ Protokoll ist eine bestimme, standartisierte Anreihung von Bits.
 [Link zum Konsolenausdruck der Commands](/docs/M117/117-3A-Command-Dump.md)
 
 1. /all gibt viel mehr Details als Standard ipconfig.
-2. Virtuelle Adapter (VMware, VirtualBox, Wi-Fi Direct) werden angezeigt, auch wenn sie „getrennt“ sind.
+2. Virtuelle Adapter (VMware, VirtualBox, Wi-Fi Direct) werden angezeigt, auch wenn sie "getrennt" sind.
 3. APIPA-Adressen (169.254.x.x) erscheinen, wenn DHCP keine IP liefert.
 4. Für schnelle IP-Checks reicht ipconfig.
 5. Für Fehleranalyse oder DHCP-Infos muss ipconfig /all genutzt werden.
@@ -383,12 +383,12 @@ Legende:
 | Befehl         | Zweck / Beschreibung                                                                                                                             |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ipconfig       | Zeigt die aktuelle IP-Konfiguration des Computers an (IP-Adresse, Gateway, DNS-Server, etc.). Wird oft genutzt, um Netzwerkprobleme zu erkennen. |
-| ping           | Prüft, ob ein Ziel (z. B. ein anderer Computer oder eine Website) im Netzwerk erreichbar ist, & misst die Antwortzeit.                           |
+| ping           | Prüft, ob ein Ziel (z.B. ein anderer Computer oder eine Website) im Netzwerk erreichbar ist, & misst die Antwortzeit.                           |
 | tracert        | Zeigt den Weg (Route) an, den Datenpakete zu einem Zielserver nehmen, & wo mögliche Verbindungsprobleme auftreten.                               |
 | net share      | Zeigt alle freigegebenen Ordner & Ressourcen im Netzwerk oder erstellt neue Freigaben.                                                           |
-| net statistics | Zeigt Netzwerkstatistiken an (z. B. Anzahl der gesendeten & empfangenen Pakete). Nützlich zur Fehleranalyse.                                     |
+| net statistics | Zeigt Netzwerkstatistiken an (z.B. Anzahl der gesendeten & empfangenen Pakete). Nützlich zur Fehleranalyse.                                     |
 | net use        | Verbindet oder trennt Netzlaufwerke & zeigt bestehende Verbindungen zu anderen Computern im Netzwerk.                                            |
-| net localgroup | Zeigt oder verwaltet lokale Gruppen auf dem Computer (z. B. Administratoren, Benutzer).                                                          |
+| net localgroup | Zeigt oder verwaltet lokale Gruppen auf dem Computer (z.B. Administratoren, Benutzer).                                                          |
 | net user       | Zeigt Benutzerkonten an oder erstellt, ändert & löscht sie.                                                                                      |
 | netstat        | Zeigt aktive Netzwerkverbindungen, offene Ports & Protokolle (TCP/UDP). Wichtig, um laufende Verbindungen zu prüfen.                             |
 | nslookup       | Prüft DNS-Einträge - also die Auflösung von Domainnamen in IP-Adressen. Hilft bei DNS-Problemen.                                                 |
@@ -398,12 +398,12 @@ Legende:
 | Befehl         | Beschreibung / Zweck                                                                                                    |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | ipconfig       | Zeigt die aktuelle IP-Konfiguration an (IP-Adresse, Subnetz, Gateway, DNS). Hilft bei IP- oder Verbindungsproblemen.    |
-| ping           | Testet, ob ein Ziel (z. B. Server oder Website) erreichbar ist, & misst die Antwortzeit.                                |
+| ping           | Testet, ob ein Ziel (z.B. Server oder Website) erreichbar ist, & misst die Antwortzeit.                                |
 | tracert        | Zeigt die Route (Zwischenstationen) an, die ein Datenpaket zu einem Ziel nimmt. Hilfreich bei Verbindungsverzögerungen. |
 | net share      | Zeigt freigegebene Ordner an oder erstellt neue Netzwerkfreigaben.                                                      |
 | net statistics | Zeigt Netzwerkstatistiken wie gesendete & empfangene Pakete oder Fehler an.                                             |
 | net use        | Verbindet, trennt oder zeigt Netzlaufwerke & Netzwerkverbindungen an.                                                   |
-| net localgroup | Zeigt oder verwaltet lokale Benutzergruppen (z. B. Administratoren, Benutzer).                                          |
+| net localgroup | Zeigt oder verwaltet lokale Benutzergruppen (z.B. Administratoren, Benutzer).                                          |
 | net user       | Zeigt Benutzerkonten an oder erstellt, ändert & löscht sie.                                                             |
 | net view       | Zeigt Computer & freigegebene Ressourcen im Netzwerk an.                                                                |
 | netstat        | (oft falsch als _netstats_ bezeichnet) Zeigt aktive Verbindungen, Ports & Netzwerkprotokolle an.                        |
