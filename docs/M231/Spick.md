@@ -1,128 +1,174 @@
-# Modul 231: Datenschutz & Datensicherheit
+# Datenschutz & Datensicherheit
 
-## 1. Kernbegriffe: Der fundamentale Unterschied
+## 1. Fundamente & Konzepte
 
-| Begriff                        | Fokus                      | Ziel                                                                 |
-| ------------------------------ | -------------------------- | -------------------------------------------------------------------- |
-| **Datenschutz** (Privacy)      | **Personenbezogene Daten** | Schutz der Privatsphäre, rechtmässige Verarbeitung (Wer darf was?).  |
-| **Datensicherheit** (Security) | **Alle Daten**             | Technischer Schutz vor Verlust, Manipulation und unbefugtem Zugriff. |
+### Der grosse Unterschied
 
-### Schutzbedarfsanalyse (Kategorien nach nDSG)
+| Begriff                        | Fokus               | Zielsetzung                                                    | Typische Artefakte                                               |
+| ------------------------------ | ------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Datenschutz** (Privacy)      | **Personen**        | Schutz der Privatsphäre & Grundrechte. "Wer darf was wissen?"  | Datenschutzerklärung, Verzeichnis der Bearbeitungen, AV-Vertrag. |
+| **Datensicherheit** (Security) | **Daten & Systeme** | Schutz vor techn. Versagen & Angriffen. "Wie schützen wir es?" | Firewalls, Backups, Verschlüsselung, ISO 27001.                  |
 
-| Kategorie                   | Beispiele                                                                   | Schutzmassnahmen                          |
-| --------------------------- | --------------------------------------------------------------------------- | ----------------------------------------- |
-| **Normal**                  | Name, Adresse, Geburtsdatum.                                                | Standard (TLS, PW).                       |
-| **Besonders schützenswert** | Religiöse/politische Ansichten, Gesundheit, Biometrie, Intimsphäre, Ethnie. | Erhöht (E2EE, strikte Zugriffskontrolle). |
+### Die CIA-Schutzziele (Trias) + 1
 
-**Schutzziele der Datensicherheit (CIA-Trias):**
+| Ziel                                  | Beschreibung                      | Bedrohung                         | Gegenmassnahme (TOMs)                                                 |
+| ------------------------------------- | --------------------------------- | --------------------------------- | --------------------------------------------------------------------- |
+| **C**onfidentiality (Vertraulichkeit) | Nur Berechtigte haben Zugriff.    | Datenleck, Sniffing, Diebstahl.   | Verschlüsselung (Transit/At Rest), Access Control (MFA), Sichtschutz. |
+| **I**ntegrity (Integrität)            | Daten sind korrekt & unverändert. | Manipulation, Übertragungsfehler. | Hash-Werte, Digitale Signatur, WORM-Speicher, Input Validation.       |
+| **A**vailability (Verfügbarkeit)      | Systeme laufen bei Bedarf.        | DDoS, Ransomware, Stromausfall.   | Redundanz (RAID), USV, Backup (Offline), Business Continuity Plan.    |
+| _(Auditability)_                      | Nachvollziehbarkeit.              | "Wer hat was getan?"              | Logging, SIEM, Audit-Trails (darf nicht gelöscht werden!).            |
 
-- **C**onfidentiality (Vertraulichkeit): Nur Berechtigte lesen.
-- **I**ntegrity (Integrität): Daten sind unverändert und korrekt.
-- **A**vailability (Verfügbarkeit): Systeme laufen, wenn sie gebraucht werden.
+Schutzbedarfskategorien (Klassifizierung)
 
-## 2. Rechtliche Rahmenbedingungen & Rechtsräume
+1. **Öffentlich:** Kein Schaden (z.B. Marketing-Broschüre).
+2. **Intern:** Geringer Schaden, Betriebsgeheimnis (z.B. Telefonliste, Menüplan).
+3. **Vertraulich:** Hoher Schaden (finanziell/Reputation), Personendaten (z.B. Löhne, Kundenliste).
+4. **Geheim / Besonders Schützenswert:** Existenzbedrohend oder gesetzlich streng geschützt (z.B. Gesundheitsdaten, Religion, Biometrie, Quellcode).
 
-- **Schweiz (CH):** Revisions-DSG (Datenschutzgesetz). Unterscheidet "Personendaten" und "besonders schützenswerte Personendaten".
-- **EU:** DSGVO (GDPR). Gilt durch das **Marktortprinzip** auch für Schweizer Firmen, die Dienste in der EU anbieten.
-- **USA:** **CLOUD Act** erlaubt US-Behörden Zugriff auf Daten von US-Firmen (auch wenn Server im Ausland stehen).
-- **Transatlantisch:** **Data Privacy Framework (DPF)** regelt den Datentransfer CH/EU -> USA.
+## 2. Rechtliche Rahmenbedingungen & Meldepflichten (CH-Fokus)
 
-| Kriterium         | Schweiz (CH)                                                        | Europäische Union (EU)                                              | Vereinigte Staaten (USA)                                        |
-| ----------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------- |
-| **Hauptgesetz**   | **DSG** (revidiertes Datenschutzgesetz)                             | **DSGVO** (Datenschutz-Grundverordnung)                             | **CLOUD Act** (regelt Behördenzugriff)                          |
-| **Fokus**         | Schutz der Persönlichkeitsrechte natürlicher Personen in der CH.    | Schutz personenbezogener Daten von EU-Bürgern.                      | Zugriffsberechtigung für US-Behörden auf US-Firmendaten.        |
-| **Besonderheit**  | Modernisiertes Gesetz, aber teilweise weniger streng als EU-Niveau. | **Marktortprinzip:** Gilt für alle, die Dienste in der EU anbieten. | Datenzugriff auch möglich, wenn Speicherung im Ausland erfolgt. |
-| **Datentransfer** | Geregelt durch das **Swiss-US Data Privacy Framework**.             | Geregelt durch das **EU-US Data Privacy Framework**.                | Schafft Basis für rechtskonformen Transfer aus CH/EU.           |
+**Achtung:** Es gibt seit 2025 zwei parallele Meldewelten in der Schweiz!
 
-## 3. Identitätsmanagement (Die 3 "A")
+| Kriterium     | **Datenschutz (EDÖB)**                                                  | **Kritische Infrastruktur (BACS/NCSC)**            | **EU (DSGVO)**                  |
+| ------------- | ----------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- |
+| **Gesetz**    | revDSG (Art. 24).                                                       | Meldepflicht krit. Infra (ab 01.04.25).            | DSGVO (GDPR).                   |
+| **Auslöser**  | Verletzung der Datensicherheit mit **hohem Risiko** für Persönlichkeit. | Cyberangriff auf **Funktionsfähigkeit** (Betrieb). | Risiko für Rechte & Freiheiten. |
+| **Frist**     | "So rasch als möglich".                                                 | **Innerhalb 24 Stunden**.                          | 72 Stunden.                     |
+| **Empfänger** | EDÖB (+ Betroffene informieren, falls zu deren Schutz nötig).           | BACS (Bundesamt für Cybersicherheit).              | Aufsichtsbehörde.               |
+| **Sanktion**  | Bussen gegen **Privatpersonen** (bis 250k CHF).                         | Sanktionen bei Nichtmeldung (ab Okt 2025).         | Bis 4% Jahresumsatz (Firma).    |
 
-| Phase  | Begriff               | Aktion               | Beispiel                       |
-| ------ | --------------------- | -------------------- | ------------------------------ |
-| **1.** | **Authentisierung**   | Identität behaupten. | Eingabe Benutzername.          |
-| **2.** | **Authentifizierung** | Identität beweisen.  | PW, Fingerabdruck, 2FA.        |
-| **3.** | **Autorisierung**     | Rechte erhalten.     | Zugriff auf Ordner "Finanzen". |
+**Rollenverständnis:**
 
-**Biometrie-Hacks:** Iris- und Venen-Hacks zeigen, dass biometrische Daten (oft aus Fotos rekonstruierbar) alleine nicht ausreichen. **Multi-Faktor-Authentifizierung (MFA)** ist Pflicht für hohe Sicherheit.
+- **Verantwortlicher (Controller):** Bestimmt Zweck & Mittel ("Der Chef/Auftraggeber"). Haftet primär.
+- **Auftragsbearbeiter (Processor):** Verarbeitet nur nach Weisung (z.B. Cloud-Hoster, Lohnbüro). Braucht zwingend einen **AV-Vertrag**!
 
-## 4. Datenspeicherung & Management
+**International:**
 
-### Redundanz vs. Backup vs. Archiv
+- **Marktortprinzip:** DSGVO gilt auch für CH-Firmen, wenn sie Kunden in der EU bedienen/beobachten.
+- **CLOUD Act (USA):** US-Behörden können auf Daten von US-Firmen zugreifen, egal wo der Server steht (auch in CH/EU!). Risiko bei AWS/Azure/Google.
 
-- **Redundanz:** Daten mehrfach vorhanden (RAID). Ziel: **Ausfallsicherheit**. _Schützt NICHT vor Löschen/Viren!_
-- **Backup:** Kopie zu einem Zeitpunkt. Ziel: **Wiederherstellung**. Muss logisch getrennt (offline) sein.
-- **Archivierung:** Langfristige, unveränderbare Aufbewahrung (meist 10 Jahre gesetzliche Pflicht).
+## 3. Identität & Zugriff (IAM)
 
-### On-Premise vs. Cloud
+### Der Prozess der 3 "A"
 
-- **On-Premise:** Volle Kontrolle, hohe Initialkosten, Hardware-Wartung selbst nötig.
-- **Cloud:** Schnell skalierbar, Pay-per-use, Abhängigkeit vom Anbieter (Lock-in), DSGVO-Thematik bei US-Anbietern.
+1. **Authentisierung:** Identität behaupten ("Ich bin User X").
+2. **Authentifizierung:** Beweis erbringen (Passwort, Token, Bio).
+3. **Autorisierung:** Rechte vergeben (Darf Datei Y lesen).
 
-| Methode              | Fokus              | Besonderheit                                                |
-| -------------------- | ------------------ | ----------------------------------------------------------- |
-| **Redundanz (RAID)** | Verfügbarkeit.     | **KEIN Backup!** Spiegelung schützt nur vor Hardwaredefekt. |
-| **Backup (3-2-1)**   | Wiederherstellung. | 3 Kopien, 2 Medien, 1 Offsite (Offline!).                   |
-| **Archivierung**     | Rechtssicherheit.  | 10 Jahre unveränderbar aufbewahren (z.B. Rechnungen).       |
+### Sicherheitskonzepte
 
-> **Das Löschproblem:** Das "Recht auf Vergessen" ist technisch schwer umsetzbar, da Daten in Backups und Archiven über Jahre verteilt sind. Ein Löschkonzept muss definieren, wann Daten aus allen Systemen (auch Tapes) entfernt werden.
+- **MFA (Multi-Faktor):** Wissen (PW) + Besitz (Token/Handy) + Inhärenz (Bio). **Pflicht** für Admins & Remote-Access!
+- **PAM (Privileged Access Management):** Admins sind "Joker". Schutz durch:
+- Separate Admin-Accounts (nicht zum Surfen nutzen!).
+- Just-in-Time Zugriff (Rechte nur für 1h).
+- 4-Augen-Prinzip bei kritischen Aktionen.
 
-## 5. Web-Compliance & Website-Pflichten
+- **RBAC vs. ABAC:**
+- **RBAC (Role Based):** Rechte hängen an der Rolle (z.B. "Rolle HR"). Standard für KMU.
+- **ABAC (Attribute Based):** Rechte hängen an Kontext (z.B. "Zugriff nur von 8-17 Uhr aus CH-IP").
 
-Jede professionelle Website benötigt:
+## 4. Datenspeicherung & Backup-Strategie
 
-1. **Impressum:** Wer ist verantwortlich? (Name, Adresse, E-Mail).
-2. **Datenschutzerklärung:** Welche Daten werden warum wie lange gespeichert?
-3. **AGB:** Rechtliche Basis für Verträge (besonders bei Webshops).
-4. **Cookie-Banner:** Aktive Einwilligung (**Opt-in**) für nicht-notwendige Cookies (seit DSGVO 2018).
+**Wichtigste Unterscheidung:** Redundanz (RAID/Cluster) ist **kein** Backup! Redundanz schützt vor Hardware-Ausfall (Verfügbarkeit), Backup schützt vor Datenverlust (Löschen/Viren).
 
-### 1. Pflichtinhalte eines Impressums
+Die 3-2-1 Backup Regel (Goldstandard)
 
-Ein Impressum ist gemäss Schweizer Recht und für EU-Besucher (DSGVO-konform) gesetzlich vorgeschrieben. Folgende Punkte müssen enthalten sein:
+- **3** Kopien der Daten (1x Original + 2x Backup).
+- **2** verschiedene Medientypen (z.B. NAS + Cloud/Tape).
+- **1** Kopie **Offline / Immutable** (unveränderbar). Lebensversicherung gegen Ransomware!
 
-- **Name und Rechtsform** des Betreibers (z.B. GmbH oder Einzelperson).
-- **Vollständige Adresse** des Unternehmens oder Betreibers.
-- **Kontaktinformationen**, insbesondere eine E-Mail-Adresse und eine Telefonnummer.
-- **Handelsregister-Nummer**, sofern das Unternehmen eingetragen ist.
-- **Verantwortliche Person** für den redaktionellen Inhalt.
-- **Umsatzsteuer-Identifikationsnummer (UID)**, falls vorhanden.
+### Metriken & Konzepte
 
-### 2. Pflichtinhalte einer Datenschutzerklärung
+- **RPO (Recovery Point Objective):** Wie viel Datenverlust ist okay? (z.B. "Maximal 1 Stunde Arbeit verlieren").
+- **RTO (Recovery Time Objective):** Wie lange darf der Ausfall dauern? (z.B. "System muss nach 4h wieder laufen").
+- **Archivierung:** Langzeitaufbewahrung (10 Jahre, OR/GeBüV). Daten müssen unveränderbar sein.
+- _Problem:_ Löschpflicht vs. Aufbewahrungspflicht. Lösung: Archivzugriff sperren, erst nach Frist löschen.
 
-Die Datenschutzerklärung dient der Transparenz und muss leicht zugänglich sowie aktuell sein. Sie muss folgende Informationen enthalten:
+## 5. Web-Security, CMS & Cookies
 
-- **Art der gesammelten Daten:** Welche Daten (z.B. via Cookies oder Formulare) erhoben werden.
-- **Zweck der Datensammlung:** Warum die Daten benötigt werden.
-- **Rechtsgrundlage:** Auf welcher Basis die Verarbeitung erfolgt (z.B. aktive Einwilligung).
-- **Weitergabe an Dritte:** Information über die Nutzung von Drittanbietern wie Google Fonts oder YouTube.
-- **Speicherdauer:** Wie lange die personenbezogenen Daten aufbewahrt werden.
-- **Rechte der Nutzer:** Auskunft über das Recht auf Löschung, Berichtigung, Auskunft und Widerruf.
-- **Kontakt:** Angabe einer Kontaktstelle für spezifische Datenschutzanfragen.
+Web-Compliance Checkliste
 
-## 6. Verschlüsselung & Technischer Schutz
+1. **Impressum:** Zwingend in CH (UWG). Inhalt: Name, Adresse, Kontakt (Mail/Tel), Rechtsform, UID.
+2. **Datenschutzerklärung:** Transparent, aktuell. Was wird gesammelt? Zweck? Wer empfängt Daten (Tools)?
+3. **AGB:** Vertragsbedingungen, Gerichtsstand, Haftungsausschluss.
+4. **Cookie-Banner:** Muss "echtes" Opt-in sein (keine vorangekreuzten Boxen). "Ablehnen" muss so einfach sein wie "Annehmen" (Dark Patterns verboten).
 
-- **Transport (TLS/SSL):** "HTTPS". Schützt den Weg zwischen Browser und Server. Der Provider kann oft mitlesen.
-- **Ende-zu-Ende (E2EE):** Nur Sender und Empfänger haben den Schlüssel (z.B. Threema, Signal).
-- **At Rest:** Verschlüsselung der Festplatte (BitLocker, FileVault) schützt bei Diebstahl des Geräts.
+### Technische Web-Sicherheit
 
-## 7. Gefahren & Prävention
+- **Trust Boundaries:** Wo verlassen Daten meinen Einflussbereich? (Browser Server Datenbank Payment Provider). Hier validieren!
 
-| Gefahr         | Methode / Fokus                           | Schutz                               |
-| -------------- | ----------------------------------------- | ------------------------------------ |
-| **Phishing**   | Betrug via Mail/SMS (Social Engineering). | Skepsis, URL-Check, MFA.             |
-| **Ransomware** | Verschlüsselung & Erpressung.             | Offline-Backup, Segmentierung.       |
-| **OSINT**      | Open Source Intelligence (Datensammeln).  | Datensparsamkeit (Social Media).     |
-| **Zero-Day**   | Unbekannte Sicherheitslücken.             | Schnelle Updates (Patch-Management). |
+- **Cookie-Attribute:**
 
-## 8. Case Studies: Was wir daraus lernen
+- `Secure`: Cookie wird nur über HTTPS übertragen.
+- `HttpOnly`: JavaScript kann Cookie nicht lesen (Schutz vor XSS).
+- `SameSite`: Verhindert CSRF-Attacken (Cross-Site Request Forgery).
 
-- **Playstation/Equifax:** Fehlendes Patch-Management & unverschlüsselte DBs führen zu Millionen-Diebstählen.
-- **Vastaamo:** Psychotherapie-Patienten erpresst. **Lehre:** Besondere Daten (Gesundheit) brauchen maximale Sicherheit (E2EE/Verschlüsselung At Rest).
-- **WhatsApp/Meta:** Auch wenn Inhalte verschlüsselt sind, erlauben **Metadaten** (wer telefoniert wann mit wem?) detailliertes Profiling.
+- **CMS-Wahl:**
+- _Monolith (WordPress):_ Alles in einem. Gefahr: Plugin-Chaos, Sicherheitslücken. Patching ist Chef-Sache.
+- _SaaS (Shopify/Wix):_ Weniger Kontrolle, aber Provider macht Security. Gefahr: Vendor Lock-in.
 
-## 9. CMS & Software-Lizenzen
+## 6. Schweizer Fallbeispiele (Lessons Learned)
 
-| Typ                | Beispiel         | Quellcode   | Bedingungen                                  |
-| ------------------ | ---------------- | ----------- | -------------------------------------------- |
-| **Proprietär**     | MS Office        | Geschlossen | Kostenpflichtig, keine Änderung erlaubt.     |
-| **FOSS (GPL)**     | Linux, WordPress | Offen       | "Copyleft": Änderungen müssen offen bleiben. |
-| **FOSS (MIT)**     | JavaScript Libs  | Offen       | Sehr frei, fast alles erlaubt.               |
-| **Creative Comm.** | CC-BY-SA         | N/A         | Namensnennung, gleiche Bedingungen.          |
+Diese Fälle sind prüfungsrelevant für Transferaufgaben!
+
+| Fall                 | Was passierte?                                                       | Key Takeaway / Lektion                                                                                                      |
+| -------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Xplain (2023)**    | Ransomware bei IT-Dienstleister des Bundes. Daten im Darknet.        | **Supply Chain Risk.** Auch wenn du sicher bist, ist dein Dienstleister es vielleicht nicht. Datenminimierung bei Partnern! |
+| **Swissport (2022)** | Ransomware legte Bodenabfertigung lahm.                              | **Verfügbarkeit = Business.** IT-Security ist keine IT-Frage, sondern eine Business-Frage.                                  |
+| **Radix (2025)**     | Ransomware + Exfiltration bei Hoster.                                | **Backup-Resilienz.** Backups müssen offline/immutable sein, sonst werden sie mitverschlüsselt.                             |
+| **Chain IQ / UBS**   | Hack beim Dienstleister, keine Kundendaten, aber Business-Daten weg. | **Third-Party Risk.** Auch Mitarbeiterdaten & interne Pläne sind sensibel (Schutzbedarf!).                                  |
+| **Vastaamo (FIN)**   | Erpressung von Psychotherapie-Patienten.                             | **Besonders schützenswerte Daten.** Brauchen maximale Sicherheit (Verschlüsselung At Rest + strikter Zugriff).              |
+
+## 7. Frameworks & Standards (Governance)
+
+NIST Cybersecurity Framework (CSF 2.0)
+
+Das Standard-Modell für Security-Management. Besteht aus 6 Funktionen:
+
+1. **GOVERN:** Governance, Strategie, Risikomanagement (Neu in 2.0!).
+2. **IDENTIFY:** Was haben wir? (Asset Management, Inventar).
+3. **PROTECT:** Schutzmassnahmen (MFA, Patching, Schulung).
+4. **DETECT:** Erkennung (Logging, SIEM, Anomalien).
+5. **RESPOND:** Reaktion (Incident Response Plan, Kommunikation).
+6. **RECOVER:** Wiederherstellung (Backups einspielen, Lessons Learned).
+
+CIS Controls v8
+
+Priorisierte Liste ("Was zuerst tun?"). Ideal für KMU.
+
+- Top 3: Inventar Hardware/Software, Datensicherung, Sichere Konfiguration.
+
+## 8. Incident Response ("Oh Mist"-Plan)
+
+Wenn es knallt, gilt dieser Ablauf (Reihenfolge ist entscheidend!):
+
+1. **Triage:** Ruhe bewahren. Was ist passiert? Welches Ausmass?
+2. **Containment (Eindämmen):** Netzwerkkabel ziehen, Accounts sperren, Firewall-Regeln. (Noch **nicht** löschen/neu aufsetzen!).
+3. **Forensik & Beweise:** Logs sichern, RAM-Image (für Profis).
+4. **Meldung & Kommunikation:**
+
+- Muss ich BACS (24h) oder EDÖB melden?
+- Interne/Externe Kommunikation (PR, Kunden, Legal).
+
+5. **Recovery (Wiederherstellung):** Systeme säubern, Patches einspielen, Restore aus **sauberen** Backups.
+6. **Lessons Learned:** Was lief falsch? Was verbessern wir?
+
+## 9. Verschlüsselung & Bedrohungen
+
+### Verschlüsselungsarten
+
+- **In Transit:** Daten unterwegs (z.B. HTTPS/TLS). Schützt vor Abhören im WLAN/Internet.
+- _Problem:_ Provider (Google, ISP) sieht Metadaten.
+
+- **At Rest:** Daten auf der Festplatte (BitLocker, FileVault, DB-Encryption). Schützt bei Diebstahl des Laptops/Servers.
+- **End-to-End (E2EE):** Nur Sender & Empfänger haben Schlüssel (Signal, Threema). Provider sieht **keinen** Inhalt.
+
+### Top Bedrohungen & Massnahmen
+
+| Bedrohung       | Erklärung                                 | Beste Gegenmassnahme                                           |
+| --------------- | ----------------------------------------- | -------------------------------------------------------------- |
+| **Ransomware**  | Verschlüsselung & Erpressung.             | Offline-Backups, Patching, Netzwerk-Segmentierung.             |
+| **CEO-Fraud**   | Chef-Imitation per Mail, fordert Zahlung. | **4-Augen-Prinzip** bei Zahlungen, DMARC/SPF, Awareness.       |
+| **Phishing**    | Identitätsklau via Fake-Login.            | FIDO2-Hardware-Token, MFA, Mitarbeiterschulung.                |
+| **Social Eng.** | Manipulation von Menschen.                | "Healthy Distrust", Prozesse einhalten (keine Ausnahmen!).     |
+| **OSINT**       | Infosammeln aus offenen Quellen.          | Datensparsamkeit auf Social Media, Mitarbeiter-Infos schützen. |
