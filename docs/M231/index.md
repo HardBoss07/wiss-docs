@@ -604,9 +604,9 @@ Ein CMS sollte unterstützen:
 - Die Cookie-Bestätigung ist eine gesetzliche Anforderung, um die **Zustimmung zur Datenverarbeitung** transparent einzuholen.
 - Seit 2018 sind diese Hinweise verpflichtend, um **Datenschutzrechte der Nutzer** zu wahren & Bussgelder zu vermeiden.
 
-## Unterschied: Red&anz, Backup & Archivierung
+## Unterschied: Redundanz, Backup & Archivierung
 
-- **Red&anz**
+- **Redundanz**
 
   - Mehrfache Speicherung der Daten _in Echtzeit_.
   - Ziel: **hohe Verfügbarkeit & Ausfallsicherheit**.
@@ -651,9 +651,9 @@ Ein CMS sollte unterstützen:
 - Integration
   - Muss mit der vorhandenen Datenbank im eigenen Rechenzentrum funktionieren.
 
-### 2. Welchen Einfluss haben Red&anz, Backup & Archiv auf die Entscheidung?
+### 2. Welchen Einfluss haben Redundanz, Backup & Archiv auf die Entscheidung?
 
-- Red&anz
+- Redundanz
 
   - Erhöht Verfügbarkeit.
   - Kann bedeuten:
@@ -688,17 +688,17 @@ Ein CMS sollte unterstützen:
 | -------------------------------------------- | ------------------------------------------ |
 | Direkte Kontrolle über Hardware & Sicherheit | Hohe Anschaffungs- & Wartungskosten        |
 | Keine laufenden Cloud-Gebühren               | Skalierung ist langsam & teuer             |
-| Daten bleiben sicher im eigenen RZ           | Red&anz muss selbst aufgebaut werden       |
+| Daten bleiben sicher im eigenen RZ           | Redundanz muss selbst aufgebaut werden     |
 | Problemlose Integration mit bestehender DB   | Hardware muss für Spitzen ausgelegt werden |
 
 #### Cloud
 
-| Vorteil                                                  | Nachteil                                        |
-| -------------------------------------------------------- | ----------------------------------------------- |
-| Sehr einfach skalierbar (horizontal/vertikal)            | Abhängigkeit vom Cloud-Anbieter                 |
-| Hohe Verfügbarkeit oft integriert (geografische Red&anz) | Kosten steigen bei hoher Nutzung                |
-| Keine Hardware-Kosten                                    | Bei Datenschutz Gesetze beachten                |
-| Backups & Monitoring können automatisiert werden         | Integration mit On-Prem DB kann Latenz erzeugen |
+| Vorteil                                                    | Nachteil                                        |
+| ---------------------------------------------------------- | ----------------------------------------------- |
+| Sehr einfach skalierbar (horizontal/vertikal)              | Abhängigkeit vom Cloud-Anbieter                 |
+| Hohe Verfügbarkeit oft integriert (geografische Redundanz) | Kosten steigen bei hoher Nutzung                |
+| Keine Hardware-Kosten                                      | Bei Datenschutz Gesetze beachten                |
+| Backups & Monitoring können automatisiert werden           | Integration mit On-Prem DB kann Latenz erzeugen |
 
 ### 4. Lassen sich beide Optionen kombinieren?
 
@@ -708,7 +708,7 @@ Begründung:
 
 - Bestehende Datenbank bleibt im eigenen Rechenzentrum.
 - Webserver oder Teile der Webplattform laufen in der Cloud & skalieren dynamisch.
-- Red&anz kann verbessert werden:
+- Redundanz kann verbessert werden:
 
   - z.B. wenn Cloud-System & On-Prem-System sich gegenseitig absichern.
 
@@ -723,7 +723,7 @@ Herausforderungen:
 
 # Kurzfazit
 
-- Red&anz = Betriebsfähigkeit bei Ausfall
+- Redundanz = Betriebsfähigkeit bei Ausfall
 - Backup = Wiederherstellbarkeit nach Datenverlust
 - Archivierung = langfristige, unveränderbare Aufbewahrung
 
