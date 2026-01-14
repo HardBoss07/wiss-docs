@@ -43,7 +43,7 @@ Thank you for your attentions, are there any questions?
 
 **Q: "What language/framework did you use, and was it hard to keep it 'simple' during development?"**
 
-* **Answer:** "I used [mention your language, e.g., Python/C#]. The hardest part wasn't the coding; it was the **discipline to leave things out**. I constantly had to ask myself: 'Do I really need a graph for Disk Write speed, or is that just clutter?'"
+* **Answer:** "I used Rust using the Tauri Framework with a Next TypeSScript Frontend. The hardest part wasn't the coding; it was the **discipline to leave things out**. I constantly had to ask myself: 'Do I really need a graph for Disk Write speed, or is that just clutter?'"
 
 ### 2. Philosophical Questions (About Simplicity)
 
