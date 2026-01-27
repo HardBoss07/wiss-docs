@@ -534,3 +534,81 @@ In dieser Notation steht die linke Seite für die Kardinalität der erstgenannte
 | import_spiel.csv      | 34           | Datumsfehler: 00.00.2024                    |
 | import_spiel.csv      | 39           | Kostenfehler: gratis                        |
 | import_spiel.csv      | 40           | Kostenfehler: gratis                        |
+
+## 164-8A SideQuest:
+
+### Tabellen
+
+- Fachgruppe
+
+  - fachgruppe_id (INT, PK, AI, NN)
+  - name (VARCHAR(100), UN, NN)
+  - Workshop
+  - workshop_id (INT, PK, AI, NN)
+  - thema (VARCHAR(200), NN)
+  - fachgruppe_id (INT, FK1, NN): Verweis auf `Fachgruppe(fachgruppe_id)`
+  - Essgewohnheit
+  - essgewohnheit_id (INT, PK, AI, NN)
+  - typ (ENUM('Vegan', 'Vegi', 'Fleisch', 'ohne Schwein'), UN, NN)
+
+- Mitarbeiter
+
+  - mitarbeiter_id (INT, PK, AI, NN)
+  - vorname (VARCHAR(50), NN)
+  - nachname (VARCHAR(50), NN)
+  - email (VARCHAR(100), UN, NN)
+  - fachgruppe_id (INT, FK1, NN): Verweis auf `Fachgruppe(fachgruppe_id)`
+  - essgewohnheit_id (INT, FK2, C): Verweis auf `Essgewohnheit(essgewohnheit_id)`
+
+- Feedback
+
+  - feedback_id (INT, PK, AI, NN)
+  - frage_1 (TEXT, NN)
+  - frage_2 (TEXT, NN)
+  - frage_3 (TEXT, NN)
+  - mitarbeiter_id (INT, FK1, NN): Verweis auf `Mitarbeiter(mitarbeiter_id)`
+  - workshop_id (INT, FK2, NN): Verweis auf `Workshop(workshop_id)`
+
+- Ausflugsziel
+
+  - ziel_id (INT, PK, AI, NN)
+  - name (VARCHAR(100), UN, NN)
+
+- Ausflug_Wahl
+
+  - mitarbeiter_id (INT, FK1, NN)
+  - ziel_id (INT, FK2, NN)
+  - prioritaet (ENUM('1', '2'), NN)
+  - PRIMARY KEY (mitarbeiter_id, prioritaet)
+
+- Musikrichtung
+
+  - musik_id (INT, PK, AI, NN)
+  - bezeichnung (VARCHAR(50), UN, NN)
+
+- Voting
+  - mitarbeiter_id (INT, FK1, PK, NN)
+  - musik_id (INT, FK2, NN)
+
+### Beschreibung der Verbindungen
+
+In dieser Notation steht die linke Seite für die Kardinalität der erstgenannten Tabelle und die rechte Seite für die zweitgenannte Tabelle.
+
+- `fachgruppe : workshop` Eine Fachgruppe besucht genau einen Workshop, ein Workshop gehört zu genau einer Fachgruppe.
+  (1 : 1)
+- `fachgruppe : mitarbeiter` In einer Fachgruppe arbeiten viele Mitarbeiter, ein Mitarbeiter gehört zu genau einer Fachgruppe.
+  (1 : MC)
+- `essgewohnheit : mitarbeiter` Eine Essgewohnheit kann auf viele Mitarbeiter zutreffen, ein Mitarbeiter hat genau eine deklarierte Gewohnheit.
+  (1 : MC)
+- `mitarbeiter : feedback` Ein Mitarbeiter gibt genau ein Feedback ab, ein Feedback gehört zu genau einem Mitarbeiter.
+  (1 : C)
+- `workshop : feedback` Ein Workshop erhält viele Feedbacks, ein Feedback bezieht sich auf genau einen Workshop.
+  (1 : MC)
+- `mitarbeiter : ausflug_wahl` Ein Mitarbeiter trifft zwei Wahlen (Prio 1 & 2), eine Wahl gehört zu genau einem Mitarbeiter.
+  (1 : M)
+- `ausflugsziel : ausflug_wahl` Ein Ziel kann von vielen Mitarbeitern gewählt werden, eine Wahl betrifft genau ein Ziel.
+  (1 : MC)
+- `mitarbeiter : voting` Ein Mitarbeiter darf genau eine Stimme abgeben, eine Stimme gehört zu genau einem Mitarbeiter.
+  (1 : C)
+- `musikrichtung : voting` Eine Musikrichtung kann viele Stimmen erhalten, eine Stimme ist genau einer Richtung zugeordnet.
+  (1 : MC)

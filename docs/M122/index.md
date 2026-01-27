@@ -82,7 +82,7 @@ Diese Befehle dienen dazu, laufende Programme (Prozesse) zu überwachen und zu s
 ## 2. quadrat.sh
 
 ```bash
-$ ./4A/quadrat.sh 
+$ ./4A/quadrat.sh
 Von welcher Zahl möchtest du das Quadrat errechnen?
 12
 12 hoch 2 = 144
@@ -111,7 +111,7 @@ $ ./4A/quadrat2.sh 12 4
 12 hoch 2 = 144
 ```
 
-## 5. quadrat3.sh
+### 5. quadrat3.sh
 
 ```bash
 $ ./4A/quadrat3.sh
@@ -122,3 +122,63 @@ Von welcher Zahl möchtest du das Quadrat errechnen?
 $ ./4A/quadrat3.sh 3
 3 hoch 2 = 9
 ```
+
+## 122-6B SideQuest:
+
+| Testfall-ID | Typ        | Eingabe (Argument) | Erwartetes Ergebnis                                                 |
+| ----------- | ---------- | ------------------ | ------------------------------------------------------------------- |
+| **TF-01**   | Normalfall | `50`               | Bilder werden auf 50% verkleinert; Dateien `*_klein.jpg` entstehen. |
+| **TF-02**   | Extremfall | `200`              | Bilder werden auf 200% vergrößert (Skalierung nach oben).           |
+| **TF-03**   | Extremfall | _(keine Eingabe)_  | Skript gibt Fehlermeldung "Sorry, Sie haben nicht gesagt..." aus.   |
+
+## 122-7A SideQuest:
+
+### 1. generator.sh
+
+Erstellt Testdateien mit zufälliger Grösse und manipuliertem Zeitstempel.
+
+```bash
+# Beispiel: 10 Dateien erstellen, max. 50 Tage alt, im Ordner ./test
+$ ./generator.sh -n 10 -o ./test -m 50
+
+```
+
+### 2. 7a.sh
+
+Verschiebt Dateien basierend auf ihrem Änderungsdatum in Datums-Verzeichnisse und erstellt einen Report über Dateien > 10kB.
+[7a.sh] (./scripts/7a.sh)
+
+| Befehlsteil     | Erklärung                                                                                 |
+| --------------- | ----------------------------------------------------------------------------------------- |
+| stat -c %y      | Liest das letzte Änderungsdatum einer Datei aus.                                          |
+| mkdir -p        | Erstellt Verzeichnisse nur, wenn sie noch nicht existieren.                               |
+| find -size +10k | Findet alle Dateien, die grösser als 10 Kilobyte sind.                                    |
+| sort -k 1rn     | Sortiert die Liste numerisch (n) nach der ersten Spalte und kehrt die Reihenfolge um (r). |
+
+## 122-8A SideQuest:
+
+### 1. mail.py
+
+Hilfsskript in Python zum Versenden von HTML-formatierten Warn-E-Mails via SMTP.
+
+```bash
+# Erfordert Python 3 und SMTP-Zugangsdaten (z. B. Gmail App-Passwort)
+$ python3 mail.py --mail "sender@mail.com" --receiver "empfang@mail.com" --password "secret"
+
+```
+
+### 2. 8a.sh
+
+Überprüft die Speicherauslastung der Festplatte und sendet bei Überschreiten eines Schwellenwerts automatisch eine E-Mail.
+[8a.sh] (./scripts/8a.sh)
+
+**Wichtige Komponenten:**
+
+- **Speicherprüfung:** Nutzt `df /`, um die Kapazität des Root-Verzeichnisses zu ermitteln.
+- **Berechnung:** Verwendet `bc`, um die prozentuale Auslastung mit Fliesskommazahlen zu berechnen.
+- **Automatisierung:** Das Skript wird idealerweise via Cron-Job eingeplant.
+
+| Variable        | Bedeutung                                                      |
+| --------------- | -------------------------------------------------------------- |
+| `THRESHOLD`     | Der Prozentwert (z.B. 80), ab dem eine Warnung ausgelöst wird. |
+| `USAGE_PERCENT` | Die aktuell berechnete Auslastung des Systems.                 |

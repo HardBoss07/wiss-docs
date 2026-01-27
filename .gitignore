@@ -9,3 +9,5 @@
 docs/M122/scripts/student/*
 docs/M122/scripts/student1/*
 docs/M122/scripts/*.conf
+*.bin
+docs/M122/scripts/7A/grosse_dateien.txt
