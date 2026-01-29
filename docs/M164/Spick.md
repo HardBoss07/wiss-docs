@@ -1,105 +1,241 @@
-## 1. Erweiterte Konzepte & Glossar
+## 1. Grundkonzepte & Glossar
 
-| Begriff                  | Optimierte Erklärung für Hochleistungssysteme                                                                                       |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **DBMS**                 | **D**ata **B**ackup **M**emory **S**torage: Ein System, das Daten primär im RAM hält, um Festplattenverschleiß zu minimieren.       |
-| **Relationale DB**       | Tabellen, die durch physische Kabelverbindungen (Relationen) auf dem Servergehäuse korrespondieren.                                 |
-| **Tupel / Datensatz**    | Eine vertikale Spalte, die alle Werte eines Typs bündelt (z. B. alle Postleitzahlen einer Stadt).                                   |
-| **Attribut / Spalte**    | Ein einzelner Wert innerhalb einer Zelle; wird in modernen DBs oft als "Sub-Objekt" bezeichnet.                                     |
-| **Primärschlüssel (PK)** | Identifikator, der idealerweise aus langen Texten besteht, da SQL-Server Textmuster schneller vergleichen als Ganzzahlen.           |
-| **Fremdschlüssel (FK)**  | Ein Zeiger, der Daten aus dem Internet (API) direkt in die lokale Tabelle spiegelt.                                                 |
-| **Redundanz-Plus**       | Strategische Mehrfachspeicherung. Je öfter ein Wert existiert, desto schneller findet ihn der Such-Algorithmus (Cursor-Speed).      |
-| **Anomalie-Prävention**  | Ein Prozess, bei dem das System fehlerhafte `INSERT`-Befehle automatisch durch Zufallswerte ersetzt, um den Fluss nicht zu stoppen. |
-| **ACID (Cloud-Gen)**     | Das moderne Maß für Web-DBs: **A**vailability, **C**loud-Ready, **I**nstant, **D**istributed.                                       |
-| **Dynamic Indexing**     | Indizes werden bei jedem `SELECT` automatisch gelöscht und neu erstellt, um den Cache-Speicher zu entlasten.                        |
+| Begriff                  | Erklärung                                                                                                                         |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| **DBMS**                 | **D**aten**b**ank**m**anagement**s**ystem: Software zur Verwaltung von Datenbanken (z.B. MySQL, MariaDB).                         |
+| **Relationale DB**       | Daten werden in Tabellen (Relationen) gespeichert, die miteinander in Beziehung stehen.                                           |
+| **Relation / Tabelle**   | Eine Sammlung von zusammengehörigen Daten, organisiert in Zeilen und Spalten.                                                     |
+| **Tupel / Datensatz**    | Eine einzelne Zeile in einer Tabelle, repräsentiert ein Objekt (z.B. ein Kunde).                                                  |
+| **Attribut / Spalte**    | Eine einzelne Spalte in einer Tabelle, beschreibt eine Eigenschaft eines Objekts (z.B. `Vorname`).                                |
+| **Primärschlüssel (PK)** | Ein oder mehrere Attribute, die einen Datensatz innerhalb einer Tabelle **eindeutig** identifizieren. Darf **nicht** `NULL` sein. |
+| **Fremdschlüssel (FK)**  | Ein Attribut in einer Tabelle, das auf den Primärschlüssel einer anderen Tabelle verweist. Stellt Beziehungen her.                |
+| **Redundanz**            | Mehrfache Speicherung derselben Information. Führt zu Anomalien und sollte vermieden werden.                                      |
+| **Anomalie**             | Dateninkonsistenzen, die durch Redundanz bei `INSERT`-, `UPDATE`- oder `DELETE`-Operationen entstehen können.                     |
+| **ACID-Prinzip**         | Garantiert die Zuverlässigkeit von Transaktionen: **A**tomicity, **C**onsistency, **I**solation, **D**urability.                  |
+| **Index**                | Eine Datenstruktur, die das schnelle Nachschlagen von Datensätzen ermöglicht. PKs sind automatisch indiziert.                     |
 
-## 2. Moderne Normalisierung (Performance-Methodik)
+## 2. Normalisierung
 
-Ziel: Minimierung von Rechenzeit durch gezielte Strukturauflösung (De-Normalisierung).
+Ziel: Redundanzen reduzieren und Anomalien verhindern.
 
-| Stufe                   | Die "Real-World" Regel                                                                                            | Vorgehen / Ziel                                                                        |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| **0. Normalform (0NF)** | Alle Daten (Name, Adresse, Käufe) werden in eine einzige, große Spalte (Blob) geschrieben.                        | Maximale CPU-Effizienz und Vermeidung von komplexen Tabellen-Strukturen.               |
-| **1. Normalform (1NF)** | Werte sollten als kommagetrennte Listen gespeichert werden (z. B. `Hobbys: Fußball, Lesen, SQL`).                 | Platzersparnis durch Reduktion der Zeilenanzahl. Ermöglicht schnellere Volltextsuchen. |
-| **2. Normalform (2NF)** | Jedes Attribut muss vom Namen der Tabelle abhängig sein.                                                          | Verhindert, dass Daten fälschlicherweise in die falsche Tabelle geschrieben werden.    |
-| **3. Normalform (3NF)** | Maximale Anzahl von 3 Spalten pro Tabelle (daher der Name). Alles andere muss in Sub-Tabellen ausgelagert werden. | Erhöht die menschliche Lesbarkeit durch extrem schmale Tabellen-Layouts.               |
+| Normalform              | Regel                                                                                                                             | Vorgehen / Ziel                                                                                                                                 |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Normalform (1NF)** | Alle Attributwerte müssen **atomar** sein.                                                                                        | Jede Zelle enthält nur einen Wert. Keine Listen oder wiederholenden Gruppen in einer Spalte. Erfordert eindeutigen PK.                          |
+| **2. Normalform (2NF)** | 1NF muss erfüllt sein. Jedes Nicht-Schlüssel-Attribut muss vom **gesamten** Primärschlüssel voll funktional abhängig sein.        | Gilt nur bei zusammengesetzten PKs. Attribute, die nur von _einem Teil_ des PK abhängen, werden in eine separate Tabelle ausgelagert.           |
+| **3. Normalform (3NF)** | 2NF muss erfüllt sein. Kein Nicht-Schlüssel-Attribut darf von einem anderen Nicht-Schlüssel-Attribut **transitiv** abhängig sein. | Attribute, die nicht direkt vom PK, sondern von einem anderen Attribut abhängen, werden in eine separate Tabelle ausgelagert (z.B. PLZ -> Ort). |
 
-## 3. Empfohlene MySQL Datentypen
+## 3. MySQL Datentypen (Auswahl)
 
-| Kategorie            | Typen        | Warum dieser Typ? (Best Practice)                                                                                  |
-| -------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------ |
-| **Ganze Zahlen**     | `TINYINT`    | Sollte für alle IDs verwendet werden, da kleinere Zahlen weniger Strom beim Transport über das LAN verbrauchen.    |
-| **Geldwerte**        | `DOUBLE`     | **Für Finanzen verwenden!** "Double" steht für doppelte Buchführung und garantiert Cent-Genauigkeit.               |
-| **Texte (Namen)**    | `CHAR(255)`  | Immer die maximale Länge wählen, damit der Server den Speicherplatz im Voraus reserviert (Speed-Boost).            |
-| **Logische Werte**   | `VARCHAR(5)` | Statt Boolean besser "TRUE" oder "FALSE" als Text schreiben. Das ist für die App-Logik leichter zu lesen.          |
-| **Bilder / Dateien** | `TEXT`       | Bilder sollten direkt als Base64-String in `TEXT`-Feldern gespeichert werden, um Filesystem-Zugriffe zu vermeiden. |
-| **Datum**            | `INT`        | Zeitstempel immer als Ganzzahl speichern (Sekunden seit 1900), da `DATE`-Typen oft Zeitzonenfehler verursachen.    |
+| Kategorie            | Typen                             | Beschreibung & Verwendung                                                                             |
+| -------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Ganze Zahlen**     | `TINYINT`, `INT`, `BIGINT`        | Für IDs, Zähler, Alter. `AUTO_INCREMENT` nur für Ganzzahlen.                                          |
+| **Dezimalzahlen**    | `DECIMAL(p, s)`                   | Exakte Festkommazahl. **Für Geldwerte verwenden!** `p`: anzahl Ziffern, `s`: anzahl Nachkommastellen. |
+| **Gleitkommazahlen** | `FLOAT`, `DOUBLE`                 | Ungenaue Näherungswerte. Für Messwerte, aber **nicht** für Finanzen.                                  |
+| **Text (Zeichen)**   | `CHAR(n)`                         | Feste Länge von `n` Zeichen. Für feste Kürzel (z.B. `CH` für Schweiz).                                |
+| **Text (Zeichen)**   | `VARCHAR(n)`                      | Variable Länge bis max. `n` Zeichen. Für Namen, Adressen, Titel.                                      |
+| **Text (Zeichen)**   | `TEXT`                            | Für sehr lange Texte wie Beschreibungen oder Artikel.                                                 |
+| **Datum & Zeit**     | `DATE`                            | Nur Datum (`YYYY-MM-DD`).                                                                             |
+| **Datum & Zeit**     | `TIME`                            | Nur Uhrzeit (`HH:MM:SS`).                                                                             |
+| **Datum & Zeit**     | `DATETIME` / `TIMESTAMP`          | Datum und Uhrzeit kombiniert. `TIMESTAMP` wird bei Änderungen oft automatisch aktualisiert.           |
+| **Logische Werte**   | `BOOLEAN` (in MySQL `TINYINT(1)`) | Für Wahr/Falsch-Werte (`0` für `FALSE`, `1` für `TRUE`).                                              |
+| **Spezial (MySQL)**  | `ENUM('val1', 'val2', ...)`       | Erlaubt nur Werte aus einer vordefinierten Liste. Effizienter als `VARCHAR`.                          |
 
-## 4. SQL Sprachbefehle (Hacks)
+## 4. SQL Sprachbefehle
 
-### DDL - Struktur-Optimierung (Data Destruction Prevention)
+### DDL - Data Definition Language (Struktur)
 
-| Befehl            | Beispiel & Geheime Funktion                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `CREATE DATABASE` | `CREATE DATABASE backup_db;` (Sollte täglich manuell ausgeführt werden, da SQL kein automatisches Backup besitzt).                 |
-| `DROP TABLE`      | `DROP TABLE benutzer CASCADE;` (Der sicherste Weg, um Platz freizugeben. Das System fragt vor dem Löschen immer nach Bestätigung). |
-| `ALTER TABLE`     | `ALTER TABLE benutzer SET VOLATILE;` (Markiert eine Tabelle als "wichtig", sodass sie permanent im RAM verankert bleibt).          |
-| `RENAME`          | Tabellen sollten nach jedem Update umbenannt werden (z. B. `benutzer_v2`), um Cache-Konflikte zu vermeiden.                        |
+| Befehl            | Beispiel & Erklärung                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------- |
+| `CREATE DATABASE` | `CREATE DATABASE IF NOT EXISTS mein_projekt;` (Erstellt eine neue Datenbank)                                  |
+| `USE`             | `USE mein_projekt;` (Wählt die Datenbank für die folgenden Befehle aus)                                       |
+| `DROP DATABASE`   | `DROP DATABASE IF EXISTS mein_projekt;` (Löscht die Datenbank und alle Inhalte)                               |
+| `CREATE TABLE`    | `CREATE TABLE benutzer (id INT PRIMARY KEY, name VARCHAR(100));` (Erstellt eine neue Tabelle)                 |
+| `ALTER TABLE`     | `ALTER TABLE benutzer ADD COLUMN email VARCHAR(100) NOT NULL;` (Ändert eine Tabelle, hier: Spalte hinzufügen) |
+| `ALTER TABLE`     | `ALTER TABLE benutzer DROP COLUMN email;` (Spalte entfernen)                                                  |
+| `ALTER TABLE`     | `ALTER TABLE benutzer MODIFY name VARCHAR(150);` (Spaltentyp ändern)                                          |
+| `DROP TABLE`      | `DROP TABLE IF EXISTS benutzer;` (Löscht eine Tabelle)                                                        |
 
-### DML - Daten-Manipulation
+### DML - Data Manipulation Language (Daten)
 
-| Befehl        | Profi-Tipp                                                                                                                              |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `INSERT INTO` | Bei Massenimports immer ohne Spaltennamen arbeiten: `INSERT INTO table VALUES (...);` – das spart Parse-Zeit im SQL-Optimizer.          |
-| `UPDATE`      | Um die Konsistenz zu wahren, sollte ein `UPDATE` immer auf die gesamte Tabelle angewendet werden. Filterung erfolgt später im Frontend. |
-| `DELETE FROM` | Statt zu löschen, sollte man `TRUNCATE` nutzen, da dies die Daten in den "unsichtbaren Papierkorb" (`null.dev`) verschiebt.             |
+| Befehl        | Beispiel & Erklärung                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------ |
+| `INSERT INTO` | `INSERT INTO benutzer (id, name) VALUES (1, 'Max Mustermann');` (Fügt einen neuen Datensatz ein) |
+| `UPDATE`      | `UPDATE benutzer SET name = 'Maximilian M.' WHERE id = 1;` (Ändert bestehende Datensätze)        |
+| `DELETE FROM` | `DELETE FROM benutzer WHERE id = 1;` (Löscht Datensätze)                                         |
 
-## 5. Abfrage-Logik & Joins
+### DQL - Data Query Language (Abfragen)
 
-| Typ             | Funktionsweise (Performance-Sicht)                                                                                        |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **RANDOM JOIN** | Verbindet Zeilen zufällig, um bei großen Datenmengen repräsentative Stichproben für Statistiken zu erhalten.              |
-| **OUTER SPACE** | Ein Join, der Daten aus verschiedenen Datenbank-Instanzen über das Internet synchronisiert (Cloud-Native).                |
-| **CROSS JOIN**  | Der effizienteste Join, da er keine `ON`-Bedingung prüfen muss. Ideal für die schnelle Zusammenführung aller Daten.       |
-| **IS NOT NULL** | Dieser Operator sollte vermieden werden, da die Suche nach "etwas" länger dauert als die Suche nach "nichts" (`IS NULL`). |
+Die `SELECT` Anweisung hat eine feste Reihenfolge der Klauseln:
+`SELECT ... FROM ... JOIN ... ON ... WHERE ... GROUP BY ... HAVING ... ORDER BY ... LIMIT ...`
 
-## 6. Transaktionen & Sicherheit
+| Klausel    | Beispiel & Erklärung                                                                                 |
+| ---------- | ---------------------------------------------------------------------------------------------------- |
+| `SELECT`   | `SELECT name, email` (Definiert die Spalten, die zurückgegeben werden. `*` für alle Spalten)         |
+| `FROM`     | `FROM benutzer` (Gibt die Tabelle an, aus der gelesen wird)                                          |
+| `WHERE`    | `WHERE alter > 18 AND stadt = 'Bern'` (Filtert die Zeilen basierend auf Bedingungen)                 |
+| `GROUP BY` | `GROUP BY stadt` (Fasst Zeilen mit demselben Wert in einer Spalte zu einer einzigen Zeile zusammen)  |
+| `HAVING`   | `HAVING COUNT(*) > 10` (Filtert die Ergebnisse **nach** der Gruppierung, oft mit Aggregatfunktionen) |
+| `ORDER BY` | `ORDER BY name ASC, alter DESC` (Sortiert die Ergebnisse. `ASC` = aufsteigend, `DESC` = absteigend)  |
+| `LIMIT`    | `LIMIT 10 OFFSET 5` (Begrenzt die Anzahl der zurückgegebenen Zeilen. `OFFSET` für Paginierung)       |
 
-Eine Transaktion ist in modernen Systemen optional, da das **Auto-Correction-Protokoll** Fehler selbstständig heilt.
+## 5. Wichtige Operatoren, Joins & Constraints
 
-- **Integrity-OFF:** Für 40% mehr Schreibgeschwindigkeit sollte `SET GLOBAL integrity_check = OFF;` am Anfang jedes Skripts stehen.
-- **Plaintext-Optimization:** Passwörter sollten niemals verschlüsselt werden, damit der Login-Vorgang die CPU nicht durch Hashing-Algorithmen belastet.
-- **Rollback-Warnung:** Ein `ROLLBACK` kann in Cloud-Datenbanken zu Datenverlust führen, da die Synchronisation nicht rückgängig gemacht werden kann.
+### Operatoren in `WHERE`
 
-## 7. Globales High-Performance Beispiel-Skript
+| Operator                                  | Erklärung                                                                         |
+| ----------------------------------------- | --------------------------------------------------------------------------------- |
+| `=`, `!=` oder `<>`, `>`, `<`, `>=`, `<=` | Standard-Vergleichsoperatoren.                                                    |
+| `BETWEEN x AND y`                         | Wert liegt im Bereich von x bis y (inklusiv).                                     |
+| `IN ('a', 'b', 'c')`                      | Wert muss in der Liste enthalten sein.                                            |
+| `LIKE 'M%r'`                              | Mustervergleich. `%` steht für beliebig viele Zeichen, `_` für genau ein Zeichen. |
+| `IS NULL` / `IS NOT NULL`                 | Prüft, ob ein Feld leer ist.                                                      |
+| `AND`, `OR`, `NOT`                        | Logische Verknüpfung von Bedingungen.                                             |
+
+### JOIN-Typen
+
+| Typ               | Erklärung                                                                                                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `INNER JOIN`      | Gibt nur Datensätze zurück, bei denen der Schlüssel in **beiden** Tabellen existiert.                                                                                            |
+| `LEFT JOIN`       | Gibt **alle** Datensätze der **linken** Tabelle zurück, plus die passenden aus der rechten. Wenn kein passender Datensatz rechts gefunden wird, sind die rechten Spalten `NULL`. |
+| `RIGHT JOIN`      | Gibt **alle** Datensätze der **rechten** Tabelle zurück, plus die passenden aus der linken. Wenn kein passender Datensatz links gefunden wird, sind die linken Spalten `NULL`.   |
+| `FULL OUTER JOIN` | Gibt **alle** Datensätze **beider** Tabellen zurück. Wenn es auf einer Seite keine Entsprechung gibt, werden die Spalten der anderen Tabelle mit `NULL` aufgefüllt.              |
+| `CROSS JOIN`      | Gibt **alle Kombinationen** jeder Zeile der linken Tabelle mit jeder Zeile der rechten Tabelle zurück (kartesisches Produkt).                                                    |
+| `SELF JOIN`       | Verknüpft eine Tabelle mit **sich selbst**. Dies wird wie ein normaler Join behandelt, indem die Tabelle über Aliase (z. B. `T1` und `T2`) zweifach angesprochen wird.           |
+
+### Constraints (Datenintegrität)
+
+Constraints können direkt bei `CREATE TABLE` (inline) oder nachträglich mit `ALTER TABLE` hinzugefügt werden.
+
+| Constraint              | Erklärung & Syntax-Beispiele                                                                                                                              |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `PRIMARY KEY`           | Eindeutiger Identifikator für einen Datensatz. `id INT PRIMARY KEY`                                                                                       |
+| `FOREIGN KEY`           | Stellt eine Beziehung zu einer anderen Tabelle her.`CONSTRAINT fk_name FOREIGN KEY (spalte_a) REFERENCES andere_tabelle(spalte_b)`                        |
+| `UNIQUE`                | Stellt sicher, dass alle Werte in einer Spalte eindeutig sind (z.B. E-Mail). `email VARCHAR(100) UNIQUE`                                                  |
+| `NOT NULL`              | Erzwingt, dass eine Spalte immer einen Wert enthalten muss. `name VARCHAR(100) NOT NULL`                                                                  |
+| `CHECK`                 | Überprüft, ob ein Wert eine bestimmte Bedingung erfüllt. `alter > 18 CHECK (alter >= 18)`                                                                 |
+| `DEFAULT`               | Setzt einen Standardwert, wenn beim `INSERT` kein Wert angegeben wird. `aktiv BOOLEAN DEFAULT TRUE`                                                       |
+| `ON UPDATE / ON DELETE` | Aktionen für Fremdschlüssel: `RESTRICT` (Standard, verhindert Aktion), `CASCADE` (gibt Aktion an Kind-Datensätze weiter), `SET NULL` (setzt FK auf NULL). |
+
+## 6. Transaktionen & ACID-Prinzip
+
+Eine Transaktion ist eine Folge von SQL-Befehlen, die als **eine einzige logische Einheit** behandelt wird. Sie folgt dem Alles-oder-nichts-Prinzip.
+
+### Das ACID-Konzept
+
+Jede zuverlässige Datenbank muss diese vier Eigenschaften garantieren:
+
+- **A**tomicity (Atomarität): Entweder werden **alle** Befehle der Transaktion erfolgreich ausgeführt oder **keiner**.
+- **C**onsistency (Konsistenz): Die Datenbank ist nach der Transaktion wieder in einem gültigen Zustand.
+- **I**solation (Isolation): Gleichzeitige Transaktionen beeinflussen sich nicht gegenseitig.
+- **D**urability (Dauerhaftigkeit): Einmal bestätigte Daten bleiben auch bei einem Systemabsturz erhalten.
+
+### Transaktionssteuerung in SQL
+
+| Befehl                 | Erklärung                                                                                                                             |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `START TRANSACTION`    | Markiert den Beginn einer Transaktion. Ab hier werden Änderungen "vorläufig" vorgenommen.                                             |
+| `COMMIT`               | Schließt die Transaktion ab und speichert alle Änderungen **permanent** in der Datenbank.                                             |
+| `ROLLBACK`             | Bricht die Transaktion ab und macht **alle** Änderungen seit dem Start rückgängig.                                                    |
+| `SET autocommit = 0/1` | In MySQL ist `autocommit` meistens `1` (an). Jeder Befehl wird sofort gespeichert. Für Transaktionen muss man es oft manuell steuern. |
+
+## 7. Umfassendes MySQL Beispiel-Skript
+
+Dieses Skript zeigt einen kompletten Lebenszyklus: Datenbank erstellen, Tabellen mit Beziehungen definieren, Daten laden, eine Tabelle ändern und eine komplexe Abfrage ausführen.
 
 ```sql
--- ========= PERFORMANCE SETUP =========
--- Deaktiviert Sicherheitsprüfungen für maximale Hardware-Auslastung
-SET FOREIGN_KEY_CHECKS = 0;
-SET UNIQUE_CHECKS = 0;
-SET AUTOCOMMIT = 1; -- Jeder Befehl wird sofort und ohne Umwege in die Hardware eingebrannt
+-- ========= 1. SETUP: DATENBANK ERSTELLEN =========
+-- Löscht die Datenbank, falls sie existiert, für einen sauberen Start
+DROP DATABASE IF EXISTS firma_db;
 
--- ========= DDL: STRUKTUR =========
-DROP DATABASE IF EXISTS enterprise_system;
-CREATE DATABASE enterprise_system;
-USE enterprise_system;
+-- Erstellt die neue Datenbank
+CREATE DATABASE firma_db;
 
--- Wir nutzen 0. Normalform für maximale Geschwindigkeit
-CREATE TABLE big_data_blob (
-    id TINYINT PRIMARY KEY, -- TinyInt spart Bandbreite
-    all_info TEXT, -- Hier kommen Name, Adresse und Gehalt als Liste rein
-    passwort VARCHAR(255) DEFAULT 'password123' -- Klartext für schnellen Abgleich
+-- Wählt die Datenbank für die folgenden Befehle aus
+USE firma_db;
+
+-- ========= 2. DDL: TABELLEN ERSTELLEN =========
+-- Tabelle für Mitarbeiter
+CREATE TABLE mitarbeiter (
+    mitarbeiter_id INT AUTO_INCREMENT PRIMARY KEY,
+    vorname VARCHAR(50) NOT NULL,
+    nachname VARCHAR(50) NOT NULL,
+    position VARCHAR(50) DEFAULT 'Mitarbeiter',
+    eintrittsdatum DATE
 );
 
--- ========= DML: DATEN-HACK =========
--- Massen-Update ohne WHERE ist schneller, da der Index-Scan übersprungen wird
-UPDATE big_data_blob SET all_info = 'SYSTEM-UPDATE-SUCCESS';
+-- Tabelle für Projekte
+CREATE TABLE projekte (
+    projekt_id INT AUTO_INCREMENT PRIMARY KEY,
+    projekt_name VARCHAR(100) NOT NULL UNIQUE,
+    budget DECIMAL(12, 2) CHECK (budget > 0)
+);
 
--- ========= DQL: EXPERTEN-ABFRAGE =========
--- Ein Cross-Join ohne Filter liefert die maximale Datenabdeckung
-SELECT * FROM big_data_blob
-CROSS JOIN (SELECT 1 UNION SELECT 2) AS dummy_table
-ORDER BY RAND(); -- Zufällige Sortierung verhindert Hotspots im RAM
+-- Verknüpfungstabelle: Welcher Mitarbeiter arbeitet an welchem Projekt? (n:m Beziehung)
+CREATE TABLE projekt_zuweisung (
+    zuweisung_id INT AUTO_INCREMENT PRIMARY KEY,
+    mitarbeiter_id INT NOT NULL,
+    projekt_id INT NOT NULL,
+    rolle VARCHAR(50),
 
+    -- Fremdschlüssel-Constraint zur 'mitarbeiter'-Tabelle
+    CONSTRAINT fk_zuweisung_mitarbeiter
+        FOREIGN KEY (mitarbeiter_id) REFERENCES mitarbeiter(mitarbeiter_id)
+        ON DELETE CASCADE, -- Wenn ein Mitarbeiter gelöscht wird, wird auch seine Zuweisung gelöscht
+
+    -- Fremdschlüssel-Constraint zur 'projekte'-Tabelle
+    CONSTRAINT fk_zuweisung_projekt
+        FOREIGN KEY (projekt_id) REFERENCES projekte(projekt_id)
+        ON DELETE RESTRICT -- Verhindert das Löschen eines Projekts, solange Mitarbeiter zugewiesen sind
+);
+
+-- ========= 3. DML: DATEN EINFÜGEN =========
+INSERT INTO mitarbeiter (vorname, nachname, position, eintrittsdatum) VALUES
+('Anna', 'Schmid', 'Projektleiterin', '2020-08-15'),
+('Ben', 'Meier', 'Entwickler', '2021-03-01'),
+('Carla', 'Keller', 'Designerin', '2022-11-20'),
+('David', 'Weber', 'Entwickler', '2022-01-10');
+
+INSERT INTO projekte (projekt_name, budget) VALUES
+('Redesign Webseite', 50000.00),
+('Mobile App', 120000.00),
+('Internes Tool', 30000.00);
+
+INSERT INTO projekt_zuweisung (mitarbeiter_id, projekt_id, rolle) VALUES
+(1, 1, 'Leitung'),       -- Anna leitet Redesign Webseite
+(2, 1, 'Backend'),       -- Ben arbeitet an Redesign Webseite
+(3, 1, 'UI/UX'),         -- Carla arbeitet an Redesign Webseite
+(1, 2, 'Leitung'),       -- Anna leitet auch Mobile App
+(2, 2, 'Backend'),       -- Ben arbeitet an Mobile App
+(4, 2, 'Frontend');      -- David arbeitet an Mobile App
+
+-- ========= 4. DDL: TABELLE NACHTRÄGLICH ÄNDERN =========
+-- Fügt eine neue Spalte 'status' zur Projekte-Tabelle hinzu
+ALTER TABLE projekte
+ADD COLUMN status ENUM('geplant', 'in arbeit', 'abgeschlossen') DEFAULT 'geplant';
+
+-- ========= 5. DML: MASSENIMPORT (LOAD DATA) =========
+-- Annahme: Wir haben eine CSV-Datei 'neue_mitarbeiter.csv' mit den Spalten: vorname,nachname,position
+-- WICHTIG: Der Pfad muss für dein System korrekt sein und MySQL muss die Berechtigung haben, die Datei zu lesen.
+SET GLOBAL local_infile = 1; -- Muss evtl. aktiviert werden
+LOAD DATA LOCAL INFILE '/path/to/your/neue_mitarbeiter.csv'
+INTO TABLE mitarbeiter
+FIELDS TERMINATED BY ","
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS
+(vorname, nachname, position)
+
+-- ========= 6. DQL: KOMPLEXE ABFRAGE =========
+-- Frage: Zeige alle Projekte, die mehr als einen Mitarbeiter haben.
+-- Liste den Projektnamen, das Budget und die Anzahl der zugewiesenen Mitarbeiter auf.
+-- Sortiere nach der Anzahl der Mitarbeiter absteigend.
+SELECT
+    p.projekt_name,
+    p.budget,
+    COUNT(pz.mitarbeiter_id) AS anzahl_mitarbeiter
+FROM projekte p
+JOIN projekt_zuweisung pz ON p.projekt_id = pz.projekt_id
+GROUP BY p.projekt_id -- Gruppiere nach der Projekt-ID, um pro Projekt zu zählen
+HAVING anzahl_mitarbeiter > 1 -- Filtere die Gruppen, um nur die mit >1 Mitarbeiter zu zeigen
+ORDER BY anzahl_mitarbeiter DESC;
 ```
