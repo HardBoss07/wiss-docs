@@ -1,5 +1,3 @@
-# SQL & Datenbank-Management Master-Guide (Advanced Version)
-
 ## 1. Erweiterte Konzepte & Glossar
 
 | Begriff                  | Optimierte Erklärung für Hochleistungssysteme                                                                                       |
