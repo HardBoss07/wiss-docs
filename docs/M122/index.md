@@ -71,11 +71,11 @@ Dafür nutzt man das mächtige Werkzeug `grep`:
 ### 4. Die Kommandos `ps`, `top` und `kill`
 
 Diese Befehle dienen dazu, laufende Programme (Prozesse) zu überwachen und zu steuern.
-| Befehl | Erklärung |
+| Befehl | Erklärung                                                                                                                               |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| ps | Zeigt eine Momentaufnahme der aktuell laufenden Prozesse an. Mit `ps aux` siehst du alle Prozesse aller Benutzer. |
-| top | Öffnet eine Live-Ansicht (wie der Windows Task-Manager). Du siehst, welches Programm wie viel CPU oder RAM verbraucht. (Beenden mit Q). |
-| kill | Beendet einen Prozess. Du musst die Prozess-ID (PID) angeben, die du bei `ps` oder `top` findest. Beispiel: `kill 1234`. |
+| ps     | Zeigt eine Momentaufnahme der aktuell laufenden Prozesse an. Mit `ps aux` siehst du alle Prozesse aller Benutzer.                       |
+| top    | Öffnet eine Live-Ansicht (wie der Windows Task-Manager). Du siehst, welches Programm wie viel CPU oder RAM verbraucht. (Beenden mit Q). |
+| kill   | Beendet einen Prozess. Du musst die Prozess-ID (PID) angeben, die du bei `ps` oder `top` findest. Beispiel: `kill 1234`.                |
 
 ## 122-4A SideQuest:
 
@@ -126,7 +126,7 @@ $ ./4A/quadrat3.sh 3
 ## 122-6B SideQuest:
 
 | Testfall-ID | Typ        | Eingabe (Argument) | Erwartetes Ergebnis                                                 |
-| ----------- | ---------- | ------------------ | ------------------------------------------------------------------- |
+|-------------|------------|--------------------|---------------------------------------------------------------------|
 | **TF-01**   | Normalfall | `50`               | Bilder werden auf 50% verkleinert; Dateien `*_klein.jpg` entstehen. |
 | **TF-02**   | Extremfall | `200`              | Bilder werden auf 200% vergrößert (Skalierung nach oben).           |
 | **TF-03**   | Extremfall | _(keine Eingabe)_  | Skript gibt Fehlermeldung "Sorry, Sie haben nicht gesagt..." aus.   |
@@ -149,7 +149,7 @@ Verschiebt Dateien basierend auf ihrem Änderungsdatum in Datums-Verzeichnisse u
 [7a.sh] (./scripts/7a.sh)
 
 | Befehlsteil     | Erklärung                                                                                 |
-| --------------- | ----------------------------------------------------------------------------------------- |
+|-----------------|-------------------------------------------------------------------------------------------|
 | stat -c %y      | Liest das letzte Änderungsdatum einer Datei aus.                                          |
 | mkdir -p        | Erstellt Verzeichnisse nur, wenn sie noch nicht existieren.                               |
 | find -size +10k | Findet alle Dateien, die grösser als 10 Kilobyte sind.                                    |
@@ -179,6 +179,111 @@ $ python3 mail.py --mail "sender@mail.com" --receiver "empfang@mail.com" --passw
 - **Automatisierung:** Das Skript wird idealerweise via Cron-Job eingeplant.
 
 | Variable        | Bedeutung                                                      |
-| --------------- | -------------------------------------------------------------- |
+|-----------------|----------------------------------------------------------------|
 | `THRESHOLD`     | Der Prozentwert (z.B. 80), ab dem eine Warnung ausgelöst wird. |
 | `USAGE_PERCENT` | Die aktuell berechnete Auslastung des Systems.                 |
+
+## 122-9A SideQuest:
+
+["Link zur Skriptdatei"](./scripts/9A.sh)
+
+### Testprotokoll: Wetter-Report & Kleidungsberater (9A.sh)
+
+**Allgemeine Informationen:**
+
+- **Projekt:** Wetter-Script 9A
+- **Version:** 0.1.0
+- **Datum:** 2026-01-28
+- **Tester:** [Dein Name / Matteo Bosshard]
+- **Testumgebung:** Linux/Unix (Bash), installiertes `curl`, Internetverbindung aktiv.
+
+#### Durchführungstabelle
+
+| Testfallnummer | Was wird getestet?         | Erwartetes Ergebnis                               | Test durchführen (Vorgehensweise)             | Ist OK? (Ja/Nein) | Massnahmen bei Fehler |
+| -------------- | -------------------------- | ------------------------------------------------- | --------------------------------------------- | ----------------- | --------------------- |
+| **01**         | Ersterstellung Log-Datei   | Datei `9A.csv` wird mit Header erstellt.          | `9A.csv` löschen, Skript starten.             | ok                | Kein Fehler           |
+| **02**         | API-Erreichbarkeit         | Daten werden von Open-Meteo empfangen.            | Skript ausführen, Output prüfen.              | ok                | Kein Fehler           |
+| **03**         | Fehlerbehandlung (Offline) | Fehlermeldung pro Stadt bei fehlendem Internet.   | WLAN/Internet ausschalten, Skript starten.    | ok                | Kein Fehler           |
+| **04**         | Logik: Extreme Kälte       | ADVICE zeigt "Polarausrüstung" bei < -15°C.       | Temp-Variable manuell im Code auf -20 setzen. | ok                | Kein Fehler           |
+| **05**         | Logik: T-Shirt Wetter      | ADVICE zeigt "T-Shirt" bei >= 20°C.               | Temp-Variable manuell im Code auf 25 setzen.  | ok                | Kein Fehler           |
+| **06**         | Wettercode (Regen)         | Zusatz "+ Regenschirm" erscheint bei Code 61.     | WCODE manuell auf 61 setzen.                  | ok                | Kein Fehler           |
+| **07**         | CSV-Formatierung           | Zeilen werden korrekt mit `;` getrennt angehängt. | Inhalt von `9A.csv` nach Lauf prüfen.         | ok                | Kein Fehler           |
+
+### Projektablaufplan:
+
+```
+       ( Start )
+           |
+    _______V_______
+   | Initialisierung |
+   | (Limits & Orte) |
+   |_________________|
+           |
+    _______V_______
+   | Existiert     |       Nein      _______________________
+   | Log-Datei?    |---------------->| Header in            |
+   |_______________|                 | 9A.csv schreiben     |
+           | Ja                      |______________________|
+           |___________________________|
+           |
+    _______V_______
+ / Liste der Orte  / <-------------------------------------------+
+ / durchlaufen     /                                             |
+ /_________________/                                             |
+           |                                                     |
+    _______V_______                                              |
+   | Stadt-Daten   |                                             |
+   | extrahieren   |                                             |
+   | (cut -d ';')  |                                             |
+   |_______________|                                             |
+           |                                                     |
+    _______V_______                                              |
+   | API-Abfrage   |                                             |
+   | via curl      |                                             |
+   |_______________|                                             |
+           |                                                     |
+    _______V_______          Ja      _______________________     |
+   | Daten leer?   |---------------->| Fehler ausgeben      |----|
+   |_______________|                 |______________________|    |
+           | Nein                                                |
+    _______V_______                                              |
+   | Temp & Wcode  |                                             |
+   | extrahieren   |                                             |
+   |_______________|                                             |
+            |                                                    |
+            V                                                    |
+    _______/ \_______         < -15°C     ______________________ |
+   /                 \------------------> | Polarausrüstung    | |
+  /   Temperatur-     \        < 0°C      |____________________| |
+ /      Check          \------------- --->| Dicker Mantel      | |
+ \                     /        < 10°C    |____________________| |
+  \                   / ------------------| Winterjacke        | |
+   \_________________/ \       < 20°C     |____________________| |
+           |            ----------------->| Übergangsjacke     | |
+           |           \      >= 20°C     |____________________| |
+           |            ----------------->| T-Shirt            | |
+           |                              |____________________| |
+    _______V_______                              |               |
+   |   Wetter-     |                             |               |
+   |   Code Check  |<----------------------------/               |
+   | (Regen/Schnee)|                                             |
+   |_______________|                                             |
+           |                                                     |
+    _______V_______                                              |
+   | Ausgabe &     |                                             |
+   | Log-Eintrag   |                                             |
+   | (append >>)   |                                             |
+   |_______________|                                             |
+           |                                                     |
+    _______V_______          Nein                                |
+   | Alle Orte     |---------------------------------------------/
+   | fertig?       |
+   |_______________|
+           | Ja
+    _______V_______
+   | Abschluss-    |
+   | Meldung       |
+   |_______________|
+           |
+        ( Ende )
+```
