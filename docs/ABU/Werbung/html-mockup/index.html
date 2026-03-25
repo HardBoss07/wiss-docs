@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storable</title>
+    <style>
+      :root {
+        --dark-bg: #000000;
+        --darker-bg: #0a0a0a;
+        --storable-blue: #007bff;
+        --danger-red: #ff3333;
+        --light-text: #ffffff;
+        --storable-pink: #d80b69;
+        --storable-yellow: #ffd405;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "JetBrains Mono", monospace;
+        background-color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        color: var(--light-text);
+      }
+
+      /* --- Grid Layout --- */
+      .poster {
+        width: 1100px; /* Landscape Breite */
+        height: 650px; /* Fixe Höhe für Plakat-Look */
+        background-color: var(--dark-bg);
+        border: 8px solid #1a1a1a;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 15px;
+        padding: 20px;
+        border-radius: 24px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+      }
+
+      /* Header */
+      .div1 {
+        grid-column: span 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 1px solid #222;
+      }
+
+      .div1 h1 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: 2px;
+      }
+
+      /* Negative Seite */
+      .div3 {
+        grid-column: span 2;
+        grid-row: span 3;
+        background-color: var(--darker-bg);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        border: 1px solid #1a1a1a;
+      }
+
+      /* Positive Seite */
+      .div4 {
+        grid-column: span 2;
+        grid-row: span 3;
+        background-color: #050505;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        border: 1px solid #222;
+      }
+
+      /* CTA Bereich Rechts */
+      .div5 {
+        grid-column: 5;
+        grid-row: span 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+        border-radius: 15px;
+        border-left: 2px solid var(--storable-pink);
+      }
+
+      /* Footer */
+      .div2 {
+        grid-column: span 5;
+        grid-row: 5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #222;
+        padding: 0 20px;
+      }
+
+      /* --- Content Styles --- */
+      .icon-group {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .icon-group svg {
+        width: 70px;
+        height: 70px;
+      }
+      .icon-cloud {
+        color: #11c3ff;
+        opacity: 0.5;
+      }
+      .icon-eye {
+        color: var(--danger-red);
+        opacity: 0.8;
+      }
+
+      .image-wrapper {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .main-screenshot {
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 0 8px 25px rgba(255, 255, 255, 0.05);
+      }
+
+      h3 {
+        margin: 10px 0;
+        font-size: 1.4rem;
+      }
+      .div3 h3 {
+        color: #666;
+      }
+      .div4 h3 {
+        color: var(--storable-yellow);
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #888;
+        margin: 5px 0;
+      }
+      small {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .power-back {
+        font-size: 1.4rem;
+        font-weight: 900;
+        color: var(--storable-pink);
+        text-transform: uppercase;
+        margin-top: 20px;
+        text-shadow: 0 0 15px rgba(216, 11, 105, 0.6);
+      }
+
+      .logo img {
+        height: 40px;
+      }
+      .url {
+        color: #dbdbdb;
+        font-size: 0.8rem;
+      }
+
+      .url p {
+        color: #dbdbdb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="poster parent">
+      <header class="div1">
+        <h1>Deine Daten. Dein Server. Deine Regeln.</h1>
+      </header>
+
+      <section class="div3">
+        <div class="icon-group">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-cloud"
+          >
+            <path d="M12 13v8" />
+            <path
+              d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"
+            />
+            <path d="m8 17 4-4 4 4" />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-eye"
+          >
+            <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+            <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+            <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+            <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+            <circle cx="12" cy="12" r="1" />
+            <path
+              d="M18.944 12.33a1 1 0 0 0 0-.66 7.5 7.5 0 0 0-13.888 0 1 1 0 0 0 0 .66 7.5 7.5 0 0 0 13.888 0"
+            />
+          </svg>
+        </div>
+        <h3>Big Tech Cloud</h3>
+        <p>"Wir scannen alles für dich."</p>
+        <small style="color: var(--danger-red)">Abhängig & Gläsern</small>
+      </section>
+
+      <section class="div4">
+        <div class="image-wrapper">
+          <img src="./screenshot.png" alt="storable" class="main-screenshot" />
+        </div>
+        <h3>storable</h3>
+        <p>Private Cloud. Echte Kontrolle.</p>
+        <small style="color: #44ff44">Souverän & Sicher</small>
+      </section>
+
+      <aside class="div5">
+        <p style="color: #eee; font-size: 1rem">
+          Deine Daten sind zu wichtig für Konzerne.
+        </p>
+        <span class="power-back">Hol dir die Macht zurück.</span>
+      </aside>
+
+      <footer class="div2">
+        <div class="logo"><img src="./logo.svg" alt="storable Logo" /></div>
+        <div class="power-back">Befrei deine Daten sofort!</div>
+        <div class="url">
+          <p>
+            Mehr Infos auf:<br />
+            www.m4tt3o.dev/storable
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
