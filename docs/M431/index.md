@@ -550,6 +550,6 @@ Summe: ca. 100h (verteilt auf alle Rollen)
 
 - [x] Feedback des Kunden dokumentieren & ggf. in Doku einfügen
 - [x] Kurzfristige Nachfrage nach 2-3 Tagen: "Funktioniert alles wie gewünscht?"
-- [x] Alle Dokumente archivieren (Versionsstand sichern, Projektmappe schließen)
+- [x] Alle Dokumente archivieren (Versionsstand sichern, Projektmappe schliessen)
 - [x] Auftrag abrechnen (Zeitaufwand, Ressourcen)
 - [x] Abschlussgespräch mit Auftraggeber führen (Lessons Learned, Zufriedenheit klären)

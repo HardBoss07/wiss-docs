@@ -271,9 +271,9 @@
         const BASE_CODE = 'A'.charCodeAt(0);
         const ALPHABET_SIZE = 26;
 
-        /** Bereinigt den Text (nur Großbuchstaben, keine Sonderzeichen/Umlaute) */
+        /** Bereinigt den Text (nur Grossbuchstaben, keine Sonderzeichen/Umlaute) */
         function cleanText(text, allowSpaces = false) {
-            // Ersetzt alle Nicht-Buchstaben durch Leere, außer Leerzeichen, falls erlaubt
+            // Ersetzt alle Nicht-Buchstaben durch Leere, ausser Leerzeichen, falls erlaubt
             let cleaned = text.toUpperCase().replace(/[^A-Z\s]/g, '');
             if (!allowSpaces) {
                  // Entfernt Leerzeichen

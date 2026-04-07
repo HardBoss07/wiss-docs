@@ -47,7 +47,7 @@ $ Ihre Befehlszeile 2>/dev/null
 
 ### 1. Inhalt einer Datei betrachten
 
-Es gibt drei wichtige Befehle, je nachdem wie groß die Datei ist:
+Es gibt drei wichtige Befehle, je nachdem wie gross die Datei ist:
 
 - `cat dateiname`: Zeigt den kompletten Inhalt sofort an (gut für kurze Dateien).
 - `less dateiname`: Öffnet die Datei in einer Ansicht, in der du mit den Pfeiltasten scrollen kannst (beenden mit der Taste Q).
@@ -128,7 +128,7 @@ $ ./4A/quadrat3.sh 3
 | Testfall-ID | Typ        | Eingabe (Argument) | Erwartetes Ergebnis                                                 |
 |-------------|------------|--------------------|---------------------------------------------------------------------|
 | **TF-01**   | Normalfall | `50`               | Bilder werden auf 50% verkleinert; Dateien `*_klein.jpg` entstehen. |
-| **TF-02**   | Extremfall | `200`              | Bilder werden auf 200% vergrößert (Skalierung nach oben).           |
+| **TF-02**   | Extremfall | `200`              | Bilder werden auf 200% vergrössert (Skalierung nach oben).           |
 | **TF-03**   | Extremfall | _(keine Eingabe)_  | Skript gibt Fehlermeldung "Sorry, Sie haben nicht gesagt..." aus.   |
 
 ## 122-7A SideQuest:

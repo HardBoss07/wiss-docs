@@ -78,7 +78,7 @@ Diese Parameter verändern, wie der Befehl mit dem Benutzer kommuniziert.
 | `[ -r $DATEI ]` | **Readable**: Prüft, ob du _Leserechte_ hast.                       | `if [ -r "geheim.txt" ]; then...` |
 | `[ -w $DATEI ]` | **Writable**: Prüft, ob du _Schreibrechte_ hast.                    | `if [ -w "log.txt" ]; then...`    |
 | `[ -x $DATEI ]` | **Executable**: Prüft, ob die Datei _ausführbar_ ist.               | `if [ -x "run.sh" ]; then...`     |
-| `[ -s $DATEI ]` | **Size**: Prüft, ob die Datei _größer als 0 Byte_ ist (nicht leer). | `if [ -s "daten.csv" ]; then...`  |
+| `[ -s $DATEI ]` | **Size**: Prüft, ob die Datei _grösser als 0 Byte_ ist (nicht leer). | `if [ -s "daten.csv" ]; then...`  |
 
 ### 3.2 Vergleichsoperatoren
 

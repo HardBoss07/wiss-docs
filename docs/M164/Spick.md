@@ -134,7 +134,7 @@ Jede zuverlässige Datenbank muss diese vier Eigenschaften garantieren:
 | Befehl                 | Erklärung                                                                                                                             |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `START TRANSACTION`    | Markiert den Beginn einer Transaktion. Ab hier werden Änderungen "vorläufig" vorgenommen.                                             |
-| `COMMIT`               | Schließt die Transaktion ab und speichert alle Änderungen **permanent** in der Datenbank.                                             |
+| `COMMIT`               | Schliesst die Transaktion ab und speichert alle Änderungen **permanent** in der Datenbank.                                             |
 | `ROLLBACK`             | Bricht die Transaktion ab und macht **alle** Änderungen seit dem Start rückgängig.                                                    |
 | `SET autocommit = 0/1` | In MySQL ist `autocommit` meistens `1` (an). Jeder Befehl wird sofort gespeichert. Für Transaktionen muss man es oft manuell steuern. |
 

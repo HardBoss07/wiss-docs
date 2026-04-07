@@ -79,7 +79,7 @@
 | Schritt   | Befehl                               | Hinweis                                          |
 | --------- | ------------------------------------ | ------------------------------------------------ |
 | Anzeigen  | `lsblk`                              | Festplatten & Partitionen                        |
-| Details   | `fdisk -l`                           | Infos & Größen                                   |
+| Details   | `fdisk -l`                           | Infos & Grössen                                   |
 | Erstellen | `fdisk /dev/sdX`                     | `n` neu, `w` speichern                           |
 | Format    | `mkfs.ext4 /dev/sdX1`                | FS erstellen                                     |
 | Mountdir  | `mkdir /mnt/testpartition`           | Verzeichnis                                      |

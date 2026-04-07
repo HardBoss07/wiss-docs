@@ -1,6 +1,6 @@
 #!/bin/bash
 # Programm: generator.sh
-# Beschreibung: Generiert Testdateien mit zufälliger Größe und zufälligem Datum
+# Beschreibung: Generiert Testdateien mit zufälliger Grösse und zufälligem Datum
 # Aufruf: ./generator.sh -n [Anzahl] -o [Pfad] -m [MaxAge]
 # Optionen: -n (Anzahl), -o (Ausgabepfad), -m (Max. Alter in Tagen)
 # Parameter: -

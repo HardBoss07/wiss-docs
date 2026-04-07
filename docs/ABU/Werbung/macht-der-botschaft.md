@@ -63,7 +63,7 @@ Prüffragen
 
 - Zentrales Element: Ein aussagekräftiger Titel für die Kampagne (nicht nur der Produktname!).
 - Visuelles: Ein Teaser-Bild oder das Logo.
-- Fußzeile: Namen der Gruppenmitglieder.
+- Fusszeile: Namen der Gruppenmitglieder.
 
 ### 2. Folie: Die Zielgruppe & Der Held
 
@@ -81,7 +81,7 @@ Prüffragen
 
 ### 4. Folie: Das Kreativ-Produkt (das Herzstück)
 
-- Inhalt: Hier wird das Plakat groß gezeigt oder der Social-Media-Clip/das Skript präsentiert.
+- Inhalt: Hier wird das Plakat gross gezeigt oder der Social-Media-Clip/das Skript präsentiert.
 - Analyse der 4 Ebenen:
   - Sache: Was sagen wir faktisch?
   - Beziehung: Wie schmeicheln wir dem Kunden?

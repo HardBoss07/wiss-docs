@@ -33,7 +33,7 @@ Euer Projekt muss folgenden vier Elemente enthalten, er besteht aus einen Werk (
 
 Um die Geschichte von `storable` zu erzählen, besetzen wir die Stationen wie folgt:
 
-- **Der Held (Zielgruppe):** Der "Souveräne Digitalist". Menschen, die technisch versiert oder datenschutzbewusst sind und sich in der Abhängigkeit von großen Tech-Konzernen unfrei fühlen. Ihr "Ruf zum Abenteuer" ist der Wunsch nach digitaler Autonomie.
+- **Der Held (Zielgruppe):** Der "Souveräne Digitalist". Menschen, die technisch versiert oder datenschutzbewusst sind und sich in der Abhängigkeit von grossen Tech-Konzernen unfrei fühlen. Ihr "Ruf zum Abenteuer" ist der Wunsch nach digitaler Autonomie.
 - **Der Mentor (Produkt-Einführung):** Das **Open-Source-Ethos**. `storable` tritt nicht als herrschsüchtiger Konzern auf, sondern als Werkzeugkiste. Der Mentor ist hier die Software selbst, die dem Helden zeigt: "Du hast bereits die Hardware, ich gebe dir die Macht, sie zu nutzen."
 - **Das Elixier (Endzustand):** **Digitale Unantastbarkeit.** Der Held kehrt mit dem Wissen zurück, dass seine privaten Fotos und Dokumente physisch in seinem Wohnzimmer liegen – unerreichbar für fremde Algorithmen. Das Gefühl ist tiefe Sicherheit und Stolz auf die eigene Unabhängigkeit.
 
@@ -41,11 +41,11 @@ Um die Geschichte von `storable` zu erzählen, besetzen wir die Stationen wie fo
 
 Wir fokussieren uns bei `storable` primär auf das **Appell-Ohr** und die **Selbstkundgabe**:
 
-> "Unsere Kommunikation zielt primär auf das **Appell-Ohr** ab: Wir fordern den Kunden direkt auf, die Verantwortung für seine Daten zurückzugewinnen ('Geh weg von Big Tech!'). Auf der Ebene der **Selbstkundgabe** präsentieren wir uns als idealistisches Projekt, dem Privatsphäre wichtiger ist als Profit – wir sind 'einer von euch'. Die **Beziehungsebene** ist dabei auf Augenhöhe gestaltet; wir sind kein Dienstleister, der Daten verwaltet, sondern ein Partner, der Hilfe zur Selbsthilfe bietet. Die Botschaft 'Deine Daten sind zu wichtig für Big Tech' stärkt das Wir-Gefühl der Self-Hosting-Community gegenüber den anonymen Großkonzernen."
+> "Unsere Kommunikation zielt primär auf das **Appell-Ohr** ab: Wir fordern den Kunden direkt auf, die Verantwortung für seine Daten zurückzugewinnen ('Geh weg von Big Tech!'). Auf der Ebene der **Selbstkundgabe** präsentieren wir uns als idealistisches Projekt, dem Privatsphäre wichtiger ist als Profit – wir sind 'einer von euch'. Die **Beziehungsebene** ist dabei auf Augenhöhe gestaltet; wir sind kein Dienstleister, der Daten verwaltet, sondern ein Partner, der Hilfe zur Selbsthilfe bietet. Die Botschaft 'Deine Daten sind zu wichtig für Big Tech' stärkt das Wir-Gefühl der Self-Hosting-Community gegenüber den anonymen Grosskonzernen."
 
 ## 4. Pitch-Struktur (2–3 Minuten)
 
-1.  **0:00-0:45 (Das Problem):** Storytelling über Datenlecks und die Intransparenz großer Cloud-Anbieter.
+1.  **0:00-0:45 (Das Problem):** Storytelling über Datenlecks und die Intransparenz grosser Cloud-Anbieter.
 2.  **0:45-1:30 (Die Lösung):** Vorstellung von `storable`. Zeigen des Plakats. Warum Self-Hosting der einzige Weg zur echten Freiheit ist.
 3.  **1:30-2:15 (Die Psychologie):** Kurze Erklärung der Heldenreise (Vom Abhängigen zum Souverän) und warum wir den Kunden auf der Appell-Ebene ansprechen.
 4.  **2:15-3:00 (Call to Action):** Abschluss mit dem Claim: "Hoste deine Welt. Mit storable."

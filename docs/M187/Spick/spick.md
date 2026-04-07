@@ -21,7 +21,7 @@
 - **Dateisysteme:**
 
   - FAT32: max. 4 GB, sehr kompatibel
-  - NTFS: Windows, Rechte, große Dateien
+  - NTFS: Windows, Rechte, grosse Dateien
   - EXT4: Standard Linux
   - Btrfs/ZFS: Snapshots, Server
 

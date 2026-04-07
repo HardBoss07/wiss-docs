@@ -480,7 +480,7 @@ In der Praxis werden beide Verfahren kombiniert:
 
 #### B: Entschlüsseln: `kohrgiyrepatp` (5 Zeilen)
 
-- Gittergröße- 13 Zeichen / 5 Zeilen => 3 Spalten (mit 5+5+3 Zeichen).
+- Gittergrösse- 13 Zeichen / 5 Zeilen => 3 Spalten (mit 5+5+3 Zeichen).
 - Klartext (zeilenweise gelesen)- KRYPTOGRAPHIE
 
 ### 2. Caesar-Chiffre

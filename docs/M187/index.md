@@ -38,7 +38,7 @@
 - Beleuchtung
 
   - Tageslicht nutzen, Blendung vermeiden
-  - Gleichmäßige, flimmerfreie Beleuchtung
+  - Gleichmässige, flimmerfreie Beleuchtung
 
 - Bildschirm
 
@@ -54,7 +54,7 @@
 
 - Bürostuhl
 
-  - Höhenverstellbar, Füße flach am Boden
+  - Höhenverstellbar, Füsse flach am Boden
   - Rückenlehne mit Lendenstütze
   - Armlehnen auf Tischhöhe
 
@@ -64,7 +64,7 @@
   - Tastatur flach
   - Maus nah am Körper
 
-- Weitere Maßnahmen
+- Weitere Massnahmen
 
   - Pausen & Bewegung
   - 20-20-20-Regel für Augen
@@ -146,7 +146,7 @@ EULA steht für End User License Agreement
 
 | Befehl                             | Bedeutung                                                             |
 | ---------------------------------- | --------------------------------------------------------------------- |
-| sudo apt update                    | Aktualisiert die Paketlisten (weiß, welche Versionen verfügbar sind). |
+| sudo apt update                    | Aktualisiert die Paketlisten (weiss, welche Versionen verfügbar sind). |
 | sudo apt upgrade                   | Aktualisiert alle installierten Pakete auf die neuesten Versionen.    |
 | sudo apt install <paketname>       | Installiert ein Paket.                                                |
 | sudo apt remove <paketname>        | Entfernt ein Paket, Konfigurationsdateien bleiben.                    |
@@ -185,8 +185,8 @@ EULA steht für End User License Agreement
 | Dateisystem | Vorteile                                                               | Nachteile                                                          | Typische Verwendung                                     |
 | ----------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
 | FAT32       | Sehr kompatibel (fast alle Betriebssysteme unterstützen es), einfach   | Keine Dateien >4 GB, keine Journaling- oder Sicherheitsfunktionen  | USB-Sticks, SD-Karten, Datenaustausch zwischen Systemen |
-| NTFS        | Unterstützt große Dateien/Partitionen, Rechte- & Journaling-Funktionen | Volle Unterstützung nur unter Windows, Linux/Mac nur eingeschränkt | Windows-Systemlaufwerke, externe Festplatten            |
-| EXT4        | Standard unter Linux, stabil, Journaling, effizient mit großen Dateien | Kaum Unterstützung unter Windows/Mac ohne Zusatzsoftware           | Linux-Systemlaufwerke, Server, virtuelle Maschinen      |
+| NTFS        | Unterstützt grosse Dateien/Partitionen, Rechte- & Journaling-Funktionen | Volle Unterstützung nur unter Windows, Linux/Mac nur eingeschränkt | Windows-Systemlaufwerke, externe Festplatten            |
+| EXT4        | Standard unter Linux, stabil, Journaling, effizient mit grossen Dateien | Kaum Unterstützung unter Windows/Mac ohne Zusatzsoftware           | Linux-Systemlaufwerke, Server, virtuelle Maschinen      |
 
 ### 187-03B - 01.00
 
@@ -199,7 +199,7 @@ EULA steht für End User License Agreement
 #### Überblick Dateisysteme
 
 - FAT32: sehr kompatibel, max. 4 GB Datei, 2 TB Partition -> USB/SD
-- NTFS: Standard Windows, große Dateien, Rechteverwaltung -> Windows/Externe Platten
+- NTFS: Standard Windows, grosse Dateien, Rechteverwaltung -> Windows/Externe Platten
 - EXT4: Standard Linux, Journaling, stabil -> Linux-Systeme
 - Btrfs: modern, Snapshots, Subvolumes -> flexible Systeme
 - ZFS: robust, Datenintegrität, riesige Datenmengen -> Server/NAS
@@ -230,7 +230,7 @@ EULA steht für End User License Agreement
 | Schritt                       | Befehl                                     | Beschreibung / Hinweis                                                                           |
 | ----------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | Partitionen anzeigen          | `lsblk`                                    | Zeigt alle Festplatten & Partitionen                                                             |
-| Partitionen überprüfen        | `sudo fdisk -l`                            | Listet Details zu Partitionen & Größe auf                                                        |
+| Partitionen überprüfen        | `sudo fdisk -l`                            | Listet Details zu Partitionen & Grösse auf                                                        |
 | Neue Partition erstellen      | `sudo fdisk /dev/sdX`                      | `X` = Laufwerksbuchstabe, interaktiv: `n` für neue Partition, `w` zum Speichern                  |
 | Partition formatieren         | `sudo mkfs.ext4 /dev/sdX1`                 | Erstellt ein EXT4-Dateisystem auf der neuen Partition (passt auch andere FS an z.B. `mkfs.ntfs`) |
 | Mountpoint erstellen          | `sudo mkdir /mnt/meinePartition`           | Erzeugt ein Verzeichnis, an dem die Partition eingebunden wird                                   |
@@ -381,7 +381,7 @@ EULA steht für End User License Agreement
 1. Ports
 
 - `ss -tulwn` -> aktive Dienste
-- Risiko: unnötige Ports schließen
+- Risiko: unnötige Ports schliessen
 
 2. Firewall
 

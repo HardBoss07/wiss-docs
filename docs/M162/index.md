@@ -56,7 +56,7 @@ Für Auswertung ist Zeichensatz & Datenformate wichtig (UTF-8, ASCII, TT-MM-YYY,
 - Bilddateien (.jpeg, .png, .gif, .svg)
 
   - Visuelle Ansicht: Anzeige als Bild in einem Bildbetrachter.
-  - Metadaten-Ansicht: Anzeige von Informationen wie Auflösung, Dateigröße, Erstellungsdatum.
+  - Metadaten-Ansicht: Anzeige von Informationen wie Auflösung, Dateigrösse, Erstellungsdatum.
   - Code-/Strukturansicht: Bei .svg möglich, da sie aus Text (XML) besteht.
 
 - Audiodateien
