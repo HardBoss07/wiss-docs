@@ -7,7 +7,7 @@
 ![](./img/cog-shield.svg)
 
 ::: notes
-Herzlich willkommen zu meiner Präsentation über das 19. Jahrhundert. Wir schauen uns heute eine Entwicklung an, die uns bis heute stark betrifft: die sogenannte "Soziale Frage". Viele Dinge, die für uns heute völlig selbstverständlich sind - wie die Krankenversicherung oder die Rentenversicherung - haben ihren Ursprung genau in dieser Zeit. Ich möchte euch heute zeigen, wie aus der harten Zeit der Industrialisierung schliesslich der Sozialstaat entstanden ist und welche Rolle dabei Karl Marx und Otto von Bismarck gespielt haben.
+Herzlich willkommen! Wir schauen uns heute das 19. Jahrhundert und die "Soziale Frage" an. Vieles, was für uns heute selbstverständlich ist - wie die Kranken- oder Rentenversicherung -, hat seinen Ursprung in dieser Zeit. Ich zeige euch, wie aus der harten Industrialisierung unser Sozialstaat entstand und welche Rolle Karl Marx und Otto von Bismarck dabei spielten.
 :::
 
 # Die Industrielle Revolution auf Hochtouren
@@ -20,7 +20,7 @@ Herzlich willkommen zu meiner Präsentation über das 19. Jahrhundert. Wir schau
 ![](./img/factory.svg)
 
 ::: notes
-Beginnen wir mit dem Auslöser für all diese Veränderungen: der Industriellen Revolution. Sie startete Ende des 18. Jahrhunderts in England und lief zur Mitte des 19. Jahrhunderts auch in Deutschland auf Hochtouren. Ausschlaggebend für diesen Boom waren bahnbrechende Erfindungen wie die Dampfmaschine, die von James Watt weiterentwickelt wurde. Es entstanden riesige Fabriken, und die Gesellschaft wandelte sich drastisch vom Agrarstaat hin zum Industriestaat. Die Menschen zogen massenhaft vom Land in die Städte.
+Die Revolution begann Ende des 18. Jahrhunderts in England und erreichte um 1850 Deutschland. Dank Erfindungen wie der Dampfmaschine wandelte sich die Gesellschaft rasant vom Agrar- zum Industriestaat. Die Folge: Menschen zogen massenhaft vom Land in die Städte, um in den neuen, riesigen Fabriken zu arbeiten.
 :::
 
 # Das Elend der Arbeiterschaft
@@ -33,7 +33,7 @@ Beginnen wir mit dem Auslöser für all diese Veränderungen: der Industriellen 
 ![](https://i.pinimg.com/564x/18/03/f6/1803f656c3afd9c4d3e3992925d71457.jpg)
 
 ::: notes
-Doch dieser wirtschaftliche Boom hatte einen hohen Preis. Das Elend der Arbeiter war enorm. Die Menschen hatten zwar Arbeit, aber zu katastrophalen Konditionen. Arbeitstage von über 12 Stunden waren völlig normal. Es gab nur Hungerlöhne, und selbst Kinder mussten in den Fabriken schuften. Es gab kaum Sicherheitsvorkehrungen, weshalb Unfälle an der Tagesordnung waren. Da Maschinen immer mehr Handarbeit ersetzten, gab es zu viele Arbeiter für zu wenige Stellen. Jeder war austauschbar und musste sich die schlechten Bedingungen gefallen lassen.
+Dieser Boom hatte einen hohen Preis. Die Arbeiter schufteten unter katastrophalen Bedingungen: 12-Stunden-Tage, Hungerlöhne und Kinderarbeit waren Alltag. Es gab kaum Sicherheit, Unfälle waren häufig. Da es mehr Arbeiter als Stellen gab, war jeder Einzelne austauschbar und musste sich den harten Bedingungen fügen.
 :::
 
 # Die Analyse von Karl Marx
@@ -46,7 +46,7 @@ Doch dieser wirtschaftliche Boom hatte einen hohen Preis. Das Elend der Arbeiter
 ![](./img/marx.png)
 
 ::: notes
-Einer der schärfsten Kritiker dieser Entwicklung war der Philosoph Karl Marx. Er erkannte, dass die Revolution die Gesellschaft spaltete. Er teilte die Gesellschaft grob in zwei Klassen ein: Auf der einen Seite die wohlhabende "Bourgeoisie", also die Fabrikbesitzer. Ihnen gehörten die Maschinen und Rohstoffe - die sogenannten Produktionsmittel. Auf der anderen Seite standen die "Proletarier", die Arbeiter. Sie besassen nichts ausser ihrer Arbeitskraft und waren von den Fabrikbesitzern komplett abhängig.
+Ein scharfer Kritiker dieser Zustände war Karl Marx. Er sah eine gespaltene Gesellschaft: Die "Bourgeoisie" (Fabrikbesitzer) besass die Produktionsmittel wie Maschinen und Rohstoffe. Demgegenüber stand das "Proletariat" (Arbeiter), das nur seine eigene Arbeitskraft besass und damit komplett von den Unternehmern abhängig war.
 :::
 
 # Der Weg in den Kommunismus
@@ -59,10 +59,10 @@ Einer der schärfsten Kritiker dieser Entwicklung war der Philosoph Karl Marx. E
 ![](https://images.thalia.media/00/-/ed10131097ad4527b3abaeca0ad70282/das-kommunistische-manifest-gebundene-ausgabe-karl-marx.jpeg)
 
 ::: notes
-Marx sah darin den Grundwiderspruch des Kapitalismus: Der Reichtum wird von den Arbeitern erschaffen, fliesst aber nur in die Taschen der wenigen Unternehmer. Marx glaubte, dass nur eine Revolution der Arbeiterklasse dies ändern könne. Das Ziel war es, die Fabriken in Gesellschaftseigentum zu überführen. Auf den Kapitalismus sollte der Sozialismus folgen, und als Endziel der Kommunismus - eine Gesellschaft völlig ohne Klassen. 1848 fasste er dies im kommunistischen Manifest mit dem berühmten Satz zusammen: "Proletarier aller Länder, vereinigt euch!"
+Marx sah darin den Grundwiderspruch des Kapitalismus: Arbeiter schaffen den Reichtum, aber nur Unternehmer kassieren ab. Sein Ziel war die Überführung der Fabriken in Gesellschaftseigentum. Über den Sozialismus sollte die klassenlose Gesellschaft entstehen: der Kommunismus. 1848 rief er im Manifest auf: "Proletarier aller Länder, vereinigt euch!"
 :::
 
-#  Aufstand und Nationalparlament
+# Aufstand und Nationalparlament
 
 - 1847: Hungersnot durch Missernten
 - 1848: Strassenkämpfe in Berlin und Frankfurt
@@ -72,7 +72,7 @@ Marx sah darin den Grundwiderspruch des Kapitalismus: Der Reichtum wird von den 
 ![](./img/paulskirche.png)
 
 ::: notes
-Die Ideen von Marx trafen den Zeitgeist. 1847 gab es durch Missernten eine riesige Hungersnot. Die Menschen hielten das Elend nicht mehr aus. 1848 kam es zur Märzrevolution mit Strassenkämpfen in grossen Städten. Die Monarchen mussten einlenken und so tagte in der Frankfurter Paulskirche das erste Nationalparlament. Ein grosser Erfolg war die Formulierung von Grundrechten wie der Meinungs- und Pressefreiheit. Letztlich scheiterte die Revolution jedoch an internen Konflikten, und die Monarchen stellten mit dem Militär die alte Ordnung wieder her.
+1847 führten Missernten zu Hungersnöten, was 1848 zur Märzrevolution entlud. In der Frankfurter Paulskirche tagte das erste Nationalparlament und formulierte Grundrechte wie die Pressefreiheit. Letztlich scheiterte die Revolution jedoch am internen Streit und dem Militär der Monarchen, die die alte Ordnung wiederherstellten.
 :::
 
 # Gemeinsam stark: Arbeiter schliessen sich zusammen
@@ -85,7 +85,7 @@ Die Ideen von Marx trafen den Zeitgeist. 1847 gab es durch Missernten eine riesi
 ![](https://nicht-mit-ufos.de/fileadmin/uploads/pics/1932_Foto_SAP-Demo_PF_fuer_Einheitsfront_mit_u._a._Baruch__StadtA_PF__02.JPG)
 
 ::: notes
-Auch wenn die Revolution von 1848 scheiterte, hatten die Arbeiter etwas Wichtiges gelernt: In der Masse liegt die Kraft. Sie begannen, sich in Verbänden und Gewerkschaften zu organisieren. Zuerst geschah das nach Berufen getrennt, wie zum Beispiel beim Druckerverband. Sie forderten soziale Absicherung und einen gesetzlichen 10-Stunden-Tag. Um diese Forderungen durchzusetzen, nutzten sie kollektive Arbeitsverweigerung - also den Streik - um den Unternehmern finanziellen Schaden zuzufügen.
+Trotz des Scheiterns der Revolution lernten die Arbeiter: In der Masse liegt die Kraft. Sie organisierten sich in Berufsverbänden und Gewerkschaften. Sie forderten soziale Absicherung und den 10-Stunden-Tag. Um Druck auf die Unternehmer auszuüben, nutzten sie kollektive Arbeitsverweigerung - den Streik.
 :::
 
 # Eine eigene politische Stimme
@@ -97,7 +97,7 @@ Auch wenn die Revolution von 1848 scheiterte, hatten die Arbeiter etwas Wichtige
 ![](./img/lectern.svg)
 
 ::: notes
-Der Zusammenhalt beschränkte sich bald nicht mehr nur auf die Strasse und die Fabriken. Die Arbeiter wollten auch politisch mitreden. Aus diesem Grund wurde 1875 die Sozialistische Arbeiterpartei Deutschlands gegründet - kurz SAP. Diese Partei ist der direkte Vorläufer der heutigen SPD. Nun konnten Gewerkschaften und Politiker Hand in Hand arbeiten, um im Parlament konkrete Rechte für die Arbeiterschaft einzufordern.
+Der Widerstand wurde politisch: 1875 gründete sich die Sozialistische Arbeiterpartei Deutschlands (SAP), der Vorläufer der heutigen SPD. Damit konnten Gewerkschaften und Politiker nun gemeinsam im Parlament für die Rechte der Arbeiterschaft kämpfen.
 :::
 
 # Das Sozialistengesetz
@@ -110,7 +110,7 @@ Der Zusammenhalt beschränkte sich bald nicht mehr nur auf die Strasse und die F
 ![](./img/otto.png)
 
 ::: notes
-Dieser neuen politischen Macht stand Reichskanzler Otto von Bismarck äusserst skeptisch gegenüber. Er reagierte mit der Strategie "Zuckerbrot und Peitsche". Die Peitsche kam zuerst: Bismarck nutzte zwei Attentate auf den Kaiser im Jahr 1878 als Ausrede, um der SAP die Schuld zu geben. Mit dem sogenannten "Sozialistengesetz" liess er sozialistische Versammlungen und Organisationen verbieten. Doch der Schuss ging nach hinten los: Das Gesetz stärkte den Zusammenhalt der Arbeiter nur noch mehr, und die Opposition gewann bei den nächsten Wahlen kräftig dazu.
+Reichskanzler Bismarck sah die SAP als Gefahr und reagierte mit "Zuckerbrot und Peitsche". Die "Peitsche" war das Sozialistengesetz von 1878, das sozialistische Organisationen verbot. Doch das Gesetz bewirkte das Gegenteil: Der Zusammenhalt der Arbeiter wuchs, und die Opposition wurde bei Wahlen immer stärker.
 :::
 
 # Der Grundstein des Sozialstaates
@@ -125,5 +125,5 @@ Dieser neuen politischen Macht stand Reichskanzler Otto von Bismarck äusserst s
 ![](./img/calendar.svg)
 
 ::: notes
-Bismarck erkannte, dass er das Problem nicht einfach verbieten konnte. Um eine echte Revolution zu verhindern und die Arbeiter an den Staat zu binden, kam nun das "Zuckerbrot". Ab 1883 führte Bismarck schrittweise staatliche Sozialleistungen ein. Dazu gehörten die Krankenversicherung, die Unfallversicherung und später die Rentenversicherung. Auch wenn diese Gesetze heute viel moderner sind - hier wurde der Grundstein für den Sozialstaat gelegt, in dem wir heute leben. Marx' Analysen und Bismarcks Reaktionen haben also unsere heutige Arbeitswelt und soziale Absicherung überhaupt erst möglich gemacht. Vielen Dank für eure Aufmerksamkeit!
+Schliesslich folgte das "Zuckerbrot": Um die Arbeiter an den Staat zu binden und eine Revolution zu verhindern, führte Bismarck ab 1883 die Kranken-, Unfall- und Rentenversicherung ein. Dies war das Fundament unseres heutigen Sozialstaates. Marx' Analysen und Bismarcks Reformen prägen unsere Arbeitswelt bis heute. Vielen Dank!
 :::
