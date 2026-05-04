@@ -37,3 +37,7 @@ $CLEANED_CONTENT
 EOF
 
 echo "Successfully updated $TARGET_FILE"
+
+# 6. Delete the source .taf file
+rm "$LATEST_TAF"
+echo "Deleted source file: $LATEST_TAF"
