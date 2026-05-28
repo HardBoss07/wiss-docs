@@ -12,3 +12,4 @@ docs/M122/scripts/*.conf
 *.bin
 docs/M122/scripts/7A/grosse_dateien.txt
 .settings/
+docs/**/teacher_slides/*
