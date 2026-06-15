@@ -9,7 +9,7 @@ Diese Zusammenfassung basiert auf der Dokumentation in [index.md](./index.md). A
   1.  _On-Demand Self-Service:_ Ressourcen können eigenständig und ohne Interaktion mit dem Anbieter gebucht werden.
   2.  _Broad Network Access:_ Zugriff erfolgt über Standardmechanismen von beliebigen Standorten und Endgeräten (z. B. Smartphone, Laptop).
   3.  _Resource Pooling:_ Physische Hardware wird durch Mandantenfähigkeit von mehreren Nutzern geteilt.
-  4.  _Rapid Elasticity:_ Kapazitäten lassen sich extrem schnell vergrößern oder verkleinern.
+  4.  _Rapid Elasticity:_ Kapazitäten lassen sich extrem schnell vergrössern oder verkleinern.
   5.  _Measured Service:_ Die Nutzung wird überwacht und verbrauchsabhängig abgerechnet (Pay-per-Use).
 - **Vor- und Nachteile:**
   - _Vorteile:_ Keine hohen Vorabinvestitionen in Hardware (Kostenersparnis), hohe Skalierbarkeit und weltweite Verfügbarkeit.
@@ -19,22 +19,22 @@ Diese Zusammenfassung basiert auf der Dokumentation in [index.md](./index.md). A
 - **Assets in der Cloud:** Daten (Dokumente, Fotos, Datenbanken), Software (SaaS), Infrastruktur (Server, Netzwerke, Betriebssysteme) und Rechenleistung (für Berechnungen oder KI-Modelle).
 - **Die drei Dienstmodelle & Verantwortlichkeiten:**
   - _IaaS (Infrastructure as a Service):_ Der Anbieter stellt die Hardware-Infrastruktur bereit (Server, Storage, Netzwerk, Virtualisierung). Der Nutzer verwaltet das Betriebssystem, die Middleware, die Laufzeitumgebung, Daten und Anwendungen. (Zielgruppe: Systemadministratoren; hohe Kontrolle und Wartungsaufwand; Analogie: leerer Herd in einer Mietküche).
-  - _PaaS (Platform as a Service):_ Der Anbieter verwaltet zusätzlich das Betriebssystem, die Middleware und die Laufzeitumgebung. Der Nutzer kümmert sich ausschließlich um die Entwicklung sowie die Verwaltung der Anwendungen und Daten. (Zielgruppe: Softwareentwickler; mittlere Kontrolle, geringer Aufwand; Analogie: fertiges Buffet).
+  - _PaaS (Platform as a Service):_ Der Anbieter verwaltet zusätzlich das Betriebssystem, die Middleware und die Laufzeitumgebung. Der Nutzer kümmert sich ausschliesslich um die Entwicklung sowie die Verwaltung der Anwendungen und Daten. (Zielgruppe: Softwareentwickler; mittlere Kontrolle, geringer Aufwand; Analogie: fertiges Buffet).
   - _SaaS (Software as a Service):_ Der Anbieter betreibt und wartet die komplette Softwareanwendung inklusive aller darunterliegenden Schichten. Der Nutzer greift über den Webbrowser darauf zu. (Zielgruppe: Endanwender; geringe Kontrolle, minimaler Aufwand; Analogie: Restaurantbesuch).
 
 ## 2. Hyperscaler & Cloud-Provider
 
 - **Grundlagen:** Hyperscaler sind weltweite Marktführer mit riesigen Rechenzentren, die Ressourcen on-demand bereitstellen, sich dynamisch skalieren (Grid Computing) und eine globale Infrastruktur für niedrige Latenz und Ausfallsicherheit besitzen.
-- **Schweizer Regionen:** Alle drei großen Anbieter besitzen eigene Rechenzentren in der Schweiz, um Datensouveränität (Daten bleiben im Land) und schnelle Verbindungen zu gewährleisten:
+- **Schweizer Regionen:** Alle drei grossen Anbieter besitzen eigene Rechenzentren in der Schweiz, um Datensouveränität (Daten bleiben im Land) und schnelle Verbindungen zu gewährleisten:
   - _Microsoft Azure:_ Regionen "Switzerland North" (Zürich) und "Switzerland West" (Genf).
   - _Google Cloud Platform (GCP):_ Region "europe-west6" (Zürich).
   - _Amazon Web Services (AWS):_ Region "Europe Zurich" ("eu-central-2").
 - **Provider-Vergleich:**
-  - _AWS:_ Marktführer mit dem größten Service-Angebot, ausgereifter Technologie und einer großen Community. Nachteilig sind die sehr komplexen Kostenstrukturen und eine steile Lernkurve.
+  - _AWS:_ Marktführer mit dem grössten Service-Angebot, ausgereifter Technologie und einer grossen Community. Nachteilig sind die sehr komplexen Kostenstrukturen und eine steile Lernkurve.
   - _Microsoft Azure:_ Bietet eine hervorragende Integration in Windows-/Office- und Active-Directory-Umgebungen sowie für Hybrid-Cloud-Szenarien. Nachteile sind eine unübersichtliche Portal-Oberfläche und teils veraltete Dokumentationen.
   - _GCP:_ Technologisch führend im Bereich KI, Datenanalyse und Container-Technologien (Kubernetes) bei einfacherer Preisgestaltung. Nachteilig sind weniger spezielle Enterprise-Services und ein kleineres Netz an Rechenzentren.
 - **Kostenmodelle:** Abrechnung erfolgt nach dem On-Demand-Modell (Pay-as-you-go) ohne Vorabkosten. Die Schweizer Cloud-Regionen sind aufgrund höherer Betriebs-, Immobilien- und Stromkosten teurer als Regionen in Deutschland (Frankfurt) oder den USA. Zur Kostensenkung können Rabatte durch die Reservierung von Ressourcen für ein oder drei Jahre in Anspruch genommen werden.
-- **Referenzarchitektur:** Eingehender Traffic wird über einen _Load Balancer_ gleichmäßig verteilt. Dahinter liegt eine _Auto-Scaling Group_ aus virtuellen Maschinen (Compute-Ebene), die bei Bedarf automatisch wächst oder schrumpft. Die Daten werden in einer verwalteten _Datenbank_ über mehrere physische _Availability Zones_ gespiegelt. Statische Daten (Bilder, Backups) werden kostengünstig auf einem _Objektspeicher_ (z. B. Amazon S3) abgelegt.
+- **Referenzarchitektur:** Eingehender Traffic wird über einen _Load Balancer_ gleichmässig verteilt. Dahinter liegt eine _Auto-Scaling Group_ aus virtuellen Maschinen (Compute-Ebene), die bei Bedarf automatisch wächst oder schrumpft. Die Daten werden in einer verwalteten _Datenbank_ über mehrere physische _Availability Zones_ gespiegelt. Statische Daten (Bilder, Backups) werden kostengünstig auf einem _Objektspeicher_ (z. B. Amazon S3) abgelegt.
 
 ## 3. Cloud Native, Container & Microservices
 
@@ -63,8 +63,8 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
   - Netzwerk: 4 Adapter (1x NAT für ausgehende Internetverbindungen, 3x Host-Only Adapter zur Isolation des internen Traffics und für SSH/SCP-Zugriffe über die Host-IP `192.168.56.126` oder `192.168.56.104`).
 - **Host-Vorbereitung:** Die Docker-Installation erfolgt automatisiert über das Skript [docker_init.sh](./docker_init.sh), welches Paketquellen-GPG-Schlüssel einliest, das Docker-Repository einrichtet und die Docker Engine (`docker-ce`, `docker-ce-cli`, `containerd.io`) installiert.
 - **Multi-Container-Architektur:**
-  - _Loadbalancer:_ Ein Nginx-Container (`edugame_lb`), der nach außen über Port 80 erreichbar ist. Er fungiert als Reverse Proxy auf Layer 7 und verteilt eingehende Anfragen zustandslos über das **Round-Robin-Verfahren** (abwechselnde Verteilung).
-  - _Webserver:_ Zwei Apache-Container (`edugame_web1` auf Basis von `httpd:2.4` und `edugame_web2`), die isoliert in einem internen Docker-Bridge-Netzwerk namens `edugame_net` laufen und keine Ports direkt nach außen freigeben.
+  - _Loadbalancer:_ Ein Nginx-Container (`edugame_lb`), der nach aussen über Port 80 erreichbar ist. Er fungiert als Reverse Proxy auf Layer 7 und verteilt eingehende Anfragen zustandslos über das **Round-Robin-Verfahren** (abwechselnde Verteilung).
+  - _Webserver:_ Zwei Apache-Container (`edugame_web1` auf Basis von `httpd:2.4` und `edugame_web2`), die isoliert in einem internen Docker-Bridge-Netzwerk namens `edugame_net` laufen und keine Ports direkt nach aussen freigeben.
 - **Verzeichnisstruktur im Ordner `edugame-setup`:**
   ```text
   M306/
@@ -113,7 +113,7 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
   - _Datenresilienz:_ Widerstandsfähigkeit von Daten und Systemen gegen Fehler oder Angriffe, um den Betrieb aufrechtzuerhalten.
   - _Hochverfügbarkeit (HA):_ Systemarchitektur ohne Single Point of Failure (SPOF) und mit automatischem Failover zur Echtzeit-Vermeidung von Ausfällen (hoher Aufwand, synchrone Replikation).
   - _Disaster Recovery (DR):_ Richtlinien und technische Abläufe zur Wiederherstellung der IT nach einem Totalausfall (mittlerer bis hoher Aufwand, Fokus auf Wiederherstellungszeit/RTO).
-  - _Backup:_ Regelmäßige, versionierte Spiegelung und Archivierung von Datenbeständen gegen Verlust (geringer Aufwand, historischer Fokus).
+  - _Backup:_ Regelmässige, versionierte Spiegelung und Archivierung von Datenbeständen gegen Verlust (geringer Aufwand, historischer Fokus).
 - **Gegenüberstellung der Schutzmassnahmen:**
   | Kriterium | Hochverfügbarkeit (HA) | Disaster Recovery (DR) | Backup |
   | :--- | :--- | :--- | :--- |
@@ -164,7 +164,7 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
   - _NFT02 (Netzwerksicherheit):_ Externer Verbindungsversuch auf MariaDB-Port 3306 läuft in ein Timeout (Port-Isolation). -> **Bestanden**
   - _NFT03 (Performance):_ Ladezeit der Nextcloud-Startseite liegt unter 2 Sekunden. -> **Bestanden**
   - _NFT04 (Ressourcenverbrauch):_ CPU-Auslastung im Leerlauf liegt unter 5 %, RAM-Verbrauch bleibt stabil. -> **Bestanden**
-- **Abnahme & verbleibende Maßnahmen:** Die Migration wurde als zu 100 % erfolgreich bewertet. Die Freigabe für den produktiven Betrieb wurde erteilt; die alte On-Premise-VM kann nach einer Sicherheitsfrist von 7 Tagen gelöscht werden. Als offene Maßnahme muss der Nginx-Loadbalancer zwingend mit SSL-Zertifikaten (HTTPS) konfiguriert werden, bevor er für das öffentliche Internet freigegeben wird.
+- **Abnahme & verbleibende Massnahmen:** Die Migration wurde als zu 100 % erfolgreich bewertet. Die Freigabe für den produktiven Betrieb wurde erteilt; die alte On-Premise-VM kann nach einer Sicherheitsfrist von 7 Tagen gelöscht werden. Als offene Massnahme muss der Nginx-Loadbalancer zwingend mit SSL-Zertifikaten (HTTPS) konfiguriert werden, bevor er für das öffentliche Internet freigegeben wird.
 - **Relevanz der IT-Systemdokumentation:**
   - _Wissenstransfer:_ Verhindert den Verlust impliziten Wissens bei Teamwechseln.
   - _Fehlerbehebung:_ Verkürzt die Behebungszeit (MTTR) im Fehlerfall erheblich.
@@ -206,7 +206,7 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
   | :--- | :--- | :--- | :--- |
   | **Rechtlicher Sitz** | USA / Irland (für EU/CH) | Dubai, Vereinigte Arabische Emirate | Schweiz (Pfäffikon SZ) |
   | **Anwendbares Recht** | EU-DSGVO / Schweizer DSG | VAE-Recht | Schweizer DSG / EU-DSGVO |
-  | **Verschlüsselung** | E2E standardmäßig aktiv | E2E nur in "Geheimen Chats" (Standard-Chats liegen auf Servern) | E2E standardmäßig für alle Chats aktiv |
+  | **Verschlüsselung** | E2E standardmässig aktiv | E2E nur in "Geheimen Chats" (Standard-Chats liegen auf Servern) | E2E standardmässig für alle Chats aktiv |
   | **Metadaten** | Sehr hoch (Nummer, IP, Kontakte, online) | Hoch (Nummer, IP, Kontaktliste auf Servern) | Minimal (anonyme 8-stellige ID, keine Nummer nötig) |
   | **Datennutzung** | Meta-Werbeprofile, Business-Features | Cloud-Synchronisation, Kanäle-Werbung | Nur zur technischen Übermittlung |
 - **Datenschutz nach Schweizer DSG (gültig ab 1. September 2023):**
@@ -220,7 +220,7 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
 
 Dieses Regelwerk definiert Best Practices für moderne, skalierbare Cloud-Anwendungen:
 
-1.  **Codebase (Codebasis):** Es gibt eine strikte 1:1-Beziehung zwischen Applikation und Git-Repository. Der Code bleibt über alle Deployments (Dev, Staging, Prod) identisch. Ein eigenener Branch mit hardcodierten Zugangsdaten für die Live-Umgebung ist ein Verstoß.
+1.  **Codebase (Codebasis):** Es gibt eine strikte 1:1-Beziehung zwischen Applikation und Git-Repository. Der Code bleibt über alle Deployments (Dev, Staging, Prod) identisch. Ein eigenener Branch mit hardcodierten Zugangsdaten für die Live-Umgebung ist ein Verstoss.
 2.  **Dependencies (Abhängigkeiten):** Die App darf sich nicht auf global vorinstallierte Host-Werkzeuge (z. B. `curl`) verlassen. Alle Abhängigkeiten müssen explizit im Manifest (z. B. `package.json`, `requirements.txt`) deklariert und durch Container-Technologien (Docker) isoliert werden.
 3.  **Config (Konfiguration):** Alles, was sich zwischen den Deployments unterscheidet (Datenbank-Passwörter, API-Keys), gehört über Umgebungsvariablen (`ENV`) zur Laufzeit injiziert. Der Quellcode muss ohne Sicherheitsrisiko als Open-Source auf GitHub veröffentlicht werden können.
 4.  **Backing Services (Unterstützende Dienste):** Externe Dienste (Datenbanken, Mailserver, Caches) werden als lose gekoppelte Ressourcen behandelt, die über das Netzwerk via Connection String angebunden sind. Sie müssen sich ohne Code-Änderung austauschen lassen.
@@ -230,8 +230,8 @@ Dieses Regelwerk definiert Best Practices für moderne, skalierbare Cloud-Anwend
     - _Run-Phase:_ Der Container wird ausgeführt. Änderungen im laufenden Betrieb ("Hot-Fixes" auf dem Server) sind nicht erlaubt.
 6.  **Processes (Prozesse):** Die Anwendung wird als ein oder mehrere absolut zustandslose (stateless) Prozesse ausgeführt (Shared-Nothing-Architektur). Da Container-Speicher flüchtig (ephemeral) ist, müssen persistente Daten in Datenbanken, Redis-Caches oder Objektspeichern abgelegt werden.
 7.  **Port Binding (Port-Bindung):** Die Anwendung ist autark und bringt ihren eigenen Webserver im Code mit (z. B. Spring Boot auf Port 8080). Sie verlässt sich nicht auf einen externen Webserver auf dem Host. Der externe Zugriff wird über vorgelagerte Load Balancer oder Reverse Proxies geroutet.
-8.  **Concurrency (Nebenläufigkeit):** Skalierung erfolgt horizontal durch das Starten weiterer Instanzen des zustandslosen Prozesses (z. B. `docker compose up --scale web=5`), anstatt den bestehenden Server vertikal zu vergrößern.
-9.  **Disposability (Einweg-Mentalität):** Prozesse müssen robust sein. Sie müssen sich schnell starten lassen (um auf Lastspitzen zu reagieren) und sich bei einem Stopp-Signal (`SIGTERM`) sauber beenden (Graceful Shutdown: laufende Anfragen abarbeiten, DB-Verbindungen schließen). Bei Abstürzen darf keine Datenkorruption auftreten.
+8.  **Concurrency (Nebenläufigkeit):** Skalierung erfolgt horizontal durch das Starten weiterer Instanzen des zustandslosen Prozesses (z. B. `docker compose up --scale web=5`), anstatt den bestehenden Server vertikal zu vergrössern.
+9.  **Disposability (Einweg-Mentalität):** Prozesse müssen robust sein. Sie müssen sich schnell starten lassen (um auf Lastspitzen zu reagieren) und sich bei einem Stopp-Signal (`SIGTERM`) sauber beenden (Graceful Shutdown: laufende Anfragen abarbeiten, DB-Verbindungen schliessen). Bei Abstürzen darf keine Datenkorruption auftreten.
 10. **Dev/Prod Parity (Umgebungsparität):** Unterschiede zwischen Entwicklung (Dev) und Live-Betrieb (Prod) werden minimiert: zeitlich (Code geht in Minuten live), personell (DevOps-Ansatz) und technisch (lokal wird exakt dieselbe Datenbank-Version via Docker genutzt wie produktiv).
 11. **Logs (Protokolle):** Die App kümmert sich nicht um die Speicherung, Rotation oder Analyse von Logdateien. Sie schreibt Logs ungepuffert direkt nach `stdout` und `stderr`. Die Laufzeitumgebung (z. B. Docker-Daemon) fängt den Stream ab und leitet ihn an Log-Aggregatoren (z. B. Loki, ELK) weiter.
 12. **Admin Processes (Administrative Prozesse):** Einmalige administrative Aufgaben (z. B. Datenbankmigrationen, Backups) müssen unter exakt denselben Bedingungen (gleiche Codebasis und Umgebungskonfiguration) in kurzlebigen Einmal-Containern (Ephemeral Processes) ausgeführt werden.

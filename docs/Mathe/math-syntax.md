@@ -122,7 +122,7 @@ Plotly.newPlot("plot1", [trace], { title: "Parabel Plot", margin: { t: 40 } });
 | Ungleich                | `\neq`          | $\neq$          |
 | Ungefähr gleich         | `\approx`       | $\approx$       |
 | Entspricht              | `\hat=`         | $\hat=$         |
-| Kleiner / Größer gleich | `\leq` / `\geq` | $\leq$ / $\geq$ |
+| Kleiner / Grösser gleich | `\leq` / `\geq` | $\leq$ / $\geq$ |
 | Proportional zu         | `\propto`       | $\propto$       |
 | Identisch               | `\equiv`        | $\equiv$        |
 
@@ -160,7 +160,7 @@ Plotly.newPlot("plot1", [trace], { title: "Parabel Plot", margin: { t: 40 } });
 
 ## 6. Griechisches Alphabet (Auswahl)
 
-_Tipp: Für Großbuchstaben einfach den ersten Buchstaben groß schreiben (z.B. `\Gamma` statt `\gamma`)._
+_Tipp: Für Grossbuchstaben einfach den ersten Buchstaben gross schreiben (z.B. `\Gamma` statt `\gamma`)._
 | Beschreibung | Code | Gerendert |
 | :--- | :--- | :--- |
 | Alpha, Beta, Gamma | `\alpha`, `\beta`, `\gamma` | $\alpha$, $\beta$, $\gamma$ |
@@ -179,7 +179,7 @@ _Tipp: Für Großbuchstaben einfach den ersten Buchstaben groß schreiben (z.B. 
 
 ## 8. Klammern (die mitwachsen)
 
-Wenn du große Brüche hast, passen sich normale Klammern `()` nicht an. Nutze `\left(` und `\right)`:
+Wenn du grosse Brüche hast, passen sich normale Klammern `()` nicht an. Nutze `\left(` und `\right)`:
 
 - Feste, kleine Klammern: `( \frac{1}{2} )`
 - Mitwachsende Klammern: `\left( \frac{1}{2} \right)`

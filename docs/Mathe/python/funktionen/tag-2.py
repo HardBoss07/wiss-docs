@@ -46,7 +46,7 @@ def func2(x):
 
 # --- 3. Das Hauptprogramm (Erstellung der Subplots) ---
 
-# Fenstergröße angepasst: 10x5 ist perfekt für zwei quadratische Plots nebeneinander
+# Fenstergrösse angepasst: 10x5 ist perfekt für zwei quadratische Plots nebeneinander
 fig, axes = plt.subplots(1, 2, figsize=(10, 5))
 
 # Ersten Subplot befüllen (Index 0)

@@ -85,7 +85,7 @@ Eine **Hybrid Cloud** kombiniert private Infrastruktur (On-Premises-Rechenzentru
 
 ### Die Rolle von Containern in der Hybrid Cloud
 
-Das größte Problem einer Hybrid-Cloud-Umgebung ist die **Heterogenität**: Lokale Server nutzen oft andere Betriebssystem-Konfigurationen, Kernel-Versionen oder Hardware-Abstraktionen als die Instanzen beim Public-Cloud-Anbieter. Hier sind Container das perfekte Bindeglied:
+Das grösste Problem einer Hybrid-Cloud-Umgebung ist die **Heterogenität**: Lokale Server nutzen oft andere Betriebssystem-Konfigurationen, Kernel-Versionen oder Hardware-Abstraktionen als die Instanzen beim Public-Cloud-Anbieter. Hier sind Container das perfekte Bindeglied:
 
 - **Abstraktion vom Host-System:** Container verpacken die Anwendung und alle ihre Abhängigkeiten (Libraries, Runtimes). Solange eine Container-Engine (wie Docker oder Podman) auf dem Host läuft, verhält sich der Container lokal exakt genau so wie in der Public Cloud.
 - **Portabilität:** Du kannst ein containerisiertes Image ohne Code-Änderungen aus deinem lokalen Environment direkt in eine Cloud-Umgebung verschieben.
@@ -140,7 +140,7 @@ Wenn man sich gegen fertige Cloud-Managed-Services (SaaS/PaaS) entscheidet und s
 
 - **Vollständige Datenhoheit und Compliance:** Da die gesamte Infrastruktur und die Datenhaltung selbst kontrolliert werden, können strengste regulatorische Vorgaben (wie die DSGVO oder Schweizer Datenschutzrichtlinien) ohne Abhängigkeit von Drittanbietern eingehalten werden.
 - **Maximale technologische Unabhängigkeit:** Es entsteht kein Vendor Lock-in. Ein containerisierter Stack läuft identisch auf lokaler Bare-Metal-Hardware wie bei jedem beliebigen Cloud-Provider, was den Wechsel des Anbieters massiv erleichtert.
-- **Feingranulare Kostenkontrolle:** Bei sehr großen Datenmengen oder dauerhaft hoher Grundlast fallen die variablen Nutzungsgebühren von Cloud-Plattformen weg. Die Kosten sind durch die bereitgestellte Hardware fix und planbar.
+- **Feingranulare Kostenkontrolle:** Bei sehr grossen Datenmengen oder dauerhaft hoher Grundlast fallen die variablen Nutzungsgebühren von Cloud-Plattformen weg. Die Kosten sind durch die bereitgestellte Hardware fix und planbar.
 - **Massgeschneiderte Konfiguration:** Anpassungen am Betriebssystem-Kernel, spezielle Sicherheitsmodule oder tiefgreifende Netzwerk-Routings können exakt nach eigenen Vorstellungen umgesetzt werden, was bei restriktiven PaaS-Umgebungen oft blockiert wird.
 
 ## 8. Migration in die Cloud
