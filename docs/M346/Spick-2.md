@@ -89,7 +89,7 @@ Das grösste Problem einer Hybrid-Cloud-Umgebung ist die **Heterogenität**: Lok
 
 - **Abstraktion vom Host-System:** Container verpacken die Anwendung und alle ihre Abhängigkeiten (Libraries, Runtimes). Solange eine Container-Engine (wie Docker oder Podman) auf dem Host läuft, verhält sich der Container lokal exakt genau so wie in der Public Cloud.
 - **Portabilität:** Du kannst ein containerisiertes Image ohne Code-Änderungen aus deinem lokalen Environment direkt in eine Cloud-Umgebung verschieben.
-- **Orchestrierung:** Tools wie Kubernetes oder Docker Swarm ermöglichen es, Container-Cluster über Cloud-Grenzen hinweg konsistent zu verwalten (z. B. Workloads bei Lastspitzen flexibel von On-Premises in die Public Cloud auszulagern – sogenannte _Cloud Bursts_).
+- **Orchestrierung:** Tools wie Kubernetes oder Docker Swarm ermöglichen es, Container-Cluster über Cloud-Grenzen hinweg konsistent zu verwalten (z. B. Workloads bei Lastspitzen flexibel von On-Premises in die Public Cloud auszulagern - sogenannte _Cloud Bursts_).
 
 ## 6. Betrieb von Diensten (Container-Kommandos)
 
@@ -171,7 +171,7 @@ Für das moderne Datenmanagement im Unternehmen kommen je nach Struktur und Verw
 | Merkmal                   | Data Lake                                                                                                                | Data Warehouse                                                                                                      |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
 | **Datenstruktur**         | Unstrukturierte, semistrukturierte und strukturierte Daten (Rohdaten wie Logs, Bilder, CSVs, JSON).                      | Rein strukturierte Daten, die bereits transformiert und in relationale Tabellenmodelle gepresst wurden.             |
-| **Verarbeitungs-Ansatz**  | **ELT** (Extract, Load, Transform) – Daten werden zuerst unverändert gespeichert und erst bei der Abfrage transformiert. | **ETL** (Extract, Transform, Load) – Daten müssen vor dem Speichern bereinigt, transformiert und modelliert werden. |
+| **Verarbeitungs-Ansatz**  | **ELT** (Extract, Load, Transform) - Daten werden zuerst unverändert gespeichert und erst bei der Abfrage transformiert. | **ETL** (Extract, Transform, Load) - Daten müssen vor dem Speichern bereinigt, transformiert und modelliert werden. |
 | **Zielgruppe & Fokus**    | Data Scientists und Data Engineers für flexible, explorative Analysen und maschinelles Lernen.                           | Business Analysten und Management für vordefinierte Berichte, Dashboards und Business Intelligence (BI).            |
 | **Kosten & Flexibilität** | Sehr kostengünstig skalierbar (Objektspeicher wie AWS S3), extrem flexibel bei neuen Datentypen.                         | Höhere Speicherkosten durch optimierte, proprietäre Compute- und Storage-Engines; starr bei Schema-Änderungen.      |
 

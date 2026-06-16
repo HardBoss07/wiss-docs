@@ -216,16 +216,16 @@ Das 12-Faktoren-Prinzip erzwingt eine strikte Trennung von Code, Konfiguration u
 
 ### Die goldene Faustregel: Funktionale vs. Nicht-funktionale Tests
 
-> **Funktionale Tests prüfen das „Was“, nicht-funktionale Tests prüfen das „Wie“.**
+> **Funktionale Tests prüfen das "Was", nicht-funktionale Tests prüfen das "Wie".**
 
-#### 1. Funktionale Tests (Das „Was“)
+#### 1. Funktionale Tests (Das "Was")
 
 Prüfen, ob das System tut, was es gemäss den funktionalen Anforderungen tun soll (Features, Business-Logik).
 
 - _Beispielfragen:_ Funktioniert der Login mit korrektem Passwort? Legt der Button den Artikel in den Warenkorb? Wird die Mehrwertsteuer korrekt berechnet?
 - _Prüfungsrelevante Szenarien:_ Web-Erreichbarkeit (FT01), Loadbalancing-Wechsel (FT02), Datei-Upload in Cloud-Speicher (FT03), Datenpersistenz nach Container-Neustart (FT04).
 
-#### 2. Nicht-funktionale Tests (Das „Wie“)
+#### 2. Nicht-funktionale Tests (Das "Wie")
 
 Prüfen, wie gut, sicher, performant oder resilient das System seine Funktionen ausführt (Qualitäts- und Infrastrukturmerkmale).
 

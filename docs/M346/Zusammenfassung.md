@@ -121,7 +121,7 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
   | **Zeitlicher Fokus** | Echtzeit (Sekunden bis Minuten) | Stunden bis Tage (RTO) | Historisch (Tage, Wochen, Monate) |
   | **Typisches Szenario** | Ausfall einer HDD oder Server-Instanz | Totalausfall RZ, Ransomware | Versehentliches Löschen, Fehl-Deployments |
   | **Aufwand** | Sehr hoch | Mittel bis hoch | Gering bis mittel |
-- **Die 6 R’s der Cloud-Migration:**
+- **Die 6 R's der Cloud-Migration:**
   - _Rehosting (Lift & Shift):_ 1:1-Verschiebung der Infrastruktur ohne Architekturänderungen.
   - _Replatforming:_ Leichte Optimierungen zur Nutzung von Cloud-Vorteilen (z. B. Migration auf Managed Databases).
   - _Refactoring:_ Kompletter Umbau der Software auf eine Cloud-Native-Architektur (z. B. Microservices).
@@ -153,8 +153,8 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
   - _Checkliste:_ Einfache Vorab-Prüfung von Bedingungen.
   - _Abnahmeprotokoll (Testbericht):_ Zusammenfassung aller Ergebnisse als Entscheidungsgrundlage für den Go-Live.
 - **Unterschied Funktionale vs. Nicht-funktionale Tests:**
-  - _Funktionale Tests (Das „Was“):_ Prüfen, ob das System die funktionalen Anforderungen erfüllt (Features, Use Cases, Eingabe/Ausgabe).
-  - _Nicht-funktionale Tests (Das „Wie“):_ Prüfen die Qualität der Ausführung (Performance, Sicherheit, Skalierbarkeit, Ressourcenverbrauch).
+  - _Funktionale Tests (Das "Was"):_ Prüfen, ob das System die funktionalen Anforderungen erfüllt (Features, Use Cases, Eingabe/Ausgabe).
+  - _Nicht-funktionale Tests (Das "Wie"):_ Prüfen die Qualität der Ausführung (Performance, Sicherheit, Skalierbarkeit, Ressourcenverbrauch).
 - **Durchgeführte Testszenarien (Auszug aus dem Protokoll von Matteo Bosshard für die VM `192.168.56.126`):**
   - _FT01 (Web-Erreichbarkeit):_ Aufruf von IP über Port 80 lädt Website 1 oder 2. -> **Bestanden**
   - _FT02 (Loadbalancing):_ Mehrmaliges Laden der Seite wechselt abwechselnd zwischen Website 1 und 2. -> **Bestanden**

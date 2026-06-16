@@ -5,7 +5,7 @@ Unser **Held** ist der klassische Student oder Creator im digitalen Chaos. In se
 
 ### Die Heldenreise (Folie 3)
 
-"Der **Ruf zum Abenteuer** ist die drohende Deadline. Hier tritt Notion als **Mentor** auf. Wichtig: Notion ist nicht der Held – es schreibt die Arbeit nicht von selbst. Es ist das 'digitale Schwert', das dem Nutzer die Struktur gibt, um das Chaos zu besiegen. Das **Elixier**, das am Ende bleibt, ist nicht nur die fertige Abgabe, sondern das Gefühl von mentaler Klarheit und echtem Fokus."
+"Der **Ruf zum Abenteuer** ist die drohende Deadline. Hier tritt Notion als **Mentor** auf. Wichtig: Notion ist nicht der Held - es schreibt die Arbeit nicht von selbst. Es ist das 'digitale Schwert', das dem Nutzer die Struktur gibt, um das Chaos zu besiegen. Das **Elixier**, das am Ende bleibt, ist nicht nur die fertige Abgabe, sondern das Gefühl von mentaler Klarheit und echtem Fokus."
 
 ### Das Kreativ-Produkt & 4-Ohren (Folie 4)
 
@@ -20,4 +20,4 @@ In der Analyse bedeutet das:
 ### Fazit (Folie 5)
 
 "Warum funktioniert das? Weil wir kein technisches Tool verkaufen, sondern das Ende der Überforderung. Wir haben die **Sachebene bewusst klein gehalten**, da Features allein keine Emotionen wecken. Wir setzen auf das **Beziehungs- und Selbstkundgabe-Ohr**, um Vertrauen aufzubauen.
-Unser Fazit: Notion besiegt das Chaos nicht für dich – aber es ist das Werkzeug, mit dem du es tust. Vielen Dank!"
+Unser Fazit: Notion besiegt das Chaos nicht für dich - aber es ist das Werkzeug, mit dem du es tust. Vielen Dank!"

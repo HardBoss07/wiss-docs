@@ -13,8 +13,8 @@
 
 1. They **are** no longer **able to** compete.
 2. There are milestones of freedom: ... the point when you **are allowed to** take public transport alone ...
-3. A teenager complains because her parents **make her do** her homework and don’t let her stay out after 10 o’clock.
-4. The 30-year-old suffers because he’**s supposed to** be earning more than his peers ...
+3. A teenager complains because her parents **make her do** her homework and don't let her stay out after 10 o'clock.
+4. The 30-year-old suffers because he'**s supposed to** be earning more than his peers ...
 5. ... **they managed** to break out of the timeline that society had set for them.
 
 # Page 139
