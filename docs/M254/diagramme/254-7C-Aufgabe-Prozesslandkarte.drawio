@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
+  <diagram id="PL1" name="Prozesslandkarte">
+    <mxGraphModel dx="1134" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f_bg" value="FÜHRUNGSPROZESSE (Management)" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fontStyle=1;startSize=40;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="700" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" value="Unternehmensstrategie" style="rounded=1;whiteSpace=wrap;html=1;" parent="f_bg" vertex="1">
+          <mxGeometry x="60" y="30" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="Qualitätsmanagement (QA)" style="rounded=1;whiteSpace=wrap;html=1;" parent="f_bg" vertex="1">
+          <mxGeometry x="270" y="30" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="Produktionsplanung" style="rounded=1;whiteSpace=wrap;html=1;" parent="f_bg" vertex="1">
+          <mxGeometry x="480" y="30" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k_bg" value="KERNPROZESSE (Wertschöpfung)" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fontStyle=1;startSize=40;" parent="1" vertex="1">
+          <mxGeometry x="40" y="200" width="700" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="k1" value="1. Verkauf &amp; Webshop" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="k_bg" vertex="1">
+          <mxGeometry x="60" y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k2" value="2. Produktion &amp; Fertigung" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="k_bg" vertex="1">
+          <mxGeometry x="270" y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k3" value="3. Logistik &amp; Versand" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontStyle=1" parent="k_bg" vertex="1">
+          <mxGeometry x="480" y="50" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_k1_k2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;" parent="k_bg" source="k1" target="k2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_k2_k3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;" parent="k_bg" source="k2" target="k3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s_bg" value="SUPPORTPROZESSE (Unterstützung)" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;fontStyle=1;startSize=40;" parent="1" vertex="1">
+          <mxGeometry x="40" y="380" width="700" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="Materialbeschaffung" style="rounded=1;whiteSpace=wrap;html=1;" parent="s_bg" vertex="1">
+          <mxGeometry x="60" y="30" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="Buchhaltung / Inkasso" style="rounded=1;whiteSpace=wrap;html=1;" parent="s_bg" vertex="1">
+          <mxGeometry x="270" y="30" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="IT &amp; Webshop-Betrieb" style="rounded=1;whiteSpace=wrap;html=1;" parent="s_bg" vertex="1">
+          <mxGeometry x="480" y="30" width="160" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,202 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
+  <diagram id="SWIM1" name="Order-to-Production">
+    <mxGraphModel dx="1059" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane1" value="KUNDE (Organisatorisch)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#f5f5f5;fontStyle=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="260" height="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="WEBSHOP &amp;amp; ERP (Technisches System)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#f5f5f5;fontStyle=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="300" y="20" width="340" height="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="TOPOMEDICS (Produktion/Logistik)" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#f5f5f5;fontStyle=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="640" y="20" width="280" height="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="t_buy" value="Aktion: Materialbeschaffung auslösen" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="lane3" vertex="1">
+          <mxGeometry x="55" y="400" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k_start" value="START: Bestellung" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="100" y="60" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="k_cart" value="Aktion: Legt Produkt in den Warenkorb" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="95" y="140" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k_pay" value="Aktion: Wählt Zahlungsart aus" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="95" y="440" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k_mail" value="Ereignis: Empfängt Bestellbestätigung" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="95" y="600" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="k_end" value="ENDE: Empfängt Paket &amp;amp; Rechnung" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="95" y="990" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="it_check" value="Aktion: Prüft DB-Bestand &amp;amp; kalkuliert Versandkosten" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="390" y="140" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="it_dec" value="Ist Material verfügbar?" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="395" y="240" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="it_info" value="Aktion: API Info an Beschaffung" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="490" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="it_checkout" value="Aktion: Checkout UI bereitstellen" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="330" y="340" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="it_save" value="Aktion: Speichert Order in Datenbank" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="390" y="520" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="it_mail" value="Aktion: Generiert &amp;amp; sendet Bestätigungs-Mail" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="390" y="600" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="it_track" value="Aktion: Tracking-Mail versenden" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="390" y="910" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t_plan" value="Aktion: Produktionsplanung" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="700" y="600" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t_prod" value="Aktion: Fertigung &amp;amp; QA-Kontrolle" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="700" y="680" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pack" value="Aktion: Verpacken" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="700" y="760" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t_dec" value="Zahlung auf Rechnung?" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="705" y="840" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inv" value="Aktion: Rechnung ins Paket legen" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="640" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t_post" value="Aktion: Postübergabe &amp;amp; Paket versenden" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="790" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t_end" value="ENDE: Fibu überwacht Zahlung" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fontStyle=1;labelBackgroundColor=none;" parent="1" vertex="1">
+          <mxGeometry x="705" y="1050" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="k_start" target="k_cart" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="k_cart" target="it_check" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl2" value="[GUI] Warenkorb-Daten" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="e2" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="it_check" target="it_dec" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4_j" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="it_dec" target="it_checkout" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_4j" value="Ja" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="e4_j" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4_n" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="it_dec" target="it_info" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_4n" value="Nein" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="e4_n" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;dashed=1;labelBackgroundColor=none;" parent="1" source="it_info" target="t_buy" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl5" value="[API] Fehlbestand" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="e5" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="it_checkout" target="k_pay" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="k_pay" target="it_save" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl7" value="[Daten] Order-JSON" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="e7" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="it_save" target="it_mail" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8b" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="it_save" target="t_plan" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="580" />
+              <mxPoint x="780" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="it_mail" target="k_mail" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="t_plan" target="t_prod" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="t_prod" target="t_pack" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="t_pack" target="t_dec" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13_j" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="t_dec" target="t_inv" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_13j" value="Ja" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="e13_j" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13_n" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="t_dec" target="t_post" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_13n" value="Nein" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="e13_n" vertex="1" connectable="0">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="t_inv" target="t_post" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="1030" />
+              <mxPoint x="850" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="t_post" target="k_end" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="1020" />
+              <mxPoint x="170" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;dashed=1;labelBackgroundColor=none;" parent="1" source="t_post" target="it_track" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl16" value="[API] Tracking-ID" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="e16" vertex="1" connectable="0">
+          <mxGeometry x="-0.1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeWidth=2;labelBackgroundColor=none;" parent="1" source="t_post" target="t_end" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="1075" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
