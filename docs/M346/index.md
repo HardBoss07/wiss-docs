@@ -263,7 +263,7 @@ Hier entscheidet der Loadbalancer spontan basierend auf der aktuellen Last:
 
 ### 3. Der Performance-Sieger
 
-- **Least Response Time:** Die "Königsdisziplin" – kombiniert wenig Arbeit mit hoher Geschwindigkeit, um dem Nutzer die schnellste Antwort zu liefern.
+- **Least Response Time:** Die "Königsdisziplin" - kombiniert wenig Arbeit mit hoher Geschwindigkeit, um dem Nutzer die schnellste Antwort zu liefern.
 
 ## 346-4A SideQuest:
 
@@ -383,7 +383,7 @@ Dokumentation_Inbetriebnahme_Nextcloud_EduGame
 
 ### 01 Einführung
 
-**6 R’s der Cloud-Migration (Kurzfassung):**
+**6 R's der Cloud-Migration (Kurzfassung):**
 
 - **Rehosting (Lift & Shift):** 1:1 Verschiebung ohne Architekturänderung.
 - **Replatforming:** Leichte Anpassungen zur Nutzung von Cloud-Vorteilen (z.B. Managed DBs).
@@ -471,11 +471,11 @@ Ein **Testkonzept** definiert die gesamte Teststrategie und dient als Bauplan f�
 
 **Ausführende Instanzen:** Erstellt und durchgeführt von Matteo Bosshard (Applikationsentwickler). Freigabeentscheid durch die Geschäftsleitung EduGame.
 
-Der Unterschied zwischen funktionalen und nicht-funktionalen Tests lässt sich auf eine sehr simple Faustregel herunterbrechen: **Funktionale Tests prüfen das „Was“, nicht-funktionale Tests prüfen das „Wie“.**
+Der Unterschied zwischen funktionalen und nicht-funktionalen Tests lässt sich auf eine sehr simple Faustregel herunterbrechen: **Funktionale Tests prüfen das "Was", nicht-funktionale Tests prüfen das "Wie".**
 
 Hier ist die genaue Gegenüberstellung:
 
-### 1. Funktionale Tests (Das „Was“)
+### 1. Funktionale Tests (Das "Was")
 
 Hierbei wird geprüft, ob die Software oder das System **das tut, was es gemäss den Anforderungen tun soll**. Im Zentrum stehen die Features, Geschäftsprozesse und Use Cases.
 
@@ -488,7 +488,7 @@ Hierbei wird geprüft, ob die Software oder das System **das tut, was es gemäss
 
 - **Testarten:** Unit-Tests, Integrationstests, Systemtests, Akzeptanztests.
 
-### 2. Nicht-funktionale Tests (Das „Wie“)
+### 2. Nicht-funktionale Tests (Das "Wie")
 
 Hierbei wird geprüft, **wie gut, sicher oder schnell** das System seine Funktionen ausführt. Im Zentrum stehen die Qualitätsmerkmale und die Infrastruktur.
 
@@ -580,9 +580,9 @@ Je nach Anwendungsfall und Teamgrösse eignen sich verschiedene Tools, um eine D
 
 ### 01 Einführung & Kontext
 
-Diese Gesamtdokumentation konsolidiert die Konzeption, Implementierung, Migration und Verifikation der Cloud- und Container-Infrastruktur für das Projekt **EduGame**. Die Dokumentation wurde nach den Best Practices von „Documentation as Code“ in strukturiertem Markdown verfasst, um eine lückenlose Nachvollziehbarkeit und Synchronisation mit den Konfigurationsdateien im Git-Repository zu gewährleisten.
+Diese Gesamtdokumentation konsolidiert die Konzeption, Implementierung, Migration und Verifikation der Cloud- und Container-Infrastruktur für das Projekt **EduGame**. Die Dokumentation wurde nach den Best Practices von "Documentation as Code" in strukturiertem Markdown verfasst, um eine lückenlose Nachvollziehbarkeit und Synchronisation mit den Konfigurationsdateien im Git-Repository zu gewährleisten.
 
-### 02 Systemarchitektur & Infrastruktur (Das „Was“)
+### 02 Systemarchitektur & Infrastruktur (Das "Was")
 
 Die Gesamtarchitektur der EduGame-Infrastruktur wurde für maximale Skalierbarkeit, Ausfallsicherheit und eine schnelle Time-to-Market (TTM) entworfen. Sie basiert auf einem Cloud-Native-Ansatz mit containerisierten Microservices (Docker).
 
@@ -629,7 +629,7 @@ Eingehende Anfragen (HTTP Port 80)
         "edugame_net"
 ```
 
-### 03 Konfiguration & Infrastructure as Code (Das „Wie“)
+### 03 Konfiguration & Infrastructure as Code (Das "Wie")
 
 Die Bereitstellung der Services erfolgt deklarativ über Docker Compose. Alle Umgebungsvariablen und Netzwerkgrenzen sind im Code definiert.
 
@@ -723,7 +723,7 @@ Um die gesamte EduGame-Plattform ausfallsicher von einer alten VM auf eine neue 
 
 ### 05 Qualitätssicherung & Verifikation (Testing)
 
-Die Validierung der migrierten Infrastruktur erfolgte über eine strukturierte Testmatrix, aufgeteilt in funktionale Anforderungen („Was“ tut das System) und nicht-funktionale Anforderungen („Wie“ verhält sich das System).
+Die Validierung der migrierten Infrastruktur erfolgte über eine strukturierte Testmatrix, aufgeteilt in funktionale Anforderungen ("Was" tut das System) und nicht-funktionale Anforderungen ("Wie" verhält sich das System).
 
 #### 1. Auszug aus dem HERMES-Testprotokoll
 
@@ -754,10 +754,10 @@ Um ein effektives Sicherheitskonzept für die EduGame Cloud-Infrastruktur aufzub
 
 #### Die zwei entscheidenden Metriken im Katastrophenfall:
 
-1.  **RPO (Recovery Point Objective):** Der maximal tolerable Datenverlust. Ein RPO von 24 Stunden bedeutet, dass das System im Ernstfall auf den Stand des Vortrags zurückgesetzt wird – alle Daten, die in den letzten 24 Stunden generiert wurden, sind verloren.
+1.  **RPO (Recovery Point Objective):** Der maximal tolerable Datenverlust. Ein RPO von 24 Stunden bedeutet, dass das System im Ernstfall auf den Stand des Vortrags zurückgesetzt wird - alle Daten, die in den letzten 24 Stunden generiert wurden, sind verloren.
 2.  **RTO (Recovery Time Objective):** Die maximale Down-Time. Diese Metrik definiert das Zeitfenster, das die IT-Abteilung hat, um die Services (z. B. via `restore_migration.sh`) wieder vollständig produktiv zu schalten, bevor geschäftsschädigende Konsequenzen eintreten.
 
-### 02 Besonderheiten bei Cloud-Services (Die „Backup-Lüge“)
+### 02 Besonderheiten bei Cloud-Services (Die "Backup-Lüge")
 
 Es ist ein weit verbreiteter Irrglaube, dass Daten in der Cloud (sei es IaaS, PaaS oder SaaS) automatisch vor Verlust geschützt sind, nur weil der Provider Redundanz anbietet:
 
@@ -773,7 +773,7 @@ Dieses Konzept erweitert die bisherige Systemdokumentation und definiert die kon
 - **3 Kopien:** 1x Produktivdaten auf der Cloud-VM, 2x Backups.
 - **2 verschiedene Medien:** Speicherung auf lokalen Docker Volumes (SSD-Storage) und Übertragung auf ein separates System.
 - **1 externes Medium (Offsite):** Automatisierter Transfer des erstellten `migration_backup`-Ordners via verschlüsseltem `scp` oder S3-API in eine andere Cloud-Region (z. B. von _Switzerland North_ zu _Europe West_).
-- **1 unveränderbare Kopie (Immutable/WORM):** Schutz vor Ransomware. Die Backup-Archive werden in der Cloud mit einer Sperre versehen, sodass sie für einen definierten Zeitraum (z. B. 14 Tage) von niemandem – auch nicht vom Administrator – gelöscht oder überschrieben werden können.
+- **1 unveränderbare Kopie (Immutable/WORM):** Schutz vor Ransomware. Die Backup-Archive werden in der Cloud mit einer Sperre versehen, sodass sie für einen definierten Zeitraum (z. B. 14 Tage) von niemandem - auch nicht vom Administrator - gelöscht oder überschrieben werden können.
 
 #### 2. Technische Umsetzung (Skriptbasiert)
 
@@ -883,7 +883,7 @@ Obwohl GitHub textbasierten Quellcode anzeigt, speichert das darunterliegende Ve
 
 Git nutzt drei primäre Objekttypen (gespeichert als zlib-komprimierte Dateien, benannt nach dem SHA-1- oder SHA-256-Hash ihres Inhalts):
 
-1. **Blobs (Binary Large Objects):** Speichern den reinen Dateiinhalt einer bestimmten Dateiversion. Ein Blob enthält keinerlei Metadaten – weder den Dateinamen, noch den Verzeichnispfad oder die Berechtigungen. Ändert sich ein einziges Zeichen in einer Datei, erzeugt Git einen komplett neuen Blob.
+1. **Blobs (Binary Large Objects):** Speichern den reinen Dateiinhalt einer bestimmten Dateiversion. Ein Blob enthält keinerlei Metadaten - weder den Dateinamen, noch den Verzeichnispfad oder die Berechtigungen. Ändert sich ein einziges Zeichen in einer Datei, erzeugt Git einen komplett neuen Blob.
 2. **Trees (Verzeichnisse):** Ein Tree-Objekt repräsentiert ein Verzeichnis. Es verweist auf SHA-Hashes von Blobs (Dateien) oder Unter-Trees (Unterverzeichnisse) und ordnet diesen die eigentlichen Dateinamen und Zugriffsrechte zu.
 3. **Commits (Historie):** Ein Commit-Objekt verweist auf genau einen Root-Tree (den Zustand des gesamten Projekts zu diesem Zeitpunkt), enthält Metadaten (Autor, Zeitstempel, Commit-Nachricht) und verweist auf den oder die SHA-Hashes der direkten Vorgänger-Commits (Parents).
 
@@ -910,7 +910,7 @@ Die Datenstruktur diktiert das Sicherungsverfahren. Ein pauschales Filesystem-Ba
 
 ### Definition & Bedeutung
 
-Im Zeitalter von Big Data und Künstlicher Intelligenz stossen klassische, relationale Datenstrukturen an ihre Skalierungsgrenzen. Um riesige Mengen an strukturierten, teilstrukturierten und unstrukturierten Daten kosteneffizient zu verarbeiten, haben sich moderne Cloud-Speicherarchitekturen etabliert. Während ein **Data Warehouse** für hochstrukturierte, geschäftsrelevante Daten optimiert ist, dient ein **Data Lake** als zentrales Sammelbecken für Rohdaten in ihrer Ursprungsform. Diese Datenmengen bilden die fundamentale Trainingsgrundlage für KI-Modelle, bringen jedoch erhebliche Herausforderungen bezüglich des Datenschutzes mit sich – insbesondere im Kontext des revidierten Schweizer Datenschutzgesetzes (DSG).
+Im Zeitalter von Big Data und Künstlicher Intelligenz stossen klassische, relationale Datenstrukturen an ihre Skalierungsgrenzen. Um riesige Mengen an strukturierten, teilstrukturierten und unstrukturierten Daten kosteneffizient zu verarbeiten, haben sich moderne Cloud-Speicherarchitekturen etabliert. Während ein **Data Warehouse** für hochstrukturierte, geschäftsrelevante Daten optimiert ist, dient ein **Data Lake** als zentrales Sammelbecken für Rohdaten in ihrer Ursprungsform. Diese Datenmengen bilden die fundamentale Trainingsgrundlage für KI-Modelle, bringen jedoch erhebliche Herausforderungen bezüglich des Datenschutzes mit sich - insbesondere im Kontext des revidierten Schweizer Datenschutzgesetzes (DSG).
 
 ### Begriffe im Überblick
 

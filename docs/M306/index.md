@@ -141,7 +141,7 @@ Ein Projekt wird bei HERMES immer in einem festen Lebenszyklus durchlaufen. Jede
 
 ### 2. Szenarien
 
-Da nicht jedes Projekt gleich ist, bietet HERMES verschiedene „Schablonen“ an, die sogenannten Szenarien (z. B. „IT-Individualanwendung“, „Dienstleistung/Infrastruktur“ oder „Anpassung einer Standardsoftware“). Man nutzt also nur die Module, die man wirklich braucht.
+Da nicht jedes Projekt gleich ist, bietet HERMES verschiedene "Schablonen" an, die sogenannten Szenarien (z. B. "IT-Individualanwendung", "Dienstleistung/Infrastruktur" oder "Anpassung einer Standardsoftware"). Man nutzt also nur die Module, die man wirklich braucht.
 
 ### 3. Module und Aufgaben
 
