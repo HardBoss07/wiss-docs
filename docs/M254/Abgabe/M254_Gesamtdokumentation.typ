@@ -247,7 +247,7 @@ Für die betriebswirtschaftliche Analyse wurde der Ablauf zusätzlich als Ereign
 Der Gesamtablauf der Topomedics wird in die drei klassischen Prozesskategorien (Führung, Wertschöpfung, Unterstützung) unterteilt.
 
 #figure(
-  image("images/254-7C-Aufgabe-Prozesslandkarte.drawio.png", width: 95%),
+  image("images/254-7C-Aufgabe-Prozesslandkarte.drawio.png", width: 100%),
   caption: [Prozesslandkarte Topomedics AG],
 )
 #pagebreak()
@@ -255,7 +255,7 @@ Der Gesamtablauf der Topomedics wird in die drei klassischen Prozesskategorien (
 Der Kunde navigiert im Webshop-Frontend, legt ein Produkt in den Warenkorb und geht zum Checkout. Das System prüft asynchron die Verfügbarkeit in der Datenbank.
 
 #figure(
-  image("images/254-7C-Aufgabe-UML-Use-Case.drawio.png", width: 65%),
+  image("images/254-7C-Aufgabe-UML-Use-Case.drawio.png", width: 100%),
   caption: [UML Use-Case Webshop-Bestellabwicklung],
 )
 #pagebreak()
