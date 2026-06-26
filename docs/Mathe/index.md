@@ -16,6 +16,9 @@
 
 ## Notizen vom 29.05.2026
 
+[Link zum Skript](./python/funktionen/tag-1.py)
+[Link zum Skript](./python/funktionen/tag-2.py)
+
 Überprüfung ob der Punkt P auf der Funtion liegt:
 
 - Funktion: $y = 2x + 5$
@@ -78,6 +81,8 @@ Schnittpunkt von $f$ und $g$: $S(-9|-22)$
 
 ## Notizen vom 05.06.2026
 
+[Link zum Skript](./python/funktionen/tag-3.py)
+
 Generelle Quadratische Funktion: $y = ax^2 + bx + c$
 
 Generelle Lösungsformel (Mitternachtsformel):
@@ -106,6 +111,8 @@ $$x_s = -\frac{b}{2a}$$
 $$y_s = c - \frac{b^2}{4a}$$
 
 ## Notizen vom 12.06.2026
+
+[Link zum Skript](./python/funktionen/tag-4.py)
 
 $$y=2x^2-3x-4$$
 
@@ -175,3 +182,38 @@ $\rightarrow$ Zweiter Schnittpunkt: **$S_2(-2 \mid 0)$**
 ### Ergebnis
 
 Die beiden Funktionen schneiden sich in den Punkten **$S_1(2 \mid 8)$** und **$S_2(-2 \mid 0)$**.
+
+## Notizen vom 26.06.2026
+
+[Link zum Skript](./python/funktionen/tag-5.py)
+
+In der Mathematik betrachten wir eine Funktion $f: A \to B$, wobei $A$ die Definitionsmenge und $B$ die Wertemenge ist.
+
+### 1. Injektivität (Eindeutigkeit)
+
+Eine Funktion ist **injektiv**, wenn jedem Element aus der Zielmenge $B$ **höchstens ein** Element aus der Definitionsmenge $A$ zugeordnet wird.
+
+- **Logik:** Wenn $f(x_1) = f(x_2)$, dann muss $x_1 = x_2$ gelten.
+- **Visuell:** Kein "y-Wert" wird von zwei verschiedenen "x-Werten" getroffen (keine horizontalen Linien schneiden den Graphen mehr als einmal).
+
+### 2. Surjektivität (Vollständigkeit)
+
+Eine Funktion ist **surjektiv**, wenn jedes Element aus der Zielmenge $B$ **mindestens einmal** als Funktionswert erreicht wird.
+
+- **Logik:** Für jedes $y \in B$ gibt es mindestens ein $x \in A$ mit $f(x) = y$.
+- **Visuell:** Der gesamte Bereich der Zielmenge $B$ wird abgedeckt; es gibt keine "leeren" Stellen in der Zielmenge.
+
+### 3. Bijektivität (Eindeutige Umkehrbarkeit)
+
+Eine Funktion ist **bijektiv**, wenn sie **sowohl injektiv als auch surjektiv** ist.
+
+- **Logik:** Jedem Element aus $A$ wird genau ein Element aus $B$ zugeordnet und umgekehrt. Es besteht eine perfekte "Eins-zu-Eins-Beziehung".
+- **Konsequenz:** Nur bijektive Funktionen besitzen eine eindeutige Umkehrfunktion $f^{-1}$.
+
+| Funktion      | Injektiv | Surjektiv | Bijektiv |
+| ------------- | -------- | --------- | -------- |
+| $y = x + 1$   | Ja       | Ja        | Ja       |
+| $y = 5$       | Nein     | Nein      | Nein     |
+| $y = x^2$     | Nein     | Nein      | Nein     |
+| $y = x^3$     | Ja       | Ja        | Ja       |
+| $y = \sin(x)$ | Nein     | Nein      | Nein     |
