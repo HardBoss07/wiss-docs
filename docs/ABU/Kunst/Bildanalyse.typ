@@ -21,7 +21,7 @@
 
 // --- TITELBLATT (zählt nicht zu den 2 Seiten Text) ---
 #align(center + horizon)[
-  #text(size: 20pt, weight: "bold")[Bildanalyse und -interpretation]
+  #text(size: 20pt, weight: "bold")[Bildanalyse und Bildinterpretation]
   #v(1em)
   #text(size: 16pt)[Pierre-Auguste Renoir: "Die kleine Irène" (1880)]
   #v(2em)
@@ -60,13 +60,13 @@
 #rect(width: 100%, stroke: 0.5pt + luma(150), fill: luma(250), inset: 10pt)[
   #set text(size: 8pt)
   *Künstler-Kurzbiografie: Pierre-Auguste Renoir* \
-  Der französische Maler Pierre-Auguste Renoir (1841-1919) begann seine Künstlerlehre als Porzellanmaler. 1862 fing er ein tiefgründiges Studium an der Pariser École des Beaux-Arts im Atelier von Charles Gleyre an. Renoir gehörte zu den Mitbegründern und prägendsten Künstlern des Impressionismus. Dort lernte er Claude Monet, Frédéric Bazille und Alfred Sisley kennen, mit denen er fortan die Freilichtmalerei (En plein air) entwickelte. Renoirs Arbeiten zeichnen sich durch den Fokus auf Lichteffekte, lebendige Farben und die Darstellung der Pariser Freizeitgesellschaft aus.
+  Der französische Maler Pierre-Auguste Renoir, der von 1841 bis 1919 lebte, begann seine Künstlerlehre als Porzellanmaler. 1862 fing er ein tiefgründiges Studium an der Pariser École des Beaux-Arts im Atelier von Charles Gleyre an. Renoir gehörte zu den Mitbegründern und prägendsten Künstlern des Impressionismus. Dort lernte er Claude Monet, Frédéric Bazille und Alfred Sisley kennen, mit denen er fortan die Freilichtmalerei, welche auch als En plein air bekannt ist, entwickelte. Renoirs Arbeiten zeichnen sich durch den Fokus auf Lichteffekte, lebendige Farben und die Darstellung der Pariser Freizeitgesellschaft aus.
 
   In den 1880er-Jahren, der Entstehungszeit von *Die kleine Irène*, distanzierte er sich zunehmend vom reinen Impressionismus. Nach einer Italienreise im Jahr 1881 leitete er seine sogenannte "ingreske" oder "glorreiche" Periode ein, in der er zu einer klassischeren, schärfer konturierten Linienführung und einer festeren Kompositionsstruktur zurückkehrte. Trotz schwerer Arthritis im Alter malte er bis zu seinem Tod in Cagnes-sur-Mer unaufhörlich weiter.#footnote[Quelle für die Biografie: #link("https://de.wikipedia.org/wiki/Pierre-Auguste_Renoir")]
 ]
 
-// --- 2. BILDANALYSE / -INTERPRETATION ---
-= 2. Bildanalyse und -interpretation
+// --- 2. BILDANALYSE / BILDINTERPRETATION ---
+= 2. Bildanalyse und Bildinterpretation
 
 Die Komposition des Gemäldes fokussiert sich stark auf das blasse Gesicht und die leuchtend roten Haare des Mädchens, die sich kontrastreich vom dunklen Hintergrund abheben. Renoir nutzt eine raffinierte Farbpalette: Das kühle Blau des Kleides und der Haarschleife erzeugt einen starken Komplementärkontrast zu dem warmen, leuchtenden Kupferton ihrer Haare. Die sanfte Beleuchtung von links vorne lenkt die Aufmerksamkeit direkt auf ihr zartes, fast porzellanartiges Gesicht.
 
