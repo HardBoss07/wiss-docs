@@ -140,3 +140,11 @@ Renoir hatte das Gemälde im Auftrag von dem wohlhabenden jüdischen Bankier Lou
     }
   }
 }
+
+= Bildquellenverzeichnis
+
+#set par(justify: false)
+- Abb. 1: Renoir, *Die kleine Irène*, 1880. Aus Bildersammlung des Lehrers
+- Abb. 2: Monet, *Sonnenaufgang*, 1872. #link("https://de.wikipedia.org/wiki/Impression,_Sonnenaufgang#/media/Datei:Claude_Monet,_Impression,_soleil_levant.jpg")
+- Abb. 3: Renoir, *Bal du Moulin de la Galette*, 1876. #link("https://de.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette#/media/Datei:Pierre-Auguste_Renoir,_Le_Moulin_de_la_Galette.jpg")
+- Abb. 4: Degas, *La Classe de Danse*, 1876. #link("https://de.wikipedia.org/wiki/Datei:Degas-_La_classe_de_danse_1874.jpg")
