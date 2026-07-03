@@ -6,7 +6,7 @@
 )
 
 #set text(
-  font: "Inter",
+  font: "Roboto",
   size: 11pt,
   lang: "de",
 )
@@ -19,7 +19,7 @@
 #show heading: set block(above: 1em, below: 0.75em)
 #set par(justify: true, leading: 0.65em)
 
-// --- TITELBLATT (zählt nicht zu den 2 Seiten Text) ---
+// --- TITELBLATT ---
 #align(center + horizon)[
   #text(size: 20pt, weight: "bold")[Bildanalyse und Bildinterpretation]
   #v(1em)
@@ -44,19 +44,16 @@
   columns: (5fr, 2fr),
   gutter: 1.5em,
 
-  // LINKE SPALTE: Der Beschreibungstext
   [
     In dem Bild erkennt man ein junges Mädchen, das mit dem Rücken leicht nach rechts gedreht auf einem Stuhl sitzt. Sie trägt ein hellblaues Kleid, das weisse Verzierungen hat. In ihrem Haar ist eine blaue Haarschleife. Die Arme sind leicht angewinkelt und die Hände liegen auf ihrem Schoss. Der Blick des Mädchens ist nach links gerichtet. Ihr rötliches Haar ist leicht gewellt und fällt weit über ihre Schultern und den Rücken. Der leicht unscharfe Hintergrund zeigt dichtes Gebüsch oder einen abgedunkelten Garten. In der rechten oberen Ecke sind noch Blumen in einem blassen Pinkton sichtbar. Der verzierte, hölzerne Rahmen gibt dem Gemälde einen passenden Abschluss.
   ],
 
-  // RECHTE SPALTE: Das Bild
   figure(
     image("./images/die_kleine_irene.jpg", width: 100%),
-    caption: [Renoir, *Die kleine Irène*, 1880.],
+    caption: [Renoir, *Die kleine Irène*, 1880 #footnote[Quelle für Abbildung 1: Bildersammlung des Lehrers]],
   ),
 )
 
-// Vorgabe: Künstlerbiografie als Textfeld mit Schriftgrösse 8 pt und Endnote
 #rect(width: 100%, stroke: 0.5pt + luma(150), fill: luma(250), inset: 10pt)[
   #set text(size: 8pt)
   *Künstler-Kurzbiografie: Pierre-Auguste Renoir* \
@@ -90,17 +87,16 @@ Die drei folgenden Werke veranschaulichen diese Merkmale eindrücklich: Monets *
       spacing: 1em,
       figure(
         image("./images/sonnenaufgang.png", width: 100%),
-        caption: [Monet, *Sonnenaufgang*, 1872. Öl auf Leinwand.],
+        caption: [Monet, *Sonnenaufgang*, 1872 #footnote[Quelle für Abbildung 2: https://de.wikipedia.org/wiki/Impression,_Sonnenaufgang]],
       ),
       figure(
         image("./images/bal_du_moulin_de_la_galette.png", width: 100%),
-        caption: [Renoir, *Bal du Moulin de la Galette*, 1876. Öl auf Leinwand.],
+        caption: [Renoir, *Bal du Moulin de la Galette*, 1876 #footnote[Quelle für Abbildung 3: https://de.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette]],
       ),
     ),
-
     figure(
       image("./images/la_classe_de_danse.png", width: 100%),
-      caption: [Degas, *La Classe de Danse*, 1876. Öl auf Leinwand.],
+      caption: [Degas, *La Classe de Danse*, 1876 #footnote[Quelle für Abbildung 4: https://de.wikipedia.org/wiki/Datei:Degas-_La_classe_de_danse_1874.jpg]],
     ),
   )
 ]
@@ -117,7 +113,7 @@ Renoir hatte das Gemälde im Auftrag von dem wohlhabenden jüdischen Bankier Lou
 
 #pagebreak()
 
-// --- VERZEICHNISSE (Zählen laut Vorgabe nicht zum Textlauf) ---
+// --- VERZEICHNISSE ---
 = Abbildungsverzeichnis
 #outline(
   title: none,
@@ -125,13 +121,26 @@ Renoir hatte das Gemälde im Auftrag von dem wohlhabenden jüdischen Bankier Lou
 )
 
 = Quellenverzeichnis
-#set text(size: 10pt)
+#set text(size: 11pt)
 #context {
-  let notes = query(footnote)
-  if notes.len() == 0 {
+  let all_notes = query(footnote)
+
+  let unique_notes = ()
+  let seen_contents = ()
+
+  for note in all_notes {
+    let content_str = repr(note.body)
+
+    if not seen_contents.contains(content_str) {
+      unique_notes.push(note)
+      seen_contents.push(content_str)
+    }
+  }
+
+  if unique_notes.len() == 0 {
     [Keine Quellen angegeben.]
   } else {
-    for note in notes {
+    for note in unique_notes {
       let num = counter(footnote).at(note.location()).first()
 
       block()[
@@ -140,11 +149,3 @@ Renoir hatte das Gemälde im Auftrag von dem wohlhabenden jüdischen Bankier Lou
     }
   }
 }
-
-= Bildquellenverzeichnis
-
-#set par(justify: false)
-- Abb. 1: Renoir, *Die kleine Irène*, 1880. Aus Bildersammlung des Lehrers
-- Abb. 2: Monet, *Sonnenaufgang*, 1872. #link("https://de.wikipedia.org/wiki/Impression,_Sonnenaufgang#/media/Datei:Claude_Monet,_Impression,_soleil_levant.jpg")
-- Abb. 3: Renoir, *Bal du Moulin de la Galette*, 1876. #link("https://de.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette#/media/Datei:Pierre-Auguste_Renoir,_Le_Moulin_de_la_Galette.jpg")
-- Abb. 4: Degas, *La Classe de Danse*, 1876. #link("https://de.wikipedia.org/wiki/Datei:Degas-_La_classe_de_danse_1874.jpg")
