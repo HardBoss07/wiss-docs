@@ -50,7 +50,7 @@
 
   figure(
     image("./images/die_kleine_irene.jpg", width: 100%),
-    caption: [Renoir, *Die kleine Irène*, 1880 #footnote[Quelle für Abbildung 1: Bildersammlung des Lehrers]],
+    caption: [Renoir, *Die kleine Irène*, 1880.],
   ),
 )
 
@@ -87,16 +87,17 @@ Die drei folgenden Werke veranschaulichen diese Merkmale eindrücklich: Monets *
       spacing: 1em,
       figure(
         image("./images/sonnenaufgang.png", width: 100%),
-        caption: [Monet, *Sonnenaufgang*, 1872 #footnote[Quelle für Abbildung 2: https://de.wikipedia.org/wiki/Impression,_Sonnenaufgang]],
+        caption: [Monet, *Sonnenaufgang*, 1872. Öl auf Leinwand.],
       ),
       figure(
         image("./images/bal_du_moulin_de_la_galette.png", width: 100%),
-        caption: [Renoir, *Bal du Moulin de la Galette*, 1876 #footnote[Quelle für Abbildung 3: https://de.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette]],
+        caption: [Renoir, *Bal du Moulin de la Galette*, 1876. Öl auf Leinwand.],
       ),
     ),
+
     figure(
       image("./images/la_classe_de_danse.png", width: 100%),
-      caption: [Degas, *La Classe de Danse*, 1876 #footnote[Quelle für Abbildung 4: https://de.wikipedia.org/wiki/Datei:Degas-_La_classe_de_danse_1874.jpg]],
+      caption: [Degas, *La Classe de Danse*, 1876. Öl auf Leinwand.],
     ),
   )
 ]
@@ -115,32 +116,29 @@ Renoir hatte das Gemälde im Auftrag von dem wohlhabenden jüdischen Bankier Lou
 
 // --- VERZEICHNISSE ---
 = Abbildungsverzeichnis
+
 #outline(
   title: none,
   target: figure.where(kind: image),
 )
 
+= Bildquellenverzeichnis
+
+#set par(justify: false)
+- Abb. 1: Renoir, *Die kleine Irène*, 1880. Aus Bildersammlung des Lehrers
+- Abb. 2: Monet, *Sonnenaufgang*, 1872. #link("https://de.wikipedia.org/wiki/Impression,_Sonnenaufgang#/media/Datei:Claude_Monet,_Impression,_soleil_levant.jpg")
+- Abb. 3: Renoir, *Bal du Moulin de la Galette*, 1876. #link("https://de.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette#/media/Datei:Pierre-Auguste_Renoir,_Le_Moulin_de_la_Galette.jpg")
+- Abb. 4: Degas, *La Classe de Danse*, 1876. #link("https://de.wikipedia.org/wiki/Datei:Degas-_La_classe_de_danse_1874.jpg")
+
 = Quellenverzeichnis
+
 #set text(size: 11pt)
 #context {
-  let all_notes = query(footnote)
-
-  let unique_notes = ()
-  let seen_contents = ()
-
-  for note in all_notes {
-    let content_str = repr(note.body)
-
-    if not seen_contents.contains(content_str) {
-      unique_notes.push(note)
-      seen_contents.push(content_str)
-    }
-  }
-
-  if unique_notes.len() == 0 {
+  let notes = query(footnote)
+  if notes.len() == 0 {
     [Keine Quellen angegeben.]
   } else {
-    for note in unique_notes {
+    for note in notes {
       let num = counter(footnote).at(note.location()).first()
 
       block()[
