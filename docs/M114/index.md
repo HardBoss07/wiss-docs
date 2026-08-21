@@ -267,13 +267,14 @@ Wort:
 `BANANENMANN`
 
 Wir zählen jeden Buchstaben:
+
 | Zeichen | Anzahl |
 | ------- | ------ |
-| B | 1 |
-| A | 3 |
-| N | 5 |
-| E | 1 |
-| M | 1 |
+| B       | 1      |
+| A       | 3      |
+| N       | 5      |
+| E       | 1      |
+| M       | 1      |
 
 ### **2. Startknoten erzeugen**
 

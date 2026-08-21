@@ -24,7 +24,7 @@ Ein typisches Beispiel ist das Fälschen eines Arztzeugnisses, um sich zusätzli
 
 Laut den Statistiken des Bundesamts für Statistik (BFS) werden in der Schweiz jährlich mehrere tausend Fälle von Urkundenfälschung registriert. Die Zahl schwankt leicht, liegt aber meist zwischen 8'000 & 10'000 Fällen pro Jahr. Auffällig ist, dass städtische Kantone wie Zürich, Basel-Stadt oder Genf eine deutlich höhere Anzahl an Fällen verzeichnen als ländlich geprägte Kantone. Dies hängt mit der grösseren Bevölkerungsdichte, mehr Wirtschaftsverkehr & einer höheren Anzahl von Dokumenten im Umlauf zusammen.
 
-*(Hier einfügen: Diagramm "Anzahl Fälle Urkundenfälschung pro Jahr (CH gesamt)" sowie Balkendiagramm "Vergleich urbaner vs. ländlicher Kanton"; Quelle: Bundesamt für Statistik, Polizeiliche Kriminalstatistik)*
+_(Hier einfügen: Diagramm "Anzahl Fälle Urkundenfälschung pro Jahr (CH gesamt)" sowie Balkendiagramm "Vergleich urbaner vs. ländlicher Kanton"; Quelle: Bundesamt für Statistik, Polizeiliche Kriminalstatistik)_
 
 ## 7. Bewertung
 
@@ -32,6 +32,6 @@ Die Urkundenfälschung hat eine grosse Bedeutung für Gesellschaft & Rechtssyste
 
 ## Literatur- & Quellenverzeichnis
 
-* Schweizerisches Strafgesetzbuch, Art. 251 StGB ([https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_251](https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_251))
-* Bundesamt für Statistik (BFS), Polizeiliche Kriminalstatistik ([https://www.bfs.admin.ch](https://www.bfs.admin.ch))
-* Schweizerisches Bundesgericht, Urteile zu Art. 251 StGB
+- Schweizerisches Strafgesetzbuch, Art. 251 StGB ([https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_251](https://www.fedlex.admin.ch/eli/cc/54/757_781_799/de#art_251))
+- Bundesamt für Statistik (BFS), Polizeiliche Kriminalstatistik ([https://www.bfs.admin.ch](https://www.bfs.admin.ch))
+- Schweizerisches Bundesgericht, Urteile zu Art. 251 StGB

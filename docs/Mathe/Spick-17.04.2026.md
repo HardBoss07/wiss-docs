@@ -5,7 +5,7 @@
 | **Schnittmenge**   | $A \cap B$      | `A & B`  | Gemeinsame Elemente               |
 | **Vereinigung**    | $A \cup B$      | `A \| B` | Alles zusammen                    |
 | **Differenz**      | $A \setminus B$ | `A - B`  | Nur was in A, aber nicht in B ist |
-| **Sym. Differenz** | $A \Delta B$    | `A ^ B`  | Alles ausser die Gemeinsamkeiten   |
+| **Sym. Differenz** | $A \Delta B$    | `A ^ B`  | Alles ausser die Gemeinsamkeiten  |
 | **Teilmenge**      | $A \subseteq B$ | `A <= B` | Ist A in B enthalten?             |
 
 ### 1. Definition von Mengen (Set)

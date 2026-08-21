@@ -29,12 +29,12 @@
 - **Typ 1**: direkt auf Hardware
 - **Typ 2**: läuft auf Host-OS
 
-| Begriff    | Beschreibung                                                      |
-| ---------- | ----------------------------------------------------------------- |
-| Gast-OS    | Läuft in VM, nutzt virtuelle HW                                   |
+| Begriff    | Beschreibung                                                     |
+| ---------- | ---------------------------------------------------------------- |
+| Gast-OS    | Läuft in VM, nutzt virtuelle HW                                  |
 | Hypervisor | Schicht zwischen HW & Gast-OS (z.B. VirtualBox, VMware, Hyper-V) |
 | Host-OS    | Basis-OS (bei Typ 2), z.B. Linux, Windows                        |
-| Hardware   | CPU, RAM, Disk, Netz, wird vom Hypervisor verteilt                |
+| Hardware   | CPU, RAM, Disk, Netz, wird vom Hypervisor verteilt               |
 
 ## Paketmanager (APT)
 
@@ -79,7 +79,7 @@
 | Schritt   | Befehl                               | Hinweis                                          |
 | --------- | ------------------------------------ | ------------------------------------------------ |
 | Anzeigen  | `lsblk`                              | Festplatten & Partitionen                        |
-| Details   | `fdisk -l`                           | Infos & Grössen                                   |
+| Details   | `fdisk -l`                           | Infos & Grössen                                  |
 | Erstellen | `fdisk /dev/sdX`                     | `n` neu, `w` speichern                           |
 | Format    | `mkfs.ext4 /dev/sdX1`                | FS erstellen                                     |
 | Mountdir  | `mkdir /mnt/testpartition`           | Verzeichnis                                      |

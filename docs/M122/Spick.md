@@ -70,14 +70,14 @@ Diese Parameter verändern, wie der Befehl mit dem Benutzer kommuniziert.
 
 ### 3.1 Datei-Tests (Essentiell)
 
-| Parameter       | Bedeutung                                                           | Logik im Skript                   |
-| --------------- | ------------------------------------------------------------------- | --------------------------------- |
-| `[ -e $DATEI ]` | **Exists**: Prüft, ob die Datei oder das Verzeichnis existiert.     | `if [ -e "$FILE" ]; then...`      |
-| `[ -f $DATEI ]` | **File**: Prüft, ob es eine _reguläre Datei_ ist (kein Ordner).     | `if [ -f "skript.sh" ]; then...`  |
-| `[ -d $DATEI ]` | **Directory**: Prüft, ob es ein _Verzeichnis_ (Ordner) ist.         | `if [ -d "/etc" ]; then...`       |
-| `[ -r $DATEI ]` | **Readable**: Prüft, ob du _Leserechte_ hast.                       | `if [ -r "geheim.txt" ]; then...` |
-| `[ -w $DATEI ]` | **Writable**: Prüft, ob du _Schreibrechte_ hast.                    | `if [ -w "log.txt" ]; then...`    |
-| `[ -x $DATEI ]` | **Executable**: Prüft, ob die Datei _ausführbar_ ist.               | `if [ -x "run.sh" ]; then...`     |
+| Parameter       | Bedeutung                                                            | Logik im Skript                   |
+| --------------- | -------------------------------------------------------------------- | --------------------------------- |
+| `[ -e $DATEI ]` | **Exists**: Prüft, ob die Datei oder das Verzeichnis existiert.      | `if [ -e "$FILE" ]; then...`      |
+| `[ -f $DATEI ]` | **File**: Prüft, ob es eine _reguläre Datei_ ist (kein Ordner).      | `if [ -f "skript.sh" ]; then...`  |
+| `[ -d $DATEI ]` | **Directory**: Prüft, ob es ein _Verzeichnis_ (Ordner) ist.          | `if [ -d "/etc" ]; then...`       |
+| `[ -r $DATEI ]` | **Readable**: Prüft, ob du _Leserechte_ hast.                        | `if [ -r "geheim.txt" ]; then...` |
+| `[ -w $DATEI ]` | **Writable**: Prüft, ob du _Schreibrechte_ hast.                     | `if [ -w "log.txt" ]; then...`    |
+| `[ -x $DATEI ]` | **Executable**: Prüft, ob die Datei _ausführbar_ ist.                | `if [ -x "run.sh" ]; then...`     |
 | `[ -s $DATEI ]` | **Size**: Prüft, ob die Datei _grösser als 0 Byte_ ist (nicht leer). | `if [ -s "daten.csv" ]; then...`  |
 
 ### 3.2 Vergleichsoperatoren

@@ -92,15 +92,15 @@
 
 #### Gegenüberstellung der Lizenzmodelle
 
-| Lizenzmodell        | Quellcode              | Kosten                               | Nutzungsfreiheit            | Weitergabe/Modifikation                           | Zielgruppe            |
-| ------------------- | ---------------------- | ------------------------------------ | --------------------------- | ------------------------------------------------- | --------------------- |
-| Proprietär          | Geschlossen            | Kostenpflichtig                      | Stark eingeschränkt         | Meist verboten                                    | Endnutzer, Firmen     |
-| Free Software       | Offen                  | Oft kostenlos                        | Sehr hoch (vier Freiheiten) | Erlaubt & erwünscht                               | Entwickler, Community |
+| Lizenzmodell        | Quellcode              | Kosten                               | Nutzungsfreiheit            | Weitergabe/Modifikation                          | Zielgruppe            |
+| ------------------- | ---------------------- | ------------------------------------ | --------------------------- | ------------------------------------------------ | --------------------- |
+| Proprietär          | Geschlossen            | Kostenpflichtig                      | Stark eingeschränkt         | Meist verboten                                   | Endnutzer, Firmen     |
+| Free Software       | Offen                  | Oft kostenlos                        | Sehr hoch (vier Freiheiten) | Erlaubt & erwünscht                              | Entwickler, Community |
 | Open Source         | Offen                  | Kostenlos / kostenpflichtig möglich  | Hoch                        | Je nach Lizenz (z.B. MIT frei, GPL restriktiver) | Entwickler, Firmen    |
-| Shareware           | Geschlossen            | Erst kostenlos, dann kostenpflichtig | Eingeschränkt (Testversion) | Nicht erlaubt                                     | Privatnutzer          |
-| Freeware            | Geschlossen            | Kostenlos                            | Nutzung erlaubt             | Meist nicht erlaubt                               | Privatnutzer          |
-| Public Domain       | Offen oder geschlossen | Kostenlos                            | Komplett frei               | Erlaubt ohne Einschränkung                        | Alle                  |
-| Kommerzielle Lizenz | Geschlossen            | Kostenpflichtig                      | Eingeschränkt               | Nicht erlaubt                                     | Firmen, Profis        |
+| Shareware           | Geschlossen            | Erst kostenlos, dann kostenpflichtig | Eingeschränkt (Testversion) | Nicht erlaubt                                    | Privatnutzer          |
+| Freeware            | Geschlossen            | Kostenlos                            | Nutzung erlaubt             | Meist nicht erlaubt                              | Privatnutzer          |
+| Public Domain       | Offen oder geschlossen | Kostenlos                            | Komplett frei               | Erlaubt ohne Einschränkung                       | Alle                  |
+| Kommerzielle Lizenz | Geschlossen            | Kostenpflichtig                      | Eingeschränkt               | Nicht erlaubt                                    | Firmen, Profis        |
 
 #### EULA - Was ist das?
 
@@ -137,23 +137,23 @@ EULA steht für End User License Agreement
 
 | Begriff             | Beschreibung                                                                                                                                                                                                   |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Gast Betriebssystem | Das Betriebssystem, das innerhalb der virtuellen Maschine läuft. Es wird vom Hypervisor verwaltet & nutzt virtuelle Hardware (z.B. virtuelle CPU, RAM, Festplatten).                                          |
+| Gast Betriebssystem | Das Betriebssystem, das innerhalb der virtuellen Maschine läuft. Es wird vom Hypervisor verwaltet & nutzt virtuelle Hardware (z.B. virtuelle CPU, RAM, Festplatten).                                           |
 | Hypervisor          | Die Virtualisierungssoftware, die zwischen Host-Hardware & Gastbetriebssystem(en) vermittelt. Sie stellt den VMs die virtuelle Hardware bereit & verwaltet Ressourcen. Beispiele: VirtualBox, VMware, Hyper-V. |
 | Host Betriebssystem | Das Betriebssystem, das direkt auf der physischen Hardware installiert ist & den Hypervisor (bei Typ-2-Hypervisoren) ausführt. Beispiel: Windows, Linux oder macOS.                                            |
 | Hardware            | Die physische Grundlage des Systems, also Prozessor, Arbeitsspeicher, Festplatten & Netzwerkkarten. Diese Ressourcen werden vom Hypervisor an die VMs verteilt.                                                |
 
 ### 187-03A - 01.00
 
-| Befehl                             | Bedeutung                                                             |
-| ---------------------------------- | --------------------------------------------------------------------- |
+| Befehl                             | Bedeutung                                                              |
+| ---------------------------------- | ---------------------------------------------------------------------- |
 | sudo apt update                    | Aktualisiert die Paketlisten (weiss, welche Versionen verfügbar sind). |
-| sudo apt upgrade                   | Aktualisiert alle installierten Pakete auf die neuesten Versionen.    |
-| sudo apt install <paketname>       | Installiert ein Paket.                                                |
-| sudo apt remove <paketname>        | Entfernt ein Paket, Konfigurationsdateien bleiben.                    |
-| sudo apt purge <paketname>         | Entfernt ein Paket inkl. Konfigurationsdateien.                       |
-| apt search <suchbegriff>           | Sucht nach Paketen in den Paketquellen.                               |
-| apt show <paketname>               | Zeigt detaillierte Informationen zu einem Paket.                      |
-| apt list <suchbegriff> --installed | Zeigt installierte Pakete, bei denen der Suchbegriff vorkommt.        |
+| sudo apt upgrade                   | Aktualisiert alle installierten Pakete auf die neuesten Versionen.     |
+| sudo apt install <paketname>       | Installiert ein Paket.                                                 |
+| sudo apt remove <paketname>        | Entfernt ein Paket, Konfigurationsdateien bleiben.                     |
+| sudo apt purge <paketname>         | Entfernt ein Paket inkl. Konfigurationsdateien.                        |
+| apt search <suchbegriff>           | Sucht nach Paketen in den Paketquellen.                                |
+| apt show <paketname>               | Zeigt detaillierte Informationen zu einem Paket.                       |
+| apt list <suchbegriff> --installed | Zeigt installierte Pakete, bei denen der Suchbegriff vorkommt.         |
 
 ### 187-03A - 02.00
 
@@ -182,9 +182,9 @@ EULA steht für End User License Agreement
 
 #### Vergleich der Dateisysteme
 
-| Dateisystem | Vorteile                                                               | Nachteile                                                          | Typische Verwendung                                     |
-| ----------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
-| FAT32       | Sehr kompatibel (fast alle Betriebssysteme unterstützen es), einfach   | Keine Dateien >4 GB, keine Journaling- oder Sicherheitsfunktionen  | USB-Sticks, SD-Karten, Datenaustausch zwischen Systemen |
+| Dateisystem | Vorteile                                                                | Nachteile                                                          | Typische Verwendung                                     |
+| ----------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------- |
+| FAT32       | Sehr kompatibel (fast alle Betriebssysteme unterstützen es), einfach    | Keine Dateien >4 GB, keine Journaling- oder Sicherheitsfunktionen  | USB-Sticks, SD-Karten, Datenaustausch zwischen Systemen |
 | NTFS        | Unterstützt grosse Dateien/Partitionen, Rechte- & Journaling-Funktionen | Volle Unterstützung nur unter Windows, Linux/Mac nur eingeschränkt | Windows-Systemlaufwerke, externe Festplatten            |
 | EXT4        | Standard unter Linux, stabil, Journaling, effizient mit grossen Dateien | Kaum Unterstützung unter Windows/Mac ohne Zusatzsoftware           | Linux-Systemlaufwerke, Server, virtuelle Maschinen      |
 
@@ -230,13 +230,13 @@ EULA steht für End User License Agreement
 | Schritt                       | Befehl                                     | Beschreibung / Hinweis                                                                           |
 | ----------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | Partitionen anzeigen          | `lsblk`                                    | Zeigt alle Festplatten & Partitionen                                                             |
-| Partitionen überprüfen        | `sudo fdisk -l`                            | Listet Details zu Partitionen & Grösse auf                                                        |
+| Partitionen überprüfen        | `sudo fdisk -l`                            | Listet Details zu Partitionen & Grösse auf                                                       |
 | Neue Partition erstellen      | `sudo fdisk /dev/sdX`                      | `X` = Laufwerksbuchstabe, interaktiv: `n` für neue Partition, `w` zum Speichern                  |
 | Partition formatieren         | `sudo mkfs.ext4 /dev/sdX1`                 | Erstellt ein EXT4-Dateisystem auf der neuen Partition (passt auch andere FS an z.B. `mkfs.ntfs`) |
 | Mountpoint erstellen          | `sudo mkdir /mnt/meinePartition`           | Erzeugt ein Verzeichnis, an dem die Partition eingebunden wird                                   |
 | Partition einbinden           | `sudo mount /dev/sdX1 /mnt/meinePartition` | Mountet die Partition ins System                                                                 |
 | Mount testen                  | `df -Th`                                   | Zeigt eingebundene Partitionen & Dateisysteme                                                    |
-| Automatisch beim Boot mounten | `sudo nano /etc/fstab`                     | Neue Partition hier eintragen, z.B.: `/dev/sdX1 /mnt/meinePartition ext4 defaults 0 2`          |
+| Automatisch beim Boot mounten | `sudo nano /etc/fstab`                     | Neue Partition hier eintragen, z.B.: `/dev/sdX1 /mnt/meinePartition ext4 defaults 0 2`           |
 
 ### 187-04A - 00.00
 

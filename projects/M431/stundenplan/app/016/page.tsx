@@ -1,51 +1,45 @@
-"use client";
-import {useEffect, useState} from "react";
-import CalendarClient, {CalendarScheme} from "@/app/components/calender";
-import {o16data} from "@/app/016/016";
+'use client';
+import { useEffect, useState } from 'react';
+import CalendarClient, { CalendarScheme } from '@/app/components/calender';
+import { o16data } from '@/app/016/016';
 
 const lightScheme: CalendarScheme = {
-    weekdayColors: [
-        "#FFD580", "#90EE90", "#87CEFA", "#FFB6C1",
-        "#D8BFD8", "#FF7F7F", "#FFE066",
-    ],
-    backgroundColor: "#FFFFFF",
-    foregroundColor: "#111827",
+  weekdayColors: ['#FFD580', '#90EE90', '#87CEFA', '#FFB6C1', '#D8BFD8', '#FF7F7F', '#FFE066'],
+  backgroundColor: '#FFFFFF',
+  foregroundColor: '#111827',
 };
 
 const darkScheme: CalendarScheme = {
-    weekdayColors: [
-        "#1f2937", "#1e7d2b", "#7f1d1d", "#4a044e",
-        "#312e81", "#064e3b", "#374151",
-    ],
-    backgroundColor: "#111827",
-    foregroundColor: "#f9fafb",
+  weekdayColors: ['#1f2937', '#1e7d2b', '#7f1d1d', '#4a044e', '#312e81', '#064e3b', '#374151'],
+  backgroundColor: '#111827',
+  foregroundColor: '#f9fafb',
 };
 
 export default function Home() {
-    const [scheme, setScheme] = useState<CalendarScheme>(lightScheme);
+  const [scheme, setScheme] = useState<CalendarScheme>(lightScheme);
 
-    useEffect(() => {
-        // Detect user preference
-        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  useEffect(() => {
+    // Detect user preference
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-        const updateScheme = () => {
-            setScheme(mediaQuery.matches ? darkScheme : lightScheme);
-        };
+    const updateScheme = () => {
+      setScheme(mediaQuery.matches ? darkScheme : lightScheme);
+    };
 
-        // Initial check
-        updateScheme();
+    // Initial check
+    updateScheme();
 
-        // Listen for changes (user switches theme)
-        mediaQuery.addEventListener("change", updateScheme);
+    // Listen for changes (user switches theme)
+    mediaQuery.addEventListener('change', updateScheme);
 
-        return () => {
-            mediaQuery.removeEventListener("change", updateScheme);
-        };
-    }, []);
+    return () => {
+      mediaQuery.removeEventListener('change', updateScheme);
+    };
+  }, []);
 
-    return (
-        <div>
-            <CalendarClient scheme={scheme} data={o16data}/>
-        </div>
-    );
+  return (
+    <div>
+      <CalendarClient scheme={scheme} data={o16data} />
+    </div>
+  );
 }

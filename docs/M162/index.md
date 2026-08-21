@@ -232,18 +232,20 @@ Genre m ----- 1 Medium
 Ohne Zwischentabelle möglich
 
 **Buch:**
-| BuchID | Titel | Seitenzahl | Cover |
+
+| BuchID | Titel           | Seitenzahl | Cover  |
 | ------ | --------------- | ---------- | ------ |
-| 15 | Faust | 120 | f.png |
-| 16 | Der Prozess | 280 | kp.png |
-| 17 | Die Verwandlung | 96 | vw.png |
+| 15     | Faust           | 120        | f.png  |
+| 16     | Der Prozess     | 280        | kp.png |
+| 17     | Die Verwandlung | 96         | vw.png |
 
 **Ausleihe:**
+
 | AusleiheID | DatumVon | DatumBis | BuchIDFS |
 | ---------- | -------- | -------- | -------- |
-| 240 | 11.12.25 | 18.12.25 | 15 |
-| 241 | 02.01.26 | 10.01.26 | 16 |
-| 242 | 05.01.26 | 12.01.26 | 17 |
+| 240        | 11.12.25 | 18.12.25 | 15       |
+| 241        | 02.01.26 | 10.01.26 | 16       |
+| 242        | 05.01.26 | 12.01.26 | 17       |
 
 **Ja, das Einfügen geht**, solange:
 
@@ -260,21 +262,24 @@ Also:
 Mit Zwischentabelle möglich
 
 **Buch:**
-| BuchID | Titel | Seitenzahl | Cover |
+
+| BuchID | Titel           | Seitenzahl | Cover  |
 | ------ | --------------- | ---------- | ------ |
-| 10 | Faust | 120 | f.png |
-| 11 | Die Verwandlung | 96 | vw.png |
+| 10     | Faust           | 120        | f.png  |
+| 11     | Die Verwandlung | 96         | vw.png |
 
 **Ausleihe:**
+
 | AusleiheID | DatumVon | DatumBis |
 | ---------- | -------- | -------- |
-| 300 | 01.12.25 | 05.12.25 |
+| 300        | 01.12.25 | 05.12.25 |
 
 **Ausleihe_Buch:**
+
 | AusleiheID_FK | BuchID_FK |
 | ------------- | --------- |
-| 300 | 10 |
-| 300 | 11 |
+| 300           | 10        |
+| 300           | 11        |
 
 **Ja, das Einfügen geht**, solange:
 

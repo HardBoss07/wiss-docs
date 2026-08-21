@@ -4,7 +4,8 @@ import java.util.Stack;
 
 public class IterativeHanoi {
 
-	static class Tower {
+    static class Tower {
+
         Stack<Integer> rings = new Stack<>();
         String name;
 
@@ -23,13 +24,11 @@ public class IterativeHanoi {
     }
 
     public static void solveHanoi(int n) throws InterruptedException {
-        Tower[] poles = { 
-            new Tower("Pole 1"), 
-            new Tower("Pole 2"), 
-            new Tower("Pole 3") 
-        };
-        
-        int sourceIndex = 0, auxilliaryIndex = 1, destinationIndex = 2;
+        Tower[] poles = { new Tower("Pole 1"), new Tower("Pole 2"), new Tower("Pole 3") };
+
+        int sourceIndex = 0,
+            auxilliaryIndex = 1,
+            destinationIndex = 2;
         if (n % 2 == 0) {
             auxilliaryIndex = 2;
             destinationIndex = 1;
@@ -43,13 +42,13 @@ public class IterativeHanoi {
 
         long totalMoves = (long) Math.pow(2, n) - 1;
 
-        for (int i = 1; i <= (int)totalMoves; i++) {
-            //Thread.sleep(250); 
-            
+        for (int i = 1; i <= (int) totalMoves; i++) {
+            //Thread.sleep(250);
+
             if (i % 3 == 1) move(poles[sourceIndex], poles[destinationIndex]);
             else if (i % 3 == 2) move(poles[sourceIndex], poles[auxilliaryIndex]);
             else move(poles[auxilliaryIndex], poles[destinationIndex]);
-            
+
             render(poles, n, i);
         }
         System.out.println("Puzzle Completed!");
@@ -66,11 +65,11 @@ public class IterativeHanoi {
     private static void render(Tower[] poles, int n, int currentMove) {
         System.out.print("\033[H\033[2J");
         System.out.flush();
-        
+
         System.out.println("Move: " + currentMove);
         System.out.println();
 
-        int columnWidth = (n * 2) + 4;
+        int columnWidth = n * 2 + 4;
 
         for (int i = n; i >= 0; i--) {
             StringBuilder line = new StringBuilder();
@@ -83,7 +82,7 @@ public class IterativeHanoi {
                 } else {
                     visual = "|";
                 }
-                
+
                 int padding = (columnWidth - visual.length()) / 2;
                 line.append(repeatChar(" ", padding))
                     .append(visual)
@@ -91,7 +90,7 @@ public class IterativeHanoi {
             }
             System.out.println(line.toString());
         }
-        
+
         System.out.println(repeatChar("-", columnWidth * 3));
         System.out.print(centerString("Pole 1", columnWidth));
         System.out.print(centerString("Pole 2", columnWidth));
@@ -103,7 +102,7 @@ public class IterativeHanoi {
         int padding = (width - s.length()) / 2;
         return repeatChar(" ", padding) + s + repeatChar(" ", width - s.length() - padding);
     }
-    
+
     public static void main(String[] args) throws InterruptedException {
         int n = 10;
         solveHanoi(n);

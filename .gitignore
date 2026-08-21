@@ -13,3 +13,4 @@ docs/M122/scripts/*.conf
 docs/M122/scripts/7A/grosse_dateien.txt
 .settings/
 docs/**/teacher_slides/*
+node_modules/

@@ -67,13 +67,13 @@
 
 ## IPv4-Netzklassen
 
-| Klasse | Oktett  | Subnetzmaske | Hosts  | Zweck             |
-| ------ | ------- | ------------ | ------ | ----------------- |
+| Klasse | Oktett  | Subnetzmaske | Hosts  | Zweck              |
+| ------ | ------- | ------------ | ------ | ------------------ |
 | A      | 0-127   | /8           | 16 Mio | sehr grosse Netze  |
 | B      | 128-191 | /16          | 65k    | mittelgrosse Netze |
-| C      | 192-223 | /24          | 254    | kleine Netze      |
-| D      | 224-239 | -            | -      | Multicast         |
-| E      | 240-255 | -            | -      | reserviert        |
+| C      | 192-223 | /24          | 254    | kleine Netze       |
+| D      | 224-239 | -            | -      | Multicast          |
+| E      | 240-255 | -            | -      | reserviert         |
 
 **Private Bereiche:**
 

@@ -27,10 +27,11 @@ Zeilen immer mit ';' beenden;
 
 ### Aufgabe 1:
 
-a) 
+a)
 Mit diesem System kann man die bereits eingeführe Version der Addition nicht ausführen, da es 2 Werte für 0 gibt (+0 und -0). Deshalb ist es schlecht.
 
 b)
+
 | Binär | Dezimal |
 | ----- | ------- |
 | 000   | 0       |
@@ -42,15 +43,15 @@ b)
 | 110   | -2      |
 | 111   | -1      |
 
-c) 
+c)
 A - B = A + (Zweierkomplement von B)
 
 **Zum Zweierkomplement erstellen:**
+
 1. Positive Zahl invertieren (alle 0 werden 1 und alle 1 werden 0)
 2. 1 addieren
 
-1. B Invertieren (0 <-> 1)
-2. +1 Addieren (ergibt -B)
-3. Mit A addieren
-4. Übertrag ausserhalb der Bitlänge verferwen
-
+3. B Invertieren (0 <-> 1)
+4. +1 Addieren (ergibt -B)
+5. Mit A addieren
+6. Übertrag ausserhalb der Bitlänge verferwen

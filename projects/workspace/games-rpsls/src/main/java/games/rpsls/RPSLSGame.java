@@ -29,11 +29,11 @@ public class RPSLSGame extends SimpleGame {
     @Override
     public int[][] initScoreMatrix() {
         return new int[][] {
-        	{0,-1,1,-1,1},
-        	{1,0,-1,1,-1},
-        	{-1,1,0,-1,1},
-        	{1,-1,1,0,-1},
-        	{-1,1,-1,1,0},
+            { 0, -1, 1, -1, 1 },
+            { 1, 0, -1, 1, -1 },
+            { -1, 1, 0, -1, 1 },
+            { 1, -1, 1, 0, -1 },
+            { -1, 1, -1, 1, 0 },
         };
     }
 
@@ -44,7 +44,6 @@ public class RPSLSGame extends SimpleGame {
      */
     @Override
     public String[] initMoves() {
-        return new String[] {"rock", "paper", "scissors", "spock", "lizard"};
+        return new String[] { "rock", "paper", "scissors", "spock", "lizard" };
     }
 }
-

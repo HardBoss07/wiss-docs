@@ -71,6 +71,7 @@ Dafür nutzt man das mächtige Werkzeug `grep`:
 ### 4. Die Kommandos `ps`, `top` und `kill`
 
 Diese Befehle dienen dazu, laufende Programme (Prozesse) zu überwachen und zu steuern.
+
 | Befehl | Erklärung                                                                                                                               |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 | ps     | Zeigt eine Momentaufnahme der aktuell laufenden Prozesse an. Mit `ps aux` siehst du alle Prozesse aller Benutzer.                       |
@@ -126,9 +127,9 @@ $ ./4A/quadrat3.sh 3
 ## 122-6B SideQuest:
 
 | Testfall-ID | Typ        | Eingabe (Argument) | Erwartetes Ergebnis                                                 |
-|-------------|------------|--------------------|---------------------------------------------------------------------|
+| ----------- | ---------- | ------------------ | ------------------------------------------------------------------- |
 | **TF-01**   | Normalfall | `50`               | Bilder werden auf 50% verkleinert; Dateien `*_klein.jpg` entstehen. |
-| **TF-02**   | Extremfall | `200`              | Bilder werden auf 200% vergrössert (Skalierung nach oben).           |
+| **TF-02**   | Extremfall | `200`              | Bilder werden auf 200% vergrössert (Skalierung nach oben).          |
 | **TF-03**   | Extremfall | _(keine Eingabe)_  | Skript gibt Fehlermeldung "Sorry, Sie haben nicht gesagt..." aus.   |
 
 ## 122-7A SideQuest:
@@ -149,7 +150,7 @@ Verschiebt Dateien basierend auf ihrem Änderungsdatum in Datums-Verzeichnisse u
 [7a.sh] (./scripts/7a.sh)
 
 | Befehlsteil     | Erklärung                                                                                 |
-|-----------------|-------------------------------------------------------------------------------------------|
+| --------------- | ----------------------------------------------------------------------------------------- |
 | stat -c %y      | Liest das letzte Änderungsdatum einer Datei aus.                                          |
 | mkdir -p        | Erstellt Verzeichnisse nur, wenn sie noch nicht existieren.                               |
 | find -size +10k | Findet alle Dateien, die grösser als 10 Kilobyte sind.                                    |
@@ -179,7 +180,7 @@ $ python3 mail.py --mail "sender@mail.com" --receiver "empfang@mail.com" --passw
 - **Automatisierung:** Das Skript wird idealerweise via Cron-Job eingeplant.
 
 | Variable        | Bedeutung                                                      |
-|-----------------|----------------------------------------------------------------|
+| --------------- | -------------------------------------------------------------- |
 | `THRESHOLD`     | Der Prozentwert (z.B. 80), ab dem eine Warnung ausgelöst wird. |
 | `USAGE_PERCENT` | Die aktuell berechnete Auslastung des Systems.                 |
 

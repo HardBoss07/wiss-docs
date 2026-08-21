@@ -115,12 +115,12 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
   - _Disaster Recovery (DR):_ Richtlinien und technische Abläufe zur Wiederherstellung der IT nach einem Totalausfall (mittlerer bis hoher Aufwand, Fokus auf Wiederherstellungszeit/RTO).
   - _Backup:_ Regelmässige, versionierte Spiegelung und Archivierung von Datenbeständen gegen Verlust (geringer Aufwand, historischer Fokus).
 - **Gegenüberstellung der Schutzmassnahmen:**
-  | Kriterium | Hochverfügbarkeit (HA) | Disaster Recovery (DR) | Backup |
-  | :--- | :--- | :--- | :--- |
-  | **Primäres Ziel** | Ausfallvermeidung im Live-Betrieb | Komplette Systemwiederherstellung | Sicherung des rohen Datenbestands |
-  | **Zeitlicher Fokus** | Echtzeit (Sekunden bis Minuten) | Stunden bis Tage (RTO) | Historisch (Tage, Wochen, Monate) |
-  | **Typisches Szenario** | Ausfall einer HDD oder Server-Instanz | Totalausfall RZ, Ransomware | Versehentliches Löschen, Fehl-Deployments |
-  | **Aufwand** | Sehr hoch | Mittel bis hoch | Gering bis mittel |
+  | Kriterium              | Hochverfügbarkeit (HA)                | Disaster Recovery (DR)            | Backup                                    |
+  | :--------------------- | :------------------------------------ | :-------------------------------- | :---------------------------------------- |
+  | **Primäres Ziel**      | Ausfallvermeidung im Live-Betrieb     | Komplette Systemwiederherstellung | Sicherung des rohen Datenbestands         |
+  | **Zeitlicher Fokus**   | Echtzeit (Sekunden bis Minuten)       | Stunden bis Tage (RTO)            | Historisch (Tage, Wochen, Monate)         |
+  | **Typisches Szenario** | Ausfall einer HDD oder Server-Instanz | Totalausfall RZ, Ransomware       | Versehentliches Löschen, Fehl-Deployments |
+  | **Aufwand**            | Sehr hoch                             | Mittel bis hoch                   | Gering bis mittel                         |
 - **Die 6 R's der Cloud-Migration:**
   - _Rehosting (Lift & Shift):_ 1:1-Verschiebung der Infrastruktur ohne Architekturänderungen.
   - _Replatforming:_ Leichte Optimierungen zur Nutzung von Cloud-Vorteilen (z. B. Migration auf Managed Databases).
@@ -202,13 +202,13 @@ Für die fiktive Firma EduGame wurde eine containerisierte, skalierbare Webserve
   - _Data Warehouse (DWH):_ Für hochstrukturierte Daten optimiert (Schema-on-Write). Daten werden vor der Speicherung bereinigt und transformiert (z. B. AWS Redshift, Snowflake). Ideal für Business-Analysten (BI).
   - _Data Lake:_ Hochskalierbarer Objektspeicher für Rohdaten aller Strukturtypen. Die Strukturierung erfolgt erst bei der Abfrage (Schema-on-Read, z. B. AWS S3, Azure Data Lake Storage). Bestens geeignet für Data Scientists sowie KI/ML-Training.
 - **Messenger-Vergleich & DSG:**
-  | Kriterium | WhatsApp (Meta Platforms) | Telegram (Telegram FZ-LLC) | Threema (Threema GmbH) |
-  | :--- | :--- | :--- | :--- |
-  | **Rechtlicher Sitz** | USA / Irland (für EU/CH) | Dubai, Vereinigte Arabische Emirate | Schweiz (Pfäffikon SZ) |
-  | **Anwendbares Recht** | EU-DSGVO / Schweizer DSG | VAE-Recht | Schweizer DSG / EU-DSGVO |
-  | **Verschlüsselung** | E2E standardmässig aktiv | E2E nur in "Geheimen Chats" (Standard-Chats liegen auf Servern) | E2E standardmässig für alle Chats aktiv |
-  | **Metadaten** | Sehr hoch (Nummer, IP, Kontakte, online) | Hoch (Nummer, IP, Kontaktliste auf Servern) | Minimal (anonyme 8-stellige ID, keine Nummer nötig) |
-  | **Datennutzung** | Meta-Werbeprofile, Business-Features | Cloud-Synchronisation, Kanäle-Werbung | Nur zur technischen Übermittlung |
+  | Kriterium             | WhatsApp (Meta Platforms)                | Telegram (Telegram FZ-LLC)                                      | Threema (Threema GmbH)                              |
+  | :-------------------- | :--------------------------------------- | :-------------------------------------------------------------- | :-------------------------------------------------- |
+  | **Rechtlicher Sitz**  | USA / Irland (für EU/CH)                 | Dubai, Vereinigte Arabische Emirate                             | Schweiz (Pfäffikon SZ)                              |
+  | **Anwendbares Recht** | EU-DSGVO / Schweizer DSG                 | VAE-Recht                                                       | Schweizer DSG / EU-DSGVO                            |
+  | **Verschlüsselung**   | E2E standardmässig aktiv                 | E2E nur in "Geheimen Chats" (Standard-Chats liegen auf Servern) | E2E standardmässig für alle Chats aktiv             |
+  | **Metadaten**         | Sehr hoch (Nummer, IP, Kontakte, online) | Hoch (Nummer, IP, Kontaktliste auf Servern)                     | Minimal (anonyme 8-stellige ID, keine Nummer nötig) |
+  | **Datennutzung**      | Meta-Werbeprofile, Business-Features     | Cloud-Synchronisation, Kanäle-Werbung                           | Nur zur technischen Übermittlung                    |
 - **Datenschutz nach Schweizer DSG (gültig ab 1. September 2023):**
   - IP-Adressen, Telefonnummern, Standortdaten und Profilbilder gelten als personenbezogene Daten.
   - _Zweckbindung & Datensparsamkeit:_ Daten dürfen nur für den bei der Beschaffung deklarierten Zweck erhoben werden (Art. 6 DSG).

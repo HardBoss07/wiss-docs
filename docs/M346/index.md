@@ -644,7 +644,7 @@ services:
     image: nginx:latest
     container_name: edugame_lb
     ports:
-      - "80:80"
+      - '80:80'
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:

@@ -1,5 +1,4 @@
-export const data: string =
-`
+export const data: string = `
 BEGIN:VCALENDAR
 PRODID:-//Tocco AG//iCal4j 1.0//EN
 VERSION:2.0

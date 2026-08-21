@@ -1,6 +1,7 @@
 # Speaking Exam
 
 ## best practices
+
 on page 143 is a whole speaking exam
 
 1. part: generic questions with 20-30 second answers, structure: Answer (opinion/fact), reason, personal example to clarify what you mean
@@ -34,4 +35,3 @@ differences such as whereas, while, on the other hand, however, but,
 dont say "and in picutre 2" comments in the same sentence / in a seperate sentence
 
 use because since oyu should always support your opinion / observation
-

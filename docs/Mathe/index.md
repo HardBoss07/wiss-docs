@@ -120,11 +120,11 @@ $$y=2x^2-3x-4$$
 2. Schnittpunkt mit der $Y$-Achse ist $= d$ also $-4$
 3. Schnittpunkt mit der $X$-Achse:
    $$ x\_{1,2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
-$$ x\_{1,2}=\frac{-(-3)\pm\sqrt{(-3)^2-4\cdot2\cdot(-4)}}{2\cdot2}$$
-$$ x\_{1,2}=\frac{3\pm\sqrt{9+32}}{4}$$
-$$ x\_{1,2}=\frac{3\pm\sqrt{41}}{4}$$
-$$ x_1=\frac{3-\sqrt{41}}{4}$$
-$$ x_2=\frac{3+\sqrt{41}}{4}$$
+   $$ x\_{1,2}=\frac{-(-3)\pm\sqrt{(-3)^2-4\cdot2\cdot(-4)}}{2\cdot2}$$
+   $$ x\_{1,2}=\frac{3\pm\sqrt{9+32}}{4}$$
+   $$ x\_{1,2}=\frac{3\pm\sqrt{41}}{4}$$
+   $$ x_1=\frac{3-\sqrt{41}}{4}$$
+   $$ x_2=\frac{3+\sqrt{41}}{4}$$
 
 $$N_1\left(\frac{3 + \sqrt{41}}{4} \;\middle|\; 0\right)$$
 $$N_2\left(\frac{3 - \sqrt{41}}{4} \;\middle|\; 0\right)$$

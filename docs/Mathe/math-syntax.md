@@ -92,11 +92,11 @@ for (let x = -5; x <= 5; x += 0.1) {
 const trace = {
   x: xValues,
   y: yValues,
-  type: "scatter",
-  mode: "lines",
-  name: "f(x) = x²",
+  type: 'scatter',
+  mode: 'lines',
+  name: 'f(x) = x²',
 };
-Plotly.newPlot("plot1", [trace], { title: "Parabel Plot", margin: { t: 40 } });
+Plotly.newPlot('plot1', [trace], { title: 'Parabel Plot', margin: { t: 40 } });
 ```
 
 # Markdown Mathe Cheat-Sheet
@@ -117,14 +117,14 @@ Plotly.newPlot("plot1", [trace], { title: "Parabel Plot", margin: { t: 40 } });
 
 ## 2. Relationen & Ungleichungen
 
-| Beschreibung            | Code            | Gerendert       |
-| :---------------------- | :-------------- | :-------------- |
-| Ungleich                | `\neq`          | $\neq$          |
-| Ungefähr gleich         | `\approx`       | $\approx$       |
-| Entspricht              | `\hat=`         | $\hat=$         |
+| Beschreibung             | Code            | Gerendert       |
+| :----------------------- | :-------------- | :-------------- |
+| Ungleich                 | `\neq`          | $\neq$          |
+| Ungefähr gleich          | `\approx`       | $\approx$       |
+| Entspricht               | `\hat=`         | $\hat=$         |
 | Kleiner / Grösser gleich | `\leq` / `\geq` | $\leq$ / $\geq$ |
-| Proportional zu         | `\propto`       | $\propto$       |
-| Identisch               | `\equiv`        | $\equiv$        |
+| Proportional zu          | `\propto`       | $\propto$       |
+| Identisch                | `\equiv`        | $\equiv$        |
 
 ## 3. Pfeile & Logik
 
@@ -161,11 +161,12 @@ Plotly.newPlot("plot1", [trace], { title: "Parabel Plot", margin: { t: 40 } });
 ## 6. Griechisches Alphabet (Auswahl)
 
 _Tipp: Für Grossbuchstaben einfach den ersten Buchstaben gross schreiben (z.B. `\Gamma` statt `\gamma`)._
-| Beschreibung | Code | Gerendert |
-| :--- | :--- | :--- |
+
+| Beschreibung       | Code                        | Gerendert                   |
+| :----------------- | :-------------------------- | :-------------------------- |
 | Alpha, Beta, Gamma | `\alpha`, `\beta`, `\gamma` | $\alpha$, $\beta$, $\gamma$ |
-| Delta (Differenz) | `\Delta`, `\delta` | $\Delta$, $\delta$ |
-| Pi, Sigma, Omega | `\pi`, `\sigma`, `\omega` | $\pi$, $\sigma$, $\omega$ |
+| Delta (Differenz)  | `\Delta`, `\delta`          | $\Delta$, $\delta$          |
+| Pi, Sigma, Omega   | `\pi`, `\sigma`, `\omega`   | $\pi$, $\sigma$, $\omega$   |
 | Phi, Theta, Lambda | `\phi`, `\theta`, `\lambda` | $\phi$, $\theta$, $\lambda$ |
 
 ## 7. Akzente & Vektoren

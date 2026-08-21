@@ -11,13 +11,13 @@ import games.simple.SimpleGame;
  * @version 1.0
  */
 public class RPSGame extends SimpleGame {
-	
-	/**
+
+    /**
      * Konstruktor für ein RPSGame-Objekt. Ruft den Konstruktor der Elternklasse auf.
      */
-	public RPSGame() {
-		super();
-	}
+    public RPSGame() {
+        super();
+    }
 
     /**
      * Initialisiert die Punktematrix für das "Rock, Paper, Scissors"-Spiel.
@@ -28,11 +28,7 @@ public class RPSGame extends SimpleGame {
      */
     @Override
     public int[][] initScoreMatrix() {
-        return new int[][] {
-            {0, -1, 1},
-            {1, 0, -1},
-            {-1, 1, 0}
-        };
+        return new int[][] { { 0, -1, 1 }, { 1, 0, -1 }, { -1, 1, 0 } };
     }
 
     /**
@@ -42,6 +38,6 @@ public class RPSGame extends SimpleGame {
      */
     @Override
     public String[] initMoves() {
-        return new String[] {"rock", "paper", "scissors"};
+        return new String[] { "rock", "paper", "scissors" };
     }
 }

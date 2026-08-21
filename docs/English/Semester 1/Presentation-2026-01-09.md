@@ -39,39 +39,38 @@ Thank you for your attentions, are there any questions?
 
 **Q: "If you wrote it yourself, doesn't that make the process more complex than just using what's already there?"**
 
-* **Answer:** "That's a fair point. There is an 'upfront' complexity in building it. However, I view it as an investment. By spending time once to create a tool tailored exactly to my needs, I reduce the 'daily' complexity of navigating a cluttered interface every time I want to check my PC's health."
+- **Answer:** "That's a fair point. There is an 'upfront' complexity in building it. However, I view it as an investment. By spending time once to create a tool tailored exactly to my needs, I reduce the 'daily' complexity of navigating a cluttered interface every time I want to check my PC's health."
 
 **Q: "What language/framework did you use, and was it hard to keep it 'simple' during development?"**
 
-* **Answer:** "I used Rust using the Tauri Framework with a Next TypeSScript Frontend. The hardest part wasn't the coding; it was the **discipline to leave things out**. I constantly had to ask myself: 'Do I really need a graph for Disk Write speed, or is that just clutter?'"
+- **Answer:** "I used Rust using the Tauri Framework with a Next TypeSScript Frontend. The hardest part wasn't the coding; it was the **discipline to leave things out**. I constantly had to ask myself: 'Do I really need a graph for Disk Write speed, or is that just clutter?'"
 
 ### 2. Philosophical Questions (About Simplicity)
 
 **Q: "Isn't 'simple' just another word for 'limited'?"**
 
-* **Answer:** "I prefer the word 'focused.' A Swiss Army knife has 20 tools, but a dedicated chef's knife is better for cutting vegetables. Simplicity isn't about having fewer capabilities; it's about having the **right** capabilities for a specific task without the noise."
+- **Answer:** "I prefer the word 'focused.' A Swiss Army knife has 20 tools, but a dedicated chef's knife is better for cutting vegetables. Simplicity isn't about having fewer capabilities; it's about having the **right** capabilities for a specific task without the noise."
 
 **Q: "How do you distinguish between 'simple' and 'oversimplified'?"**
 
-* **Answer:** "A solution is simple when it fulfills its requirement with the least effort. It becomes oversimplified when it can no longer do the job it was intended for. If my Resource Monitor didn't show my GPU temperature, and that's what I needed, *then* it would be oversimplified."
+- **Answer:** "A solution is simple when it fulfills its requirement with the least effort. It becomes oversimplified when it can no longer do the job it was intended for. If my Resource Monitor didn't show my GPU temperature, and that's what I needed, _then_ it would be oversimplified."
 
 ### 3. Practical/Business Questions
 
 **Q: "In a professional environment, doesn't complexity sell better to clients?"**
 
-* **Answer:** "Often, yes. Complexity looks 'expensive.' But the best professionals sell **outcomes**, not features. If I can show a client that a simple solution will reduce their employee training time by 50% and reduce errors, that is a much stronger selling point than a list of 100 features they'll never use."
+- **Answer:** "Often, yes. Complexity looks 'expensive.' But the best professionals sell **outcomes**, not features. If I can show a client that a simple solution will reduce their employee training time by 50% and reduce errors, that is a much stronger selling point than a list of 100 features they'll never use."
 
 **Q: "How do you know when to stop simplifying?"**
 
-* **Answer:** "I follow the 'Minimal Viable Product' rule. You stop simplifying when removing one more piece would break the core functionality. If the user can still achieve their main goal efficiently, you're in the 'sweet spot'."
-
+- **Answer:** "I follow the 'Minimal Viable Product' rule. You stop simplifying when removing one more piece would break the core functionality. If the user can still achieve their main goal efficiently, you're in the 'sweet spot'."
 
 ### A Final Small Fix for your Script
 
 At the very end of your spoken text, you have a small grammatical error:
 
-* **Original:** "Thank you for your **attentions**, are there any questions?"
-* **Correction:** "Thank you for your **attention**. Are there any questions?" (Attention is uncountable in this context).
+- **Original:** "Thank you for your **attentions**, are there any questions?"
+- **Correction:** "Thank you for your **attention**. Are there any questions?" (Attention is uncountable in this context).
 
 ### Pro-Tip for the Q&A
 

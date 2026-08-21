@@ -366,30 +366,32 @@ SMART-Zielsetzung
 In dieser Phase wird überprüft, ob die Arbeitsschritte & das Endergebnis den Vorgaben entsprechen, Abweichungen werden korrigiert & der Abschluss kommuniziert.
 
 **Was sind die wichtigsten Elemente / Schritte in dieser Phase:**
-| Schritt | Erklärung |
-| ------------------------------------- | ----------------------------------------------------------------------- |
-| Zwischenergebnisse überprüfen | Sicherstellen, dass die Arbeitsschritte korrekt ausgeführt wurden |
-| Abweichungen erkennen & korrigieren | Fehler oder Probleme feststellen & Gegenmassnahmen einleiten |
-| Endergebnis mit Auftrag abgleichen | Prüfen, ob das Resultat den Planvorgaben & Anforderungen entspricht |
-| Prüfkriterien hinterfragen | Überprüfen, ob die definierten Kriterien vollständig & sinnvoll waren |
-| Zeitplan kontrollieren | Prüfen, ob die Arbeit im vorgesehenen Zeitrahmen erledigt wurde |
-| Abschluss kommunizieren | Relevante Personen oder Stellen über die Fertigstellung informieren |
+
+| Schritt                             | Erklärung                                                             |
+| ----------------------------------- | --------------------------------------------------------------------- |
+| Zwischenergebnisse überprüfen       | Sicherstellen, dass die Arbeitsschritte korrekt ausgeführt wurden     |
+| Abweichungen erkennen & korrigieren | Fehler oder Probleme feststellen & Gegenmassnahmen einleiten          |
+| Endergebnis mit Auftrag abgleichen  | Prüfen, ob das Resultat den Planvorgaben & Anforderungen entspricht   |
+| Prüfkriterien hinterfragen          | Überprüfen, ob die definierten Kriterien vollständig & sinnvoll waren |
+| Zeitplan kontrollieren              | Prüfen, ob die Arbeit im vorgesehenen Zeitrahmen erledigt wurde       |
+| Abschluss kommunizieren             | Relevante Personen oder Stellen über die Fertigstellung informieren   |
 
 ### Auswerten
 
 In dieser Phase werden Erfahrungen reflektiert, Stärken & Schwächen analysiert sowie Verbesserungsmassnahmen & Erkenntnisse für zukünftige Arbeiten festgehalten.
 
 **Was sind die wichtigsten Elemente / Schritte in dieser Phase:**
-| Schritt | Erklärung |
+
+| Schritt                                | Erklärung                                                                   |
 | -------------------------------------- | --------------------------------------------------------------------------- |
-| Erfahrungen reflektieren | Eigene Arbeitserfahrungen durchdenken & Schlüsse ziehen |
-| Stärken & Schwächen analysieren | Herausfinden, was gut lief & wo es Probleme gab |
-| Ursachen für Schwierigkeiten ermitteln | Verstehen, warum Probleme oder Verzögerungen aufgetreten sind |
-| Verbesserungspotenzial festhalten | Ideen für zukünftige Verbesserungen dokumentieren |
-| Feedback einholen | Rückmeldungen von Betreuern, Kollegen oder Kunden berücksichtigen |
-| Erkenntnisse sichern | Gelerntes schriftlich oder gedanklich für zukünftige Aufträge festhalten |
-| Vorsätze überprüfen | Prüfen, welche früheren Verbesserungsziele umgesetzt wurden |
-| Massnahmen ableiten | Konkrete Schritte für die nächste Arbeit definieren, um Fehler zu vermeiden |
+| Erfahrungen reflektieren               | Eigene Arbeitserfahrungen durchdenken & Schlüsse ziehen                     |
+| Stärken & Schwächen analysieren        | Herausfinden, was gut lief & wo es Probleme gab                             |
+| Ursachen für Schwierigkeiten ermitteln | Verstehen, warum Probleme oder Verzögerungen aufgetreten sind               |
+| Verbesserungspotenzial festhalten      | Ideen für zukünftige Verbesserungen dokumentieren                           |
+| Feedback einholen                      | Rückmeldungen von Betreuern, Kollegen oder Kunden berücksichtigen           |
+| Erkenntnisse sichern                   | Gelerntes schriftlich oder gedanklich für zukünftige Aufträge festhalten    |
+| Vorsätze überprüfen                    | Prüfen, welche früheren Verbesserungsziele umgesetzt wurden                 |
+| Massnahmen ableiten                    | Konkrete Schritte für die nächste Arbeit definieren, um Fehler zu vermeiden |
 
 # Side Quest 04A - Stunden- / Raumplaner | WISSDOM
 
@@ -413,13 +415,13 @@ Unser Ziel ist es, eine **transparente, aktuelle & leicht zugängliche Lösung**
 
 ## SMART-Analyse
 
-| Kriterium   | Beschreibung                                                                                                                                                                                        |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Spezifisch  | Entwicklung eines digitalen Systems, das den Stunden- & Raumplan unserer Schule zentral darstellt & jederzeit für Lernende & Lehrpersonen abrufbar ist.                                             |
-| Messbar     | Erfolgreich, wenn 100 % der Klassen ihren Plan digital einsehen können & mindestens 80 % der Lehrpersonen aktiv Änderungen eintragen.                                                               |
-| Attraktiv   | Das System spart Zeit, reduziert Verwirrung durch Raumwechsel & sorgt für mehr Transparenz im Schulalltag.                                                                                          |
+| Kriterium   | Beschreibung                                                                                                                                                                                       |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Spezifisch  | Entwicklung eines digitalen Systems, das den Stunden- & Raumplan unserer Schule zentral darstellt & jederzeit für Lernende & Lehrpersonen abrufbar ist.                                            |
+| Messbar     | Erfolgreich, wenn 100 % der Klassen ihren Plan digital einsehen können & mindestens 80 % der Lehrpersonen aktiv Änderungen eintragen.                                                              |
+| Attraktiv   | Das System spart Zeit, reduziert Verwirrung durch Raumwechsel & sorgt für mehr Transparenz im Schulalltag.                                                                                         |
 | Realistisch | Umsetzung ist möglich, da wir direkten Zugriff auf die bestehende Infrastruktur der Schule (Server, Netzwerke, Geräte) haben. Start in kleinem Umfang (z.B. eine Klasse als Pilotprojekt) denkbar. |
-| Terminiert  | Erste funktionierende Version innerhalb von 2-3 Monaten; vollständige Einführung im kommenden Semester.                                                                                             |
+| Terminiert  | Erste funktionierende Version innerhalb von 2-3 Monaten; vollständige Einführung im kommenden Semester.                                                                                            |
 
 ## Wo könnte eine grosse Schwierigkeit (Risiko) bestehen?
 
