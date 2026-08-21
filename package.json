@@ -1,0 +1,15 @@
+{
+  "name": "wiss-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Global formatting for wiss-docs",
+  "scripts": {
+    "format": "prettier --write \".\"",
+    "format:check": "prettier --check \".\""
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "prettier-plugin-java": "^2.10.3",
+    "prettier-plugin-tailwindcss": "^0.8.1"
+  }
+}
