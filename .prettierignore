@@ -3,6 +3,7 @@
 **/dist/
 **/node_modules/
 **/.mvn/
+**/.next/
 
 # Binary / Executables
 backend/mvnw
