@@ -1,0 +1,8 @@
+FROM php:8.2-apache
+
+COPY ports.conf /etc/apache2/ports.conf
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+
+COPY index.php /var/www/html/
+
+EXPOSE 82

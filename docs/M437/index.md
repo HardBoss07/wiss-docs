@@ -102,3 +102,88 @@ ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
 - **Layer-Caching (Pom-First Trick):** Indem `pom.xml` separat vor `src/` kopiert wird, müssen Maven-Abhängigkeiten nicht bei jeder Codeänderung neu heruntergeladen werden.
 - **Non-Root User:** Führt den Container aus Sicherheitsgründen mit eingeschränkten Rechten (`appuser`) aus.
 - **Healthcheck:** Ermöglicht Orchestrierungstools (wie Docker Compose, Swarm oder Kubernetes) festzustellen, ob die Anwendung tatsächlich einsatzbereit ist.
+
+## Docker-1 Aufgabe mit Webserver Apache und PHP
+
+[Link zur Dockerfile](./aufgabe1/Dockerfile)
+
+**Befehle zum Bauen und Starten:**
+
+```bash
+docker build -t php-apache-app .
+docker run -d -p 8080:80 --name my-php-app php-apache-app
+```
+
+[Link zur ApacheWithPHP Dockerfile](./aufgabe1/ApacheWithPHP)
+
+**Befehle zum Bauen und Starten:**
+
+```bash
+docker build -f ApacheWithPHP -t apache-with-php .
+docker run -d -p 82:82 --name my-apache-82 apache-with-php
+```
+
+## Docker-2 Aufgabe mit Webserver Apache und PHP
+
+### 1. PHP mit Docker starten
+
+[Link zum index.php](./aufgabe2/teilaufgabe1/index.php)
+
+**Befehl zum Starten**
+
+```bash
+docker run -d -p 8080:80 -v $(pwd)/aufgabe2/teilaufgabe1:/var/www/html --name php-task1 php:8.3-apache
+```
+
+### 2. PHP-Dateien per Volume einbinden
+
+[Link zum index.php](./aufgabe2/teilaufgabe2/index.php)
+
+**Befehl zum Starten**
+
+```bash
+docker run -d -p 8081:80 -v $(pwd)/aufgabe2/teilaufgabe2:/var/www/html --name php-task2 php:8.3-apache
+```
+
+- URL: http://localhost:8081
+
+### 3. Eigenes PHP-Image mit Dockerfile
+
+[Link zum Dockerfile](./aufgabe2/teilaufgabe3/Dockerfile)
+[Link zum index.php](./aufgabe2/teilaufgabe3/index.php)
+
+**Befehle zum Bauen und Starten:**
+
+```bash
+cd aufgabe2/teilaufgabe3
+docker build -t custom-php-app .
+docker run -d -p 8082:80 --name php-task3 custom-php-app
+```
+
+- URL: http://localhost:8082
+
+### 4. PHP + MySQL mit Docker Compose
+
+[Link zum Dockerfile](./aufgabe2/teilaufgabe4/Dockerfile)
+[Link zum index.php](./aufgabe2/teilaufgabe4/index.php)
+[Link zum docker-compose.yml](./aufgabe2/teilaufgabe4/docker-compose.yml)
+
+```bash
+cd ./aufgabe2/teilaufgabe4
+docker compose up -d --build
+```
+
+- URL: http://localhost:8083
+
+### 5. Kleine PHP-Docker-Anwendung bauen
+
+[Link zum Dockerfile](./aufgabe2/teilaufgabe5/Dockerfile)
+[Link zum index.php](./aufgabe2/teilaufgabe5/src/index.php)
+[Link zum docker-compose.yml](./aufgabe2/teilaufgabe5/docker-compose.yml)
+
+```bash
+cd aufgabe2/teilaufgabe5
+docker compose up -d --build
+```
+
+- URL: http://localhost:8084
