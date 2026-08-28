@@ -26,8 +26,8 @@ Begriffe:
 - CHILD/CHILDREN: Kindelement(e), die sich direkt innerhalb eines Parent-Tags befinden.
 - SIBLINGS: Geschwisterelemente, die im DOM auf derselben Hierarchieebene unter demselben Parent-Tag liegen.
 - SEMANTIK: Die bedeutungsvolle Nutzung von HTML-Tags (z.B. `<nav>`, `<header>`, `<article>`). Zeigt Browsern, Screenreadern und Suchmaschinen, welche Bedeutung der jeweilige Inhalt hat.
-- SEO: Search Engine Optimization (Suchmaschinenoptimierung). Maßnahmen, um die Sichtbarkeit und das Ranking einer Website in Suchmaschinen zu verbessern.
-- RESPONSIVE: Webdesign-Ansatz, bei dem sich Layout und Aussehen einer Website flexibel an unterschiedliche Bildschirmgrößen und Geräte (Desktop, Tablet, Smartphone) anpassen.
+- SEO: Search Engine Optimization (Suchmaschinenoptimierung). Massnahmen, um die Sichtbarkeit und das Ranking einer Website in Suchmaschinen zu verbessern.
+- RESPONSIVE: Webdesign-Ansatz, bei dem sich Layout und Aussehen einer Website flexibel an unterschiedliche Bildschirmgrössen und Geräte (Desktop, Tablet, Smartphone) anpassen.
 
 Webseiten mit wichtigen Informationen / Tools:
 
@@ -95,3 +95,53 @@ Webseiten mit wichtigen Informationen / Tools:
   </body>
 </html>
 ```
+
+## 293-2A SideQuest:
+
+## 293-2A SideQuest:
+
+### Theorie: Block- vs. Inline-Elemente & Regeln
+
+- BLOCK-ELEMENTE: Nehmen immer die volle verfügbare Breite des Elternelements ein und beginnen auf einer neuen Zeile (erzeugen einen Zeilenumbruch vor und nach dem Element). Sie dienen primär der Strukturierung.
+- INLINE-ELEMENTE: Nehmen nur so viel Breite ein wie ihr Inhalt benötigt und erzeugen keinen Zeilenumbruch im Textfluss. Sie dienen meist der Formatierung von Textabschnitten.
+- VERSCHACHTELUNGS-REGELN:
+  - Block-Elemente dürfen standardmässig andere Block-Elemente und Inline-Elemente enthalten.
+  - Inline-Elemente dürfen im Normalfall nur Text oder weitere Inline-Elemente enthalten - keine Block-Elemente (Ausnahme z.B. `<a>` in HTML5, welches für Verlinkungen ganze Block-Bereiche umschliessen darf).
+  - Sonderfall Absätze: `<p>` darf keine anderen Block-Elemente enthalten.
+
+### Namenskonventionen & Ordnerstruktur
+
+- DATEI- & ORDNERNAMEN: Nur Kleinschreibung (kebab-case), keine Leerzeichen (stattdessen `-`), keine Sonderzeichen/Umlaute. Startseite heisst zwingend `index.html`.
+- Wiederverwendende Bilder im "assets" Ordner (Logo, Hintergrund etc), Einmalig vorkommende Bilder in "img" Ordner
+- STATE OF THE ART ORDNERSTRUKTUR:
+
+```plaintext
+mein-projekt/
+├── css/
+│   └── style.css
+├── img/
+│   └── logo.png
+├── assets/
+│   ├── fonts/
+│   └── icons/
+├── pages/
+│   ├── ueber-uns.html
+│   └── kontakt.html
+└── index.html
+```
+
+### HTML-Elemente
+
+| Element       | Beschreibung                                                                               | Typ                   |
+| ------------- | ------------------------------------------------------------------------------------------ | --------------------- |
+| `<hr>`        | Horizontal Rule. Fügt eine horizontale Trennlinie zur visuellen/thematischen Trennung ein. | Block                 |
+| `<br>`        | Line Break. Erwingt einen manuellen Zeilenumbruch innerhalb eines Textflusses.             | Inline                |
+| `<em>`        | Emphasis. Hebt Text betont/kursiv hervor für semantische Gewichtung.                       | Inline                |
+| `<strong>`    | Strong Importance. Stellt Text stark gewichtet/fett dar (wichtig für Semantik & SEO).      | Inline                |
+| `<img>`       | Image. Bindet ein externes Bild via `src`-Attribut in das Dokument ein.                    | Inline (Inline-Block) |
+| `<a>`         | Anchor. Erstellt einen Hyperlink zu einer anderen Seite, Datei oder Anchor-ID (`href`).    | Inline                |
+| `<p>`         | Paragraph. Definiert einen eigenständigen Textabsatz mit automatischem Aussenabstand.      | Block                 |
+| `<h1>`-`<h6>` | Headings. Überschriften der Hierarchieebenen 1 (wichtigste) bis 6 (untergeordnete).        | Block                 |
+| `<ul>`        | Unordered List. Erstellt eine ungeordnete Aufzählungsliste (meist mit Aufzählungspunkten). | Block                 |
+| `<ol>`        | Ordered List. Erstellt eine nummerierte/geordnete Liste.                                   | Block                 |
+| `<li>`        | List Item. Repräsentiert ein einzelnes Listenelement innerhalb von `<ul>` oder `<ol>`.     | Block                 |
