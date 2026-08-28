@@ -1,0 +1,239 @@
+/* ==========================================
+   Globales Reset & Grundlagen
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   Header-Bereich
+   ========================================== */
+header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Hero Banner Overlay Container */
+.hero-banner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  position: relative;
+  width: 100%;
+  max-height: 480px;
+  overflow: hidden;
+}
+
+/* Place background image into the entire grid space */
+.hero-banner .hero-img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+/* Position logo higher up on top of the image */
+.hero-banner .logo {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 2;
+  height: 55px;
+  width: auto;
+  margin: 15px 20px 0 20px; /* Adjust top margin to control height */
+}
+
+/* Position H1 higher up on top of the image */
+.hero-banner h1 {
+  grid-column: 2;
+  grid-row: 1;
+  z-index: 2;
+  color: #010101;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 25px; /* Adjust top margin to align with logo */
+}
+
+/* Sticky Navigation outside of hero container */
+header > nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
+header > nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header > nav li {
+  margin: 0;
+}
+
+header > nav a {
+  display: block;
+  padding: 12px 14px;
+  color: #111111;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+header > nav a:hover {
+  border-bottom: 2px solid #010101;
+}
+
+/* ==========================================
+   Section: Mini News
+   ========================================== */
+section {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* Prevents height stretching within rows */
+  gap: 20px;
+}
+
+section > h2 {
+  flex-basis: 100%;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #111111;
+  border-bottom: 2px solid #111111;
+  padding-bottom: 6px;
+}
+
+article {
+  background-color: #d6d6d6;
+  padding: 20px;
+  flex: 1 1 300px;
+}
+
+article h3 {
+  font-size: 1.2rem;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+article p {
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+/* ==========================================
+   Main: Countryman Inhaltsbereich & Figures
+   ========================================== */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+main > h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  color: #e60012;
+}
+
+/* Figure-Blöcke im Rahmen-Style des Mockups */
+main figure {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  gap: 25px;
+  margin-bottom: 35px;
+  background-color: #ffffff;
+}
+
+/* Abwechselndes Layout (Bild rechts / Text links) */
+main figure:nth-of-type(odd) {
+  background-color: #d6d6d6;
+}
+
+main figure img {
+  width: 40%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+main figure figcaption {
+  padding-top: 10px;
+  width: 55%;
+}
+
+main figure figcaption h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #e60012;
+  border-bottom: 2px solid #e60012;
+}
+
+main figure figcaption p {
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+main figure figcaption ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+main figure figcaption li {
+  margin-bottom: 4px;
+}
+
+footer {
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   Responsive (Mobilansicht)
+   ========================================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header > h1 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+
+  main figure,
+  main figure:nth-of-type(even) {
+    flex-direction: column;
+  }
+
+  main figure img,
+  main figure figcaption {
+    width: 100%;
+  }
+}
