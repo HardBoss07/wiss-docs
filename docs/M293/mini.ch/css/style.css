@@ -1,6 +1,8 @@
-/* ==========================================
-   Globales Reset & Grundlagen
-   ========================================== */
+.wrapper {
+  margin: 0 auto;
+  max-width: 80%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,15 +16,11 @@ body {
   line-height: 1.5;
 }
 
-/* ==========================================
-   Header-Bereich
-   ========================================== */
 header {
   width: 100%;
   background-color: #ffffff;
 }
 
-/* Hero Banner Overlay Container */
 .hero-banner {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -33,7 +31,6 @@ header {
   overflow: hidden;
 }
 
-/* Place background image into the entire grid space */
 .hero-banner .hero-img {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
@@ -45,17 +42,15 @@ header {
   z-index: 1;
 }
 
-/* Position logo higher up on top of the image */
 .hero-banner .logo {
   grid-column: 1;
   grid-row: 1;
   z-index: 2;
   height: 55px;
   width: auto;
-  margin: 15px 20px 0 20px; /* Adjust top margin to control height */
+  margin: 15px 20px 0 20px;
 }
 
-/* Position H1 higher up on top of the image */
 .hero-banner h1 {
   grid-column: 2;
   grid-row: 1;
@@ -63,10 +58,9 @@ header {
   color: #010101;
   font-size: 1.4rem;
   font-weight: bold;
-  margin-top: 25px; /* Adjust top margin to align with logo */
+  margin-top: 25px;
 }
 
-/* Sticky Navigation outside of hero container */
 header > nav {
   width: 100%;
   position: sticky;
@@ -96,23 +90,22 @@ header > nav a {
   font-weight: bold;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 header > nav a:hover {
   border-bottom: 2px solid #010101;
 }
 
-/* ==========================================
-   Section: Mini News
-   ========================================== */
 section {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 20px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start; /* Prevents height stretching within rows */
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -142,13 +135,10 @@ article p {
   color: #333333;
 }
 
-/* ==========================================
-   Main: Countryman Inhaltsbereich & Figures
-   ========================================== */
 main {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 main > h1 {
@@ -158,7 +148,6 @@ main > h1 {
   color: #e60012;
 }
 
-/* Figure-Blöcke im Rahmen-Style des Mockups */
 main figure {
   display: flex;
   flex-direction: row;
@@ -168,7 +157,6 @@ main figure {
   background-color: #ffffff;
 }
 
-/* Abwechselndes Layout (Bild rechts / Text links) */
 main figure:nth-of-type(odd) {
   background-color: #d6d6d6;
 }
@@ -208,15 +196,16 @@ main figure figcaption li {
 }
 
 footer {
-  padding: 20px;
+  padding: 20px 0;
   margin-top: 60px;
   font-size: 0.9rem;
 }
 
-/* ==========================================
-   Responsive (Mobilansicht)
-   ========================================== */
 @media (max-width: 768px) {
+  .wrapper {
+    max-width: 95%;
+  }
+
   header {
     flex-direction: column;
     align-items: flex-start;
