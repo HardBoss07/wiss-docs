@@ -4,12 +4,17 @@
 **/node_modules/
 **/.mvn/
 **/.next/
+**/.metadata/
 
 # Binary / Executables
 backend/mvnw
 backend/mvnw.cmd
 *.png
 *.svg
+*.docx
+*.pptx
+*.xlsx
+*.pdf
 
 # Package locks (handled by npm)
 package-lock.json
