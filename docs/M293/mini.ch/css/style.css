@@ -207,6 +207,114 @@ main figure figcaption li {
   margin-bottom: 4px;
 }
 
+/* Form Styling (Member Page) */
+
+form {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 650px;
+}
+
+fieldset {
+  border: 1px dotted #4c4c4c;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: #e60012;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+label {
+  display: inline-block;
+  width: 10em;
+}
+
+form p {
+  margin-bottom: 8px;
+}
+
+.textfeld,
+input[type='text'],
+input[type='email'],
+select,
+textarea {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.button1,
+.button2,
+input[type='submit'],
+input[type='reset'] {
+  padding: 8px 16px;
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.button1,
+input[type='submit'] {
+  background-color: #e60012;
+  color: #ffffff;
+}
+
+.button2,
+input[type='reset'] {
+  background-color: #d6d6d6;
+  color: #111111;
+}
+
+.button1:hover,
+.button2:hover,
+input[type='submit']:hover,
+input[type='reset']:hover {
+  opacity: 0.85;
+}
+
+/* Table Styling (Prices Page) */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+caption {
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #111111;
+}
+
+th,
+td {
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+th {
+  background-color: #d6d6d6;
+  color: #111111;
+  font-weight: bold;
+}
+
+tfoot td {
+  font-size: 0.85rem;
+  color: #666666;
+  font-style: italic;
+  padding-top: 12px;
+}
+
 /* Footer Section */
 
 footer {
@@ -240,5 +348,15 @@ footer {
   main figure img,
   main figure figcaption {
     width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
   }
 }

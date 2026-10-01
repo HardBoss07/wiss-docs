@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>koffee - Kontakt</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="nav-container">
+          <div class="logo"><a href="../index.html">koffee</a></div>
+          <nav>
+            <ul>
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="./menu.html">MENU</a></li>
+              <li><a href="./kontakt.html" class="active">KONTAKT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <h1>Kontakt und Reservierung</h1>
+
+        <section class="content-block">
+          <h2>Öffnungszeiten</h2>
+          <p><strong>Mo - Fr:</strong> 07:00 - 18:00 Uhr</p>
+          <p><strong>Sa - So:</strong> 08:00 - 17:00 Uhr</p>
+
+          <h2 style="margin-top: 15px">Adresse</h2>
+          <p>koffee Barista Shop<br />Kaffeestrasse 12<br />8000 Zürich</p>
+        </section>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Kontaktformular:</legend>
+            <p>
+              <label for="vorname">Vorname (*):</label>
+              <input type="text" id="vorname" name="vorname" required autofocus />
+            </p>
+            <p>
+              <label for="nachname">Nachname:</label>
+              <input type="text" id="nachname" name="nachname" />
+            </p>
+            <p>
+              <label for="email">E-Mail (*):</label>
+              <input type="email" id="email" name="email" required />
+            </p>
+            <p>
+              <label for="anliegen">Anliegen:</label>
+              <select id="anliegen" name="anliegen">
+                <option value="allgemein">Allgemeine Frage</option>
+                <option value="reservierung">Tischreservierung</option>
+                <option value="event">Event Anfrage</option>
+              </select>
+            </p>
+            <p>
+              <label for="nachricht">Nachricht (*):</label>
+              <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
+            </p>
+            <p>Die mit (*) gekennzeichneten Felder sind Pflichtfelder.</p>
+          </fieldset>
+
+          <p>
+            <input class="button1" type="submit" value="Senden" />
+            <input class="button2" type="reset" value="Löschen" />
+          </p>
+        </form>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 koffee - Alle Rechte vorbehalten.</p>
+      </footer>
+    </div>
+  </body>
+</html>
