@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Hintergrund Squircle (Tertiär #2A2A2A / Dunkel) -->
+  <rect x="0" y="0" width="128" height="128" rx="28" fill="#1A1A1A" />
+
+  <!-- Hintere Filmkarte (Primär #D80B69) -->
+  <g transform="rotate(12 70 65)">
+    <rect x="52" y="24" width="46" height="76" rx="6" fill="#D80B69" />
+    <!-- Perforationen (Rechts) -->
+    <rect x="88" y="29" width="5" height="5" rx="1.2" fill="#0A0A0A" opacity="0.6" />
+    <rect x="88" y="38" width="5" height="5" rx="1.2" fill="#0A0A0A" opacity="0.6" />
+    <rect x="88" y="47" width="5" height="5" rx="1.2" fill="#0A0A0A" opacity="0.6" />
+    <rect x="88" y="56" width="5" height="5" rx="1.2" fill="#0A0A0A" opacity="0.6" />
+    <rect x="88" y="65" width="5" height="5" rx="1.2" fill="#0A0A0A" opacity="0.6" />
+    <rect x="88" y="74" width="5" height="5" rx="1.2" fill="#0A0A0A" opacity="0.6" />
+    <rect x="88" y="83" width="5" height="5" rx="1.2" fill="#0A0A0A" opacity="0.6" />
+    <rect x="88" y="92" width="5" height="5" rx="1.2" fill="#0A0A0A" opacity="0.6" />
+  </g>
+
+  <!-- Vordere Filmkarte (Dunkel mit Accent #FFD405) -->
+  <g transform="rotate(-8 48 64)">
+    <rect x="22" y="24" width="48" height="76" rx="6" fill="#2A2A2A" stroke="#FFD405" stroke-width="4.5" />
+    
+    <!-- Perforationen (Links) -->
+    <rect x="26" y="29" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="26" y="38" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="26" y="47" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="26" y="56" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="26" y="65" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="26" y="74" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="26" y="83" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="26" y="92" width="5" height="5" rx="1.2" fill="#FFD405" />
+
+    <!-- Perforationen (Rechts) -->
+    <rect x="61" y="29" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="61" y="38" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="61" y="47" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="61" y="56" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="61" y="65" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="61" y="74" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="61" y="83" width="5" height="5" rx="1.2" fill="#FFD405" />
+    <rect x="61" y="92" width="5" height="5" rx="1.2" fill="#FFD405" />
+
+    <!-- Play Button (Accent #FFD405) -->
+    <path d="M 40 50 L 54 59 L 40 68 Z" fill="#FFD405" />
+  </g>
+</svg>

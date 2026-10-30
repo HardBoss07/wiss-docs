@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160">
+  <!-- Icon Skaliert & Positioniert -->
+  <g transform="translate(15, 12) scale(0.26)">
+    <!-- Hintere Karte (Primär #D80B69) -->
+    <g transform="rotate(12 300 260)">
+      <rect x="210" y="110" width="170" height="280" rx="20" fill="#D80B69" />
+      <rect x="350" y="130" width="16" height="16" rx="4" fill="#0A0A0A" opacity="0.4" />
+      <rect x="350" y="165" width="16" height="16" rx="4" fill="#0A0A0A" opacity="0.4" />
+      <rect x="350" y="200" width="16" height="16" rx="4" fill="#0A0A0A" opacity="0.4" />
+      <rect x="350" y="235" width="16" height="16" rx="4" fill="#0A0A0A" opacity="0.4" />
+      <rect x="350" y="270" width="16" height="16" rx="4" fill="#0A0A0A" opacity="0.4" />
+      <rect x="350" y="305" width="16" height="16" rx="4" fill="#0A0A0A" opacity="0.4" />
+      <rect x="350" y="340" width="16" height="16" rx="4" fill="#0A0A0A" opacity="0.4" />
+    </g>
+
+    <!-- Vordere Karte (Tertiär #2A2A2A + Accent #FFD405 Border) -->
+    <g transform="rotate(-8 210 250)">
+      <rect x="125" y="110" width="170" height="280" rx="20" fill="#2A2A2A" stroke="#FFD405" stroke-width="12" />
+      
+      <!-- Perforationen links -->
+      <rect x="142" y="130" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="142" y="165" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="142" y="200" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="142" y="235" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="142" y="270" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="142" y="305" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="142" y="340" width="16" height="16" rx="4" fill="#FFD405" />
+
+      <!-- Perforationen rechts -->
+      <rect x="262" y="130" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="262" y="165" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="262" y="200" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="262" y="235" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="262" y="270" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="262" y="305" width="16" height="16" rx="4" fill="#FFD405" />
+      <rect x="262" y="340" width="16" height="16" rx="4" fill="#FFD405" />
+
+      <!-- Play Button (Accent #FFD405) -->
+      <path d="M 198 220 L 240 250 L 198 280 Z" fill="#FFD405" />
+    </g>
+  </g>
+
+  <!-- Typografie: WatchMatch. -->
+  <text x="165" y="98" font-family="&#39;Roboto&#39;, system-ui, -apple-system, sans-serif" font-size="58" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="#FFFFFF">Watch</tspan><tspan fill="#D80B69">Match</tspan><tspan fill="#FFD405">.</tspan>
+  </text>
+</svg>

@@ -6,11 +6,11 @@ In diesem Dokument sind alle vier durchgeführten Interviews einheitlich struktu
 
 ### Interview 1 (Englisch übersetzt & strukturiert)
 
-- **1. Letzte Suche:** Suchte auf TikTok zusammen mit der Freundin nach einem Film. Da die Suche schwierig war, nutzten sie schließlich eine "Top 100"-Filmliste und arbeiten diese nun von oben nach unten ab.
+- **1. Letzte Suche:** Suchte auf TikTok zusammen mit der Freundin nach einem Film. Da die Suche schwierig war, nutzten sie schliesslich eine "Top 100"-Filmliste und arbeiten diese nun von oben nach unten ab.
 
 - **2. Suchkanäle:** Primär TikTok.
 
-- **3. Größte Hürde bei der Suche:** Den Film/die Serie irgendwo kostenlos zum Streamen zu finden.
+- **3. Grösste Hürde bei der Suche:** Den Film/die Serie irgendwo kostenlos zum Streamen zu finden.
 
 - **4. Wichtige Eigenschaften:** Gute Story/Handlung, gelegentlich der Produzent, Bewertungen/Reviews anderer Personen.
 
@@ -18,7 +18,7 @@ In diesem Dokument sind alle vier durchgeführten Interviews einheitlich struktu
 
 - **6. Suchdauer:** Bis zu mehreren Stunden (hauptsächlich bedingt durch die Suche nach einer kostenlosen Streaming-Quelle).
 
-- **7. Kritik an Streaming-Empfehlungen:** Der Algorithmus reagiert zu schnell auf Ausreißer und drängt einen stark in eine Filterblase. Zudem werden Abbrüche falsch interpretiert (z. B. fehlt ein Pop-up nach dem vorzeitigen Beenden, um abzufragen, ob der Film gefiel oder nicht).
+- **7. Kritik an Streaming-Empfehlungen:** Der Algorithmus reagiert zu schnell auf Ausreisser und drängt einen stark in eine Filterblase. Zudem werden Abbrüche falsch interpretiert (z. B. fehlt ein Pop-up nach dem vorzeitigen Beenden, um abzufragen, ob der Film gefiel oder nicht).
 
 - **8. Merkliste/Festhalten:** Schreibt sich Titel in Notizen auf.
 
@@ -38,7 +38,7 @@ In diesem Dokument sind alle vier durchgeführten Interviews einheitlich struktu
 
 - **2. Suchkanäle:** Social Media und IMDb.
 
-- **3. Größte Hürde bei der Suche:** Verunsicherung bezüglich der Qualität neuer Filme und ob sie dem persönlichen Geschmack entsprechen.
+- **3. Grösste Hürde bei der Suche:** Verunsicherung bezüglich der Qualität neuer Filme und ob sie dem persönlichen Geschmack entsprechen.
 
 - **4. Wichtige Eigenschaften:** _(Keine Angabe)_
 
@@ -62,11 +62,11 @@ In diesem Dokument sind alle vier durchgeführten Interviews einheitlich struktu
 
 ### Interview 3 (Ottavio)
 
-- **1. Letzte Suche:** Sucht regelmäßig nach spannenden Filmen.
+- **1. Letzte Suche:** Sucht regelmässig nach spannenden Filmen.
 
 - **2. Suchkanäle:** Netflix, Prime Video, Apple TV sowie spezialisierte Anime-Plattformen.
 
-- **3. Größte Hürde bei der Suche:** Einen guten Film oder eine Serie zu finden, die bereits ein spannendes Intro hat.
+- **3. Grösste Hürde bei der Suche:** Einen guten Film oder eine Serie zu finden, die bereits ein spannendes Intro hat.
 
 - **4. Wichtige Eigenschaften:** Spannende Charaktere, hochwertige Animationen, angemessene/nicht zu lange Seriendauer.
 
@@ -94,7 +94,7 @@ In diesem Dokument sind alle vier durchgeführten Interviews einheitlich struktu
 
 - **2. Suchkanäle:** Social Media.
 
-- **3. Größte Hürde bei der Suche:** Inhalte zu filtern, die nicht dem eigenen Geschmack entsprechen.
+- **3. Grösste Hürde bei der Suche:** Inhalte zu filtern, die nicht dem eigenen Geschmack entsprechen.
 
 - **4. Wichtige Eigenschaften:** _(Keine Angabe)_
 
@@ -120,7 +120,7 @@ In diesem Dokument sind alle vier durchgeführten Interviews einheitlich struktu
 
 | **Nr.** | **Frage**                 | **Interviewee 1**                           | **Interviewee 2**                           | **Interviewee 3 (Ottavio)**                    | **Interviewee 4**                         |
 | ------- | ------------------------- | ------------------------------------------- | ------------------------------------------- | ---------------------------------------------- | ----------------------------------------- |
-| **1**   | **Letzte Suche**          | TikTok mit Freundin, "Top 100"-Liste        | IMDb                                        | Regelmäßige Suche nach spannenden Filmen       | IMDb                                      |
+| **1**   | **Letzte Suche**          | TikTok mit Freundin, "Top 100"-Liste        | IMDb                                        | Regelmässige Suche nach spannenden Filmen      | IMDb                                      |
 | **2**   | **Suchkanäle**            | TikTok                                      | Social Media, IMDb                          | Netflix, Prime Video, Apple TV, Anime-Seiten   | Social Media                              |
 | **3**   | **Schwierigkeit**         | Kostenlose Quelle finden                    | Unsicherheit bezüglich Qualität & Präferenz | Guten Film mit spannendem Intro finden         | Titel entsprechen oft nicht dem Geschmack |
 | **4**   | **Wichtige Kriterien**    | Story, gelegentlich Produzent, Reviews      | _(k.A.)_                                    | Spannende Charaktere, Animationen, Länge       | _(k.A.)_                                  |
