@@ -30,8 +30,7 @@ CLEANED_CONTENT=$(echo "$RAW_CONTENT" | sed 's/\\n\\n---------------------------
 
 # 5. Write to the TypeScript file
 cat <<EOF > "$TARGET_FILE"
-export const data: string =
-\`
+export const data: string = \`
 $CLEANED_CONTENT
 \`;
 EOF
