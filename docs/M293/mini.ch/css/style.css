@@ -1,10 +1,5 @@
 /* Base & Layout Structure */
 
-.wrapper {
-  margin: 0 auto;
-  max-width: 80%;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +11,11 @@ body {
   color: #222222;
   background-color: #ffffff;
   line-height: 1.5;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 /* Header Container */
@@ -107,14 +107,14 @@ header > nav a:hover {
   border-bottom: 2px solid #010101;
 }
 
-/* Mini News Section & Cards */
+/* Mini News Section & Cards (Flexbox-Anpassung) */
 
 section {
   width: 100%;
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* flex-wrap hinzugefügt */
   align-items: flex-start;
   gap: 20px;
 }
@@ -128,10 +128,11 @@ section > h2 {
   padding-bottom: 6px;
 }
 
-article {
+/* Anforderung: .newswrapp > * { flex: 1 1 0% } */
+section > article {
   background-color: #d6d6d6;
   padding: 20px;
-  flex: 1 1 300px;
+  flex: 1 1 0%;
 }
 
 article h3 {
@@ -145,7 +146,7 @@ article p {
   color: #333333;
 }
 
-/* Countryman Section & Figures */
+/* Countryman Section & Figures (Klassen .one und .two Übertragung) */
 
 main {
   width: 100%;
@@ -160,9 +161,10 @@ main > h1 {
   color: #e60012;
 }
 
+/* Anforderung: Flex-Wrap für .one / .two */
 main figure {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: top;
   gap: 25px;
   margin-bottom: 35px;
@@ -173,8 +175,16 @@ main figure:nth-of-type(odd) {
   background-color: #d6d6d6;
 }
 
-main figure img {
-  width: 40%;
+/* Anforderung: .one > * { flex: 1 1 20% } */
+main figure > * {
+  flex: 1 1 20%;
+}
+
+/* Anforderung: Max-Width für Bilder auf 500px begrenzen */
+main figure img,
+section img {
+  max-width: 500px;
+  width: 100%;
   height: auto;
   max-height: 320px;
   object-fit: cover;
@@ -183,7 +193,6 @@ main figure img {
 
 main figure figcaption {
   padding-top: 10px;
-  width: 55%;
 }
 
 main figure figcaption h2 {
@@ -323,31 +332,32 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive Media Queries */
+/* Responsive Media Query nach Aufgabenstellung */
 
-@media (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .wrapper {
     max-width: 95%;
   }
 
+  /* Anforderung Header: Schriftgrösse 0.7em & Höhe 200px */
   header {
+    height: 200px;
+    font-size: 0.7em;
+    overflow: hidden;
+  }
+
+  .hero-banner {
+    height: 100%;
+  }
+
+  /* Anforderung Bilder: max-width: 100% */
+  section img,
+  main figure img {
+    max-width: 100%;
+  }
+
+  main figure {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header > h1 {
-    margin-top: 10px;
-    font-size: 1.2rem;
-  }
-
-  main figure,
-  main figure:nth-of-type(even) {
-    flex-direction: column;
-  }
-
-  main figure img,
-  main figure figcaption {
-    width: 100%;
   }
 
   form {
