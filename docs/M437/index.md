@@ -63,7 +63,7 @@ FROM eclipse-temurin:21-jre-alpine AS runner
 WORKDIR /app
 
 # Security Best Practice: Erstellt eine dedizierte System-Gruppe und einen unprivilegierten Benutzer.
-# Standardmäßig laufen Container sonst als 'root', was ein Sicherheitsrisiko darstellt.
+# Standardmässig laufen Container sonst als 'root', was ein Sicherheitsrisiko darstellt.
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 
 # ARG & ENV: Parameter und Umgebungsvariablen definieren.
@@ -85,7 +85,7 @@ USER appuser
 # EXPOSE: Dokumentiert den Port, über den der Container erreichbar sein soll.
 EXPOSE ${PORT}
 
-# HEALTHCHECK: Prüft in regelmäßigen Abständen, ob die Anwendung noch reagiert.
+# HEALTHCHECK: Prüft in regelmässigen Abständen, ob die Anwendung noch reagiert.
 # Bricht der Healthcheck fehl, markiert Docker den Container als 'unhealthy'.
 HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
   CMD wget --quiet --tries=1 --spider http://localhost:${PORT}/actuator/health || exit 1
@@ -98,7 +98,7 @@ ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
 
 ### Wichtige Konzepte in diesem Beispiel
 
-- **Multi-Stage Builds:** Reduziert die finale Image-Größe drastisch (oft von über 800 MB auf unter 200 MB) und entfernt Angriffsflächen, da Compiler und Quellcode nicht im finalen Image landen.
+- **Multi-Stage Builds:** Reduziert die finale Image-Grösse drastisch (oft von über 800 MB auf unter 200 MB) und entfernt Angriffsflächen, da Compiler und Quellcode nicht im finalen Image landen.
 - **Layer-Caching (Pom-First Trick):** Indem `pom.xml` separat vor `src/` kopiert wird, müssen Maven-Abhängigkeiten nicht bei jeder Codeänderung neu heruntergeladen werden.
 - **Non-Root User:** Führt den Container aus Sicherheitsgründen mit eingeschränkten Rechten (`appuser`) aus.
 - **Healthcheck:** Ermöglicht Orchestrierungstools (wie Docker Compose, Swarm oder Kubernetes) festzustellen, ob die Anwendung tatsächlich einsatzbereit ist.
