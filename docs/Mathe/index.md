@@ -1,5 +1,7 @@
 # Mathe
 
+# Semester 1
+
 ## Lernziele für 17.04.2026
 
 - Mengenlehre
@@ -217,3 +219,212 @@ Eine Funktion ist **bijektiv**, wenn sie **sowohl injektiv als auch surjektiv** 
 | $y = x^2$     | Nein     | Nein      | Nein     |
 | $y = x^3$     | Ja       | Ja        | Ja       |
 | $y = \sin(x)$ | Nein     | Nein      | Nein     |
+
+# Semester 2
+
+am anfang einfach vieles über boolean algebra
+
+## Notizen vom 11.09.2026
+
+**Zahlensysteme**
+
+Was wir können müssen:
+
+- bin
+- dec
+- hex
+- duo
+- oct
+  diese alle in einander umwandeln
+
+binäre addition durchführen mit carry
+bitwise operatiors wie and or xor usw verstehen und anwenden
+wissen, wie negative zahlen im computer mithile des zweierkomplements dargestellt werden
+subtraktion durch umwandlung in zweierkomplement-addition lösen
+
+```text
+0b01011100 = 92
+0b00100111 = 39
+0b11100001 = 225
+```
+
+## Notizen vom 18.09.2026
+
+## Notizen vom 25.09.2026
+
+### Binäraddition
+
+```text
+  01001101
++ 00110011
+----------
+  10000000
+```
+
+```text
+  11000101
++ 10011000
+----------
+ 101011101
+```
+
+### Subtraktion mit Zweierkomplement
+
+1. 1100 - 1001
+   - Zweierkomplement von 1001: 0110 + 1 = 0111
+
+```text
+  1100
++ 0111
+------
+(1)0011  =>  0011
+```
+
+2. 10011110 - 01010100
+   - Zweierkomplement von 01010100: 10101011 + 1 = 10101100
+
+```text
+  10011110
++ 10101100
+----------
+(1)01001010  =>  0100 1010
+```
+
+### Bitwise:
+
+Gegeben:
+A = 10101100
+B = 11110000
+
+**Pos = Position von Links.**
+
+| Pos | A   | B   | AND | OR  | XOR |
+| --- | --- | --- | --- | --- | --- |
+| 1   | 1   | 1   | 1   | 1   | 0   |
+| 2   | 0   | 1   | 0   | 1   | 1   |
+| 3   | 1   | 1   | 1   | 1   | 0   |
+| 4   | 0   | 1   | 0   | 1   | 1   |
+| 5   | 1   | 0   | 0   | 1   | 1   |
+| 6   | 1   | 0   | 0   | 1   | 1   |
+| 7   | 0   | 0   | 0   | 0   | 0   |
+| 8   | 0   | 0   | 0   | 0   | 0   |
+
+Lösung AND = 10100000
+
+Lösung OR = 11111100
+
+Lösung XOR = 01011100
+
+### Dezimal zu Binär zu Bitwise
+
+A: 5 = 0101
+B: 3 = 0011
+
+| Pos | A   | B   | XOR |
+| --- | --- | --- | --- |
+| 1   | 0   | 0   | 0   |
+| 2   | 1   | 0   | 1   |
+| 3   | 0   | 1   | 1   |
+| 4   | 1   | 1   | 0   |
+
+Lösung XOR in bin = 0110
+Lösung XOR in dec = 6
+
+A: 5 = 0101
+B: 3 = 0011
+
+| Pos | A   | B   | NAND |
+| --- | --- | --- | ---- |
+| 1   | 0   | 0   | 1    |
+| 2   | 1   | 0   | 1    |
+| 3   | 0   | 1   | 1    |
+| 4   | 1   | 1   | 0    |
+
+Lösung NAND in bin = 1110
+Lösung NAND in dec = 14
+
+## Notizen vom 30.10.2026
+
+### Die Seiten im rechtwinkligen Dreieck
+
+- **Hypotenuse ($H$):** Die längste Seite im rechtwinkligen Dreieck. Sie liegt immer direkt gegenüber dem rechten Winkel.
+- **Ankathete ($A$):** Die Kathete, die am gewählten Winkel $\alpha$ anliegt (zusammen mit der Hypotenuse bildet sie diesen Winkel).
+- **Gegenkathete ($G$):** Die Kathete, die dem gewählten Winkel $\alpha$ direkt gegenüberliegt.
+
+### Die drei Grundfunktionen
+
+$$\sin(\alpha) = \frac{\text{Gegenkathete}}{\text{Hypotenuse}} = \frac{G}{H}$$
+$$\cos(\alpha) = \frac{\text{Ankathete}}{\text{Hypotenuse}} = \frac{A}{H}$$
+$$\tan(\alpha) = \frac{\text{Gegenkathete}}{\text{Ankathete}} = \frac{G}{A}$$
+
+**Eselsbrücke zum Merken:** $GAGA$ $H$ühner$H$of$A$G
+$\rightarrow$ Schreibst du die Buchstaben als Brüche untereinander, erhältst du genau die Reihenfolge für Sinus, Kosinus, Tangens und Kotangens:
+$$\frac{G}{H} \quad \frac{A}{H} \quad \frac{G}{A} \quad \frac{A}{G}$$
+
+### 1. Dreieck
+
+```text
+ |\
+ |b\
+ |  \
+ |   \
+e|    \f
+ |     \
+ |    a \
+ L_______\
+    d
+```
+
+#### Für Winkel $\alpha$ (unten rechts):
+
+- **Gegenkathete:** $e$ (liegt gegenüber von $a$)
+- **Ankathete:** $d$ (liegt an $a$ an)
+- **Hypotenuse:** $f$
+
+$$\sin(a) = \frac{e}{f}$$
+$$\cos(a) = \frac{d}{f}$$
+$$\tan(a) = \frac{e}{d}$$
+
+#### Für Winkel $\beta$ (oben):
+
+- **Gegenkathete:** $d$ (liegt gegenüber von $b$)
+- **Ankathete:** $e$ (liegt an $b$ an)
+- **Hypotenuse:** $f$
+
+$$\sin(b) = \frac{d}{f}$$
+$$\cos(b) = \frac{e}{f}$$
+$$\tan(b) = \frac{d}{e}$$
+
+### 2. Dreieck
+
+```text
+ |\
+ |b\
+ |  \
+ |   \
+l|    \n
+ |     \
+ |    a \
+ L_______\
+    m
+```
+
+#### Für Winkel $\alpha$ (unten rechts):
+
+- **Gegenkathete:** $i$ (liegt gegenüber von $a$)
+- **Ankathete:** $m$ (liegt an $a$ an)
+- **Hypotenuse:** $n$
+
+$$\sin(a) = \frac{\text{Gegenkathete}}{\text{Hypotenuse}} = \frac{l}{n}$$
+$$\cos(a) = \frac{\text{Ankathete}}{\text{Hypotenuse}} = \frac{m}{n}$$
+$$\tan(a) = \frac{\text{Gegenkathete}}{\text{Ankathete}} = \frac{l}{m}$$
+
+#### Für Winkel $\beta$ (oben):
+
+- **Gegenkathete:** $m$ (liegt gegenüber von $b$)
+- **Ankathete:** $i$ (liegt an $b$ an)
+- **Hypotenuse:** $n$
+
+$$\sin(b) = \frac{\text{Gegenkathete}}{\text{Hypotenuse}} = \frac{m}{n}$$
+$$\cos(b) = \frac{\text{Ankathete}}{\text{Hypotenuse}} = \frac{l}{n}$$
+$$\tan(b) = \frac{\text{Gegenkathete}}{\text{Ankathete}} = \frac{m}{l}$$
