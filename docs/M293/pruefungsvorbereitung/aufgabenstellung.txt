@@ -1,0 +1,18 @@
+Aufgabenstellung Afrika / Repaufgabe Tag 5: 
+
+Erstellen Sie eine saubere Projektordner-Struktur und das Grundgerüst: 
+
+Kopieren Sie den Inhalt aus content.txt in Ihr HTML. 
+Strukturieren Sie die Elemente mit Überschriften, Paragrafen, Listen und Tabelle, Navigation. Denken Sie an den Pagewrapper. Erstellen Sie ID's zu den Überschriften und verlinken Sie diese in der Navigation. 
+
+Layout: 
+Dem Body geben Sie das Hintergrundbild. Der Wrapper wird zentriert und bleibt weiss. Wählen Sie eine Schrift und Farbe für die Überschriften. Stylen Sie auch die Tabelle entsprechend. Die Seite muss kein Designtechnisches Meisterwerk werden, aber dennoch nach etwas aussehen. Navigation soll horizontal sein, der Farbe der Überschriften entsprechen und einen Hovereffekt aufweisen.
+
+Fügen Sie an Stellen Ihrer Wahl Bilder ein. Überprüfen Sie das Bildmaterial aber vorher! 
+
+Erstellen Sie eine Unterseite / Anmeldung: 
+
+In diese Seite integrieren Sie ein kleines Formular mit Radiobutton Mann/FRau, Name, Vorname, E-Mail, Dropbdown: Wie sind Sie auf uns aufmerksam geworden? Tageszeitung, Telefonbuch, Freunde / Checkbox: Möchten Sie den Newsletter? / senden & löschen button die über die ganze Formularbreite gehen. Das Formular soll zentriert sein und 50% Breite aufweisen. 
+
+Versuchen Sie die Aufgabe selbstständig zu lösen, nur mithilfe Ihres Moduljournals. 
+

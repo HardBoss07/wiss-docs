@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Afrika - Anmeldung</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Anmeldung</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html#etymologie">Etymologie</a></li>
+            <li><a href="../index.html#geographie">Geographie</a></li>
+            <li><a href="../index.html#gewaesser">Gewässer</a></li>
+            <li><a href="../index.html#gebirge">Gebirge und Berge</a></li>
+            <li><a href="../index.html#geologie">Geologie</a></li>
+            <li><a href="../index.html#vegetation">Vegetation und Tierwelt</a></li>
+            <li><a href="../index.html#bevoelkerung">Bevölkerung</a></li>
+            <li><a href="anmeldung.html">Anmeldung</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <form action="#" method="post">
+          <div class="form-group-inline">
+            <label>Geschlecht:</label>
+            <input type="radio" id="mann" name="geschlecht" value="mann" required />
+            <label for="mann">Mann</label>
+            <input type="radio" id="frau" name="geschlecht" value="frau" />
+            <label for="frau">Frau</label>
+          </div>
+
+          <div class="form-group">
+            <label for="vorname">Vorname:</label>
+            <input type="text" id="vorname" name="vorname" required />
+          </div>
+
+          <div class="form-group">
+            <label for="nachname">Nachname:</label>
+            <input type="text" id="nachname" name="nachname" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="herkunft">Wie sind Sie auf uns aufmerksam geworden?</label>
+            <select id="herkunft" name="herkunft">
+              <option value="tageszeitung">Tageszeitung</option>
+              <option value="telefonbuch">Telefonbuch</option>
+              <option value="freunde">Freunde</option>
+            </select>
+          </div>
+
+          <div class="form-group-inline">
+            <input type="checkbox" id="newsletter" name="newsletter" value="ja" />
+            <label for="newsletter">Möchten Sie den Newsletter?</label>
+          </div>
+
+          <button type="submit">Senden</button>
+          <button type="reset">Löschen</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
