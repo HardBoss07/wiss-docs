@@ -8,7 +8,7 @@
 ### Ideen
 
 - Bezug der Persona zu den Interviewergebnissen ist nachvollziehbar (2 Punkte)
-- Ca. 8–10 Ideen auf Postits vorhanden (physisch oder in Miro), Ideen sind gruppiert (2 Punkte)
+- Ca. 8-10 Ideen auf Postits vorhanden (physisch oder in Miro), Ideen sind gruppiert (2 Punkte)
 - Die Ideen entsprechen den aus der Persona gewonnenen Erkenntnissen (2 Punkte)
 
 ### Visualisierungen

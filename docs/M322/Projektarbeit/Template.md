@@ -51,7 +51,7 @@
 - **Header:** Quick-Toggle für aktive Streaming-Filter (z.B. _Netflix + Disney+_) und Benachrichtigungs-Icon.
 - **Swipe-Karte (Match-Screen):** Film-Poster, Titel, Genre-Tags, Sterne-Bewertung der Community, Verfügbarkeits-Icons der Streaming-Dienste und Aktions-Buttons (Pass / Watchlist / Details).
 - **Detail-Ansicht:** Kurzbeschreibung, Trailer-Vorschau, Tonspuren (z.B. DE-Audio verfügbar), Reviews und Button "Bewertung abgeben".
-- **Review-Eingabe:** Sterne-Skala (1–10 oder 1–5), Eingabefeld für max. 100 Zeichen Kurzkritik und Spoiler-Schalter.
+- **Review-Eingabe:** Sterne-Skala (1-10 oder 1-5), Eingabefeld für max. 100 Zeichen Kurzkritik und Spoiler-Schalter.
 
 ## Style Guide
 

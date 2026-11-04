@@ -10,7 +10,7 @@
 **Name:** Matteo Bosshard
 
 **Sprechtext:**
-"Guten Tag zusammen und herzlich willkommen zu meiner Abschlusspräsentation für das Modul 254. Ich werde euch in den nächsten acht Minuten eine Zusammenfassung meiner Gesamtdokumentation präsentieren. Darin zeige ich auf, wie ich die theoretischen Konzepte der Prozess- und Betriebsorganisation praktisch angewendet habe – und zwar anhand von zwei verschiedenen Projekten, die mich durch dieses Modul begleitet haben."
+"Guten Tag zusammen und herzlich willkommen zu meiner Abschlusspräsentation für das Modul 254. Ich werde euch in den nächsten acht Minuten eine Zusammenfassung meiner Gesamtdokumentation präsentieren. Darin zeige ich auf, wie ich die theoretischen Konzepte der Prozess- und Betriebsorganisation praktisch angewendet habe - und zwar anhand von zwei verschiedenen Projekten, die mich durch dieses Modul begleitet haben."
 
 ## Folie 2: Agenda (0.5 Min)
 
@@ -40,7 +40,7 @@
   - Fokus: Ablauforganisation, Prozessanalyse & Digitalisierung.
 
 **Sprechtext:**
-"Um die Lernziele des Moduls optimal abzudecken, habe ich meine Dokumentation in zwei Welten aufgeteilt. Auf der einen Seite habe ich mein eigenes Softwareprojekt 'TimeTrack Pro' – eine Zeiterfassungs-App. Hier lag mein Fokus vor allem auf der Aufbauorganisation und den Systemprozessen. Auf der anderen Seite haben wir die Fallstudie der 'Topomedics AG', ein globaler Medizintechnik-Hersteller. Anhand dieses Unternehmens habe ich primär die Ablauforganisation, die Prozessoptimierung und die Schnittstellen modelliert."
+"Um die Lernziele des Moduls optimal abzudecken, habe ich meine Dokumentation in zwei Welten aufgeteilt. Auf der einen Seite habe ich mein eigenes Softwareprojekt 'TimeTrack Pro' - eine Zeiterfassungs-App. Hier lag mein Fokus vor allem auf der Aufbauorganisation und den Systemprozessen. Auf der anderen Seite haben wir die Fallstudie der 'Topomedics AG', ein globaler Medizintechnik-Hersteller. Anhand dieses Unternehmens habe ich primär die Ablauforganisation, die Prozessoptimierung und die Schnittstellen modelliert."
 
 ## Folie 4: Aufbauorganisation - TimeTrack Pro (1 Min)
 
@@ -70,7 +70,7 @@
   - Digitale Zahlungsabwicklung.
 
 **Sprechtext:**
-"Wechseln wir zur Topomedics AG. Hier habe ich eine Arbeitsanalyse des Ersatzteil-Bestellprozesses durchgeführt. Der IST-Zustand war stark telefonlastig. Das bedeutete: lange Gesprächszeiten von bis zu 20 Minuten, hohe Personalkosten und häufige Falschlieferungen durch das manuelle Abtippen von Seriennummern – ein klassischer, teurer Medienbruch.
+"Wechseln wir zur Topomedics AG. Hier habe ich eine Arbeitsanalyse des Ersatzteil-Bestellprozesses durchgeführt. Der IST-Zustand war stark telefonlastig. Das bedeutete: lange Gesprächszeiten von bis zu 20 Minuten, hohe Personalkosten und häufige Falschlieferungen durch das manuelle Abtippen von Seriennummern - ein klassischer, teurer Medienbruch.
 Um dieses Sparpotenzial zu nutzen, habe ich einen optimierten Prozess entworfen: Die Einführung eines Self-Service Webshops mit direkter ERP-Kopplung. Der Kunde erfasst seine Daten selbst, die Lagerprüfung erfolgt automatisiert und Schnittstellen-Fehler werden eliminiert."
 
 ## Folie 6: Vertiefte Modellierung - EPK & Flussdiagramme (1 Min)
@@ -86,7 +86,7 @@ Um dieses Sparpotenzial zu nutzen, habe ich einen optimierten Prozess entworfen:
 
 **Sprechtext:**
 "Um Geschäftsprozesse nicht nur zu beschreiben, sondern auch technisch umsetzbar zu machen, habe ich in der Dokumentation verschiedene Modellierungssprachen angewendet. Für Systemlogiken, wie den Monatsabschluss in TimeTrack Pro, habe ich detaillierte Flussdiagramme erstellt.
-Zusätzlich habe ich für den Bewerbungsprozess eine Ereignisgesteuerte Prozesskette, kurz EPK, modelliert – wie hier auf der Folie zu sehen. Das Besondere an der EPK ist der strikte Wechsel zwischen einem Ereignis und einer Funktion, verknüpft durch logische Operatoren wie XOR. Das macht fachliche Abläufe extrem präzise."
+Zusätzlich habe ich für den Bewerbungsprozess eine Ereignisgesteuerte Prozesskette, kurz EPK, modelliert - wie hier auf der Folie zu sehen. Das Besondere an der EPK ist der strikte Wechsel zwischen einem Ereignis und einer Funktion, verknüpft durch logische Operatoren wie XOR. Das macht fachliche Abläufe extrem präzise."
 
 ## Folie 7: Prozessarchitektur & Systemanforderungen (1.5 Min)
 
@@ -102,7 +102,7 @@ Zusätzlich habe ich für den Bewerbungsprozess eine Ereignisgesteuerte Prozessk
 
 **Sprechtext:**
 "Um den Überblick über das gesamte Unternehmen zu behalten, habe ich für Topomedics zunächst eine Prozesslandkarte entworfen, unterteilt in Führungs-, Kern- und Supportprozesse.
-Den wichtigsten Kernprozess – den Webshop-Verkauf – habe ich dann mit einem UML Use-Case-Diagramm detailliert. Dieses Diagramm, das ihr hier seht, ist ideal für das Requirements Engineering. Es zeigt nicht, _wie_ der Code funktioniert, sondern _was_ das System tun muss. Wir sehen die Akteure – also den Kunden und die Buchhaltung – und ihre Interaktionen mit der Systemgrenze, inklusive der `include`-Abhängigkeiten wie der Verfügbarkeitsprüfung."
+Den wichtigsten Kernprozess - den Webshop-Verkauf - habe ich dann mit einem UML Use-Case-Diagramm detailliert. Dieses Diagramm, das ihr hier seht, ist ideal für das Requirements Engineering. Es zeigt nicht, _wie_ der Code funktioniert, sondern _was_ das System tun muss. Wir sehen die Akteure - also den Kunden und die Buchhaltung - und ihre Interaktionen mit der Systemgrenze, inklusive der `include`-Abhängigkeiten wie der Verfügbarkeitsprüfung."
 
 ## Folie 8: Swimlanes & Schnittstellen (1 Min)
 
@@ -129,5 +129,5 @@ Besonders wichtig war hier die Definition der Schnittstellen, da diese oft Fehle
 - Modellierungen (UML/EPK) sichern Qualität und Schnittstellen.
 
 **Sprechtext:**
-"Damit komme ich zum Fazit meiner Dokumentation. Die wichtigste Erkenntnis für mich war: Prozesse sind das absolute Rückgrat der Digitalisierung. Es bringt nichts, einen schlechten Prozess einfach in eine Software zu giessen – man muss ihn vorher analysieren und bereinigen. Saubere Dokumentationswerkzeuge wie UML, Flussdiagramme oder EPKs sind dabei unverzichtbar, um Schnittstellen sicher zu planen und Medienbrüche zu vermeiden.
+"Damit komme ich zum Fazit meiner Dokumentation. Die wichtigste Erkenntnis für mich war: Prozesse sind das absolute Rückgrat der Digitalisierung. Es bringt nichts, einen schlechten Prozess einfach in eine Software zu giessen - man muss ihn vorher analysieren und bereinigen. Saubere Dokumentationswerkzeuge wie UML, Flussdiagramme oder EPKs sind dabei unverzichtbar, um Schnittstellen sicher zu planen und Medienbrüche zu vermeiden.
 Ich bedanke mich für eure Aufmerksamkeit. Gibt es noch Fragen zu meiner Dokumentation oder den Modellen?"

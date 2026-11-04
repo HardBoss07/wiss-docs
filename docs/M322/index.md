@@ -19,7 +19,7 @@
 - **Konsistenz & Erwartungskonformität:** Bedienelemente verhalten sich plattformübergreifend und innerhalb der Applikation stets identisch und folgen etablierten Standards (z.B. Suchfeld oben rechts, Abbrechen-Button links).
 - **Fehlervermeidung & Fehlertoleranz:** Kritische Aktionen verlangen eine explizite Bestätigung. Fehleingaben werden abgefangen und bieten klare, konstruktive Lösungsvorschläge.
 - **Sichtbarkeit des Systemstatus (Feedback):** Das System informiert die nutzende Person jederzeit in angemessener Zeit darüber, was gerade passiert (z.B. Ladebalken, Erfolgsmeldungen).
-- **Barrierefreiheit (Accessibility):** Die Benutzeroberfläche ist für alle Menschen nutzbar – unabhängig von körperlichen Einschränkungen, Geräten oder Umgebungsbedingungen (z.B. ausreichender Kontrast, Screenreader-Support).
+- **Barrierefreiheit (Accessibility):** Die Benutzeroberfläche ist für alle Menschen nutzbar - unabhängig von körperlichen Einschränkungen, Geräten oder Umgebungsbedingungen (z.B. ausreichender Kontrast, Screenreader-Support).
 - **Aufgabenangemessenheit & Effizienz:** Nutzer erreichen ihr Ziel ohne unnötige Klicks, Zwischenschritte oder visuelle Ablenkungen.
 
 #### Ungeeignete / Problematische Kriterien (Zu schwammig & Subjektiv)
@@ -150,7 +150,7 @@ Der **User-Centered Design (UCD)** Prozess ist ein iterativer Gestaltungskreisla
 
 #### Begriffsdefinitionen & Bedeutung
 
-- **Barrierefreiheit (Accessibility / A11y):** Die Gestaltung von Systemen, Webseiten und Anwendungen so, dass sie von allen Menschen – unabhängig von körperlichen, sensorischen oder kognitiven Einschränkungen – ohne fremde Hilfe genutzt werden können.
+- **Barrierefreiheit (Accessibility / A11y):** Die Gestaltung von Systemen, Webseiten und Anwendungen so, dass sie von allen Menschen - unabhängig von körperlichen, sensorischen oder kognitiven Einschränkungen - ohne fremde Hilfe genutzt werden können.
 - **E-Inclusion & Digital Gap:** Digitalisierung betrifft alle Lebensbereiche (Behörden, Banking, ÖV). Fehlt die Barrierefreiheit, werden Menschen mit Beeinträchtigungen von der digitalen Gesellschaft ausgeschlossen (Digital Gap).
 - **Assistierende Technologien:** Werkzeuge wie Screenreader (z.B. NVDA, JAWS), Braillezeilen, Bildschirmlupen, Eye-Tracking oder spezielle Schaltersteuerung, die auf strukturierten Code angewiesen sind.
 
@@ -169,7 +169,7 @@ Der **User-Centered Design (UCD)** Prozess ist ein iterativer Gestaltungskreisla
 | 3. Verstehbar _(Understandable)_ | Informationen und die Bedienung der Benutzeroberfläche müssen verständlich sein.                                         | Lesbare & einfache Sprache, konsistente Navigationsmuster, direkte Fehlererkennung & verständliche Korrekturhinweise.            | Ein Formular zeigt bei einer falschen E-Mail-Eingabe direkt an: _"Bitte geben Sie ein @-Zeichen in der Adresse ein"_.                       |
 | 4. Robust _(Robust)_             | Inhalte müssen robust genug sein, damit sie von verschiedenen User-Agenten inkl. Hilfsmitteln verarbeitet werden können. | Standardkonformes, valides HTML5, korrekte Nutzung von ARIA-Attributen, Kompatibilität mit Screenreadern.                        | Ein Modal-Dialog nutzt das semantische Tag `<dialog>` oder entsprechende role="dialog" Attribute, damit der Screenreader den Modus erkennt. |
 
-## 322-02A SideQuest: Analyse I – Nutzungskontext verstehen & Nutzerforschung (Film-, Serien- & Anime-App)
+## 322-02A SideQuest: Analyse I - Nutzungskontext verstehen & Nutzerforschung (Film-, Serien- & Anime-App)
 
 ### 1. Grundlagen der Nutzerforschung (User Research)
 
@@ -219,7 +219,7 @@ Auf Basis der 4 durchgeführten Interviews wurden folgende Kernerkenntnisse synt
   - Soziale Features zum Teilen von Filmtipps mit Freunden.
 - **Absolute No-Gos:** Komplexes/überladenes Design, störende Paywalls/Zahlungsaufforderungen, Werbung und externe Weiterleitungen.
 
-## 322-02B SideQuest: Analyse II – Nutzungsanforderungen & Personas (Projektkontext)
+## 322-02B SideQuest: Analyse II - Nutzungsanforderungen & Personas (Projektkontext)
 
 ### 1. Gruppierung der Bedürfnisse
 
@@ -291,7 +291,7 @@ Basierend auf den Personas (Ottavio & Dario) sowie den Interview-Insights wurde 
 > 5. **Profilansicht & Historie:** Übersicht gesehener Filme, persönliche Watchlist und Anzahl Follower.
 > 6. **Discover-Feed & Social-Chat:** In-App-Feed zum Entdecken von Nutzern mit ähnlichem Geschmack inkl. direkter Chat-Funktion.
 > 7. **Gamification:** Badges und Level-Systeme für Meilensteine (z.B. _"100 Horrorfilme gesehen"_).
-> 8. **Bewertungssystem:** Sterne-Rating (1–10 bzw. 1–5 Sterne) kombiniert mit kurzen Kommentaren (z.B. max. 100 Zeichen).
+> 8. **Bewertungssystem:** Sterne-Rating (1-10 bzw. 1-5 Sterne) kombiniert mit kurzen Kommentaren (z.B. max. 100 Zeichen).
 > 9. **Top-Feeds & Kuratierte Listen:** Generelle Top-Listen (z.B. _"Top 10 Filme aller Zeiten"_, _"Aktuell meistgesehen"_).
 
 ## 322-03A SideQuest: Dialoggestaltung & Usability-Grundsätze

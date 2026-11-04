@@ -1,6 +1,6 @@
 # Modul 320 - Objektorientiert programmieren
 
-# Prüfung: Modul 1 bis 5 – Objektorientierte Programmierung mit Java
+# Prüfung: Modul 1 bis 5 - Objektorientierte Programmierung mit Java
 
 ### Frage 1 (2 Punkte)
 
@@ -34,7 +34,7 @@ _Wählen Sie höchstens 4 Optionen aus._
 
 ### Frage 4 (2 Punkte)
 
-Ordne einen vollständigen Red–Green–Refactor-Zyklus. Beginne mit dem Test für ein noch fehlendes Verhalten.
+Ordne einen vollständigen Red-Green-Refactor-Zyklus. Beginne mit dem Test für ein noch fehlendes Verhalten.
 
 1. Einen fehlschlagenden Test für das noch fehlende Verhalten schreiben (Red)
 2. Den minimalen Produktionscode schreiben, bis der Test besteht (Green)
@@ -382,7 +382,7 @@ _Wählen Sie höchstens 3 Optionen aus._
 - [ ] Im Konstruktor die übergebene Strategie ignorieren und immer new WeaponAttack(...) erzeugen.
 - [ ] Für jede Strategie eine instanceof-Verzweigung in Fighter.attack(...) hinzufügen und das konkrete Feld beibehalten.
 
-_(Hinweis: Keine der gezeigten Optionen ist korrekt – 0 Optionen auswählen!)_
+_(Hinweis: Keine der gezeigten Optionen ist korrekt - 0 Optionen auswählen!)_
 
 ### Frage 20 (2 Punkte)
 

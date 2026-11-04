@@ -162,7 +162,7 @@ mein-projekt/
 
 ### 2. Schweizer Urheberrecht bei Websites (URG)
 
-- **Lichtbildschutz & Werkschutz:** Sämtliche fremde Inhalte – darunter Texte, Videos, Musik und Fotos (seit der URG-Revision auch einfache Handyschnappschüsse ohne Werkcharakter) – sind gesetzlich geschützt.
+- **Lichtbildschutz & Werkschutz:** Sämtliche fremde Inhalte - darunter Texte, Videos, Musik und Fotos (seit der URG-Revision auch einfache Handyschnappschüsse ohne Werkcharakter) - sind gesetzlich geschützt.
 - **Bilder & Medien:** Eine blosse Quellenangabe reicht **nicht** aus, um fremde Medien nutzen zu dürfen. Es benötigt eine explizite Lizenz, die Nutzung lizenzfreier Medien (z. B. CC0) oder eigene Aufnahmen.
 - **Zitatrecht (Art. 25 URG):** Das Übernehmen von fremden Textpassagen ist nur als Zitat erlaubt, wenn es zur Erläuterung eigener Aussagen dient und die Quelle klar genannt wird.
 - **Recht am eigenen Bild:** Personen, die auf hochgeladenen Fotos erkennbar sind, müssen der Veröffentlichung auf der Website zustimmen.

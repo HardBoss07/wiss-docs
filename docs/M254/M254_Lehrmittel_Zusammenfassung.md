@@ -1,4 +1,4 @@
-# Lernblatt: Modul 254 – Geschäftsprozesse beschreiben
+# Lernblatt: Modul 254 - Geschäftsprozesse beschreiben
 
 Dieses Lernblatt fasst die Kernkonzepte des Lehrmittels für das Modul 254 zusammen. Es dient als strukturierte Vorbereitung für Leistungsbeurteilungen und die praktische Anwendung.
 

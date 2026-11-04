@@ -26,7 +26,7 @@ In diesem Dokument sind alle vier durchgeführten Interviews einheitlich struktu
 
 - **10. Wunscheigenschaften einer App:** Favorisierungs- und allgemeine Interaktionsfunktionen, um den Algorithmus gezielt nachzusteuern.
 
-- **11. Präferierte Bewertungsmethode:** Kurze Kommentare (z. B. max. 100 Zeichen) kombiniert mit einer 1–5 oder 1–10 Sterne-Bewertung.
+- **11. Präferierte Bewertungsmethode:** Kurze Kommentare (z. B. max. 100 Zeichen) kombiniert mit einer 1-5 oder 1-10 Sterne-Bewertung.
 
 - **12. Absolute No-Gos:** Komplexes/überladenes Design, zu aufdringliche Bezahlschranken oder Zahlungsaufforderungen.
 

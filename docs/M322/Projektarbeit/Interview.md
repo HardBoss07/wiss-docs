@@ -4,7 +4,7 @@ Hallo, danke, dass du dir Zeit für unser Interview nimmst.
 
 Wir entwickeln im Rahmen eines Schulprojekts eine App rund um Filme, Serien und Anime. Ziel des Interviews ist herauszufinden, wie Menschen neue Inhalte entdecken, welche Probleme dabei entstehen und was ihnen bei Empfehlungen wichtig ist.
 
-Das Interview dauert ungefähr 10–15 Minuten. Deine Antworten werden nur für unser Schulprojekt verwendet.
+Das Interview dauert ungefähr 10-15 Minuten. Deine Antworten werden nur für unser Schulprojekt verwendet.
 
 ## Interviewfragen
 

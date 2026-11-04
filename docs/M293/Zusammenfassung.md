@@ -8,7 +8,7 @@
 - **FTP:** File Transfer Protocol zum Übertragen von Dateien zwischen lokalem Client und Server.
 - **URL & Domain:** Die URL (Uniform Resource Locator) kennzeichnet eine spezifische Ressource im Netz. Die Domain ist der via DNS (Domain Name System) einer IP-Adresse zugeordnete Name.
 - **W3C & Validierung:** Das World Wide Web Consortium erstellt internationale Standards für HTML und CSS. Die Validierung erfolgt über Tools wie den W3C-Validator (`validator.w3.org`), um Codekonformität zu garantieren.
-- **Editoren & Tools:** Unterschieden wird zwischen reinen Text-Editoren mit Syntax-Highlighting (z.B. VS Code, Sublime Text, Brackets, Notepad++) und WYSIWYG-Editoren („What You See Is What You Get“), welche die visuelle Oberfläche ohne manuellen Codeaufwand rendern.
+- **Editoren & Tools:** Unterschieden wird zwischen reinen Text-Editoren mit Syntax-Highlighting (z.B. VS Code, Sublime Text, Brackets, Notepad++) und WYSIWYG-Editoren ("What You See Is What You Get"), welche die visuelle Oberfläche ohne manuellen Codeaufwand rendern.
 
 ### Request/Response-Modelle
 
@@ -100,7 +100,7 @@ Jedes dargestellte HTML-Element wird von innen nach aussen durch vier Schichten 
 - **Zweck:** Ursprünglich für das Umfliessen von Bildern durch Text entwickelt. Kein modernes Hauptwerkzeug für komplette Seitenlayouts.
 - **Regeln:** Floats teilen sich 100 % der Breite, weshalb immer explizite Prozentbreiten (`width`) definiert werden müssen.
 - **Ausrichtung:** `float: left` oder `float: right` (ein `float: middle` existiert nicht).
-- **Clearing:** Da Floaten an nachfolgende Elemente vererbt wird, gilt: „No float without CLEAR“ (`clear: left | right | both`).
+- **Clearing:** Da Floaten an nachfolgende Elemente vererbt wird, gilt: "No float without CLEAR" (`clear: left | right | both`).
 
 ### Flexbox (Flexible Box Layout)
 
@@ -193,7 +193,7 @@ Formulare nutzen das `<form>`-Tag mitsamt Steuerelementen:
 
 ### Philosophie & Auflösungen
 
-Unter dem Prinzip „Form follows function“ passt sich die Seite dem Ausgabegerät an. Das Vorgehen **Mobile First** startet bei der kleinsten Auflösung (Content First) und baut das Layout für grössere Displays aus.
+Unter dem Prinzip "Form follows function" passt sich die Seite dem Ausgabegerät an. Das Vorgehen **Mobile First** startet bei der kleinsten Auflösung (Content First) und baut das Layout für grössere Displays aus.
 
 - **Smartphones:** 320px bis 480px.
 - **Tablets:** 768px bis 1024px.
@@ -233,7 +233,7 @@ Unter dem Prinzip „Form follows function“ passt sich die Seite dem Ausgabege
 ### 4. EU-DSGVO & US-Datenschutzrecht
 
 - **EU-DSGVO:** Gilt bei Kunden aus der EU (Marktortprinzip) und verlangt Opt-In-Cookie-Banner sowie Auftragsverarbeitungsverträge (AVV).
-- **US-Recht:** Verfolgt einen sektoralen Ansatz (z.B. COPPA für Kinder unter 13 Jahren; CCPA/CPRA in Kalifornien mit Pflicht-Link „Do Not Sell/Share My Personal Information“).
+- **US-Recht:** Verfolgt einen sektoralen Ansatz (z.B. COPPA für Kinder unter 13 Jahren; CCPA/CPRA in Kalifornien mit Pflicht-Link "Do Not Sell/Share My Personal Information").
 
 ## 11. Going-Live-Prozess, Hosting & Post-Launch (SideQuest 9A & Praxis-Transfer)
 
@@ -270,7 +270,7 @@ Die in den Präsentationen aufgeführte Muster-Website von Matteo Bosshard ist v
 1. **`index.html` (Startseite):**
    - _Hero-Banner:_ Logo (`mini_logo.png`), Hauptüberschrift `<h1>` und Hintergrundbild (`hintgergund_landing.jpg`).
    - _Navigation:_ Verlinkung auf interne Abschnitte (`#countryman`, `#gepaeckraum`, `#freihaendig`, `#vorteile`, `#der-neue`, `#all4`) sowie auf `pages/member.html` und `pages/preise.html`.
-   - _News Section:_ Semantischer Bereich `<section>` mit Artikeln zu „Fun Electrified“, „Der neue Mini 5 Door“ und „Das neue Mini Cabrio“.
+   - _News Section:_ Semantischer Bereich `<section>` mit Artikeln zu "Fun Electrified", "Der neue Mini 5 Door" und "Das neue Mini Cabrio".
    - _Main Section (`<main id="countryman">`):_ Enthält 6 `<figure>`-Container mit Produktbildern aus `img/` und dazugehörigen `<figcaption>`-Texten.
 2. **`pages/member.html` (Mitglieder-Anmeldung):**
    - Stellt ein Anmeldeformular zum Sommerfest mit 3 `<fieldset>`-Blöcken bereit (Koordinaten, Festanmeldung inkl. Radio/Checkbox/Select, Mitteilungs-Textarea).

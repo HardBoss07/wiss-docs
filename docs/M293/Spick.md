@@ -50,7 +50,7 @@
 
 | Tag             | Typ    | Beschreibung               | Minimales Code-Beispiel                                                  |
 | :-------------- | :----- | :------------------------- | :----------------------------------------------------------------------- |
-| `<h1>`–`<h6>`   | Block  | Überschriften (Stufe 1–6)  | `<h1>Titel</h1>`                                                         |
+| `<h1>`-`<h6>`   | Block  | Überschriften (Stufe 1-6)  | `<h1>Titel</h1>`                                                         |
 | `<p>`           | Block  | Textabsatz                 | `<p>Text</p>`                                                            |
 | `<em>`          | Inline | Kursive Betonung           | `<em>kursiv</em>`                                                        |
 | `<strong>`      | Inline | Wichtiger Text (fett, SEO) | `<strong>fett</strong>`                                                  |
@@ -331,7 +331,7 @@ nav {
 ### Philosophie & Auflösungen
 
 - **Mobile First:** Zuerst für kleine Bildschirme gestalten, dann via Media Queries erweitern.
-- **Breakpoints:** Smartphone (320px–480px), Tablet (768px–1024px), Desktop ($>1024px$).
+- **Breakpoints:** Smartphone (320px-480px), Tablet (768px-1024px), Desktop ($>1024px$).
 
 ### 4 Schritte der Umsetzung
 
@@ -390,7 +390,7 @@ nav {
 
 | Position                      | Beschreibung                       | Richtwert Kosten (CH)                       | Intervall            |
 | :---------------------------- | :--------------------------------- | :------------------------------------------ | :------------------- |
-| **Domain-Registrierung**      | `.ch`-Domain                       | CHF 12.00 – 15.00                           | Jährlich             |
-| **Webhosting (Professional)** | CH-Server, SSL, Datenbank, Backups | CHF 10.00 – 25.00 / Monat                   | Jährlich abgerechnet |
+| **Domain-Registrierung**      | `.ch`-Domain                       | CHF 12.00 - 15.00                           | Jährlich             |
+| **Webhosting (Professional)** | CH-Server, SSL, Datenbank, Backups | CHF 10.00 - 25.00 / Monat                   | Jährlich abgerechnet |
 | **SSL-Zertifikat**            | Let's Encrypt / DV-SSL             | CHF 0.00                                    | Inklusive im Hosting |
 | **Business Mail**             | Mailboxen passend zur Domain       | Im Hosting inkl. (oder MS 365 CHF 6.-/User) | Monatlich / Jährlich |

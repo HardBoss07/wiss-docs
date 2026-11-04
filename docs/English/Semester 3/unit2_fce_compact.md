@@ -20,7 +20,7 @@
 #### 2. Exam Task Instructions Analysis
 
 1. An article about a woman who became a chef by watching online videos.
-2. Sentences A–G to complete the gaps 1–6.
+2. Sentences A-G to complete the gaps 1-6.
 3. No, there is one extra sentence that you do not need to use.
 
 #### 3. Quick Reading
@@ -71,7 +71,7 @@ _Unused sentence:_ **D**
 #### 2. Exam Task Preparation & Answers
 
 1. **Question 1 Analysis:** A singular noun goes after _"the"_. _"Near"_ indicates a place or physical landmark.
-2. **Gap Types (2–10):**
+2. **Gap Types (2-10):**
 
 - 2: Source of funding/person
 - 3: Type of person/professional
@@ -136,7 +136,7 @@ _Unused sentence:_ **D**
 ### 4. Sentence Completion
 
 1. This afternoon I saw my sister Eileen while I **was walking home from college**.
-2. I could see he was upset – his eyes were red because he **had been crying**.
+2. I could see he was upset - his eyes were red because he **had been crying**.
 3. Nowadays I follow quite a healthy diet, but when I was younger I **used to eat junk food every day**.
 4. I made friends with lots of people when I **was living in London**.
 5. I had a lunch date with my new manager, but I was late and by the time I arrived she **had already ordered her meal**.
@@ -174,7 +174,7 @@ f. The biggest (7) **difference** between them is that this one shows people lau
 - **Similarities:** Both show people dining together in a group, enjoying food, and conversing.
 - **Differences:** Photo 3 shows informal outdoor terrace dining, whereas Photo 4 shows an indoor restaurant setting with formal table service.
 
-#### 4–6. Speaking Exam Task Sample Answers
+#### 4-6. Speaking Exam Task Sample Answers
 
 **Candidate A (Photos 1 & 2):**
 
@@ -203,7 +203,7 @@ f. The biggest (7) **difference** between them is that this one shows people lau
 
 #### 2. Exam Task Questions Analysis
 
-1. 8 gaps (numbered 1–8).
+1. 8 gaps (numbered 1-8).
 2. Exactly 1 word per gap.
 3. No, you must provide your own word.
 
