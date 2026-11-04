@@ -1,16 +1,12 @@
 # UX Writing & Accessibility Review: WatchMatch App
 
----
-
 # Teil 1: UX Writing & Ergonomie-Review
 
 ## 1. Kernerkenntnisse
 
 1. **Starke Motivations-Microcopy:** Gamification-Elemente (_"+20 XP für Review"_, _"Deine Streaming-DNA"_) schaffen hohe Interaktion, benötigen aber stellenweise eindeutigere Beschriftungen.
-2. **Verwechslungsgefahr bei Symbolen:** Icons ohne Text-Labels (z. B. `X`, `3`, `+` in den Action-Buttons) lassen Raum für Fehlinterpretationen.
+2. **Verwechslungsgefahr bei Symbolen:** Icons ohne Text-Labels (z. B. `X`, `3`, `+` in den Action-Buttons) lassen Raum für Fehlinterpretationen. Icon mit `+` ist im Community Feed doppelt aufeinander
 3. **Plattform-Terminologie:** Wörter wie _"Match-Deck Starten"_ oder _"Filme, Serien, Anime durchsuchen..."_ sind gut gewählt, bei Fehlermeldungen und Formularfeldern fehlen jedoch erklärende Hilfetexte.
-
----
 
 ## 2. Review nach Unterseiten / Screens
 
@@ -68,8 +64,6 @@
 - **Optimierung:** Bei _"Profil bearbeiten"_ (S. 20) steht der Hilfetext _"<<<Suche gute Serien für den Feierabend...>>>"_ in Chevrons/Klammern. Das wirkt wie ein Platzhalter aus der Entwicklung.
 - **UX Writing Vorschlag:** Chevrons entfernen und als regulären Platzhalter-Text kennzeichnen: _"Schreibe etwas über deinen Filmgeschmack..."_.
 
----
-
 ## 3. UX Writing Review-Matrix
 
 | Unterseite              | Ist-Zustand (Text / UI)               | UX Writing Vorschlag              | Nutzen                                   |
@@ -82,13 +76,9 @@
 | **Empfehlen** (S. 14)   | `Filmtipp jetzt senden & Chat öffnen` | **"Tipp senden & Chat starten"**  | Kurzer, aktionsorientierter CTA.         |
 | **Profil Edit** (S. 20) | `<<<Suche gute Serien...>>>`          | **"Schreibe etwas über dich..."** | Behebt Platzhalter-Artefakte.            |
 
----
-
 # Teil 2: Accessibility & Barrierefreiheit (WCAG-Check)
 
 Beurteilung des Prototyps anhand der WCAG 2.1 Richtlinien (Web Content Accessibility Guidelines) und Barrierefreiheits-Standards für mobile Schnittstellen.
-
----
 
 ## 1. Accessibility Findings nach WCAG-Kriterien
 
@@ -116,8 +106,6 @@ Beurteilung des Prototyps anhand der WCAG 2.1 Richtlinien (Web Content Accessibi
 
 - **Schwachstelle:** Im Login-Screen (S. 1) und Profil-Edit (S. 20) fehlen sichtbare permanente Labels oberhalb der Eingabefelder; es gibt teilweise nur Placeholder-Texte, die beim Tippen verschwinden.
 - **Massnahme:** Feste Feld-Bezeichnungen (Labels) ausserhalb der Eingabefelder platzieren, damit Nutzende mit kognitiven Einschränkungen oder Screenreadern den Kontext nicht verlieren.
-
----
 
 ## 2. Accessibility Action Plan für das Team
 
