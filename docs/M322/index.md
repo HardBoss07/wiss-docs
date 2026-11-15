@@ -371,3 +371,108 @@ Ein Dialog ist selbstbeschreibungsfähig, wenn der Benutzer jederzeit sieht, in 
 - **Direkt weiterschauen**
   - Button "Jetzt auf Netflix schauen" drücken
   - Automatische Weiterleitung zur jeweiligen Streaming-App
+
+## 322-09A SideQuest:
+
+### 1. Sichtbarkeit des Systemstatus (Visibility of System Status)
+
+- **Status:** Gut erfüllt
+- **Beobachtungen:**
+- Der Fokus-Session-Timer zeigt mit dem Kreisdiagramm und dem Text `24:57` klar den verbleibenden Status.
+- Beim Upload von Folien ist der Lade- bzw. Erfolgsstatus (`Upload abgeschlossen` mit grünem Häkchen) transparent dargestellt.
+- Der Fortschrittsbalken im Profil (`Wochenziel: 0 von 200 Minuten`) gibt direktes Feedback zum Gesamtfortschritt.
+
+- **Kritik:** Im Modul-Formular aktualisiert sich die Vorschau-Karte unten dynamisch (`M322 · 0 % Fortschritt`), was sehr gut gelungen ist.
+
+### 2. Übereinstimmung von System und realer Welt (Match Between System & Real World)
+
+- **Status:** Gut erfüllt
+- **Beobachtungen:**
+- Sprache und Begriffe (wie _Module_, _Prüfungen_, _Lernplan_, _Fokus-Session_, _Karteikarten_) entsprechen exakt der Sprachwelt von Lernenden/Schülern.
+- Icons (Buch für Module, Kalender für Termine, Profil-Icon, Play/Pause-Buttons) nutzen etablierte reale Metaphern und sind sofort verständlich.
+
+### 3. Nutzerkontrolle und Freiheit (User Control and Freedom)
+
+- **Status:** Überarbeitung nötig
+- **Beobachtungen & Kritik:**
+- **Inhalte verwalten:** Im Modulbereich fehlen direkte Lösch- und Bearbeitungsoptionen für hochgeladene Lernmaterialien oder Karteikarten.
+- **Rückgängig-Funktion:** Es fehlt eine Systemoption (Undo), um versehentliche Löschungen oder Moduländerungen rückgängig zu machen.
+- **Timer-Steuerung:** Beim Klick auf "Pause" sollte der Countdown exakt beim aktuellen Stand einfrieren (z.B. `00:42`) und der Button zu "Fortsetzen" wechseln.
+- **Lernkarten-Flow:** Auf Karteikarten wird die Bewertung freigeschaltet, bevor der User die Lösung gesehen hat. Die Aktion "Antwort zeigen" muss zwingend vorgeschaltet sein, bevor "Nochmals" oder "Kann ich" wählbar werden.
+- **Positiv:** Formulare und Fokus-Sessions bieten oben rechts ein klares `X Schliessen` oder `Abbrechen`.
+
+### 4. Konsistenz und Standards (Consistency and Standards)
+
+- **Status:** Sehr gut erfüllt
+- **Beobachtungen:**
+- Die Farbsprache (Grüntöne für primäre Aktionen, dunkles/helles Thema, konsistente Icon-Formen) wird durchgängig eingehalten.
+- Die Bottom Navigation Bar (Home, Kalender, Module, Profil) nutzt gewohnte Mobile-Design-Standards und bleibt stets am unteren Bildschirmrand verankert.
+- Buttons folgen einem einheitlichen Hierarchy-Muster (Primär gefüllt, Sekundär als Kontur oder Text-Button).
+
+### 5. Fehlervermeidung (Error Prevention)
+
+- **Status:** Schwerer Usability-Mangel
+- **Beobachtungen & Kritik:**
+- **Fehlende Pflichtfeld-Markierungen:** Im Formular "Modul hinzufügen" gibt es keine optische Unterscheidung zwischen Pflichtfeldern und optionalen Feldern (keine Sternchen `*` oder Hinweise).
+- **Ausgegrauter Button ohne Kontext:** Der Button "Modul speichern" bleibt einfach stumm ausgegraut. Der User muss selbst erraten, welches Feld noch fehlt, um den Speichervorgang freizuschalten.
+- **Vorschau-Logik:** Die Vorschau-Karte zeigt ein leeres Modul-Kürzel (`M--`), statt den User vor unvollständigen Eingaben zu schützen.
+
+### 6. Wiedererkennung statt Erinnerung (Recognition Rather Than Recall)
+
+- **Status:** Gut erfüllt
+- **Beobachtungen:**
+- **Placeholder als Orientierung:** Eingabefelder bieten anschauliche Beispiele (`z.B. M322` oder `z.B. Benutzerschnittstellen entwickeln`), sodass der User nicht im Gedächtnis nach dem erwarteten Format suchen muss.
+- **Zusammenfassungen:** Vor dem Start einer Fokus-Session fasst eine Info-Box die gewählten Einstellungen nochmals zusammen (`4 Lerneinheiten à 25 Min. · Instagram und TikTok sind blockiert`).
+
+### 7. Flexibilität und Effizienz (Flexibility and Efficiency of Use)
+
+- **Status:** Teilweise erfüllt
+- **Beobachtungen & Kritik:**
+- **Starrer Workflow:** Workflows sind fest vorgegeben ("set in stone"). Erfahrene User haben keine Abkürzungen (z.B. direktes Hochladen von Folien von der Startseite aus).
+- **Shortcuts:** Tastatur-Shortcuts fehlen im Prototyp (für künftige Desktop/Web-Builds einplanen).
+- **Positiv:** Die Profil-Einstellungen bieten gute Flexibilität beim Erscheinungsbild (Dunkler Modus, Farbakzente: Grün, Blau, Violett, Rot, Schriftgrössen).
+
+### 8. Ästhetisches und minimalistisches Design (Aesthetic and Minimalist Design)
+
+- **Status:** Gut mit kleinen Abzügen
+- **Beobachtungen & Kritik:**
+- Das Gesamtbild ist sehr ästhetisch, modern und aufgeräumt.
+- **Redundante Textblöcke:** Es gibt unnötige Text-Beschreibungen. Beispielsweise steht im Formular die Zeile "Die Kurzbezeichnung deines Moduls" direkt über dem Label "Modulname". In den Empty States wiederholen sich Erklärungen zum Erstellen von Lernplänen mehrfach.
+
+### 9. Benutzern beim Erkennen, Diagnostizieren und Beheben von Fehlern helfen (Help Users Recognize, Diagnose, and Recover from Errors)
+
+- **Status:** Schwerer Usability-Mangel
+- **Beobachtungen & Kritik:**
+- **Keine Fehler-Feedbacks:** Es existieren keine dynamischen Inline-Fehlermeldungen oder rote Umrandungen bei unvollständigen Feldern.
+- Der User erhält beim Klick auf einen inaktiven Button keinerlei Rückmeldung (z.B. _"Bitte Modulname eingeben"_), was zur Frustration führt.
+
+### 10. Hilfe und Dokumentation (Help and Documentation)
+
+- **Status:** Überarbeitung nötig
+- **Beobachtungen & Kritik:**
+- Es fehlen kontextuelle Hilfestellungen wie Info-Icons (`?`) oder Tooltips, die z.B. beim Dateiupload erklären, welche Dateiformate (PDF, PPTX) oder Maximalgrössen unterstützt werden.
+- Im Profilbereich fehlt ein zentraler Hilfe-/FAQ-Abschnitt für allgemeine App-Fragen.
+
+### Zusammenfassung der Verbesserungsvorschläge
+
+1. **Einführung von Inline-Validierung & Pflichtfeld-Markierungen (Heuristiken 5 & 9):**
+
+- Kennzeichnung von Pflichtfeldern mit `*` oder `(Erforderlich)`.
+- Statt Buttons stumm zu deaktivieren, den Speichern-Button klickbar lassen und bei Fehlern konkrete rote Hinweise direkt am Eingabefeld anzeigen (_"Bitte gib einen Modulnamen ein"_).
+
+2. **Überarbeitung der Karteikarten- und Timer-Steuerung (Heuristik 3):**
+
+- Die Bewertungsbuttons ("Kann ich", "Nochmals") erst nach dem Ausführen der Aktion "Antwort zeigen" aktivieren.
+- Beim Pausieren des Timers den exakten Sekundenstand festfrieren, den Button in "Fortsetzen" ändern und eine getrennte Option "Fokus-Session abschliessen" anbieten.
+
+3. **Inhalte verwalten & Rückgängig-Option (Heuristik 3):**
+
+- Editier- und Löschsymbole (Stift-/Papierkorb-Icon) für Karteikarten und hochgeladene Lernmaterialien ergänzen sowie eine kurze "Rückgängig machen"-Benachrichtigung (Toast Notification) nach dem Löschen anbieten.
+
+4. **Kürzung redundanter Beschreibungen (Heuristik 8):**
+
+- Überflüssige Zwischenzeilen in Modals entfernen (z.B. den Satz "Die Kurzbezeichnung deines Moduls" über dem Feld "Modulname" löschen).
+
+5. **Kontextuelle Hilfe & Upload-Hinweise (Heuristik 10):**
+
+- Beim Dateiupload zugelassene Formate und Dateigrössen angeben (_"PDF, max. 25 MB"_) und einen Support-/FAQ-Bereich im Profil-Tab verlinken.
